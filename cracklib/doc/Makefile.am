@@ -1,3 +1,3 @@
 pkgdata_DATA = cracklib.magic
 
-EXTRA_DIST = cracklib.magic LICENSE
+EXTRA_DIST = cracklib.magic LICENCE

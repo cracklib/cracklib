@@ -1,8 +1,6 @@
-h, I se
 SUBDIRS = lib util doc
 
 EXTRA_DIST = 	\
-		Artistic \
 		autogen.sh \
 		cracklib.spec \
 		README-DAWG \
