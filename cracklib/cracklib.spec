@@ -3,18 +3,15 @@
 %define libname %mklibname %root %maj
 %define libnamedev %libname-devel
 
-Summary:	A password-checking library.
+Summary:	A password strength-checking library.
 Name:		cracklib
-Version:	2.7
-Release:	18mdk
+Version:	3.0pre3
+Release:	1
 Group:		System/Libraries
-Source:		ftp://coast.cs.purdue.edu/pub/tools/unix/libs/cracklib/cracklib_%{version}.tar.bz2
-BuildRequires:	words
-URL:		ftp://coast.cs.purdue.edu/pub/tools/unix/libs/cracklib/
-License:	Artistic
-Patch0:		cracklib-2.7-redhat.patch.bz2
-Patch1:		cracklib-2.7-makevars.patch.bz2
-Patch2:		cracklib-2.7-includes.patch.bz2
+Source:		cracklib-%{version}.tar.gz
+Source1:        cracklib-words.gz
+URL:		http://sourceforge.net/projects/cracklib/
+License:	GPL
 Buildroot:	%{_tmppath}/%{name}-root
 
 %description
@@ -75,28 +72,27 @@ header files for development.
 
 %prep
 
-%setup -q -n cracklib,2.7
-%patch0 -p1 -b .rh
-%patch1 -p1 -b .makevars
-%patch2 -p1 -b .includes
-perl -p -i -e "s/\) -g/\)/" cracklib/Makefile
+%setup -q -n cracklib-%{version}
 chmod -R og+rX .
+mkdir -p dicts
+install %{SOURCE1} dicts/
 
 %build
-make all RPM_OPT_FLAGS="$RPM_OPT_FLAGS" \
-	libdir=%{_libdir} datadir=%{_datadir}
+
+CFLAGS="$RPM_OPT_FLAGS" ./configure \
+  --prefix=%{_prefix} \
+  --mandir=%{_mandir} \
+  --libdir=%{_libdir} \
+  --libexecdir=%{_libdir} \
+  --datadir=%{_datadir}
+
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT{%{_sbindir},%{_libdir},%{_includedir}}
-make install \
-	ROOT=$RPM_BUILD_ROOT \
-	sbindir=%{_sbindir} \
-	libdir=%{_libdir} \
-	includedir=%{_includedir}
-ln -sf libcrack.so.%{version} $RPM_BUILD_ROOT%{_libdir}/libcrack.so.%{maj}
+make install DESTDIR=$RPM_BUILD_ROOT/
+util/cracklib-format dicts/cracklib* | cracklib-packer $RPM_BUILD_ROOT/%{_datadir}/cracklib/pw_dict
 
-install -m644 cracklib/packer.h $RPM_BUILD_ROOT%{_includedir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -107,87 +103,22 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %{libname}
 %defattr(-,root,root)
-%doc README MANIFEST LICENCE HISTORY POSTER
+%doc README README-DAWG doc
+%{_datadir}/cracklib/cracklib.magic
 %{_libdir}/libcrack.so.*
 
 %files -n %{libnamedev}
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libcrack.so
+%{_libdir}/libcrack.la
+%{_libdir}/libcrack.a
 
 %files dicts
 %defattr(-,root,root)
 %{_sbindir}/*
-%{_libdir}/cracklib_dict*
+%{_datadir}/cracklib/pw_dict*
 
 %changelog
-* Wed May 26 2004 Oden Eriksson <oeriksson@mandrakesoft.com> 2.7-18mdk
-- add one missing header file
-- misc spec file fixes
 
-* Fri Jul 18 2003 Warly <warly@mandrakesoft.com> 2.7-17mdk
-- libification
-
-* Tue Jun 25 2002 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 2.7-16mdk
-- Rpmlint fixes: hardcoded-library-path (Patch1)
-- Patch2: Add missing includes
-
-* Fri Nov  2 2001 Jeff Garzik <jgarzik@mandrakesoft.com> 2.7-15mdk
-- Rebuild.
-- Update URL.
-
-* Mon Oct  2 2000 Frederic Lepied <flepied@mandrakesoft.com> 2.7-14mdk
-- removed build requires on cracklib-devel.
-- added build requires on words and chage the path of the dicts to /usr/share/dict.
-
-* Mon Aug 07 2000 Frederic Lepied <flepied@mandrakesoft.com> 2.7-13mdk
-- automatically added BuildRequires
-
-* Fri Jul 21 2000 Thierry Vignaud <tvignaud@mandrakesoft.com> 2.7-12mdk
-- BM
-
-* Fri May 19 2000 Pixel <pixel@mandrakesoft.com> 2.7-11mdk
-- add soname
-
-* Thu Apr 13 2000 Yoann Vandoorselaere <yoann@mandrakesoft.com> 2.7-10mdk
-- Devel package.
-
-* Tue Mar 21 2000 Yoann Vandoorselaere <yoann@mandrakesoft.com> 2.7-9mdk
-- Fix group.
-
-* Wed Oct 20 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
-
-- Strip binaries.
-- Add %defattr
-
-* Sun May  2 1999 Bernhard Rosenkränzer <bero@mandrakesoft.com>
-- s/V'erification/Verification in french translation - I know it's a
-  spelling mistake, but rpm 3.0 doesn't like accents in Summary: lines. :/
-
-* Thu Apr 10 1999 Alexandre Dussart <adussart@mandrakesoft.com>
-- French Translation
-
-* Fri Apr  9 1999 Bernhard Rosenkraenzer <bero@linux-mandrake.com>
-- Mandrake adaptions
-- handle RPM_OPT_FLAGS
-- add de locale
-
-* Wed Jan 06 1999 Cristian Gafton <gafton@redhat.com>
-- build for glibc 2.1
-
-* Sat May 09 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Tue Mar 10 1998 Cristian Gafton <gafton@redhat.com>
-- updated to 2.7
-- build shared libraries
-
-* Mon Nov 03 1997 Donnie Barnes <djb@redhat.com>
-- added -fPIC
-
-* Mon Oct 13 1997 Donnie Barnes <djb@redhat.com>
-- basic spec file cleanups
-
-* Mon Jun 02 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
 
