@@ -363,14 +363,6 @@ fprintf(stderr, "look for (%s)\n", string);
 	fprintf(stderr, "lwm = %lu,  middle = %lu,  hwm = %lu\n", lwm, middle, hwm);
 #endif
 
-	if (middle == hwm)
-	{
-#if DEBUG
-	    fprintf(stderr, "at terminal subdivision, breaking loop\n");
-#endif
-	    break;
-	}
-
 	this = GetPW(pwp, middle);
 	if ( ! this )
 	{
@@ -387,6 +379,19 @@ fprintf(stderr, "look for (%s)\n", string);
 	}
 
 	cmp = strcmp(string, this);
+	if (cmp == 0)
+	{
+	    return(middle);
+        }
+
+        if (middle == hwm)
+        {
+#if DEBUG 
+		fprintf(stderr, "at terminal subdivision, stopping search\n");
+#endif
+		break;
+        }
+
 	if (cmp < 0)
 	{
 	    hwm = middle;
@@ -395,10 +400,6 @@ fprintf(stderr, "look for (%s)\n", string);
 	{
 	    lwm = middle;
 	} 
-	else
-	{
-	    return (middle);
-	}
     }
 
     return (PW_WORDS(pwp));

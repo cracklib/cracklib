@@ -2,6 +2,7 @@
     * Corrected problems with invalid binary search behavior and resulting segfaults due to index read failures
     * Changed index build to include symbols and other non-alpha characters
     * Included original license in doc/ directory for reference
+    * Integrate some old patches supplied by Alec for problems similar to the bugs that were fixed above.
 
 2005-02-03:
     * Started initial repackaging of v2.7 in preparation for auto'ifying
