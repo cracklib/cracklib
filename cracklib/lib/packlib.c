@@ -12,6 +12,8 @@
 
 static char vers_id[] = "packlib.c : v2.3p2 Alec Muffett 18 May 1993";
 
+#define DEBUG 0
+
 PWDICT *
 PWOpen(prefix, mode)
     char *prefix;
@@ -111,7 +113,7 @@ PWOpen(prefix, mode)
 	    {
 		pdesc.flags &= ~PFOR_USEHWMS;
 	    }
-#if 0
+#if DEBUG
             for (i=1; i<=0xff; i++)
             {
                 printf("hwm[%02x] = %d\n", i, pdesc.hwms[i]);
@@ -159,7 +161,7 @@ PWClose(pwp)
 	    	{
 	    	    pwp->hwms[i] = pwp->hwms[i-1];
 	    	}
-#if 0
+#if DEBUG
 	    	printf("hwm[%02x] = %d\n", i, pwp->hwms[i]);
 #endif
 	    }
@@ -257,7 +259,7 @@ GetPW(pwp, number)
 
     if (prevblock == thisblock)
     {
-#if 0
+#if DEBUG
 	fprintf(stderr, "returning (%s)\n", data[number % NUMWORDS]);
 #endif
 	return (data[number % NUMWORDS]);
@@ -320,7 +322,7 @@ FindPW(pwp, string)
     register char *this;
     int idx;
 
-#if 0
+#if DEBUG
 fprintf(stderr, "look for (%s)\n", string);
 #endif
 
@@ -330,7 +332,7 @@ fprintf(stderr, "look for (%s)\n", string);
     	lwm = idx ? pwp->hwms[idx - 1] : 0;
     	hwm = pwp->hwms[idx];
 
-#if 0
+#if DEBUG
 	fprintf(stderr, "idx = %d\n", idx);
 	fprintf(stderr, "lwm = %d,  hwm = %d\n", lwm, hwm);
 #endif
@@ -347,7 +349,7 @@ fprintf(stderr, "look for (%s)\n", string);
 	hwm = PW_WORDS(pwp) - 1;
     }
 
-#if 0
+#if DEBUG
     fprintf(stderr, "---- %lu, %lu ----\n", lwm, hwm);
 #endif
 
@@ -357,13 +359,13 @@ fprintf(stderr, "look for (%s)\n", string);
 
 	middle = lwm + ((hwm - lwm + 1) / 2);
 
-#if 0
+#if DEBUG
 	fprintf(stderr, "lwm = %lu,  middle = %lu,  hwm = %lu\n", lwm, middle, hwm);
 #endif
 
 	if (middle == hwm)
 	{
-#if 0
+#if DEBUG
 	    fprintf(stderr, "at terminal subdivision, breaking loop\n");
 #endif
 	    break;
@@ -372,14 +374,14 @@ fprintf(stderr, "look for (%s)\n", string);
 	this = GetPW(pwp, middle);
 	if ( ! this )
 	{
-#if 0
+#if DEBUG
 		fprintf(stderr, "getpw returned null, returning null in FindPW\n");
 #endif
 		return(PW_WORDS(pwp));
 	}
 	else
 	{
-#if 0
+#if DEBUG
 		fprintf(stderr, "comparing %s against found %s\n", string, this);
 #endif
 	}

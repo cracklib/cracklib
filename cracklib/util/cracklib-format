@@ -3,11 +3,9 @@
 # This preprocesses a set of word lists into a suitable form for input
 # into cracklib-packer
 #
-# removed this, cause it seems like the database should also include special chars and symbols for optimum results
-#    tr -cd '\012[a-z][0-9]' |
-#
 gzip -cdf $* |
     tr '[A-Z]' '[a-z]' |
+    tr -cd '\012[a-z][0-9]' |
     sort |
     uniq |
     grep -v '^#' |
