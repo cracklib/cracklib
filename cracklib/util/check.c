@@ -1,4 +1,5 @@
 #include "config.h"
+#include "crack.h"
 #include <stdio.h>
 #include <limits.h>
 int
