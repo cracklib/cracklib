@@ -82,9 +82,9 @@ PWOpen(prefix, mode)
     memset(&pdesc, '\0', sizeof(pdesc));
     memset(&pdesc64, '\0', sizeof(pdesc64));
 
-    sprintf(iname, "%s.pwi", prefix);
-    sprintf(dname, "%s.pwd", prefix);
-    sprintf(wname, "%s.hwm", prefix);
+    snprintf(iname, STRINGSIZE, "%s.pwi", prefix);
+    snprintf(dname, STRINGSIZE, "%s.pwd", prefix);
+    snprintf(wname, STRINGSIZE, "%s.hwm", prefix);
 
     if (!(pdesc.dfp = fopen(dname, mode)))
     {

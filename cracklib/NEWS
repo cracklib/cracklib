@@ -1,4 +1,6 @@
 v2.8.2  Check for LINE_MAX, cygwin workaround (sf patch #125964, Jürgen)
+	Fix a buffer overflow in packlib file handling (not a security issue)
+	  patch provided as #126097 by Jürgen
 v2.8.1	Install packer.h, php needs it, and address prototypes
 v2.8	new package, auto'ified with libtool and numerous bug fixes, forked
 	from original v2.7 distribution with the approval of the author
