@@ -18,6 +18,20 @@ AC_CHECK_HEADERS(unistd.h)
 AC_CHECK_HEADERS(fcntl.h)
 AC_CHECK_HEADERS(inttypes.h)
 
+dnl Cygwin workaround
+AC_MSG_CHECKING(if LINE_MAX is defined)
+AC_EGREP_CPP(yes,
+[#include <limits.h>
+#ifdef LINE_MAX
+yes
+#endif
+], line_max_defined=yes, line_max_defined=no)
+AC_MSG_RESULT($line_max_defined)
+
+if test "$line_max_defined" = "no"; then
+   CFLAGS="$CFLAGS -DLINE_MAX=2048"
+fi
+
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
 
