@@ -13,4 +13,4 @@ test: all
 	util/cracklib-check < test-data
 
 dict: all
-	PATH="./util:$$PATH" ./util/create-cracklib-dict dicts/cracklib*
+	PATH="./util:$$PATH" ./util/create-cracklib-dict dicts/*
