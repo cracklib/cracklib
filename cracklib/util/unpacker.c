@@ -6,14 +6,12 @@
  * and upwards.
  */
 
-#include "config.h"
-#ifdef HAVE_INTTYPES_H
-#include <inttypes.h>
-#endif
-#include "packer.h"
+#include <stdio.h>
 
-extern char *
-GetPW(PWDICT *pwp, uint32_t number);
+#define IN_CRACKLIB
+#include "config.h"
+#include "crack.h"
+#include "packer.h"
 
 int
 main(argc, argv)

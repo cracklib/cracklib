@@ -17,6 +17,7 @@ AC_PATH_XTRA
 AC_CHECK_HEADERS(unistd.h)
 AC_CHECK_HEADERS(fcntl.h)
 AC_CHECK_HEADERS(inttypes.h)
+AC_CHECK_HEADERS(stdint.h)
 
 dnl Cygwin workaround
 AC_MSG_CHECKING(if LINE_MAX is defined)

@@ -18,9 +18,18 @@ static char vers_id[] = "fascist.c : v2.3p3 Alec Muffett 14 dec 1997";
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#ifdef HAVE_INTTYPES_H
+
+#if defined(HAVE_INTTYPES_H)
 #include <inttypes.h>
+#else
+#if defined(HAVE_STDINT_H)
+#include <stdint.h>
+#else
+typedef unsigned int uint32_t;
+typedef unsigned short uint16_t;
 #endif
+#endif
+
 #include "packer.h"
 
 #define ISSKIP(x) (isspace(x) || ispunct(x))

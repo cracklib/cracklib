@@ -6,13 +6,25 @@
  * and upwards.
  */
 
-/* This header expects the SUSv2 integer types to be available, if not,
-   it will not compile. */
+#ifndef CRACKLIB_PACKER_H
+#define CRACKLIB_PACKER_H
 
+#ifdef IN_CRACKLIB
 
 #include <stdio.h>
 #include <ctype.h>
 #include <crack.h>
+
+#if defined(HAVE_INTTYPES_H)
+#include <inttypes.h>
+#else
+#if defined(HAVE_STDINT_H)
+#include <stdint.h>
+#else
+typedef unsigned int uint32_t;
+typedef unsigned short uint16_t;
+#endif
+#endif
 
 #define STRINGSIZE	1024
 #define TRUNCSTRINGSIZE	(STRINGSIZE/4)
@@ -53,9 +65,20 @@ typedef struct
 #define PW_WORDS(x) ((x)->header.pih_numwords)
 #define PIH_MAGIC 0x70775631
 
+/* Internal routines */
+extern char *GetPW(PWDICT *pwp, uint32_t number);
+
+#else
+
+/* Dummy structure, this is an internal only opaque data type */
+typedef struct {
+	int dummy;
+} PWDICT;
+
+#endif
+
 extern PWDICT *PWOpen(char *prefix, char *mode);
 extern char *Mangle(char *input, char *control);
 
-#define CRACK_TOLOWER(a) 	(isupper(a)?tolower(a):(a)) 
-#define CRACK_TOUPPER(a) 	(islower(a)?toupper(a):(a)) 
-#define STRCMP(a,b)		strcmp((a),(b))
+
+#endif

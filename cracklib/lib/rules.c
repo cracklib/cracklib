@@ -16,6 +16,10 @@ static char vers_id[] = "rules.c : v5.0p3 Alec Muffett 20 May 1993";
 #include "crack.h"
 #include "packer.h"
 
+#define CRACK_TOLOWER(a)        (isupper(a)?tolower(a):(a))
+#define CRACK_TOUPPER(a)        (islower(a)?toupper(a):(a))
+#define STRCMP(a,b)             strcmp((a),(b))
+
 #if 0
 static void
 Debug(val, a, b, c, d, e, f, g)

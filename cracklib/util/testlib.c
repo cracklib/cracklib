@@ -6,21 +6,17 @@
  * and upwards.
  */
 
-#include "config.h"
-#ifdef HAVE_INTTYPES_H
-#include <inttypes.h>
-#endif
-#include "packer.h"
+#include <stdio.h>
+#include "crack.h"
 
 int
 main ()
 {
-    uint32_t i;
-    char buffer[STRINGSIZE];
+    char buffer[1024];
 
     printf("enter potential passwords, one per line...\n");
 
-    while (fgets (buffer, STRINGSIZE, stdin))
+    while (fgets (buffer, 1000, stdin))
     {
     	char *val;
  
