@@ -9,6 +9,11 @@ libcrack_la_SOURCES = 	fascist.c \
 			packer.h \
 			crack.h 
 
-libcrack_la_LDFLAGS = -version-info 3:0:0
+#
+# For initial release, use 10:0:8 to get 2.8.0
+# For next ABI changing release, use 3:0:0
+# After that, follow the libtool recommended incrementing procedure
+#
+libcrack_la_LDFLAGS = -version-info 10:0:8
 
 AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(pkgdatadir)/pw_dict"'
