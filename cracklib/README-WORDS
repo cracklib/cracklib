@@ -1,0 +1,21 @@
+A tiny example wordlist is included with the cracklib package
+itself. A very large dictionary suitable for use with cracklib
+is also available from the cracklib sourceforge download page.
+
+Other sources for word lists include:
+
+	http://wordlist.sourceforge.net/
+
+	http://www.openwall.com/wordlists/
+
+Please note, the licenses on some of those word lists are
+restrictive, so please read the licenses before redistributing them.
+The cracklib-words distribution from the cracklib sourceforge
+project page has been built solely from word lists previously
+distributed with cracklib or crack packages and/or public
+domain word lists.
+
+For best results, supply cracklib with as large a wordlist as you 
+have available to you - blackhats brute forcing passwords have those
+same lists, might as well use it to benefit your security.
+
