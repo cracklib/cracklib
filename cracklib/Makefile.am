@@ -2,7 +2,7 @@ SUBDIRS = lib util doc
 
 EXTRA_DIST = 	\
 		autogen.sh \
-		cracklib.spec \
+		cracklib.spec.in \
 		README-DAWG \
 		README-WORDS \
 		test-data \

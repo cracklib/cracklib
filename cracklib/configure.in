@@ -25,5 +25,5 @@ dnl Check for utility functions that may need to be replaced
 AC_CHECK_FUNCS(strdup)
 AC_CHECK_FUNCS(getpwuid_r)
 
-AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile Makefile)
+AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile Makefile cracklib.spec)
 
