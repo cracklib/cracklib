@@ -252,8 +252,8 @@ GetPW(pwp, number)
 	return (data[number % NUMWORDS]);
     }
 
-fprintf(stderr, "seek to %d for block %d\n", sizeof(struct pi_header) + (thisblock * sizeof(int32)), 
-	thisblock);
+fprintf(stderr, "seek to %d for block %d lookup number %d\n", sizeof(struct pi_header) + (thisblock * sizeof(int32)), 
+	thisblock, number);
 
     if (fseek(pwp->ifp, sizeof(struct pi_header) + (thisblock * sizeof(int32)), 0))
     {
