@@ -1,3 +1,6 @@
+2005-02-08:
+    * Corrected memory leak in gecos check
+
 2005-02-04:
     * Corrected problems with invalid binary search behavior and resulting segfaults due to index read failures
     * Changed index build to include symbols and other non-alpha characters
