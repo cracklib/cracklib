@@ -18,16 +18,27 @@ main(argc, argv)
     int32 wrote;
     PWDICT *pwp;
     char buffer[STRINGSIZE];
+    char *file;
 
     if (argc <= 1)
     {
+	file = DEFAULT_CRACKLIB_DICT;
+    }
+    else 
+    {
+        file = argv[1];
+    }
+
+    if ( argc == 2 && (!strcmp(argv[1], "-h") || !strcmp(argv[1], "--help")) )
+    {
 	fprintf(stderr, "Usage:\t%s dbname\n", argv[0]);
+        fprintf(stderr, "  if dbname is not specified, will use compiled in default of (%s).", DEFAULT_CRACKLIB_DICT);
 	return (-1);
     }
 
-    if (!(pwp = PWOpen(argv[1], "w")))
+    if (!(pwp = PWOpen(file, "w")))
     {
-	perror(argv[1]);
+	perror(file);
 	return (-1);
     }
 

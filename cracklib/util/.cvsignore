@@ -7,7 +7,7 @@ testlib
 testcheck
 packer
 cracklib-packer
-create-cracklib-dict
+cracklib-check
 Makefile
 .libs
 .deps
