@@ -1,5 +1,5 @@
-v3.0	new package, auto'ified with libtool and numerous bug fixes, forked
-	from original v2.7 distribution that appeared to be abandoned.
+v2.8	new package, auto'ified with libtool and numerous bug fixes, forked
+	from original v2.7 distribution with the approval of the author
 v2.7    mkdict/tr problem eliminated;
 	misc fixes suggested by Andrey Savochkin <saw@msu.ru> (with thanks)
 v2.6    buffer overflow problems addressed - 1st attempt
