@@ -497,17 +497,19 @@ FascistGecos(password, uid)
     struct passwd *pwp, passwd;
     char gbuffer[STRINGSIZE];
     char tbuffer[STRINGSIZE];
-    char *sbuffer;
+    char *sbuffer = NULL;
+#ifdef HAVE_GETPWUID_R
     size_t sbufferlen;
+#endif
     char *uwords[STRINGSIZE];
     char longbuffer[STRINGSIZE * 2];
 
+#ifdef HAVE_GETPWUID_R
     sbuffer = malloc(sbufferlen = LINE_MAX);
     if (sbuffer == NULL)
     {
         return ("memory allocation error");
     }
-#ifdef HAVE_GETPWUID_R
     while ((i = getpwuid_r(uid, &passwd, sbuffer, sbufferlen, &pwp)) != 0)
     {
         if (i == ERANGE)
@@ -530,6 +532,11 @@ FascistGecos(password, uid)
 
     if (pwp == NULL)
     {
+	if (sbuffer)
+	{
+		free(sbuffer);
+		sbuffer = NULL;
+	}
 	return ("you are not registered in the password file");
     }
 
@@ -539,6 +546,11 @@ FascistGecos(password, uid)
     tbuffer[STRINGSIZE-1] = '\0';
     if (GTry(tbuffer, password))
     {
+	if (sbuffer)
+	{
+		free(sbuffer);
+		sbuffer = NULL;
+	}
 	return ("it is based on your username");
     }
 
@@ -599,6 +611,11 @@ FascistGecos(password, uid)
     {
 	if (GTry(uwords[i], password))
 	{
+	    if (sbuffer)
+	    {
+	    	free(sbuffer);
+		sbuffer = NULL;
+	    }
 	    return ("it is based upon your password entry");
 	}
     }
@@ -614,6 +631,11 @@ FascistGecos(password, uid)
 
 	    if (GTry(longbuffer, password))
 	    {
+	        if (sbuffer)
+	        {
+	       	    free(sbuffer);
+		    sbuffer = NULL;
+	        }
 		return ("it is derived from your password entry");
 	    }
 
@@ -622,6 +644,11 @@ FascistGecos(password, uid)
 
 	    if (GTry(longbuffer, password))
 	    {
+	        if (sbuffer)
+	        {
+	       	    free(sbuffer);
+		    sbuffer = NULL;
+	        }
 		return ("it's derived from your password entry");
 	    }
 
@@ -631,6 +658,11 @@ FascistGecos(password, uid)
 
 	    if (GTry(longbuffer, password))
 	    {
+	        if (sbuffer)
+	        {
+	       	    free(sbuffer);
+		    sbuffer = NULL;
+	        }
 		return ("it is derivable from your password entry");
 	    }
 
@@ -640,9 +672,20 @@ FascistGecos(password, uid)
 
 	    if (GTry(longbuffer, password))
 	    {
+	        if (sbuffer)
+	        {
+	       	    free(sbuffer);
+		    sbuffer = NULL;
+	        }
 		return ("it's derivable from your password entry");
 	    }
 	}
+    }
+
+    if (sbuffer)
+    {
+        free(sbuffer);
+        sbuffer = NULL;
     }
 
     return ((char *) 0);
@@ -788,6 +831,7 @@ FascistCheck(password, path)
     static char lastpath[STRINGSIZE];
     static PWDICT *pwp;
     char pwtrunced[STRINGSIZE];
+    char *res;
 
     /* If passed null for the path, use a compiled-in default */
     if ( ! path )
@@ -823,5 +867,12 @@ FascistCheck(password, path)
     }
 
     /* sure seems like we should close the database, since we're only likely to check one password */
-    return (FascistLook(pwp, pwtrunced));
+    res = FascistLook(pwp, pwtrunced);
+
+#if 0
+    PWClose(pwp);
+    pwp = (PWDICT *)0;
+#endif
+
+    return res;
 }
