@@ -7,8 +7,8 @@ EXTRA_DIST = 	\
 		README-WORDS \
 		test-data
 
-test:
-	util/testcheck < test-data
+test: all
+	util/cracklib-check < test-data
 
-dict:
+dict: all
 	PATH="./util:$$PATH" ./util/create-cracklib-dict dicts/*

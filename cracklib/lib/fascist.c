@@ -819,5 +819,6 @@ FascistCheck(password, path)
 	strncpy(lastpath, path, STRINGSIZE);
     }
 
+    /* sure seems like we should close the database, since we're only likely to check one password */
     return (FascistLook(pwp, pwtrunced));
 }
