@@ -1,6 +1,8 @@
-noinst_PROGRAMS = testcheck packer testlib testnum teststr unpacker
+sbin_PROGRAMS = cracklib-packer
 
-sbin_SCRIPTS = mkdict
+noinst_PROGRAMS = testcheck cracklib-packer testlib testnum teststr unpacker
+
+sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
 LDADD = ../lib/libcrack.la
 AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib 
@@ -8,8 +10,8 @@ AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib
 testcheck_SOURCES = testcheck.c
 testcheck_LDADD = $(LDADD)
 
-packer_SOURCES = packer.c
-packer_LDADD = $(LDADD)
+cracklib-packer_SOURCES = packer.c
+cracklib-packer_LDADD = $(LDADD)
 
 testlib_SOURCES = testlib.c
 testlib_LDADD = $(LDADD)

@@ -1,1 +1,13 @@
 Makefile.in
+cracklib-unpacker
+unpacker
+teststr
+testnum
+testlib
+testcheck
+packer
+cracklib-packer
+create-cracklib-dict
+Makefile
+.libs
+.deps
