@@ -4,6 +4,8 @@ noinst_PROGRAMS = cracklib-packer testlib testnum teststr unpacker
 
 sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
+EXTRA_DIST = create-cracklib-dict cracklib-format
+
 LDADD = ../lib/libcrack.la
 
 AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(pkgdatadir)/pw_dict"'

@@ -5,10 +5,12 @@ EXTRA_DIST = 	\
 		cracklib.spec \
 		README-DAWG \
 		README-WORDS \
-		test-data
+		test-data \
+		dicts/cracklib-small
+
 
 test: all
 	util/cracklib-check < test-data
 
 dict: all
-	PATH="./util:$$PATH" ./util/create-cracklib-dict dicts/*
+	PATH="./util:$$PATH" ./util/create-cracklib-dict dicts/cracklib*
