@@ -1,5 +1,6 @@
 2005-02-08:
     * Corrected memory leak in gecos check
+    * Started work to make everything re-entrant, albeit at a performance loss for apps that do repeated checks
 
 2005-02-04:
     * Corrected problems with invalid binary search behavior and resulting segfaults due to index read failures

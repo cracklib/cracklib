@@ -499,13 +499,13 @@ FascistGecos(password, uid)
     char tbuffer[STRINGSIZE];
     char *sbuffer = NULL;
 #ifdef HAVE_GETPWUID_R
-    size_t sbufferlen;
+    size_t sbufferlen = LINE_MAX;
 #endif
     char *uwords[STRINGSIZE];
     char longbuffer[STRINGSIZE * 2];
 
 #ifdef HAVE_GETPWUID_R
-    sbuffer = malloc(sbufferlen = LINE_MAX);
+    sbuffer = malloc(sbufferlen);
     if (sbuffer == NULL)
     {
         return ("memory allocation error");
@@ -515,7 +515,10 @@ FascistGecos(password, uid)
         if (i == ERANGE)
         {
             free(sbuffer);
-            sbuffer = malloc(sbufferlen += LINE_MAX);
+
+	    sbufferlen += LINE_MAX;
+            sbuffer = malloc(sbufferlen);
+
             if (sbuffer == NULL)
             {
                 return ("memory allocation error");
@@ -828,8 +831,7 @@ FascistCheck(password, path)
     char *password;
     char *path;
 {
-    static char lastpath[STRINGSIZE];
-    static PWDICT *pwp;
+    PWDICT *pwp;
     char pwtrunced[STRINGSIZE];
     char *res;
 
@@ -850,29 +852,19 @@ FascistCheck(password, path)
     /* perhaps someone should put something here to check if password
        is really long and syslog() a message denoting buffer attacks?  */
 
-    if (pwp && strncmp(lastpath, path, STRINGSIZE))
+    if (!(pwp = PWOpen(path, "r")))
     {
-	PWClose(pwp);
-	pwp = (PWDICT *)0;
-    }
-
-    if (!pwp)
-    {
-	if (!(pwp = PWOpen(path, "r")))
-	{
-	    perror("PWOpen");
-	    exit(-1);
-	}
-	strncpy(lastpath, path, STRINGSIZE);
+        /* shouldn't perror in a library or exit */
+	/* but should we return a "bad password" or "good password" if this error occurs */
+	perror("PWOpen");
+	exit(-1);
     }
 
     /* sure seems like we should close the database, since we're only likely to check one password */
     res = FascistLook(pwp, pwtrunced);
 
-#if 0
     PWClose(pwp);
     pwp = (PWDICT *)0;
-#endif
 
     return res;
 }
