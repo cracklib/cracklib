@@ -21,3 +21,4 @@ config.status
 libtool
 stamp-h1
 stamp-h
+cracklib.spec
