@@ -7,12 +7,15 @@
  */
 
 #include "config.h"
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 #include "packer.h"
 
 int
 main ()
 {
-    int32 i;
+    uint32_t i;
     char buffer[STRINGSIZE];
 
     printf("enter potential passwords, one per line...\n");

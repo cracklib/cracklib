@@ -7,17 +7,20 @@
  */
 
 #include "config.h"
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 #include "packer.h"
 
 extern char *
-GetPW(PWDICT *pwp, int32 number);
+GetPW(PWDICT *pwp, uint32_t number);
 
 int
 main(argc, argv)
     int argc;
     char *argv[];
 {
-    int32 i;
+    uint32_t i;
     PWDICT *pwp;
     char buffer[STRINGSIZE];
 

@@ -9,7 +9,6 @@
 static char vers_id[] = "fascist.c : v2.3p3 Alec Muffett 14 dec 1997";
 
 #include "config.h"
-#include "packer.h"
 #include <sys/types.h>
 #include <errno.h>
 #include <limits.h>
@@ -19,6 +18,10 @@ static char vers_id[] = "fascist.c : v2.3p3 Alec Muffett 14 dec 1997";
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
+#include "packer.h"
 
 #define ISSKIP(x) (isspace(x) || ispunct(x))
 
@@ -705,7 +708,7 @@ FascistLook(pwp, instring)
     char junk[STRINGSIZE];
     char *password;
     char rpassword[STRINGSIZE];
-    int32 notfound;
+    uint32_t notfound;
 
     notfound = PW_WORDS(pwp);
     /* already truncated if from FascistCheck() */

@@ -7,12 +7,15 @@
  */
 
 #include "config.h"
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 #include "packer.h"
 
 int
 main ()
 {
-    int32 i;
+    uint32_t i;
     PWDICT *pwp;
     char buffer[STRINGSIZE];
 
@@ -26,7 +29,7 @@ main ()
 
     while (fgets (buffer, STRINGSIZE, stdin))
     {
-    	int32 i;
+    	uint32_t i;
 
 	Chop(buffer);
 	i = FindPW(pwp, buffer);

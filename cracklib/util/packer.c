@@ -7,6 +7,9 @@
  */
 
 #include "config.h"
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 #include "packer.h"
 
 int
@@ -14,8 +17,8 @@ main(argc, argv)
     int argc;
     char *argv[];
 {
-    int32 readed;
-    int32 wrote;
+    uint32_t readed;
+    uint32_t wrote;
     PWDICT *pwp;
     char buffer[STRINGSIZE];
     char *file;

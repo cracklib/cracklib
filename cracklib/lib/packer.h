@@ -6,15 +6,16 @@
  * and upwards.
  */
 
+/* This header expects the SUSv2 integer types to be available, if not,
+   it will not compile. */
+
+
 #include <stdio.h>
 #include <ctype.h>
 
 #define STRINGSIZE	1024
 #define TRUNCSTRINGSIZE	(STRINGSIZE/4)
 
-typedef unsigned char int8;
-typedef unsigned short int int16;
-typedef unsigned long int int32;
 #ifndef NUMWORDS
 #define NUMWORDS 	16
 #endif
@@ -23,10 +24,10 @@ typedef unsigned long int int32;
 
 struct pi_header
 {
-    int32 pih_magic;
-    int32 pih_numwords;
-    int16 pih_blocklen;
-    int16 pih_pad;
+    uint32_t pih_magic;
+    uint32_t pih_numwords;
+    uint16_t pih_blocklen;
+    uint16_t pih_pad;
 };
 
 typedef struct
@@ -35,12 +36,12 @@ typedef struct
     FILE *dfp;
     FILE *wfp;
 
-    int32 flags;
+    uint32_t flags;
 #define PFOR_WRITE	0x0001
 #define PFOR_FLUSH	0x0002
 #define PFOR_USEHWMS	0x0004
 
-    int32 hwms[256];
+    uint32_t hwms[256];
 
     struct pi_header header;
 

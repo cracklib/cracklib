@@ -1,3 +1,6 @@
+2005-02-09:
+    * Updated source to use SUSv2 specified integer types instead
+
 2005-02-08:
     * Corrected memory leak in gecos check
     * Started work to make everything re-entrant, albeit at a performance loss for apps that do repeated checks

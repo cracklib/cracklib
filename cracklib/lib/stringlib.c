@@ -7,8 +7,11 @@
  */
 
 #include "config.h"
-#include "packer.h"
 #include <string.h>
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
+#include "packer.h"
 
 static char vers_id[] = "stringlib.c : v2.3p2 Alec Muffett 18 May 1993";
 

@@ -1,4 +1,7 @@
 #include "config.h"
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 #include "crack.h"
 #include <stdio.h>
 #include <limits.h>

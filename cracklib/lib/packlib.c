@@ -8,6 +8,10 @@
 
 #include "config.h"
 #include <string.h>
+#include <stdlib.h>
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 #include "packer.h"
 
 static char vers_id[] = "packlib.c : v2.3p2 Alec Muffett 18 May 1993";
@@ -19,7 +23,7 @@ PWOpen(prefix, mode)
     char *prefix;
     char *mode;
 {
-    int32 i;
+    uint32_t i;
     static PWDICT pdesc;
     char iname[STRINGSIZE];
     char dname[STRINGSIZE];
@@ -205,10 +209,10 @@ PutPW(pwp, string)
     if ((pwp->flags & PFOR_FLUSH) || !(pwp->count % NUMWORDS))
     {
 	int i;
-	int32 datum;
+	uint32_t datum;
 	register char *ostr;
 
-	datum = (int32) ftell(pwp->dfp);
+	datum = (uint32_t) ftell(pwp->dfp);
 
 	fwrite((char *) &datum, sizeof(datum), 1, pwp->ifp);
 
@@ -243,17 +247,17 @@ PutPW(pwp, string)
 char *
 GetPW(pwp, number)
     PWDICT *pwp;
-    int32 number;
+    uint32_t number;
 {
-    int32 datum;
+    uint32_t datum;
     register int i;
     register char *ostr;
     register char *nstr;
     register char *bptr;
     char buffer[NUMWORDS * MAXWORDLEN];
     static char data[NUMWORDS][MAXWORDLEN];
-    static int32 prevblock = 0xffffffff;
-    int32 thisblock;
+    static uint32_t prevblock = 0xffffffff;
+    uint32_t thisblock;
 
     thisblock = number / NUMWORDS;
 
@@ -265,7 +269,7 @@ GetPW(pwp, number)
 	return (data[number % NUMWORDS]);
     }
 
-    if (fseek(pwp->ifp, sizeof(struct pi_header) + (thisblock * sizeof(int32)), 0))
+    if (fseek(pwp->ifp, sizeof(struct pi_header) + (thisblock * sizeof(uint32_t)), 0))
     {
 	perror("(index fseek failed)");
 	return ((char *) 0);
@@ -311,14 +315,14 @@ GetPW(pwp, number)
     return (data[number % NUMWORDS]);
 }
 
-int32
+uint32_t
 FindPW(pwp, string)
     PWDICT *pwp;
     char *string;
 {
-    register int32 lwm;
-    register int32 hwm;
-    register int32 middle;
+    register uint32_t lwm;
+    register uint32_t hwm;
+    register uint32_t middle;
     register char *this;
     int idx;
 
