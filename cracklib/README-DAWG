@@ -1,0 +1,35 @@
+How does the DAWG dictionary-compression algorithm work?
+
+Essentially it is a preprocessor for gzip that removes redundancy from a sorted list of words, and typically shrinks an input wordlist by some 50% without negatively impacting gzip's ability to further compress the file.
+
+In the new version of the DAWG code - slightly improved over the version that ships with Crack v5.0, but fundamentally the same - all you need do is:
+
+   1. sort the wordlist into normal Unix order. (beware localization!)
+   2. for each word that the DAWG preprocessor reads...
+   3. count how many leading characters it shares with the previous word that was read...
+   4. encode that number as a character from the set [0-9A-Za-z] for values 0..61 (if the value is >61 then stop there)
+   5. print said character (the encoded number) and the remaining stem of the word
+   6. end-for-loop 
+
+eg:
+
+foo
+foot
+footle
+fubar
+fub
+grunt
+
+compresses to:
+
+#!xdawg 	magic header
+0foo 	first word has no letters in common with anything
+3t 	next has three letters in common, and a 't'
+4le 	"foot" + "le"
+1ubar 	"f" + "ubar"
+3 	"fub" + "" => truncation
+0grunt 	back to nothing in common
+
+Inspiration for using DAWG in Crack came from Paul Leyland back in the early 1990s, who mentioned something similar being used to encode dictionaries for crossword-puzzle solving programs; we continue to be astonished at how effective DAWG is on sorted inputs without materially impacting subsequent compression (ie: gzip); a gzipped-DAWG file is also typically about 50% of the size of the gzipped non-DAWGed file.
+
+Just goes to prove that knowledge of the sort of input you'll be dealing with, can beat a general-purpose program hands-down; there are also interesting conclusions that can be drawn regarding the entropy of human languages after sorting. 

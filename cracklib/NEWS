@@ -1,0 +1,9 @@
+v3.0	new package, auto'ified with libtool and numerous bug fixes, forked
+	from original v2.7 distribution that appeared to be abandoned.
+v2.7    mkdict/tr problem eliminated;
+	misc fixes suggested by Andrey Savochkin <saw@msu.ru> (with thanks)
+v2.6    buffer overflow problems addressed - 1st attempt
+	permutations of fascist deconstructors fixed/enhanced
+v2.5    added decent info to the "shadow" directory patches.
+v2.4    forwarded to ch & jfh3 for beta testing/comments
+v2.3-   internal beta test versions
