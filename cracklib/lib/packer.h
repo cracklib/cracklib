@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <crack.h>
 
 #define STRINGSIZE	1024
 #define TRUNCSTRINGSIZE	(STRINGSIZE/4)
@@ -52,9 +53,8 @@ typedef struct
 #define PW_WORDS(x) ((x)->header.pih_numwords)
 #define PIH_MAGIC 0x70775631
 
-extern PWDICT *PWOpen();
-extern char *Mangle();
-extern char *FascistCheck();
+extern PWDICT *PWOpen(char *prefix, char *mode);
+extern char *Mangle(char *input, char *control);
 
 #define CRACK_TOLOWER(a) 	(isupper(a)?tolower(a):(a)) 
 #define CRACK_TOUPPER(a) 	(islower(a)?toupper(a):(a)) 

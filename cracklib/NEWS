@@ -1,3 +1,4 @@
+v2.8.1	Install packer.h, php needs it, and address prototypes
 v2.8	new package, auto'ified with libtool and numerous bug fixes, forked
 	from original v2.7 distribution with the approval of the author
 v2.7    mkdict/tr problem eliminated;

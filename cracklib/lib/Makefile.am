@@ -1,6 +1,6 @@
 lib_LTLIBRARIES = libcrack.la
 
-include_HEADERS = crack.h
+include_HEADERS = crack.h packer.h
 
 libcrack_la_SOURCES = 	fascist.c \
 			packlib.c \
