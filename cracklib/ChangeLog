@@ -1,3 +1,6 @@
+2005-02-14:
+    * Integrated the redhat/fedora patch for broken 64bit dictionaries
+
 2005-02-09:
     * Updated source to use SUSv2 specified integer types instead
 
