@@ -1,17 +1,20 @@
-sbin_PROGRAMS = cracklib-packer
+sbin_PROGRAMS = cracklib-packer cracklib-unpacker cracklib-check
 
-noinst_PROGRAMS = testcheck cracklib-packer testlib testnum teststr unpacker
+noinst_PROGRAMS = cracklib-packer testlib testnum teststr unpacker
 
 sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
 LDADD = ../lib/libcrack.la
 AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib 
 
-testcheck_SOURCES = testcheck.c
-testcheck_LDADD = $(LDADD)
+cracklib-check_SOURCES = cracklib-check.c
+cracklib-check_LDADD = $(LDADD)
 
 cracklib-packer_SOURCES = packer.c
 cracklib-packer_LDADD = $(LDADD)
+
+cracklib-unpacker_SOURCES = unpacker.c
+cracklib-unpacker_LDADD = $(LDADD)
 
 testlib_SOURCES = testlib.c
 testlib_LDADD = $(LDADD)
@@ -21,7 +24,4 @@ testnum_LDADD = $(LDADD)
 
 teststr_SOURCES = teststr.c
 teststr_LDADD = $(LDADD)
-
-unpacker_SOURCES = unpacker.c
-unpacker_LDADD = $(LDADD)
 
