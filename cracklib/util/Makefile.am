@@ -1,6 +1,6 @@
 sbin_PROGRAMS = cracklib-packer cracklib-unpacker cracklib-check
 
-noinst_PROGRAMS = cracklib-packer testlib testnum teststr unpacker
+noinst_PROGRAMS = testlib testnum teststr 
 
 sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
