@@ -35,7 +35,7 @@ main(argc, argv)
     if ( argc == 2 && (!strcmp(argv[1], "-h") || !strcmp(argv[1], "--help")) )
     {
 	fprintf(stderr, "Usage:\t%s dbname\n", argv[0]);
-        fprintf(stderr, "  if dbname is not specified, will use compiled in default of (%s).", DEFAULT_CRACKLIB_DICT);
+        fprintf(stderr, "  if dbname is not specified, will use compiled in default of (%s).\n", DEFAULT_CRACKLIB_DICT);
 	return (-1);
     }
 
