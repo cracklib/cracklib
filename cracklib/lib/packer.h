@@ -9,6 +9,16 @@
 #ifndef CRACKLIB_PACKER_H
 #define CRACKLIB_PACKER_H
 
+/* Moved here cause needed by mod_php */
+#define STRINGSIZE	1024
+#define TRUNCSTRINGSIZE	(STRINGSIZE/4)
+
+#ifndef NUMWORDS
+#define NUMWORDS 	16
+#endif
+#define MAXWORDLEN	32
+#define MAXBLOCKLEN 	(MAXWORDLEN * NUMWORDS)
+
 #ifdef IN_CRACKLIB
 
 #include <stdio.h>
@@ -26,14 +36,6 @@ typedef unsigned short uint16_t;
 #endif
 #endif
 
-#define STRINGSIZE	1024
-#define TRUNCSTRINGSIZE	(STRINGSIZE/4)
-
-#ifndef NUMWORDS
-#define NUMWORDS 	16
-#endif
-#define MAXWORDLEN	32
-#define MAXBLOCKLEN 	(MAXWORDLEN * NUMWORDS)
 
 struct pi_header
 {
