@@ -7,6 +7,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 
 #define IN_CRACKLIB
 #include "config.h"
@@ -58,13 +59,13 @@ main(argc, argv)
 
 	if (!buffer[0])
 	{
-	    fprintf(stderr, "skipping line: %lu\n", readed);
+	    fprintf(stderr, "skipping line: %u\n", readed);
 	    continue;
 	}
 
 	if (PutPW(pwp, buffer))
 	{
-	    fprintf(stderr, "error: PutPW '%s' line %luy\n", buffer, readed);
+	    fprintf(stderr, "error: PutPW '%s' line %uy\n", buffer, readed);
 	}
 
 	wrote++;
@@ -72,7 +73,7 @@ main(argc, argv)
 
     PWClose(pwp);
 
-    printf("%lu %lu\n", readed, wrote);
+    printf("%u %u\n", readed, wrote);
 
     return (0);
 }

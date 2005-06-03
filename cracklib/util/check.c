@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+#include <string.h>
 
 #define IN_CRACKLIB
 #include "config.h"

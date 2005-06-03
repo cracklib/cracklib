@@ -20,7 +20,6 @@ main(argc, argv)
 {
     uint32_t i;
     PWDICT *pwp;
-    char buffer[STRINGSIZE];
 
     if (argc <= 1)
     {

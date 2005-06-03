@@ -14,7 +14,6 @@
 int
 main ()
 {
-    uint32_t i;
     PWDICT *pwp;
     char buffer[STRINGSIZE];
 
@@ -32,7 +31,7 @@ main ()
 
 	Chop(buffer);
 	i = FindPW(pwp, buffer);
-	printf ("%s: %lu%s\n", buffer, i, (i==PW_WORDS(pwp) ? " **** NOT FOUND ****" : ""));
+	printf ("%s: %u%s\n", buffer, i, (i==PW_WORDS(pwp) ? " **** NOT FOUND ****" : ""));
     }
 
     return (0);

@@ -61,14 +61,12 @@ PWOpen(prefix, mode)
     char *prefix;
     char *mode;
 {
-    uint32_t i;
     int use64 = 0;
     static PWDICT pdesc;
     static PWDICT64 pdesc64;
     char iname[STRINGSIZE];
     char dname[STRINGSIZE];
     char wname[STRINGSIZE];
-    char buffer[STRINGSIZE];
     FILE *dfp;
     FILE *ifp;
     FILE *wfp;
@@ -99,7 +97,7 @@ PWOpen(prefix, mode)
 	return ((PWDICT *) 0);
     }
 
-    if (pdesc.wfp = fopen(wname, mode))
+    if ((pdesc.wfp = fopen(wname, mode)))
     {
 	pdesc.flags |= PFOR_USEHWMS;
     }
@@ -406,7 +404,7 @@ GetPW(pwp, number)
 
     bptr = buffer;
 
-    for (ostr = data[0]; *(ostr++) = *(bptr++); /* nothing */ );
+    for (ostr = data[0]; (*(ostr++) = *(bptr++)); /* nothing */ );
 
     ostr = data[0];
 
@@ -416,7 +414,7 @@ GetPW(pwp, number)
 	strcpy(nstr, ostr);
 
 	ostr = nstr + *(bptr++);
-	while (*(ostr++) = *(bptr++));
+	while ((*(ostr++) = *(bptr++)));
 
 	ostr = nstr;
     }
