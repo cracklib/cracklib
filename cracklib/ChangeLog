@@ -1,5 +1,6 @@
 2005-06-03:
     * Applied patch #1214251 from Thorsten Kukuk for some compiler warnings.
+    * Applied patch #1214259 from Thorsten Kukuk for internationalization support.
 
 2005-02-14:
     * Integrated the redhat/fedora patch for broken 64bit dictionaries

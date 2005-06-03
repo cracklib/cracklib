@@ -552,7 +552,7 @@ FascistGecos(password, uid)
 		free(sbuffer);
 		sbuffer = NULL;
 	}
-	return ("you are not registered in the password file");
+	return _("you are not registered in the password file");
     }
 
     /* lets get really paranoid and assume a dangerously long gecos entry */
@@ -566,7 +566,7 @@ FascistGecos(password, uid)
 		free(sbuffer);
 		sbuffer = NULL;
 	}
-	return ("it is based on your username");
+	return _("it is based on your username");
     }
 
     /* it never used to be that you got passwd strings > 1024 chars, but now... */
@@ -631,7 +631,7 @@ FascistGecos(password, uid)
 	    	free(sbuffer);
 		sbuffer = NULL;
 	    }
-	    return ("it is based upon your password entry");
+	    return _("it is based upon your password entry");
 	}
     }
 
@@ -651,7 +651,7 @@ FascistGecos(password, uid)
 	       	    free(sbuffer);
 		    sbuffer = NULL;
 	        }
-		return ("it is derived from your password entry");
+		return _("it is derived from your password entry");
 	    }
 
 	    strcpy(longbuffer, uwords[j]);
@@ -664,7 +664,7 @@ FascistGecos(password, uid)
 	       	    free(sbuffer);
 		    sbuffer = NULL;
 	        }
-		return ("it's derived from your password entry");
+		return _("it's derived from your password entry");
 	    }
 
 	    longbuffer[0] = uwords[i][0];
@@ -678,7 +678,7 @@ FascistGecos(password, uid)
 	       	    free(sbuffer);
 		    sbuffer = NULL;
 	        }
-		return ("it is derivable from your password entry");
+		return _("it is derivable from your password entry");
 	    }
 
 	    longbuffer[0] = uwords[j][0];
@@ -692,7 +692,7 @@ FascistGecos(password, uid)
 	       	    free(sbuffer);
 		    sbuffer = NULL;
 	        }
-		return ("it's derivable from your password entry");
+		return _("it's derivable from your password entry");
 	    }
 	}
     }
@@ -728,12 +728,12 @@ FascistLook(pwp, instring)
 
     if (strlen(password) < 4)
     {
-	return ("it's WAY too short");
+	return _("it is WAY too short");
     }
 
     if (strlen(password) < MINLEN)
     {
-	return ("it is too short");
+	return _("it is too short");
     }
 
     jptr = junk;
@@ -750,7 +750,7 @@ FascistLook(pwp, instring)
 
     if (strlen(junk) < MINDIFF)
     {
-	return ("it does not contain enough DIFFERENT characters");
+	return _("it does not contain enough DIFFERENT characters");
     }
 
     strcpy(password, (char *)Lowercase(password));
@@ -764,7 +764,7 @@ FascistLook(pwp, instring)
 
     if (!*password)
     {
-	return ("it is all whitespace");
+	return _("it is all whitespace");
     }
 
     i = 0;
@@ -780,12 +780,12 @@ FascistLook(pwp, instring)
 
     if (i > MAXSTEP)
     {
-	return ("it is too simplistic/systematic");
+	return _("it is too simplistic/systematic");
     }
 
     if (PMatch("aadddddda", password))  /* smirk */
     {
-	return ("it looks like a National Insurance number.");
+	return _("it looks like a National Insurance number.");
     }
 
     if (ptr = FascistGecos(password, getuid()))
@@ -812,7 +812,7 @@ FascistLook(pwp, instring)
 
 	if (FindPW(pwp, a) != notfound)
 	{
-	    return ("it is based on a dictionary word");
+	    return _("it is based on a dictionary word");
 	}
     }
 
@@ -831,7 +831,7 @@ FascistLook(pwp, instring)
 #endif
 	if (FindPW(pwp, a) != notfound)
 	{
-	    return ("it is based on a (reversed) dictionary word");
+	    return _("it is based on a (reversed) dictionary word");
 	}
     }
 

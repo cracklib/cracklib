@@ -25,6 +25,9 @@
 #include <ctype.h>
 #include <crack.h>
 
+#include <libintl.h>
+#define _(String) dgettext("cracklib", String)
+
 #if defined(HAVE_INTTYPES_H)
 #include <inttypes.h>
 #else
