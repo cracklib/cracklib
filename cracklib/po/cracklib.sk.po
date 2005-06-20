@@ -1,0 +1,124 @@
+# translation of cracklib.po to Slovak
+# This file is put in the public domain.
+# Stanislav Visnovsky <visnov@suse.cz>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib\n"
+"POT-Creation-Date: 2003-05-08 17:02+0000\n"
+"PO-Revision-Date: 2003-08-20 14:12+0200\n"
+"Last-Translator: Stanislav Visnovsky <visnov@suse.cz>\n"
+"Language-Team: Slovak <sk-i18n@linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2beta3\n"
+
+#: ../cracklib/fascist.c:498
+msgid "you are not registered in the password file"
+msgstr "účet nie je zaregistrovaný v súbore hesiel"
+
+#: ../cracklib/fascist.c:507
+msgid "it is based on your username"
+msgstr "je založené na mene vášho účtu"
+
+#: ../cracklib/fascist.c:567
+msgid "it is based upon your password entry"
+msgstr "je založené na zázname o účte"
+
+#: ../cracklib/fascist.c:582
+msgid "it is derived from your password entry"
+msgstr "je odvodené zo záznamu o účte"
+
+#: ../cracklib/fascist.c:590
+msgid "it's derived from your password entry"
+msgstr "je odvodené zo záznamu o účte"
+
+#: ../cracklib/fascist.c:599
+msgid "it is derivable from your password entry"
+msgstr "je odvoditeľné zo záznamu o účte"
+
+#: ../cracklib/fascist.c:608
+msgid "it's derivable from your password entry"
+msgstr "je odvoditeľné zo záznamu o účte"
+
+#: ../cracklib/fascist.c:638
+msgid "it's WAY too short"
+msgstr "je PRÍLIŠ krátke"
+
+#: ../cracklib/fascist.c:643
+msgid "it is too short"
+msgstr "je príliš krátke"
+
+#: ../cracklib/fascist.c:660
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "neobsahuje dosť RÔZNYCH znakov"
+
+#: ../cracklib/fascist.c:674
+msgid "it is all whitespace"
+msgstr "obsahuje iba medzery a tabulátory"
+
+#: ../cracklib/fascist.c:690
+msgid "it is too simplistic/systematic"
+msgstr "je príliš jednoduché alebo systematické"
+
+#: ../cracklib/fascist.c:695
+msgid "it looks like a National Insurance number."
+msgstr "vyzerá ako číslo poistky"
+
+#: ../cracklib/fascist.c:722
+msgid "it is based on a dictionary word"
+msgstr "je založené na slove zo slovníka"
+
+#: ../cracklib/fascist.c:741
+msgid "it is based on a (reversed) dictionary word"
+msgstr "je založené na (obrátenom) slove zo slovníka"
+
+#: ../cracklib/packlib.c:29
+#, c-format
+msgid "%s: another dictionary already open\n"
+msgstr "%s: už je otvorený iný slovník\n"
+
+#: ../cracklib/packlib.c:75
+#, c-format
+msgid "%s: error reading header\n"
+msgstr "%s: chyba pri čítaní hlavičky\n"
+
+#: ../cracklib/packlib.c:85
+#, c-format
+msgid "%s: magic mismatch\n"
+msgstr "%s: chyba magického čísla\n"
+
+#: ../cracklib/packlib.c:95
+#, c-format
+msgid "%s: size mismatch\n"
+msgstr "%s: chyba veľkosti\n"
+
+#: ../cracklib/packlib.c:121
+msgid "PWClose: close magic mismatch\n"
+msgstr "PWClose: chyba magického čísla pri zatvorení\n"
+
+#: ../cracklib/packlib.c:132
+msgid "index magic fseek failed\n"
+msgstr "zlyhalo hľadanie magického čísla indexu\n"
+
+#: ../cracklib/packlib.c:138
+msgid "index magic fwrite failed\n"
+msgstr "zlyhal zápis magického čísla indexu\n"
+
+#: ../cracklib/packlib.c:254
+msgid "(index fseek failed)"
+msgstr "(hľadanie indexu zlyhalo)"
+
+#: ../cracklib/packlib.c:260
+msgid "(index fread failed)"
+msgstr "(čítanie indexu zlyhalo)"
+
+#: ../cracklib/packlib.c:266
+msgid "(data fseek failed)"
+msgstr "(hľadanie dát zlyhalo)"
+
+#: ../cracklib/packlib.c:272
+msgid "(data fread failed)"
+msgstr "(čítanie dát zlyhalo)"
+

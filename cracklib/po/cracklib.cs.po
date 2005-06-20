@@ -1,0 +1,123 @@
+# translation of cracklib.po to czech
+# Klara Cihlarova <koty@seznam.cz>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib\n"
+"POT-Creation-Date: 2003-05-08 17:02+0000\n"
+"PO-Revision-Date: 2003-09-18 14:34+0200\n"
+"Last-Translator: Klara Cihlarova <koty@seznam.cz>\n"
+"Language-Team: czech <suse@suse.cz>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2\n"
+
+#: ../cracklib/fascist.c:498
+msgid "you are not registered in the password file"
+msgstr "nejste zaneseni v souboru hesel"
+
+#: ../cracklib/fascist.c:507
+msgid "it is based on your username"
+msgstr "je založeno na vašem uživatelském jménu"
+
+#: ../cracklib/fascist.c:567
+msgid "it is based upon your password entry"
+msgstr "je založeno na záznamu účtu"
+
+#: ../cracklib/fascist.c:582
+msgid "it is derived from your password entry"
+msgstr "je odvozené z vašeho záznamu účtu"
+
+#: ../cracklib/fascist.c:590
+msgid "it's derived from your password entry"
+msgstr "je odvozen ze záznamu účtu"
+
+#: ../cracklib/fascist.c:599
+msgid "it is derivable from your password entry"
+msgstr "je odvoditelné ze záznamu účtu"
+
+#: ../cracklib/fascist.c:608
+msgid "it's derivable from your password entry"
+msgstr "je odvoditelné ze záznamu účtu"
+
+#: ../cracklib/fascist.c:638
+msgid "it's WAY too short"
+msgstr "je PŘÍLIŠ krátké"
+
+#: ../cracklib/fascist.c:643
+msgid "it is too short"
+msgstr "je příliš krátké"
+
+#: ../cracklib/fascist.c:660
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "neobsahuje dostatečný počet ODLIŠNÝCH znaků"
+
+#: ../cracklib/fascist.c:674
+msgid "it is all whitespace"
+msgstr "vše jsou pouze mezery"
+
+#: ../cracklib/fascist.c:690
+msgid "it is too simplistic/systematic"
+msgstr "je příliš jednoduché nebo systematické"
+
+#: ../cracklib/fascist.c:695
+msgid "it looks like a National Insurance number."
+msgstr "vypadá jako rodné číslo."
+
+#: ../cracklib/fascist.c:722
+msgid "it is based on a dictionary word"
+msgstr "je založeno na slovu ze slovníku"
+
+#: ../cracklib/fascist.c:741
+msgid "it is based on a (reversed) dictionary word"
+msgstr "je založeno na (obráceném) slově ze slovníku"
+
+#: ../cracklib/packlib.c:29
+#, c-format
+msgid "%s: another dictionary already open\n"
+msgstr "%s: je již otevřen jiný slovník\n"
+
+#: ../cracklib/packlib.c:75
+#, c-format
+msgid "%s: error reading header\n"
+msgstr "%s: chyba při načítání hlavičky\n"
+
+#: ../cracklib/packlib.c:85
+#, c-format
+msgid "%s: magic mismatch\n"
+msgstr "%s: chyba magického čísla\n"
+
+#: ../cracklib/packlib.c:95
+#, c-format
+msgid "%s: size mismatch\n"
+msgstr "%s: špatná velikost\n"
+
+#: ../cracklib/packlib.c:121
+msgid "PWClose: close magic mismatch\n"
+msgstr "PWClose: chyba magického čísla při zavření\n"
+
+#: ../cracklib/packlib.c:132
+msgid "index magic fseek failed\n"
+msgstr "selhání při hledání indexu magického čísla\n"
+
+#: ../cracklib/packlib.c:138
+msgid "index magic fwrite failed\n"
+msgstr "chyba při zápisu indexu magického čísla\n"
+
+#: ../cracklib/packlib.c:254
+msgid "(index fseek failed)"
+msgstr "(selhalo hledání indexu)"
+
+#: ../cracklib/packlib.c:260
+msgid "(index fread failed)"
+msgstr "(selhalo čtení indexu)"
+
+#: ../cracklib/packlib.c:266
+msgid "(data fseek failed)"
+msgstr "(selhalo hledání dat)"
+
+#: ../cracklib/packlib.c:272
+msgid "(data fread failed)"
+msgstr "(chyba čtení dat)"
+

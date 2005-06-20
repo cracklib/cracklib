@@ -1,0 +1,71 @@
+# translation of cracklib.hu.po to hungarian
+# translation of cracklib.po to hungarian
+# This file is put in the public domain.
+# Marcel Hilzinger <hili@suselinux.hu>, 2003.
+# Gábor Szentiványi <szenti@suselinux.hu>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib.hu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-11-27 12:49+0000\n"
+"PO-Revision-Date: 2003-12-18 18:06+0100\n"
+"Last-Translator: Gábor Szentiványi <szenti@suselinux.hu>\n"
+"Language-Team: hungarian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
+
+#: ../cracklib/fascist.c:498
+msgid "you are not registered in the password file"
+msgstr "Ön nem szerepel a password fájlban"
+
+#: ../cracklib/fascist.c:507
+msgid "it is based on your username"
+msgstr "az Ön felhasználónevén alapszik"
+
+#: ../cracklib/fascist.c:567
+msgid "it is based upon your password entry"
+msgstr "az Ön jelszó bejegyzésén alapszik"
+
+#: ../cracklib/fascist.c:582 ../cracklib/fascist.c:590
+msgid "it is derived from your password entry"
+msgstr "az Ön jelszó bejegyzéséból lett leszármaztatva"
+
+#: ../cracklib/fascist.c:599 ../cracklib/fascist.c:608
+msgid "it is derivable from your password entry"
+msgstr "kitalálható az Ön jelszóbejegyzéséből"
+
+#: ../cracklib/fascist.c:638
+msgid "it is WAY too short"
+msgstr "nagyon rövid"
+
+#: ../cracklib/fascist.c:643
+msgid "it is too short"
+msgstr "túl rövid"
+
+#: ../cracklib/fascist.c:660
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "nem tartalmaz elegendő számú KÜLÖNBÖZŐ karaktert"
+
+#: ../cracklib/fascist.c:674
+msgid "it is all whitespace"
+msgstr "csak szóköz-szerű karakterekből áll"
+
+#: ../cracklib/fascist.c:690
+msgid "it is too simplistic/systematic"
+msgstr "túl egyszerű vagy szisztematikus"
+
+#: ../cracklib/fascist.c:695
+msgid "it looks like a National Insurance number."
+msgstr "úgy néz ki, mint egy TAJ szám"
+
+#: ../cracklib/fascist.c:722
+msgid "it is based on a dictionary word"
+msgstr "a szótárban megtalálható"
+
+#: ../cracklib/fascist.c:741
+msgid "it is based on a (reversed) dictionary word"
+msgstr "visszafelé olvasva egy ismert szót ad"
+
