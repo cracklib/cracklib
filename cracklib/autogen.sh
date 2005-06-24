@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 
 # This script runs commands necessary to generate a Makefile for libgif.
 
@@ -11,7 +11,7 @@ test -z "$srcdir" && srcdir=.
 THEDIR="`pwd`"
 cd $srcdir
 
-aclocal
+aclocal -I m4
 autoheader
 libtoolize --automake --copy
 automake --add-missing --copy
