@@ -1,3 +1,4 @@
+v2.8.4  Full localization of strings thanks to Thorsten Kukuk.
 v2.8.3  Deal with integer type and header portability issues
 v2.8.2  Check for LINE_MAX, cygwin workaround (sf patch #125964, Jürgen)
 	Fix a buffer overflow in packlib file handling (not a security issue)

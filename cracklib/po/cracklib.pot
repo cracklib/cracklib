@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-06-23 12:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/fascist.c:555
+msgid "you are not registered in the password file"
+msgstr ""
+
+#: lib/fascist.c:569
+msgid "it is based on your username"
+msgstr ""
+
+#: lib/fascist.c:634
+msgid "it is based upon your password entry"
+msgstr ""
+
+#: lib/fascist.c:654
+msgid "it is derived from your password entry"
+msgstr ""
+
+#: lib/fascist.c:667
+msgid "it's derived from your password entry"
+msgstr ""
+
+#: lib/fascist.c:681
+msgid "it is derivable from your password entry"
+msgstr ""
+
+#: lib/fascist.c:695
+msgid "it's derivable from your password entry"
+msgstr ""
+
+#: lib/fascist.c:731
+msgid "it is WAY too short"
+msgstr ""
+
+#: lib/fascist.c:736
+msgid "it is too short"
+msgstr ""
+
+#: lib/fascist.c:753
+msgid "it does not contain enough DIFFERENT characters"
+msgstr ""
+
+#: lib/fascist.c:767
+msgid "it is all whitespace"
+msgstr ""
+
+#: lib/fascist.c:783
+msgid "it is too simplistic/systematic"
+msgstr ""
+
+#: lib/fascist.c:788
+msgid "it looks like a National Insurance number."
+msgstr ""
+
+#: lib/fascist.c:815
+msgid "it is based on a dictionary word"
+msgstr ""
+
+#: lib/fascist.c:834
+msgid "it is based on a (reversed) dictionary word"
+msgstr ""

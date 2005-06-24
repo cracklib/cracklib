@@ -1,3 +1,6 @@
+2005-06-24:
+    * More updates and patch from Thorsten Kukuk for internationalization support.
+
 2005-06-03:
     * Applied patch #1214251 from Thorsten Kukuk for some compiler warnings.
     * Applied patch #1214259 from Thorsten Kukuk for internationalization support.

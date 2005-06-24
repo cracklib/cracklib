@@ -1,6 +1,6 @@
-SUBDIRS = lib util doc
+SUBDIRS = m4 lib util po doc
 
-EXTRA_DIST = 	\
+EXTRA_DIST = config.rpath mkinstalldirs  	\
 		autogen.sh \
 		cracklib.spec.in \
 		README-DAWG \
@@ -14,3 +14,5 @@ test: all
 
 dict: all
 	PATH="./util:$$PATH" ./util/create-cracklib-dict dicts/*
+
+ACLOCAL_AMFLAGS = -I m4

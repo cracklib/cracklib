@@ -1,0 +1,4 @@
+lib/fascist.c
+lib/packlib.c
+lib/rules.c
+lib/stringlib.c

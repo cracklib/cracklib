@@ -3,6 +3,9 @@ AC_INIT([lib/crack.h])
 AM_INIT_AUTOMAKE(cracklib, 2.8.3)
 AM_CONFIG_HEADER(config.h)
 
+dnl Set of available languages.
+ALL_LINGUAS="cs de es fr hu it nl sk"
+
 dnl Checks for programs.
 AC_PROG_LIBTOOL
 AC_PROG_CC
@@ -40,5 +43,10 @@ dnl Check for utility functions that may need to be replaced
 AC_CHECK_FUNCS(strdup)
 AC_CHECK_FUNCS(getpwuid_r)
 
-AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile Makefile cracklib.spec)
+dnl internationalization macros
+AM_GNU_GETTEXT_VERSION
+AM_GNU_GETTEXT([external])
+
+AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile Makefile \
+		po/Makefile.in m4/Makefile cracklib.spec)
 
