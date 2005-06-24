@@ -5,6 +5,9 @@
     * Applied patch #1214251 from Thorsten Kukuk for some compiler warnings.
     * Applied patch #1214259 from Thorsten Kukuk for internationalization support.
 
+2005-04-16:
+    * Patched for mod_php build issues
+
 2005-02-14:
     * Integrated the redhat/fedora patch for broken 64bit dictionaries
 
