@@ -1,7 +1,4 @@
-# translation of new.po to German
 # translation of cracklib.po to German
-# translation of cracklib.de.po to German
-# German message file for YaST2 (@memory@).
 # Copyright (C) 2002, 2003 SuSE Linux AG.
 # Copyright (C) 1999, 2000, 2001 SuSE GmbH.
 # Antje Faber <afaber@suse.de>, 2000-2003.
@@ -12,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: new\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-27 12:49+0000\n"
+"POT-Creation-Date: 2005-06-23 12:52+0200\n"
 "PO-Revision-Date: 2003-11-27 18:31GMT\n"
 "Last-Translator: Antje Faber <afaber@suse.de>\n"
 "Language-Team: German <i18n@suse.de>\n"
@@ -22,98 +19,62 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../cracklib/fascist.c:498
+#: lib/fascist.c:555
 msgid "you are not registered in the password file"
 msgstr "Sie sind nicht in der passwd-Datei eingetragen."
 
-#: ../cracklib/fascist.c:507
+#: lib/fascist.c:569
 msgid "it is based on your username"
 msgstr "Es basiert auf Ihrem Benutzernamen"
 
-#: ../cracklib/fascist.c:567
+#: lib/fascist.c:634
 msgid "it is based upon your password entry"
 msgstr "Es basiert auf Ihrem Passwort-Eintrag"
 
-#: ../cracklib/fascist.c:582 ../cracklib/fascist.c:590
+#: lib/fascist.c:654
 msgid "it is derived from your password entry"
 msgstr "Es wird von Ihrem Passwort-Eintrag abgeleitet"
 
-#: ../cracklib/fascist.c:599 ../cracklib/fascist.c:608
+#: lib/fascist.c:667
+msgid "it's derived from your password entry"
+msgstr "Es wird von Ihrem Passwort-Eintrag abgeleitet"
+
+#: lib/fascist.c:681
 msgid "it is derivable from your password entry"
 msgstr "Es kann von Ihrem Passwort-Eintrag abgeleitet werden."
 
-#: ../cracklib/fascist.c:638
+#: lib/fascist.c:695
+msgid "it's derivable from your password entry"
+msgstr "Es kann von Ihrem Passwort-Eintrag abgeleitet werden."
 
+#: lib/fascist.c:731
 msgid "it is WAY too short"
 msgstr "Es ist VIEL zu kurz"
 
-#: ../cracklib/fascist.c:643
+#: lib/fascist.c:736
 msgid "it is too short"
 msgstr "Es ist zu kurz"
 
-#: ../cracklib/fascist.c:660
+#: lib/fascist.c:753
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "Es enthält nicht genug unterschiedliche Zeichen"
 
-#: ../cracklib/fascist.c:674
-
+#: lib/fascist.c:767
 msgid "it is all whitespace"
 msgstr "Es besteht nur aus Leerzeichen"
 
-#: ../cracklib/fascist.c:690
+#: lib/fascist.c:783
 msgid "it is too simplistic/systematic"
 msgstr "Es ist zu einfach/systematisch"
 
-#: ../cracklib/fascist.c:695
+#: lib/fascist.c:788
 msgid "it looks like a National Insurance number."
 msgstr "Es schaut nach Versicherungsnummer aus"
 
-#: ../cracklib/fascist.c:722
+#: lib/fascist.c:815
 msgid "it is based on a dictionary word"
 msgstr "Es basiert auf einem Wörterbucheintrag"
 
-#: ../cracklib/fascist.c:741
+#: lib/fascist.c:834
 msgid "it is based on a (reversed) dictionary word"
 msgstr "Es basiert auf einem (umgekehrten) Wörterbucheintrag"
-
-#~ msgid "it's derived from your password entry"
-#~ msgstr "Es wird von Ihrem Passwort-Eintrag abgeleitet"
-
-#~ msgid "it's derivable from your password entry"
-#~ msgstr "Es kann von Ihrem Passwort-Eintrag abgeleitet werden."
-
-#~ msgid "%s: another dictionary already open\n"
-#~ msgstr "%s: weiteres Wörterbuch bereits geöffnet\n"
-
-#~ msgid "%s: error reading header\n"
-#~ msgstr "%s: Fehler beim Lesen des Kopfeintrags\n"
-
-#, fuzzy
-#~ msgid "%s: magic mismatch\n"
-#~ msgstr "%s: Magic-Wert nicht synchron\n"
-
-#~ msgid "%s: size mismatch\n"
-#~ msgstr "%s: Größe stimmt nicht überein\n"
-
-#, fuzzy
-#~ msgid "PWClose: close magic mismatch\n"
-#~ msgstr "PWClose: asynchronen Magic-Wert schließen\n"
-
-#~ msgid "index magic fseek failed\n"
-#~ msgstr "index magic fseek ist fehlgeschlagen\n"
-
-#~ msgid "index magic fwrite failed\n"
-#~ msgstr "index magic fwrite ist fehlgeschlagen\n"
-
-#~ msgid "(index fseek failed)"
-#~ msgstr "(index fseek ist fehlgeschlagen)"
-
-#~ msgid "(index fread failed)"
-#~ msgstr "(index fread ist fehlgeschlagen)"
-
-#~ msgid "(data fseek failed)"
-#~ msgstr "(data fseek ist fehlgeschlagen)"
-
-#~ msgid "(data fread failed)"
-#~ msgstr "(data fread ist fehlgeschlagen)"
-

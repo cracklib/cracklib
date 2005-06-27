@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-27 12:49+0000\n"
-"PO-Revision-Date: 2003-12-02 11:51+0100\n"
+"POT-Creation-Date: 2005-06-23 12:52+0200\n"
+"PO-Revision-Date: 2005-06-23 13:17+02:00\n"
 "Last-Translator: Patricia Vaz <Patricia.Vaz@suse.de>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -15,55 +15,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../cracklib/fascist.c:498
+#: lib/fascist.c:555
 msgid "you are not registered in the password file"
 msgstr "vous n'êtes pas enregistré dans le fichier de mot de passe"
 
-#: ../cracklib/fascist.c:507
+#: lib/fascist.c:569
 msgid "it is based on your username"
 msgstr "basé sur votre nom d'utilisateur"
 
-#: ../cracklib/fascist.c:567
+#: lib/fascist.c:634
 msgid "it is based upon your password entry"
 msgstr "basé sur votre mot de passe"
 
-#: ../cracklib/fascist.c:582 ../cracklib/fascist.c:590
+#: lib/fascist.c:654
 msgid "it is derived from your password entry"
 msgstr "dérivé de votre mot de passe"
 
-#: ../cracklib/fascist.c:599 ../cracklib/fascist.c:608
+#: lib/fascist.c:667
+msgid "it's derived from your password entry"
+msgstr "dérivé de votre mot de passe"
+
+#: lib/fascist.c:681
 msgid "it is derivable from your password entry"
 msgstr "dérivable de votre mot de passe"
 
-#: ../cracklib/fascist.c:638
+#: lib/fascist.c:695
+msgid "it's derivable from your password entry"
+msgstr "dérivable de votre mot de passe"
+
+#: lib/fascist.c:731
 msgid "it is WAY too short"
 msgstr "BEAUCOUP trop court"
 
-#: ../cracklib/fascist.c:643
+#: lib/fascist.c:736
 msgid "it is too short"
 msgstr "trop court"
 
-#: ../cracklib/fascist.c:660
+#: lib/fascist.c:753
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "ne contient pas suffisamment de caractères DIFFÉRENTS"
 
-#: ../cracklib/fascist.c:674
+#: lib/fascist.c:767
 msgid "it is all whitespace"
 msgstr "il n'y a que des espaces"
 
-#: ../cracklib/fascist.c:690
+#: lib/fascist.c:783
 msgid "it is too simplistic/systematic"
 msgstr "trop simple/systématique"
 
-#: ../cracklib/fascist.c:695
+#: lib/fascist.c:788
 msgid "it looks like a National Insurance number."
 msgstr "ressemble à un numéro de sécurité sociale"
 
-#: ../cracklib/fascist.c:722
+#: lib/fascist.c:815
 msgid "it is based on a dictionary word"
 msgstr "basé sur un mot du dictionnaire"
 
-#: ../cracklib/fascist.c:741
+#: lib/fascist.c:834
 msgid "it is based on a (reversed) dictionary word"
 msgstr "basé sur un mot du dictionnaire à l'envers"
-
