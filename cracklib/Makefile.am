@@ -1,4 +1,4 @@
-SUBDIRS = m4 lib util po doc
+SUBDIRS = m4 lib util po doc python
 
 EXTRA_DIST = config.rpath mkinstalldirs  	\
 		autogen.sh \

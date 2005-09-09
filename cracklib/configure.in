@@ -21,6 +21,7 @@ AC_CHECK_HEADERS(unistd.h)
 AC_CHECK_HEADERS(fcntl.h)
 AC_CHECK_HEADERS(inttypes.h)
 AC_CHECK_HEADERS(stdint.h)
+AC_CHECK_HEADERS(pthread.h)
 
 dnl Cygwin workaround
 AC_MSG_CHECKING(if LINE_MAX is defined)
@@ -47,6 +48,25 @@ dnl internationalization macros
 AM_GNU_GETTEXT_VERSION
 AM_GNU_GETTEXT([external])
 
-AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile Makefile \
+dnl Check for python, unless we were told to not try to build a python module
+AC_ARG_WITH(python,
+AC_HELP_STRING(--without,[Build a python module (default auto)]),
+build_python=$withval,build_python=auto)
+if test "$build_python" != no ; then
+   AM_PATH_PYTHON(,,[
+   if test "$build_python" = auto ; then
+      AC_MSG_WARN([python was not found, continuing])
+      build_python=no
+   else
+      AC_MSG_ERROR([python was required but not found])
+   fi
+   ])
+   if test "$build_python" != no ; then
+      build_python=yes
+   fi
+fi
+AM_CONDITIONAL(BUILD_PYTHON,[test "$build_python" = "yes"])
+
+AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile python/Makefile Makefile \
 		po/Makefile.in m4/Makefile cracklib.spec)
 

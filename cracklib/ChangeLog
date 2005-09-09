@@ -1,3 +1,6 @@
+2005-09-09:
+    * Patch from Nalin Dahyabhai <nalin@redhat.com> for python binding support.
+
 2005-06-24:
     * More updates and patch from Thorsten Kukuk for internationalization support.
 
