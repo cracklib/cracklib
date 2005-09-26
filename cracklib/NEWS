@@ -1,5 +1,6 @@
 v2.8.4  Patches for mod_php build issues
         Full localization of strings thanks to Thorsten Kukuk.
+	Patches for python binding support thanks to Nalin Dahyabhai
 v2.8.3  Deal with integer type and header portability issues
 v2.8.2  Check for LINE_MAX, cygwin workaround (sf patch #125964, Jürgen)
 	Fix a buffer overflow in packlib file handling (not a security issue)

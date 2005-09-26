@@ -4,7 +4,7 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <Python.h>
+#include PYTHON_H
 #ifdef HAVE_PTHREAD_H
 #include <pthread.h>
 #endif
