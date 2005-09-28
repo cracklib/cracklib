@@ -1,5 +1,6 @@
 2005-09-28:
     * Fixed for python module link issue.
+    * Add in missing config.rpath
 
 2005-09-09:
     * Patch from Nalin Dahyabhai <nalin@redhat.com> for python binding support.
