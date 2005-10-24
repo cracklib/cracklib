@@ -1,4 +1,6 @@
 v2.8.5  Add some sanity checkng to auto* script calls. (Mike Frysinger)
+        Add support for cross compiling with a local dictionary
+        Add a configure option to control default dictionary path
 v2.8.4  Patches for mod_php build issues
         Full localization of strings thanks to Thorsten Kukuk.
 	Patches for python binding support thanks to Nalin Dahyabhai
