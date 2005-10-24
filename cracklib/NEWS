@@ -1,3 +1,4 @@
+v2.8.5  Add some sanity checkng to auto* script calls. (Mike Frysinger)
 v2.8.4  Patches for mod_php build issues
         Full localization of strings thanks to Thorsten Kukuk.
 	Patches for python binding support thanks to Nalin Dahyabhai

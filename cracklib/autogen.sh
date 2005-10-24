@@ -11,12 +11,12 @@ test -z "$srcdir" && srcdir=.
 THEDIR="`pwd`"
 cd $srcdir
 
-aclocal -I m4
-autoheader
-libtoolize --automake --copy
-automake --add-missing --copy
-autoconf
-automake
+aclocal -I m4 || exit 1
+autoheader || exit 1
+libtoolize --automake --copy || exit 1
+automake --add-missing --copy || exit 1
+autoconf || exit 1
+automake || exit 1
 
 cd $THEDIR
 
