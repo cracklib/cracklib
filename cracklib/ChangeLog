@@ -1,3 +1,11 @@
+2005-10-26 11:53  nneul
+
+	* configure.in: fix version number for new release
+
+2005-10-26 11:52  nneul
+
+	* ChangeLog, NEWS: fix changelog and news
+
 2005-10-26 11:48  nneul
 
 	* NEWS, configure.in, lib/crack.h, lib/fascist.c, lib/packer.h,

@@ -1,12 +1,5 @@
 Makefile
 Makefile.in
 POTFILES
-cs.gmo
-de.gmo
-es.gmo
-fr.gmo
-hu.gmo
-it.gmo
-nl.gmo
 remove-potcdate.sed
-sk.gmo
+*.gmo
