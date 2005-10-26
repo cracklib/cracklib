@@ -7,7 +7,12 @@
  */
 
 #include <stdio.h>
+#include "config.h"
 #include "crack.h"
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
+#include "packer.h"
 
 int
 main ()
@@ -18,7 +23,7 @@ main ()
 
     while (fgets (buffer, 1000, stdin))
     {
-    	char *val;
+    	const char *val;
  
 	Chop(buffer);
 

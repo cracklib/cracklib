@@ -1,0 +1,87 @@
+# translation of cracklib.pa.po to Panjabi
+# translation of cracklib.po to Panjabi
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib.pa\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-06-23 12:52+0200\n"
+"PO-Revision-Date: 2005-08-06 06:47+0530\n"
+"Last-Translator: Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>\n"
+"Language-Team: Panjabi <pa@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/fascist.c:555
+msgid "you are not registered in the password file"
+msgstr "ਤੁਸੀਂ ਗੁਪਤ-ਕੋਡ ਫਾਇਲ 'ਚ ਰਜਿਸਟਰ ਨਹੀਂ ਹੋ"
+
+#: lib/fascist.c:569
+msgid "it is based on your username"
+msgstr "ਇਹ ਤੁਹਾਡੇ ਉਪਭੋਗੀ ਨਾਂ ਦੇ ਅਧਾਰ 'ਤੇ ਹੈ"
+
+#: lib/fascist.c:634
+msgid "it is based upon your password entry"
+msgstr "ਇਹ ਤੁਹਾਡੇ ਗੁਪਤ-ਕੋਡ ਇੰਦਰਾਜ਼ 'ਤੇ ਅਧਾਰਿਤ ਹੈ"
+
+#: lib/fascist.c:654
+msgid "it is derived from your password entry"
+msgstr "ਇਹ ਤੁਹਾਡੇ ਗੁਪਤ-ਕੋਡ ਇੰਦਰਾਜ਼ ਤੋਂ ਬਣਾਇਆ ਗਿਆ ਹੈ"
+
+#: lib/fascist.c:667
+msgid "it's derived from your password entry"
+msgstr "ਇਹ ਤੁਹਾਡੇ ਗੁਪਤ-ਕੋਡ ਇੰਦਰਾਜ਼ ਤੋਂ ਬਣਾਇਆ ਗਿਆ ਹੈ"
+
+#: lib/fascist.c:681
+msgid "it is derivable from your password entry"
+msgstr "ਇਹ ਤੁਹਾਡੇ ਗੁਪਤ-ਕੋਡ ਇੰਦਰਾਜ਼ ਤੋਂ ਬਣਾਉਣ ਯੋਗ ਹੈ"
+
+#: lib/fascist.c:695
+msgid "it's derivable from your password entry"
+msgstr "ਇਹ ਤੁਹਾਡੇ ਗੁਪਤ-ਕੋਡ ਇੰਦਰਾਜ਼ ਤੋਂ ਬਣਾਉਣਯੋਗ ਹੈ"
+
+#: lib/fascist.c:731
+msgid "it is WAY too short"
+msgstr "ਇਹ ਬਹੁਤ ਛੋਟਾ *ਢੰਗ* ਹੈ"
+
+#: lib/fascist.c:736
+msgid "it is too short"
+msgstr "ਇਹ ਬਹੁਤ ਛੋਟਾ ਹੈ"
+
+#: lib/fascist.c:753
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "ਇਹ ਵਿੱਚ *ਵੱਖਰੇ* ਅੱਖਰ ਮੌਜੂਦ ਨਹੀਂ ਹਨ"
+
+#: lib/fascist.c:767
+msgid "it is all whitespace"
+msgstr "ਇਹ ਸਿਰਫ਼ ਖਾਲੀ ਥਾਂ ਹੈ"
+
+#: lib/fascist.c:783
+msgid "it is too simplistic/systematic"
+msgstr ""
+
+#: lib/fascist.c:788
+msgid "it looks like a National Insurance number."
+msgstr ""
+
+#: lib/fascist.c:815
+msgid "it is based on a dictionary word"
+msgstr "ਇਹ ਡਿਕਸ਼ਨਰੀ ਸ਼ਬਦ ਉੱਪਰ ਅਧਾਰਿਤ ਹੈ"
+
+#: lib/fascist.c:834
+msgid "it is based on a (reversed) dictionary word"
+msgstr ""

@@ -58,7 +58,7 @@ _PWIsBroken64(FILE *ifp)
 
 PWDICT *
 PWOpen(prefix, mode)
-    char *prefix;
+    const char *prefix;
     char *mode;
 {
     int use64 = 0;

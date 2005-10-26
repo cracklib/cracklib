@@ -1,76 +1,77 @@
 # translation of cracklib.po to
-# This file is put in the public domain.
-# , 2003
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Jyri Palokangas <jmp@netti.fi>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-06-23 12:52+0200\n"
-"PO-Revision-Date: 2005-06-23 13:17+02:00\n"
-"Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team:  Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2005-08-25 15:20+0300\n"
+"Last-Translator: Jyri Palokangas <jmp@netti.fi>\n"
+"Language-Team:  <fi@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: lib/fascist.c:555
 msgid "you are not registered in the password file"
-msgstr "No está registrado en el archivo de contraseñas."
+msgstr "sinua ei ole rekisteröity salasana-tiedostossa"
 
 #: lib/fascist.c:569
 msgid "it is based on your username"
-msgstr "Está basada en su nombre de usuario."
+msgstr "pohjautuu käyttäjänimeesi"
 
 #: lib/fascist.c:634
 msgid "it is based upon your password entry"
-msgstr "Está basada en su contraseña."
+msgstr "pohjautuu salasanaasi"
 
 #: lib/fascist.c:654
 msgid "it is derived from your password entry"
-msgstr "Se deriva de su contraseña."
+msgstr "on johdettavissa salasanastasi"
 
 #: lib/fascist.c:667
 msgid "it's derived from your password entry"
-msgstr "Se deriva de su contraseña."
+msgstr "se on johdettu salasanastasi"
 
 #: lib/fascist.c:681
 msgid "it is derivable from your password entry"
-msgstr "Puede derivarse de su contraseña."
+msgstr "se on johdettavissa salasanastasi"
 
 #: lib/fascist.c:695
 msgid "it's derivable from your password entry"
-msgstr "Puede derivarse de su contraseña."
+msgstr "se on johdettavissa salasanastasi"
 
 #: lib/fascist.c:731
 msgid "it is WAY too short"
-msgstr "Es DEMASIADO corta."
+msgstr "on AIVAN liian lyhyt"
 
 #: lib/fascist.c:736
 msgid "it is too short"
-msgstr "Es demasiado corta."
+msgstr "on liian lyhyt"
 
 #: lib/fascist.c:753
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "No contiene suficientes caracteres DIFERENTES."
+msgstr "ei sisällä tarpeeksi ERILAISIA merkkejä"
 
 #: lib/fascist.c:767
 msgid "it is all whitespace"
-msgstr "Está formada sólo por espacios."
+msgstr "kokonaan välilyöntiä"
 
 #: lib/fascist.c:783
 msgid "it is too simplistic/systematic"
-msgstr "Es demasiado simple/sistemática."
+msgstr "on liian yksinkertainen/järjetelmällinen"
 
 #: lib/fascist.c:788
 msgid "it looks like a National Insurance number."
-msgstr "Parece un número de la Seguridad Social."
+msgstr "näyttää kansalliselta vakuutusnumerolta"
 
 #: lib/fascist.c:815
 msgid "it is based on a dictionary word"
-msgstr "Está basada en una palabra del diccionario."
+msgstr "pohjautuu sanakirjan sanaan"
 
 #: lib/fascist.c:834
 msgid "it is based on a (reversed) dictionary word"
-msgstr "Está basada en una palabra del diccionario escrita al revés."
+msgstr "pohjautuu (käännettyyn) sanakirjan sanaan"

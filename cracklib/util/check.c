@@ -10,7 +10,8 @@
 int
 main(int argc, char **argv)
 {
-	char buf[LINE_MAX], *why;
+	char buf[LINE_MAX];
+	const char *why;
 	int i;
 
 	while (fgets(buf, sizeof(buf), stdin) != NULL) {

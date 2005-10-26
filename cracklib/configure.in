@@ -4,7 +4,7 @@ AM_INIT_AUTOMAKE(cracklib, 2.8.5)
 AM_CONFIG_HEADER(config.h)
 
 dnl Set of available languages.
-ALL_LINGUAS="cs de es fr hu it nl sk"
+ALL_LINGUAS="cs da de el es fi fr hu it ja lt nb nl pa pl pt_BR pt sl_SI sk zh_CN zh_TW"
 
 dnl Checks for programs.
 AC_PROG_LIBTOOL

@@ -34,9 +34,9 @@ main ()
     {
 	char *c;
 
-	sscanf (buffer, "%lu", &i);
+	sscanf (buffer, "%u", &i);
 
-	printf ("(word %ld) ", i);
+	printf ("(word %d) ", i);
 
 	if (!(c = (char *) GetPW (pwp, i)))
 	{

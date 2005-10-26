@@ -1,76 +1,76 @@
-# translation of cracklib.po to
-# This file is put in the public domain.
-# , 2003
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-06-23 12:52+0200\n"
-"PO-Revision-Date: 2005-06-23 13:17+02:00\n"
+"PO-Revision-Date: 2005-06-23 12:52+0200\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team:  Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
 
 #: lib/fascist.c:555
 msgid "you are not registered in the password file"
-msgstr "No está registrado en el archivo de contraseñas."
+msgstr "您沒有在密碼檔案中註冊。"
 
 #: lib/fascist.c:569
 msgid "it is based on your username"
-msgstr "Está basada en su nombre de usuario."
+msgstr "這是根據您的使用者名稱"
 
 #: lib/fascist.c:634
 msgid "it is based upon your password entry"
-msgstr "Está basada en su contraseña."
+msgstr "這是根據您的密碼項目"
 
 #: lib/fascist.c:654
 msgid "it is derived from your password entry"
-msgstr "Se deriva de su contraseña."
+msgstr "這是從您的密碼項目中獲得的"
 
 #: lib/fascist.c:667
 msgid "it's derived from your password entry"
-msgstr "Se deriva de su contraseña."
+msgstr "這是從您的密碼項目中獲得的"
 
 #: lib/fascist.c:681
 msgid "it is derivable from your password entry"
-msgstr "Puede derivarse de su contraseña."
+msgstr "這可以從您的密碼項目中獲得"
 
 #: lib/fascist.c:695
 msgid "it's derivable from your password entry"
-msgstr "Puede derivarse de su contraseña."
+msgstr "這可以從您的密碼項目中獲得"
 
 #: lib/fascist.c:731
 msgid "it is WAY too short"
-msgstr "Es DEMASIADO corta."
+msgstr "太短了"
 
 #: lib/fascist.c:736
 msgid "it is too short"
-msgstr "Es demasiado corta."
+msgstr "太短了"
 
 #: lib/fascist.c:753
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "No contiene suficientes caracteres DIFERENTES."
+msgstr "未包含足夠的的不同字元。"
 
 #: lib/fascist.c:767
 msgid "it is all whitespace"
-msgstr "Está formada sólo por espacios."
+msgstr "全部都是空格"
 
 #: lib/fascist.c:783
 msgid "it is too simplistic/systematic"
-msgstr "Es demasiado simple/sistemática."
+msgstr "太簡單/太過於系統化"
 
 #: lib/fascist.c:788
 msgid "it looks like a National Insurance number."
-msgstr "Parece un número de la Seguridad Social."
+msgstr "看起來向是國際保險號碼。"
 
 #: lib/fascist.c:815
 msgid "it is based on a dictionary word"
-msgstr "Está basada en una palabra del diccionario."
+msgstr "根據辭典單字"
 
 #: lib/fascist.c:834
 msgid "it is based on a (reversed) dictionary word"
-msgstr "Está basada en una palabra del diccionario escrita al revés."
+msgstr "根據 (顛倒的) 辭典單字"

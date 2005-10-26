@@ -13,7 +13,7 @@ extern "C" {
  * You must link with -lcrack
  */
 
-extern char *FascistCheck(char *pw, char *dictpath);
+extern const char *FascistCheck(const char *pw, const char *dictpath);
 
 #ifdef __cplusplus
 };

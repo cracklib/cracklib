@@ -838,10 +838,10 @@ FascistLook(pwp, instring)
     return ((char *) 0);
 }
 
-char *
+const char *
 FascistCheck(password, path)
-    char *password;
-    char *path;
+    const char *password;
+    const char *path;
 {
     PWDICT *pwp;
     char pwtrunced[STRINGSIZE];

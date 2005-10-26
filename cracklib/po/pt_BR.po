@@ -1,76 +1,76 @@
-# translation of cracklib.po to
-# This file is put in the public domain.
-# , 2003
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-06-23 12:52+0200\n"
-"PO-Revision-Date: 2005-06-23 13:17+02:00\n"
+"PO-Revision-Date: 2005-08-18 15:02+0000\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team:  Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
 
 #: lib/fascist.c:555
 msgid "you are not registered in the password file"
-msgstr "No está registrado en el archivo de contraseñas."
+msgstr "você não está registrado no arquivo de senha"
 
 #: lib/fascist.c:569
 msgid "it is based on your username"
-msgstr "Está basada en su nombre de usuario."
+msgstr "é baseada no seu nome de usuário"
 
 #: lib/fascist.c:634
 msgid "it is based upon your password entry"
-msgstr "Está basada en su contraseña."
+msgstr "é baseada na sua entrada de senha"
 
 #: lib/fascist.c:654
 msgid "it is derived from your password entry"
-msgstr "Se deriva de su contraseña."
+msgstr "deriva de sua entrada de senha"
 
 #: lib/fascist.c:667
 msgid "it's derived from your password entry"
-msgstr "Se deriva de su contraseña."
+msgstr "deriva de sua entrada de senha"
 
 #: lib/fascist.c:681
 msgid "it is derivable from your password entry"
-msgstr "Puede derivarse de su contraseña."
+msgstr "é derivável de sua entrada de senha"
 
 #: lib/fascist.c:695
 msgid "it's derivable from your password entry"
-msgstr "Puede derivarse de su contraseña."
+msgstr "é derivável de sua entrada de senha"
 
 #: lib/fascist.c:731
 msgid "it is WAY too short"
-msgstr "Es DEMASIADO corta."
+msgstr "é MUITO curta"
 
 #: lib/fascist.c:736
 msgid "it is too short"
-msgstr "Es demasiado corta."
+msgstr "é muito curta"
 
 #: lib/fascist.c:753
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "No contiene suficientes caracteres DIFERENTES."
+msgstr "não contém caracteres DIFERENTES suficientes"
 
 #: lib/fascist.c:767
 msgid "it is all whitespace"
-msgstr "Está formada sólo por espacios."
+msgstr "só contém espaços em branco"
 
 #: lib/fascist.c:783
 msgid "it is too simplistic/systematic"
-msgstr "Es demasiado simple/sistemática."
+msgstr "é muito simples/sistemática"
 
 #: lib/fascist.c:788
 msgid "it looks like a National Insurance number."
-msgstr "Parece un número de la Seguridad Social."
+msgstr "parece um número de documento oficial."
 
 #: lib/fascist.c:815
 msgid "it is based on a dictionary word"
-msgstr "Está basada en una palabra del diccionario."
+msgstr "é uma palavra da língua portuguesa"
 
 #: lib/fascist.c:834
 msgid "it is based on a (reversed) dictionary word"
-msgstr "Está basada en una palabra del diccionario escrita al revés."
+msgstr "é baseada em uma palavra da língua portuguesa (ao contrário)"

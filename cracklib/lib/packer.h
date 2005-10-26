@@ -86,8 +86,13 @@ typedef struct {
 
 #endif
 
-extern PWDICT *PWOpen(char *prefix, char *mode);
+extern PWDICT *PWOpen(const char *prefix, char *mode);
+extern int PWClose(PWDICT *pwp);
+extern uint32_t FindPW(PWDICT *pwp, char *string);
+extern int PutPW(PWDICT *pwp, char *string);
+extern int PMatch(char *control, char *string);
 extern char *Mangle(char *input, char *control);
-
+extern char Chop(char *string);
+extern char *Trim(char *string);
 
 #endif
