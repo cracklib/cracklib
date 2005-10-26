@@ -1,7 +1,8 @@
-v2.8.5  Add some sanity checkng to auto* script calls. (Mike Frysinger)
+v2.8.6  Add some sanity checkng to auto* script calls. (Mike Frysinger)
         Add support for cross compiling with a local dictionary
         Add a configure option to control default dictionary path
-	Adjustments to prototypes to use const, and more language support. (Thorsten Kukuk <kukuk@suse.de>)
+      	Adjustments to prototypes to use const, and more language support. (Thorsten Kukuk <kukuk@suse.de>)
+v2.8.5  Patches for python build and missing config.rpath
 v2.8.4  Patches for mod_php build issues
         Full localization of strings thanks to Thorsten Kukuk.
 	Patches for python binding support thanks to Nalin Dahyabhai
