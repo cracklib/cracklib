@@ -8,6 +8,14 @@ EXTRA_DIST = config.rpath mkinstalldirs  	\
 		test-data \
 		dicts/cracklib-small
 
+all-local:
+	@echo
+	@echo =======================================================
+	@echo Be sure and obtain a large wordlist file and run
+	@echo 'make install' and 'make dict' to generate the word 
+	@echo list index file. See the README file for more details.
+	@echo =======================================================
+	@echo
 
 test: all
 	util/cracklib-check < test-data
