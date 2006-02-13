@@ -11,6 +11,11 @@ The primary reason for the updated release was to apply bug fixes and
 get them distributed from some central place instead of trying to get all
 of the various repackagers to apply additional packages.
 
+BUILD/INSTALL NOTE: You must 'make dict', preferably after getting a large
+wordlist, after install. Otherwise it will not install the dictionaries.
+This is left as a manual step since on some systems generating the
+dictionary index can be time consuming.
+
 
 ============================
 Original CrackLib 2.7 README
