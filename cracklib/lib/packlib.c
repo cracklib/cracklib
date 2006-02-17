@@ -125,6 +125,10 @@ PWOpen(prefix, mode)
 	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
 	    fclose(dfp);
+	    if(wfp)
+	    {
+		fclose(wfp);
+	    }
 	    return ((PWDICT *) 0);
 	}
 
@@ -139,6 +143,10 @@ PWOpen(prefix, mode)
                 pdesc.header.pih_magic = 0;
                 fclose(ifp);
                 fclose(dfp);
+		if(wfp)
+		{
+			fclose(wfp);
+		}
                 return ((PWDICT *) 0);
             }
             if (pdesc64.header.pih_magic != PIH_MAGIC)
@@ -149,6 +157,10 @@ PWOpen(prefix, mode)
                 pdesc.header.pih_magic = 0;
                 fclose(ifp);
                 fclose(dfp);
+		if(wfp)
+		{
+			fclose(wfp);
+		}
                 return ((PWDICT *) 0);
             }
             pdesc.header.pih_magic = pdesc64.header.pih_magic;
@@ -165,6 +177,10 @@ PWOpen(prefix, mode)
 	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
 	    fclose(dfp);
+	    if(wfp)
+	    {
+		fclose(wfp);
+	    }
 	    return ((PWDICT *) 0);
 	}
 
@@ -175,6 +191,10 @@ PWOpen(prefix, mode)
             pdesc.header.pih_magic = 0;
             fclose(ifp);
             fclose(dfp);
+	    if(wfp)
+	    {
+		fclose(wfp);
+	    }
             return ((PWDICT *) 0);
         }
 
@@ -185,6 +205,10 @@ PWOpen(prefix, mode)
 	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
 	    fclose(dfp);
+	    if(wfp)
+	    {
+		fclose(wfp);
+	    }
 	    return ((PWDICT *) 0);
 	}
 
@@ -265,6 +289,10 @@ PWClose(pwp)
 
     fclose(pwp->ifp);
     fclose(pwp->dfp);
+    if(pwp->wfp)
+    {
+        fclose(pwp->wfp);
+    }
 
     pwp->header.pih_magic = 0;
 
