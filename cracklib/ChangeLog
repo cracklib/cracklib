@@ -1,3 +1,21 @@
+2006-02-17 13:28  nneul
+
+	* Makefile.am: add a warning when running make test
+
+2006-02-13 16:59  nneul
+
+	* Makefile.am: output a note about building the dictionary at end
+	  of build
+
+2006-02-13 08:34  nneul
+
+	* README: add note about make dict
+
+2005-10-26 12:08  nneul
+
+	* ChangeLog, configure.in, po/.cvsignore: more cvsignore entries,
+	  new version for new development
+
 2005-10-26 11:53  nneul
 
 	* configure.in: fix version number for new release
