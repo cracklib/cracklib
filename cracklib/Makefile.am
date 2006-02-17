@@ -18,6 +18,15 @@ all-local:
 	@echo
 
 test: all
+	@echo
+	@echo =======================================================
+	@echo If you get an error when running 'make test' about a 
+	@echo missing pw_dict.pwd file, that indicates that the word
+	@echo list dictionary file has not been built. You need to
+	@echo at least run 'make install' and 'make dict' to install
+	@echo the dictionay.  See the README file for more details.
+	@echo =======================================================
+	@echo
 	util/cracklib-check < test-data
 
 dict: all
