@@ -1,3 +1,11 @@
+2006-02-17 13:43  nneul
+
+	* lib/packlib.c: also close wfp fd if it was opened
+
+2006-02-17 13:33  nneul
+
+	* ChangeLog: update Changelog
+
 2006-02-17 13:28  nneul
 
 	* Makefile.am: add a warning when running make test
