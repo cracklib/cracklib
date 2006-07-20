@@ -1,3 +1,4 @@
+v2.8.7  Add support for NLS builds on FreeBSD
 v2.8.6  Add some sanity checkng to auto* script calls. (Mike Frysinger)
         Add support for cross compiling with a local dictionary
         Add a configure option to control default dictionary path
