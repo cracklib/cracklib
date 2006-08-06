@@ -450,7 +450,7 @@ GetPW(pwp, number)
     return (data[number % NUMWORDS]);
 }
 
-uint32_t
+unsigned int
 FindPW(pwp, string)
     PWDICT *pwp;
     char *string;
