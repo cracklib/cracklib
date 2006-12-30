@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ -z "$*" ]; then
+if [ -z $1 ]; then
     echo "Usage:"
     echo "  create-cracklib-dict wordlist ..."
     echo
@@ -14,6 +14,6 @@ if [ -z "$*" ]; then
     echo "Example:"
     echo "create-cracklib-dict /usr/share/words"
 else
-    cracklib-format $* | cracklib-packer
+    cracklib-format "$@" | cracklib-packer
 fi
 
