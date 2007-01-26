@@ -19,6 +19,8 @@ static pthread_mutex_t cracklib_mutex = PTHREAD_MUTEX_INITIALIZER;
 #define UNLOCK()
 #endif
 
+#define DICT_SUFFIX ".pwd"
+
 static PyObject *
 cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 {
@@ -27,6 +29,7 @@ cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
     const char *result;
     struct stat st;
     char *keywords[] = {"pw", "dictpath", NULL};
+    char *dictfile;
 
     self = NULL;
     candidate = NULL;
@@ -52,14 +55,23 @@ cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
                             "second argument was not an absolute path!");
             return NULL;
         }
-        if (lstat(dict, &st) == -1)
+        dictfile = malloc(strlen(dict) + sizeof(DICT_SUFFIX));
+        if (dictfile == NULL)
         {
             PyErr_SetFromErrnoWithFilename(PyExc_OSError, dict);
             return NULL;
         }
+        sprintf(dictfile, "%s" DICT_SUFFIX, dict);
+        if (lstat(dictfile, &st) == -1)
+        {
+            PyErr_SetFromErrnoWithFilename(PyExc_OSError, dict);
+            free(dictfile);
+            return NULL;
+        }
+        free(dictfile);
     } else
     {
-        if (lstat(DEFAULT_CRACKLIB_DICT ".pwd", &st) == -1)
+        if (lstat(DEFAULT_CRACKLIB_DICT DICT_SUFFIX, &st) == -1)
         {
             PyErr_SetFromErrnoWithFilename(PyExc_OSError,
                                            DEFAULT_CRACKLIB_DICT);

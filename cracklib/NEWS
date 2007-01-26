@@ -1,3 +1,4 @@
+v2.8.10 Patch for better hanlding of cracklist dictionary paths in python binding. (Nalin Dahyabhai)
 v2.8.8	Some shell quoting fixups for build scripts (Mike Frysinger)
 v2.8.7  Add support for NLS builds on FreeBSD
 v2.8.6  Add some sanity checkng to auto* script calls. (Mike Frysinger)
