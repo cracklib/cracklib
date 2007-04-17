@@ -6,8 +6,6 @@
  * and upwards.
  */
 
-static char vers_id[] = "fascist.c : v2.3p3 Alec Muffett 14 dec 1997";
-
 #include "config.h"
 #include <sys/types.h>
 #include <errno.h>
@@ -788,7 +786,7 @@ FascistLook(pwp, instring)
 	return _("it looks like a National Insurance number.");
     }
 
-    if (ptr = FascistGecos(password, getuid()))
+    if ((ptr = FascistGecos(password, getuid())))
     {
 	return (ptr);
     }
