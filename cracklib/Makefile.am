@@ -1,4 +1,4 @@
-SUBDIRS = m4 lib util po doc python
+SUBDIRS = m4 lib util po doc python dicts
 
 EXTRA_DIST = config.rpath mkinstalldirs  	\
 		autogen.sh \
@@ -6,8 +6,7 @@ EXTRA_DIST = config.rpath mkinstalldirs  	\
 		README-DAWG \
 		README-WORDS \
 		README-LICENSE
-		test-data \
-		dicts/cracklib-small
+		test-data 
 
 all-local:
 	@echo
