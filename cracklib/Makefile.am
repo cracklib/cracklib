@@ -5,6 +5,7 @@ EXTRA_DIST = config.rpath mkinstalldirs  	\
 		cracklib.spec.in \
 		README-DAWG \
 		README-WORDS \
+		README-LICENSE
 		test-data \
 		dicts/cracklib-small
 
