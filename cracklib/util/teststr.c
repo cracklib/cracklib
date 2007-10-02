@@ -1,9 +1,7 @@
 /*
- * This program is copyright Alec Muffett 1993. The author disclaims all 
- * responsibility or liability with respect to it's usage or its effect 
- * upon hardware or computer systems, and maintains copyright as set out 
- * in the "LICENCE" document which accompanies distributions of Crack v4.0 
- * and upwards.
+ * This program is copyright Alec Muffett 1993, portions copyright other authors.
+ * The authors disclaim all responsibility or liability with respect to it's usage
+ * or its effect upon hardware or computer systems.
  */
 
 #define IN_CRACKLIB

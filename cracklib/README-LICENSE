@@ -1,0 +1,69 @@
+CrackLib was originally licensed with a variant of the Artistic license. In the 
+interests of wider acceptance and more modern licensing, it was switched with
+the original author's blessing to GPL v2. 
+
+This approval was carried out in email discussions in 2005, and has been reconfirmed 
+as of 2007-10-01 with the following email from Alec Muffett. 
+
+
+-------------------------------------
+
+
+From alecm@crypticide.com Mon Oct  1 12:26:03 2007
+Received: from umr-exproto2.cc.umr.edu ([131.151.0.192]) by UMR-CMAIL1.umr.edu with Microsoft SMTPSVC(6.0.3790.3959);
+	 Mon, 1 Oct 2007 12:26:03 -0500
+Received: from scansrv2.srv.mst.edu ([131.151.1.114]) by umr-exproto2.cc.umr.edu with Microsoft SMTPSVC(6.0.3790.3959);
+	 Mon, 1 Oct 2007 12:26:02 -0500
+Received: (qmail 8022 invoked from network); 1 Oct 2007 16:59:55 -0000
+Received: from smtp1.srv.mst.edu (131.151.1.43)
+  by scanin-ipvs.cc.umr.edu with SMTP; 1 Oct 2007 16:59:55 -0000
+Received: from spunkymail-mx8.g.dreamhost.com (mx1.spunky.mail.dreamhost.com [208.97.132.47])
+	by smtp1.srv.mst.edu (8.13.1/8.13.1) with ESMTP id l91Gxtpr020623
+	for <nneul@umr.edu>; Mon, 1 Oct 2007 11:59:55 -0500
+Received: from rutherford.zen.co.uk (rutherford.zen.co.uk [212.23.3.142])
+	by spunkymail-mx8.g.dreamhost.com (Postfix) with ESMTP id 2C7734D311
+	for <nneul@neulinger.org>; Mon,  1 Oct 2007 09:59:50 -0700 (PDT)
+Received: from [82.68.43.14] (helo=[192.168.1.3])
+	by rutherford.zen.co.uk with esmtp (Exim 4.50)
+	id 1IcOcX-0004Qt-6L
+	for nneul@neulinger.org; Mon, 01 Oct 2007 16:59:49 +0000
+Mime-Version: 1.0 (Apple Message framework v752.2)
+In-Reply-To: <1b1b3fd80710010908k11dac0afp1f2dd471059ff9a4@mail.gmail.com>
+References: <1190922867.3457.147.camel@localhost.localdomain> <EC90713277D2BE41B7110CCD74E235CEF44F38@UMR-CMAIL1.umr.edu> <1b1b3fd80710010908k11dac0afp1f2dd471059ff9a4@mail.gmail.com>
+Content-Type: text/plain; charset=US-ASCII; delsp=yes; format=flowed
+Message-Id: <117A1264-F6DC-4E25-B0DD-56FBFEBE6E9F@crypticide.com>
+Content-Transfer-Encoding: 7bit
+From: Alec Muffett <alecm@crypticide.com>
+Subject: Re: cracklib license
+Date: Mon, 1 Oct 2007 17:59:46 +0100
+To: Nathan Neulinger <nneul@neulinger.org>
+X-Mailer: Apple Mail (2.752.2)
+X-Originating-Rutherford-IP: [82.68.43.14]
+Return-Path: alecm@crypticide.com
+X-OriginalArrivalTime: 01 Oct 2007 17:26:03.0008 (UTC) FILETIME=[2420C000:01C80450]
+Status: RO
+Content-Length: 585
+Lines: 21
+
+>
+> ---------- Forwarded message ----------
+> From: Neulinger, Nathan <nneul@umr.edu>
+> Date: Sep 27, 2007 2:58 PM
+> Subject: RE: cracklib license
+> To: alecm@crypto.dircon.co.uk
+>
+> Any chance you could write me a self-contained email stating clearly
+> that the license is being changed to GPL, so I could include that  
+> email
+> in the repository and clean up the repository/tarballs? I have all the
+> original discussion, but something succinct and self contained  
+> would be
+> ideal.
+
+The license for my code in the Cracklib distribution is henceforth GPL.
+
+Happy now? :-)
+
+	-a
+
+

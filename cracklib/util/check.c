@@ -1,3 +1,9 @@
+/*
+ * This program is copyright Alec Muffett 1993, portions copyright other authors.
+ * The authors disclaim all responsibility or liability with respect to it's usage
+ * or its effect upon hardware or computer systems.
+ */
+
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
