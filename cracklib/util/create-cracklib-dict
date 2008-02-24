@@ -1,19 +1,45 @@
 #!/bin/sh
-if [ -z $1 ]; then
-    echo "Usage:"
-    echo "  create-cracklib-dict wordlist ..."
-    echo
-    echo "This script takes one or more word list files as arguments"
-    echo "and converts them into cracklib dictionaries for use"
-    echo "by password checking programs. The results are placed in"
-    echo "the default compiled-in dictionary location."
-    echo 
-    echo "If you wish to store the dictionary in a different location,"
-    echo "use the cracklib-format and cracklib-packer commands directly."
-    echo
-    echo "Example:"
-    echo "create-cracklib-dict /usr/share/words"
-else
-    cracklib-format "$@" | cracklib-packer
-fi
 
+usage() {
+	cat <<-EOF
+	Usage: create-cracklib-dict [options] wordlist ...
+	
+	This script takes one or more word list files as arguments
+	and converts them into cracklib dictionaries for use
+	by password checking programs. The results are placed in
+	the default compiled-in dictionary location.
+	
+	If you wish to store the dictionary in a different location,
+	use the cracklib-format and cracklib-packer commands directly.
+	
+	Options:
+	  -o, --output <file>   Alternative output file for cracklib-packer
+	  -h, --help            This help output
+	
+	Example:
+	create-cracklib-dict /usr/share/words
+	EOF
+	if [ -n "$*" ] ; then
+		echo 1>&2
+		echo "Error: $*" 1>&2
+		exit 1
+	else
+		exit 0
+	fi
+}
+
+output=""
+while [ -n "$1" ] ; do
+	case $1 in
+		-o|--output) output=$2; shift;;
+		-h|--help)   usage;;
+		--)          break;;
+		-*)          usage "unknown option '$*'";;
+		*)           break;;
+	esac
+	shift
+done
+
+[ -z "$*" ] && usage
+
+exec cracklib-format "$@" | cracklib-packer ${output}
