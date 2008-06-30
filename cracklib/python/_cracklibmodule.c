@@ -1,5 +1,26 @@
 /*
- *  A Python binding for cracklib.
+ * A Python binding for cracklib.
+ *
+ * Parts of this code are based on work Copyright (c) 2003 by Domenico
+ * Andreoli.
+ *
+ * Copyright (c) 2008 Jan Dittberner <jan@dittberner.info>
+ *
+ * This file is part of cracklib.
+ *
+ * cracklib is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * cracklib is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Prua; if not, write to the Free Software Foundation,
+ * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
 
 #include <sys/types.h>
@@ -21,8 +42,23 @@ static pthread_mutex_t cracklib_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 #define DICT_SUFFIX ".pwd"
 
+static char _cracklib_FascistCheck_doc [] =
+	"arguments: passwd, dictpath (optional)\n"
+	"\n"
+	"  passwd - password to be checked for weakness\n"
+	"  dictpath - full path name to the cracklib dictionary database\n"
+	"\n"
+	"if dictpath is not specified the default dictionary database\n"
+	"will be used.\n"
+	"\n"
+	"return value: the same password passed as first argument.\n"
+	"\n"
+	"if password is weak, exception ValueError is raised with argument\n"
+	"set to the reason of weakness.\n"
+;
+
 static PyObject *
-cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
+_cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 {
     int i;
     char *candidate, *dict;
@@ -85,23 +121,29 @@ cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 
     if (result != NULL)
     {
-        return PyString_FromString(result);
-    } else
-    {
-        Py_INCREF(Py_None);
-        return Py_None;
+    	PyErr_SetString(PyExc_ValueError, result);
+        return NULL;
     }
+    return Py_BuildValue("s", candidate);
 }
 
 static PyMethodDef
-cracklibmethods[] =
+_cracklibmethods[] =
 {
-    {"FascistCheck", cracklib_FascistCheck, METH_VARARGS | METH_KEYWORDS},
+    {"FascistCheck", _cracklib_FascistCheck, METH_VARARGS | METH_KEYWORDS,
+     _cracklib_FascistCheck_doc},
     {NULL, NULL},
 };
 
+static char _cracklib_doc[] =
+    "Python bindings for cracklib.\n"
+    "\n"
+    "This module enables the use of cracklib features from within a Python\n"
+    "program or interpreter.\n"
+;
+
 void
-initcracklib(void)
+init_cracklib(void)
 {
-    Py_InitModule("cracklib", cracklibmethods);
+    Py_InitModule3("_cracklib", _cracklibmethods, _cracklib_doc);
 }
