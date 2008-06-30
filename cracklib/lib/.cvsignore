@@ -1,9 +1,0 @@
-Makefile.in
-.deps
-.libs
-Makefile
-fascist.lo
-libcrack.la
-packlib.lo
-rules.lo
-stringlib.lo
