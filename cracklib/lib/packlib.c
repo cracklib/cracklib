@@ -7,6 +7,9 @@
 #include "config.h"
 #include <string.h>
 #include <stdlib.h>
+#ifdef HAVE_ZLIB_H
+#include <zlib.h>
+#endif
 #ifdef HAVE_INTTYPES_H
 #include <inttypes.h>
 #endif
@@ -82,15 +85,46 @@ PWOpen(prefix, mode)
     snprintf(dname, STRINGSIZE, "%s.pwd", prefix);
     snprintf(wname, STRINGSIZE, "%s.hwm", prefix);
 
-    if (!(pdesc.dfp = fopen(dname, mode)))
+    if (mode[0] == 'r')
     {
-	perror(dname);
-	return ((PWDICT *) 0);
-    }
+		pdesc.flags &= ~PFOR_USEZLIB;
+		/* first try the normal db file */
+		if (!(pdesc.dfp = fopen(dname, mode)))
+		{
+#ifdef HAVE_ZLIB_H
+			pdesc.flags |= PFOR_USEZLIB;
+			/* try extension .gz */
+			snprintf(dname, STRINGSIZE, "%s.pwd.gz", prefix);
+			if (!(pdesc.dfp = gzopen(dname, mode)))
+			{
+				perror(dname);
+				return ((PWDICT *) 0);
+			}
+#else
+		perror(dname);
+		return ((PWDICT *) 0);
+#endif
+		}
+	}
+	else
+	{
+		pdesc.flags &= ~PFOR_USEZLIB;
+		/* write mode: use fopen */
+		if (!(pdesc.dfp = fopen(dname, mode)))
+		{
+			perror(dname);
+			return ((PWDICT *) 0);
+		}
+	}
 
     if (!(pdesc.ifp = fopen(iname, mode)))
     {
-	fclose(pdesc.dfp);
+#ifdef HAVE_ZLIB_H
+		if(pdesc.flags & PFOR_USEZLIB)
+			gzclose(pdesc.dfp);
+		else
+#endif
+			fclose(pdesc.dfp);
 	perror(iname);
 	return ((PWDICT *) 0);
     }
@@ -122,7 +156,12 @@ PWOpen(prefix, mode)
 
 	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
-	    fclose(dfp);
+#ifdef HAVE_ZLIB_H
+		if(pdesc.flags & PFOR_USEZLIB)
+			gzclose(dfp);
+		else
+#endif
+			fclose(dfp);
 	    if(wfp)
 	    {
 		fclose(wfp);
@@ -140,7 +179,12 @@ PWOpen(prefix, mode)
  
                 pdesc.header.pih_magic = 0;
                 fclose(ifp);
-                fclose(dfp);
+#ifdef HAVE_ZLIB_H
+				if(pdesc.flags & PFOR_USEZLIB)
+					gzclose(dfp);
+				else
+#endif
+					fclose(dfp);
 		if(wfp)
 		{
 			fclose(wfp);
@@ -154,7 +198,13 @@ PWOpen(prefix, mode)
  
                 pdesc.header.pih_magic = 0;
                 fclose(ifp);
-                fclose(dfp);
+#ifdef HAVE_ZLIB_H
+				if(pdesc.flags & PFOR_USEZLIB)
+					gzclose(dfp);
+				else
+#endif
+					fclose(dfp);
+
 		if(wfp)
 		{
 			fclose(wfp);
@@ -174,7 +224,13 @@ PWOpen(prefix, mode)
 
 	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
-	    fclose(dfp);
+#ifdef HAVE_ZLIB_H
+		if(pdesc.flags & PFOR_USEZLIB)
+			gzclose(dfp);
+		else
+#endif
+			fclose(dfp);
+
 	    if(wfp)
 	    {
 		fclose(wfp);
@@ -188,7 +244,12 @@ PWOpen(prefix, mode)
  
             pdesc.header.pih_magic = 0;
             fclose(ifp);
-            fclose(dfp);
+#ifdef HAVE_ZLIB_H
+			if(pdesc.flags & PFOR_USEZLIB)
+				gzclose(dfp);
+			else
+#endif
+				fclose(dfp);
 	    if(wfp)
 	    {
 		fclose(wfp);
@@ -202,8 +263,13 @@ PWOpen(prefix, mode)
 
 	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
-	    fclose(dfp);
-	    if(wfp)
+#ifdef HAVE_ZLIB_H
+		if(pdesc.flags & PFOR_USEZLIB)
+			gzclose(dfp);
+		else
+#endif
+			fclose(dfp);
+		if(wfp)
 	    {
 		fclose(wfp);
 	    }
@@ -286,7 +352,12 @@ PWClose(pwp)
     }
 
     fclose(pwp->ifp);
-    fclose(pwp->dfp);
+#ifdef HAVE_ZLIB_H
+	if(pwp->flags & PFOR_USEZLIB)
+		gzclose(pwp->dfp);
+	else
+#endif
+		fclose(pwp->dfp);
     if(pwp->wfp)
     {
         fclose(pwp->wfp);
@@ -414,13 +485,40 @@ GetPW(pwp, number)
        }
     }
 
-    if (fseek(pwp->dfp, datum, 0))
+	int r = 1;
+#ifdef HAVE_ZLIB_H
+	if (pwp->flags & PFOR_USEZLIB)
+	{
+		r = gzseek(pwp->dfp, datum, 0);
+		if(r >= 0)
+			r = 0;
+	}
+	else
+#endif
+		r = fseek(pwp->dfp, datum, 0);
+
+	
+    if (r)
     {
 	perror("(data fseek failed)");
 	return ((char *) 0);
     }
-
-    if (!fread(buffer, 1, sizeof(buffer), pwp->dfp))
+	r = 0;
+	
+#ifdef HAVE_ZLIB_H
+	if (pwp->flags & PFOR_USEZLIB)
+	{
+		r = gzread(pwp->dfp, buffer, sizeof(buffer));
+		if(r < 0)
+			r = 0;
+	}
+	else
+#endif
+		r = fread(buffer, 1, sizeof(buffer), pwp->dfp);
+		
+	
+	
+    if (!r)
     {
 	perror("(data fread failed)");
 	return ((char *) 0);

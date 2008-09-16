@@ -60,6 +60,7 @@ typedef struct
 #define PFOR_WRITE	0x0001
 #define PFOR_FLUSH	0x0002
 #define PFOR_USEHWMS	0x0004
+#define PFOR_USEZLIB	0x0008
 
     uint32_t hwms[256];
 

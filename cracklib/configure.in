@@ -22,6 +22,9 @@ AC_CHECK_HEADERS(fcntl.h)
 AC_CHECK_HEADERS(inttypes.h)
 AC_CHECK_HEADERS(stdint.h)
 AC_CHECK_HEADERS(pthread.h)
+AC_CHECK_HEADERS(zlib.h, AC_DEFINE(HAVE_ZLIB_H, [], [found zlib]))
+
+AC_SEARCH_LIBS(gzopen, z)
 
 dnl Cygwin workaround
 AC_MSG_CHECKING(if LINE_MAX is defined)
