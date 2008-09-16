@@ -21,24 +21,28 @@
 # You should have received a copy of the GNU General Public License
 # along with Prua; if not, write to the Free Software Foundation,
 # Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+"""Python extensions for the cracklib binding.
+"""
 
 import string
 from _cracklib import FascistCheck
 
-ascii_uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-ascii_lowercase = "abcdefghijklmnopqrstuvwxyz"
+ASCII_UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ASCII_LOWERCASE = "abcdefghijklmnopqrstuvwxyz"
 
-diff_ok = 5
-min_length = 9
-dig_credit = 1
-up_credit = 1
-low_credit = 1
-oth_credit = 1
+DIFF_OK = 5
+MIN_LENGTH = 9
+DIG_CREDIT = 1
+UP_CREDIT = 1
+LOW_CREDIT = 1
+OTH_CREDIT = 1
 
 
-def palindrome(s):
-    for i in range(len(s)):
-        if s[i] != s[-i - 1]:
+def palindrome(sample):
+    """Checks whether the given string is a palindrome.
+    """
+    for i in range(len(sample)):
+        if sample[i] != sample[-i - 1]:
             return 0
     return 1
 
@@ -48,19 +52,21 @@ def distdifferent(old, new, i, j):
     of character removals, additions, and changes needed to go from one
     to the other."""
     if i == 0 or len(old) <= i:
-        c = 0
+        cval = 0
     else:
-        c = old[i - 1]
+        cval = old[i - 1]
     
     if j == 0 or len(new) <= i:
-        d = 0
+        dval = 0
     else:
-        d = new[j - 1]
+        dval = new[j - 1]
     
-    return c != d
+    return cval != dval
 
 
 def distcalculate(distances, old, new, i, j):
+    """Calculates the distance between two strings.
+    """
     tmp = 0
     
     if distances[i][j] != -1:
@@ -77,30 +83,34 @@ def distcalculate(distances, old, new, i, j):
 
 
 def distance(old, new):
-    m = len(old)
-    n = len(new)
+    """Gets the distance of two given strings.
+    """
+    oldlength = len(old)
+    newlength = len(new)
 
-    distances = [ [] for i in range(m + 1) ]
-    for i in range(m + 1):
-        distances[i] = [ -1 for j in range(n + 1) ]
+    distances = [ [] for i in range(oldlength + 1) ]
+    for i in range(oldlength + 1):
+        distances[i] = [ -1 for j in range(newlength + 1) ]
  
-    for i in range(m + 1):
+    for i in range(oldlength + 1):
         distances[i][0] = i
-    for j in range(n + 1):
+    for j in range(newlength + 1):
         distances[0][j] = j
     distances[0][0] = 0
 
-    r = distcalculate(distances, old, new, m, n)
+    retval = distcalculate(distances, old, new, oldlength, newlength)
 
     for i in range(len(distances)):
         for j in range(len(distances[i])):
             distances[i][j] = 0
 
-    return r
+    return retval
 
 
 def similar(old, new):
-    if distance(old, new) >= diff_ok:
+    """Calculates whether the given strings are similar.
+    """
+    if distance(old, new) >= DIFF_OK:
         return 0
     
     if len(new) >= (len(old) * 2):
@@ -111,17 +121,19 @@ def similar(old, new):
 
 
 def simple(new):
+    """Checks whether the given string is simple or not.
+    """
     digits = 0
     uppers = 0
     lowers = 0
     others = 0
 
-    for c in new:
-        if c in string.digits:
+    for character in new:
+        if character in string.digits:
             digits = digits + 1
-        elif c in ascii_uppercase:
+        elif character in ASCII_UPPERCASE:
             uppers = uppers + 1
-        elif c in ascii_lowercase:
+        elif character in ASCII_LOWERCASE:
             lowers = lowers + 1
         else:
             others = others + 1
@@ -132,38 +144,38 @@ def simple(new):
     # see the docs on the module for info on these parameters, the
     # defaults cause the effect to be the same as before the change
 
-    if dig_credit >= 0 and digits > dig_credit:
-        digits = dig_credit
+    if DIG_CREDIT >= 0 and digits > DIG_CREDIT:
+        digits = DIG_CREDIT
 
-    if up_credit >= 0 and uppers > up_credit:
-        uppers = up_credit
+    if UP_CREDIT >= 0 and uppers > UP_CREDIT:
+        uppers = UP_CREDIT
 
-    if low_credit >= 0 and lowers > low_credit:
-        lowers = low_credit
+    if LOW_CREDIT >= 0 and lowers > LOW_CREDIT:
+        lowers = LOW_CREDIT
 
-    if oth_credit >= 0 and others > oth_credit:
-        others = oth_credit
+    if OTH_CREDIT >= 0 and others > OTH_CREDIT:
+        others = OTH_CREDIT
 
-    size = min_length
+    size = MIN_LENGTH
 
-    if dig_credit >= 0:
+    if DIG_CREDIT >= 0:
         size = size - digits
-    elif digits < (dig_credit * -1):
+    elif digits < (DIG_CREDIT * -1):
         return 1
  
-    if up_credit >= 0:
+    if UP_CREDIT >= 0:
         size = size - uppers
-    elif uppers < (up_credit * -1):
+    elif uppers < (UP_CREDIT * -1):
         return 1
  
-    if low_credit >= 0:
+    if LOW_CREDIT >= 0:
         size = size - lowers
-    elif lowers < (low_credit * -1):
+    elif lowers < (LOW_CREDIT * -1):
         return 1
 
-    if oth_credit >= 0:
+    if OTH_CREDIT >= 0:
         size = size - others
-    elif others < (oth_credit * -1):
+    elif others < (OTH_CREDIT * -1):
         return 1
 
     if len(new) < size:
@@ -173,6 +185,9 @@ def simple(new):
 
 
 def VeryFascistCheck(new, old = None, dictpath = None):
+    """Extends the FascistCheck function with other checks implemented
+    in this module.
+    """
     if old != None:
         if new == old:
             raise ValueError, "is the same as the old one"
