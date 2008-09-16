@@ -173,9 +173,6 @@ def simple(new):
 
 
 def VeryFascistCheck(new, old = None, dictpath = None):
-    if dictpath == None:
-        dictpath = default_dictpath
-
     if old != None:
         if new == old:
             raise ValueError, "is the same as the old one"
@@ -190,8 +187,11 @@ def VeryFascistCheck(new, old = None, dictpath = None):
             raise ValueError, "is rotated"
         if similar(oldmono, newmono):
             raise ValueError, "is too similar to the old one"
-        
-    FascistCheck(new, dictpath)
+    
+    if dictpath == None:
+        FascistCheck(new)
+    else:
+        FascistCheck(new, dictpath)
 
     if palindrome(new):
         raise ValueError, "is a palindrome"
