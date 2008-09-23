@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-23 12:52+0200\n"
+"POT-Creation-Date: 2008-09-23 06:55-0500\n"
 "PO-Revision-Date: 2005-06-23 13:12+02:00\n"
 "Last-Translator: Stanislav Visnovsky <visnov@suse.cz>\n"
 "Language-Team: Slovak <sk-i18n@linux.sk>\n"
@@ -15,62 +15,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.2beta3\n"
 
-#: lib/fascist.c:555
+#: lib/fascist.c:551
 msgid "you are not registered in the password file"
 msgstr "účet nie je zaregistrovaný v súbore hesiel"
 
-#: lib/fascist.c:569
+#: lib/fascist.c:565
 msgid "it is based on your username"
 msgstr "je založené na mene vášho účtu"
 
-#: lib/fascist.c:634
+#: lib/fascist.c:630
 msgid "it is based upon your password entry"
 msgstr "je založené na zázname o účte"
 
-#: lib/fascist.c:654
+#: lib/fascist.c:650
 msgid "it is derived from your password entry"
 msgstr "je odvodené zo záznamu o účte"
 
-#: lib/fascist.c:667
+#: lib/fascist.c:663
 msgid "it's derived from your password entry"
 msgstr "je odvodené zo záznamu o účte"
 
-#: lib/fascist.c:681
+#: lib/fascist.c:677
 msgid "it is derivable from your password entry"
 msgstr "je odvoditeľné zo záznamu o účte"
 
-#: lib/fascist.c:695
+#: lib/fascist.c:691
 msgid "it's derivable from your password entry"
 msgstr "je odvoditeľné zo záznamu o účte"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:727
 msgid "it is WAY too short"
 msgstr "je PRÍLIŠ krátke"
 
-#: lib/fascist.c:736
+#: lib/fascist.c:732
 msgid "it is too short"
 msgstr "je príliš krátke"
 
-#: lib/fascist.c:753
+#: lib/fascist.c:749
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "neobsahuje dosť RÔZNYCH znakov"
 
-#: lib/fascist.c:767
+#: lib/fascist.c:763
 msgid "it is all whitespace"
 msgstr "obsahuje iba medzery a tabulátory"
 
-#: lib/fascist.c:783
+#: lib/fascist.c:779
 msgid "it is too simplistic/systematic"
 msgstr "je príliš jednoduché alebo systematické"
 
-#: lib/fascist.c:788
+#: lib/fascist.c:784
 msgid "it looks like a National Insurance number."
 msgstr "vyzerá ako číslo poistky"
 
-#: lib/fascist.c:815
+#: lib/fascist.c:811
 msgid "it is based on a dictionary word"
 msgstr "je založené na slove zo slovníka"
 
-#: lib/fascist.c:834
+#: lib/fascist.c:830
 msgid "it is based on a (reversed) dictionary word"
 msgstr "je založené na (obrátenom) slove zo slovníka"

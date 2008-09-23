@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-23 12:52+0200\n"
+"POT-Creation-Date: 2008-09-23 06:55-0500\n"
 "PO-Revision-Date: 2005-08-06 20:20+0100\n"
 "Last-Translator: Szabolcs Varga <shirokuma@shirokuma.hu>\n"
 "Language-Team: hungarian\n"
@@ -16,62 +16,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: lib/fascist.c:555
+#: lib/fascist.c:551
 msgid "you are not registered in the password file"
 msgstr "Ön nem szerepel a password fájlban"
 
-#: lib/fascist.c:569
+#: lib/fascist.c:565
 msgid "it is based on your username"
 msgstr "az Ön felhasználónevén alapszik"
 
-#: lib/fascist.c:634
+#: lib/fascist.c:630
 msgid "it is based upon your password entry"
 msgstr "az Ön jelszóbejegyzésén alapszik"
 
-#: lib/fascist.c:654
+#: lib/fascist.c:650
 msgid "it is derived from your password entry"
 msgstr "az Ön jelszóbejegyzéséból lett származtatva"
 
-#: lib/fascist.c:667
+#: lib/fascist.c:663
 msgid "it's derived from your password entry"
 msgstr "az Ön jelszóbejegyzéséból lett származtatva"
 
-#: lib/fascist.c:681
+#: lib/fascist.c:677
 msgid "it is derivable from your password entry"
 msgstr "kitalálható az Ön jelszóbejegyzéséből"
 
-#: lib/fascist.c:695
+#: lib/fascist.c:691
 msgid "it's derivable from your password entry"
 msgstr "kitalálható az Ön jelszóbejegyzéséből"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:727
 msgid "it is WAY too short"
 msgstr "NAGYON rövid"
 
-#: lib/fascist.c:736
+#: lib/fascist.c:732
 msgid "it is too short"
 msgstr "túl rövid"
 
-#: lib/fascist.c:753
+#: lib/fascist.c:749
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "nem tartalmaz elegendő számú KÜLÖNBÖZŐ karaktert"
 
-#: lib/fascist.c:767
+#: lib/fascist.c:763
 msgid "it is all whitespace"
 msgstr "csak szóközszerű karakterekből áll"
 
-#: lib/fascist.c:783
+#: lib/fascist.c:779
 msgid "it is too simplistic/systematic"
 msgstr "túl egyszerű vagy szisztematikus"
 
-#: lib/fascist.c:788
+#: lib/fascist.c:784
 msgid "it looks like a National Insurance number."
 msgstr "úgy néz ki, mint egy TAJ-szám"
 
-#: lib/fascist.c:815
+#: lib/fascist.c:811
 msgid "it is based on a dictionary word"
 msgstr "a szótárban megtalálható"
 
-#: lib/fascist.c:834
+#: lib/fascist.c:830
 msgid "it is based on a (reversed) dictionary word"
 msgstr "visszafelé olvasva egy ismert szót ad"

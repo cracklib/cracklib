@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-23 12:52+0200\n"
+"POT-Creation-Date: 2008-09-23 06:55-0500\n"
 "PO-Revision-Date: 2005-08-18 HO:MI+ZONE\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -15,62 +15,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/fascist.c:555
+#: lib/fascist.c:551
 msgid "you are not registered in the password file"
 msgstr "尚未在口令文件中注册"
 
-#: lib/fascist.c:569
+#: lib/fascist.c:565
 msgid "it is based on your username"
 msgstr "它基于用户名"
 
-#: lib/fascist.c:634
+#: lib/fascist.c:630
 msgid "it is based upon your password entry"
 msgstr "它基于输入的口令"
 
-#: lib/fascist.c:654
+#: lib/fascist.c:650
 msgid "it is derived from your password entry"
 msgstr "它派生自输入的口令"
 
-#: lib/fascist.c:667
+#: lib/fascist.c:663
 msgid "it's derived from your password entry"
 msgstr "它派生自输入的口令"
 
-#: lib/fascist.c:681
+#: lib/fascist.c:677
 msgid "it is derivable from your password entry"
 msgstr "可从输入的口令推断"
 
-#: lib/fascist.c:695
+#: lib/fascist.c:691
 msgid "it's derivable from your password entry"
 msgstr "可从输入的口令推断"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:727
 msgid "it is WAY too short"
 msgstr "WAY 过短"
 
-#: lib/fascist.c:736
+#: lib/fascist.c:732
 msgid "it is too short"
 msgstr "过短"
 
-#: lib/fascist.c:753
+#: lib/fascist.c:749
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "它没有包含足够的 DIFFERENT 字符"
 
-#: lib/fascist.c:767
+#: lib/fascist.c:763
 msgid "it is all whitespace"
 msgstr "全是空格"
 
-#: lib/fascist.c:783
+#: lib/fascist.c:779
 msgid "it is too simplistic/systematic"
 msgstr "过于简单化/系统化"
 
-#: lib/fascist.c:788
+#: lib/fascist.c:784
 msgid "it looks like a National Insurance number."
 msgstr "看起来像国家保险号码。"
 
-#: lib/fascist.c:815
+#: lib/fascist.c:811
 msgid "it is based on a dictionary word"
 msgstr "它基于字典单词"
 
-#: lib/fascist.c:834
+#: lib/fascist.c:830
 msgid "it is based on a (reversed) dictionary word"
 msgstr "它基于（颠倒的）字典单词"
