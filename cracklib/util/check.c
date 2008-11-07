@@ -20,6 +20,9 @@ main(int argc, char **argv)
 	const char *why;
 	int i;
 
+	setlocale(LC_ALL, "");
+	textdomain(PACKAGE);
+
 	while (fgets(buf, sizeof(buf), stdin) != NULL) {
 		while (((i = strlen(buf)) > 0) && (i > 0)) {
 			if (strchr("\r\n", buf[i - 1]) != NULL) {
