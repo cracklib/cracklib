@@ -1,0 +1,79 @@
+# translation of cracklib.default.cracklib.gu.po to Gujarati
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ankit Patel <ankit@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib.default.cracklib.gu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-23 06:55-0500\n"
+"PO-Revision-Date: 2009-10-22 18:13+0530\n"
+"Last-Translator: Ankit Patel <ankit@redhat.com>\n"
+"Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+
+#: lib/fascist.c:551
+msgid "you are not registered in the password file"
+msgstr "પાસવર્ડ ફાઈલમાં તમારી નોંધ થયેલ નથી"
+
+#: lib/fascist.c:565
+msgid "it is based on your username"
+msgstr "તમારા વપરાશકર્તા નામ પર આધારિત છે"
+
+#: lib/fascist.c:630
+msgid "it is based upon your password entry"
+msgstr "તમારા પાસવર્ડ પ્રવેશ પર આધારિત છે"
+
+#: lib/fascist.c:650
+msgid "it is derived from your password entry"
+msgstr "તમારા પાસવર્ડ પ્રવેશમાંથી તારવવામાં આવેલ છે"
+
+#: lib/fascist.c:663
+msgid "it's derived from your password entry"
+msgstr "તમારા પાસવર્ડ પ્રવેશમાંથી તારવવામાં આવેલ છે"
+
+#: lib/fascist.c:677
+msgid "it is derivable from your password entry"
+msgstr "તમારા પાસવર્ડ પ્રવેશમાંથી તારવી શકાય તેવું છે"
+
+#: lib/fascist.c:691
+msgid "it's derivable from your password entry"
+msgstr "તમારા પાસવર્ડ પ્રવેશમાંથી તારવી શકાય તેવું છે"
+
+#: lib/fascist.c:727
+msgid "it is WAY too short"
+msgstr "ખૂબ ટૂંકો છે"
+
+#: lib/fascist.c:732
+msgid "it is too short"
+msgstr "ખૂબ ટૂંકો છે"
+
+#: lib/fascist.c:749
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "ભિન્ન અક્ષરો સમાવતો નથી"
+
+#: lib/fascist.c:763
+msgid "it is all whitespace"
+msgstr "આ બધી ખાલી જગ્યા છે"
+
+#: lib/fascist.c:779
+msgid "it is too simplistic/systematic"
+msgstr "ખૂબ સરળ છે/પદ્ધતિસરનું છે"
+
+#: lib/fascist.c:784
+msgid "it looks like a National Insurance number."
+msgstr "રાષ્ટ્રિય વીમા નંબર જેવું દેખાય છે."
+
+#: lib/fascist.c:811
+msgid "it is based on a dictionary word"
+msgstr "શબ્દકોષના શબ્દ પર આધારિત છે"
+
+#: lib/fascist.c:830
+msgid "it is based on a (reversed) dictionary word"
+msgstr "(આરક્ષિત) શબ્દકોષના શબ્દ પર આધારિત છે"
+

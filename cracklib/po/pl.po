@@ -1,47 +1,46 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of pl.po to Polish
+# Piotr Bolek <pb@7bull.com>, 2005.
+# Piotr Drąg <piotrdrag@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib TBD\n"
+"Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-23 06:55-0500\n"
-"PO-Revision-Date: 2005-08-19 15:20+0200\n"
-"Last-Translator: Piotr Bolek <pb@7bull.com>\n"
-"Language-Team: Polish <i18n@suse.de>\n"
+"PO-Revision-Date: 2009-10-12 15:57+0200\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <fedora-trans-pl@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: lib/fascist.c:551
 msgid "you are not registered in the password file"
-msgstr "nie jesteś zarejestrowany w pliku passwd"
+msgstr "nie zarejestrowano w pliku passwd"
 
 #: lib/fascist.c:565
 msgid "it is based on your username"
-msgstr "to jest oparte na twojej nazwie użytkownika"
+msgstr "oparte na nazwie użytkownika"
 
 #: lib/fascist.c:630
 msgid "it is based upon your password entry"
-msgstr "oparte na twojej pozycji passwd"
+msgstr "oparte na wpisie w pliku passwd"
 
 #: lib/fascist.c:650
 msgid "it is derived from your password entry"
-msgstr "pochodzi od twojej pozycji passwd"
+msgstr "pochodzi od wpisu w pliku passwd"
 
 #: lib/fascist.c:663
 msgid "it's derived from your password entry"
-msgstr "pochodzi od twojej pozycji passwd"
+msgstr "pochodzi od wpisu w pliku passwd"
 
 #: lib/fascist.c:677
 msgid "it is derivable from your password entry"
-msgstr "da się odtworzyć na podstawie twojej pozycji passwd"
+msgstr "da się odtworzyć z wpisu w pliku passwd"
 
 #: lib/fascist.c:691
 msgid "it's derivable from your password entry"
-msgstr "da się odtworzyć na podstawie twojej pozycji passwd"
+msgstr "da się odtworzyć z wpisu w pliku passwd"
 
 #: lib/fascist.c:727
 msgid "it is WAY too short"
@@ -57,7 +56,7 @@ msgstr "nie zawiera wystarczająco RÓŻNYCH znaków"
 
 #: lib/fascist.c:763
 msgid "it is all whitespace"
-msgstr "to są same białe znaki"
+msgstr "same białe znaki"
 
 #: lib/fascist.c:779
 msgid "it is too simplistic/systematic"
