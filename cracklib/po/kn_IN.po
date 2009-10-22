@@ -76,6 +76,3 @@ msgstr "ಇದು ಶಬ್ಧಕೋಶದಲ್ಲಿನ ಒಂದು ಪದದ
 #: lib/fascist.c:830
 msgid "it is based on a (reversed) dictionary word"
 msgstr "ಇದು ಶಬ್ಧಕೋಶದಲ್ಲಿನ ಒಂದು ಪದದಂತಿದೆ(ತಿರುಮುರುವು)"
-
-
- 	  	 
