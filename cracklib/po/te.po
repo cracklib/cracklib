@@ -1,0 +1,79 @@
+# translation of cracklib.pot to Telugu
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the cracklib package.
+#
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-23 06:55-0500\n"
+"PO-Revision-Date: 2009-11-11 15:13+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+
+#: lib/fascist.c:551
+msgid "you are not registered in the password file"
+msgstr "మీరు సంకేతపదపు ఫైలునందు నమోదు కాలేదు"
+
+#: lib/fascist.c:565
+msgid "it is based on your username"
+msgstr "ఇది మీ వినియోగదారినామముపై ఆధారపడి వుంది"
+
+#: lib/fascist.c:630
+msgid "it is based upon your password entry"
+msgstr "ఇది మీ సంకేతపదము ప్రవేశముపై ఆధారపడి వుంది"
+
+#: lib/fascist.c:650
+msgid "it is derived from your password entry"
+msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడింది"
+
+#: lib/fascist.c:663
+msgid "it's derived from your password entry"
+msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడింది"
+
+#: lib/fascist.c:677
+msgid "it is derivable from your password entry"
+msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడ గలదు"
+
+#: lib/fascist.c:691
+msgid "it's derivable from your password entry"
+msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడ గలదు"
+
+#: lib/fascist.c:727
+msgid "it is WAY too short"
+msgstr "ఇది పొట్టి దానికి మార్గము"
+
+#: lib/fascist.c:732
+msgid "it is too short"
+msgstr "ఇది మరీ పొట్టిదిగా వుంది"
+
+#: lib/fascist.c:749
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "ఇది కావలసినన్ని విభిన్న అక్షరాలను కలిగిలేదు"
+
+#: lib/fascist.c:763
+msgid "it is all whitespace"
+msgstr "ఇది అంతా ఖాళీగానే వుంది"
+
+#: lib/fascist.c:779
+msgid "it is too simplistic/systematic"
+msgstr "ఇదీ మరీ సాధారణంగా/క్రమపద్దతిలో వుంది"
+
+#: lib/fascist.c:784
+msgid "it looks like a National Insurance number."
+msgstr "ఇది నేష్నల్ ఇన్సూరెన్స్ సంఖ్య వలె వుంది."
+
+#: lib/fascist.c:811
+msgid "it is based on a dictionary word"
+msgstr "ఇది నిఘంటువు పదముపై ఆధారపడివుంది"
+
+#: lib/fascist.c:830
+msgid "it is based on a (reversed) dictionary word"
+msgstr "ఇది నిఘంటువు(కలిగివున్న) పదముపై ఆధారపడివుంది"
+
