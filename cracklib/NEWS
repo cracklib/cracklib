@@ -5,6 +5,7 @@ v2.8.14 Added russian translation (Anton Dobkin)
         Added Telugu translation (Krishna Babu)
         Updated polish translation (Piotr Drąg)
         optimize order of commands in util/cracklib-format (Jan Dittberner, Debian)
+        fix several CC warnings (Jan Dittberner, Debian)
 v2.8.13 Compressed dictionary support and better python module
 v2.8.11 Better create-cracklib-dict helper script (Mike Frysinger)
 v2.8.10 Patch for better hanlding of cracklist dictionary paths in python binding. (Nalin Dahyabhai)

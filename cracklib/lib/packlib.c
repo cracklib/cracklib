@@ -15,7 +15,7 @@
 #endif
 #include "packer.h"
 
-static char vers_id[] = "packlib.c : v2.3p2 Alec Muffett 18 May 1993";
+static const char vers_id[] = "packlib.c : v2.3p2 Alec Muffett 18 May 1993";
 
 #define DEBUG 0
 

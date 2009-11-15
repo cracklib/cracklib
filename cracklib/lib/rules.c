@@ -4,7 +4,7 @@
  * or its effect upon hardware or computer systems.
  */
 
-static char vers_id[] = "rules.c : v5.0p3 Alec Muffett 20 May 1993";
+static const char vers_id[] = "rules.c : v5.0p3 Alec Muffett 20 May 1993";
 
 #include "config.h"
 #include <string.h>
@@ -24,7 +24,7 @@ Debug(val, a, b, c, d, e, f, g)
     int val;
     char *a, *b, *c, *d, *e, *f, *g;
 {
-    fprintf(stderr, a, b, c, d, e, f);
+    fprintf(stderr, a, b, c, d, e, f, g);
 }
 #else
 static void
@@ -480,7 +480,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    Debug(1, "Mangle: '>' weird argument in '%s'\n", control);
 		    return ((char *) 0);
 		}
-		if (strlen(area) <= limit)
+		if ( (int) strlen(area) <= limit)
 		{
 		    return ((char *) 0);
 		}
@@ -499,7 +499,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    Debug(1, "Mangle: '<' weird argument in '%s'\n", control);
 		    return ((char *) 0);
 		}
-		if (strlen(area) >= limit)
+		if ( (int) strlen(area) >= limit)
 		{
 		    return ((char *) 0);
 		}

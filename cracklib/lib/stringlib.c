@@ -11,7 +11,7 @@
 #endif
 #include "packer.h"
 
-static char vers_id[] = "stringlib.c : v2.3p2 Alec Muffett 18 May 1993";
+static const char vers_id[] = "stringlib.c : v2.3p2 Alec Muffett 18 May 1993";
 
 char
 Chop(string)

@@ -17,8 +17,8 @@ main(argc, argv)
     int argc;
     char *argv[];
 {
-    uint32_t readed;
-    uint32_t wrote;
+    unsigned long readed;
+    unsigned long wrote;
     PWDICT *pwp;
     char buffer[STRINGSIZE];
     char *file;
