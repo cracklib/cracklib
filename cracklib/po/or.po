@@ -1,0 +1,79 @@
+# translation of cracklib.default.cracklib.or.po to Oriya
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Manoj Kumar Giri <mgiri@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib.default.cracklib.or\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-23 06:55-0500\n"
+"PO-Revision-Date: 2009-11-12 13:02+0530\n"
+"Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
+"Language-Team: Oriya <oriya-it@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+
+#: lib/fascist.c:551
+msgid "you are not registered in the password file"
+msgstr "ପ୍ରବେଶ ସଂକେତ ଫାଇଲରେ ଆପଣ ପଞ୍ଜିକୃତ ହୋଇନାହାନ୍ତି"
+
+#: lib/fascist.c:565
+msgid "it is based on your username"
+msgstr "ଏହା ଆପଣଙ୍କର ଚାଳକନାମ ଉପରେ ଆଧାରିତ"
+
+#: lib/fascist.c:630
+msgid "it is based upon your password entry"
+msgstr "ଏହା ଆପଣଙ୍କର ପ୍ରବେଶ ସଂକେତ ଭରଣ ଉପରେ ଆଧାରିତ"
+
+#: lib/fascist.c:650
+msgid "it is derived from your password entry"
+msgstr "ଏହା ଆପଣଙ୍କର ପ୍ରବେଶ ସଂକେତ ଭରଣରୁ ଉତ୍ପନ୍ନ କରାହୋଇଥାଏ"
+
+#: lib/fascist.c:663
+msgid "it's derived from your password entry"
+msgstr "ଏହା ଆପଣଙ୍କର ପ୍ରବେଶ ସଂକେତ ଭରଣରୁ ଉତ୍ପନ୍ନ କରାହୋଇଥାଏ"
+
+#: lib/fascist.c:677
+msgid "it is derivable from your password entry"
+msgstr "ଏହା ଆପଣଙ୍କର ପ୍ରବେଶ ସଂକେତ ଭରଣରୁ ଉତ୍ପନ୍ନ କରିବା ଯୋଗ୍ୟ"
+
+#: lib/fascist.c:691
+msgid "it's derivable from your password entry"
+msgstr "ଏହା ଆପଣଙ୍କର ପ୍ରବେଶ ସଂକେତ ଭରଣରୁ ଉତ୍ପନ୍ନ କରିବା ଯୋଗ୍ୟ"
+
+#: lib/fascist.c:727
+msgid "it is WAY too short"
+msgstr "ଏହା ଅତ୍ୟଧିକ ଛୋଟ ଅଟେ"
+
+#: lib/fascist.c:732
+msgid "it is too short"
+msgstr "ଏହା ଅତ୍ୟଧିକ ଛୋଟ ଅଟେ"
+
+#: lib/fascist.c:749
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "ଏହା ଯଥେଷ୍ଟ ଭିନ୍ନ ବର୍ଣ୍ଣ ଧାରଣ କରିନଥାଏ"
+
+#: lib/fascist.c:763
+msgid "it is all whitespace"
+msgstr "ଏହା କେବଳ ଖାଲିସ୍ଥାନ ଅଟେ"
+
+#: lib/fascist.c:779
+msgid "it is too simplistic/systematic"
+msgstr "ଏହା ଅତ୍ୟଧିକ ସରଳ/ନିୟମାନୁବର୍ତ୍ତୀ"
+
+#: lib/fascist.c:784
+msgid "it looks like a National Insurance number."
+msgstr "ଏହା ଗୋଟିଏ ଜାତୀୟ ବୀମା ସଂଖ୍ୟା ପରି ଦେଖାଯାଉଛି।"
+
+#: lib/fascist.c:811
+msgid "it is based on a dictionary word"
+msgstr "ଏହା ଅଭିଧାନ ଶବ୍ଦ ଉପରେ ଆଧାରିତ"
+
+#: lib/fascist.c:830
+msgid "it is based on a (reversed) dictionary word"
+msgstr "ଏହା ଗୋଟିଏ (ଓଲଟା) ଅଭିଧାନ ଶବ୍ଦ ଉପରେ ଆଧାରିତ"
+
