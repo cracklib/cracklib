@@ -23,13 +23,15 @@
  * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
 
-#include <sys/types.h>
-#include <sys/stat.h>
+#ifdef PYTHON_H
 #include PYTHON_H
+#else
+#include <Python.h>
+#endif
 #ifdef HAVE_PTHREAD_H
 #include <pthread.h>
 #endif
-#include "../lib/crack.h"
+#include <crack.h>
 
 #ifdef HAVE_PTHREAD_H
 static pthread_mutex_t cracklib_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -60,8 +62,7 @@ static char _cracklib_FascistCheck_doc [] =
 static PyObject *
 _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 {
-    int i;
-    char *candidate, *dict;
+    char *candidate, *dict, *defaultdict;
     const char *result;
     struct stat st;
     char *keywords[] = {"pw", "dictpath", NULL};
@@ -107,17 +108,37 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
         free(dictfile);
     } else
     {
-        if (lstat(DEFAULT_CRACKLIB_DICT DICT_SUFFIX, &st) == -1)
-        {
-            PyErr_SetFromErrnoWithFilename(PyExc_OSError,
-                                           DEFAULT_CRACKLIB_DICT);
+        defaultdict = strdup(GetDefaultCracklibDict());
+        if (errno == ENOMEM) {
+            PyErr_SetFromErrno(PyExc_OSError);
             return NULL;
         }
+        dictfile = malloc(strlen(defaultdict) + sizeof(DICT_SUFFIX));
+        if (dictfile == NULL)
+        {
+            PyErr_SetFromErrnoWithFilename(PyExc_OSError, defaultdict);
+            free(defaultdict);
+            return NULL;
+        }
+        sprintf(dictfile, "%s" DICT_SUFFIX, defaultdict);
+        if (lstat(dictfile, &st) == -1)
+        {
+            PyErr_SetFromErrnoWithFilename(PyExc_OSError, defaultdict);
+            free(defaultdict);
+            free(dictfile);
+            return NULL;
+        }
+        free(dictfile);
     }
 
     LOCK();
-    result = FascistCheck(candidate, dict ? dict : DEFAULT_CRACKLIB_DICT);
+    result = FascistCheck(candidate, dict ? dict : defaultdict);
     UNLOCK();
+
+    if (defaultdict != NULL)
+    {
+        free(defaultdict);
+    }
 
     if (result != NULL)
     {
@@ -130,8 +151,8 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 static PyMethodDef
 _cracklibmethods[] =
 {
-    {"FascistCheck", _cracklib_FascistCheck, METH_VARARGS | METH_KEYWORDS,
-     _cracklib_FascistCheck_doc},
+    {"FascistCheck", (PyCFunction) _cracklib_FascistCheck,
+     METH_VARARGS | METH_KEYWORDS, _cracklib_FascistCheck_doc},
     {NULL, NULL},
 };
 

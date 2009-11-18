@@ -15,6 +15,10 @@ extern "C" {
 
 extern const char *FascistCheck(const char *pw, const char *dictpath);
 
+/* This function returns the compiled in value for DEFAULT_CRACKLIB_DICT.
+ */
+extern const char *GetDefaultCracklibDict(void);
+
 #ifdef __cplusplus
 };
 #endif

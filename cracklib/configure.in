@@ -91,5 +91,6 @@ dnl Handle local dict compiling properly
 AC_SUBST(CROSS_COMPILING, $cross_compiling)
 
 AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile python/Makefile Makefile \
+		python/setup.py \
 		po/Makefile.in m4/Makefile dicts/Makefile cracklib.spec)
 

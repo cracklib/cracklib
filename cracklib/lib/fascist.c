@@ -876,3 +876,9 @@ FascistCheck(password, path)
 
     return res;
 }
+
+const char *
+GetDefaultCracklibDict()
+{
+    return DEFAULT_CRACKLIB_DICT;
+}

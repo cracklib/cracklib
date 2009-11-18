@@ -1,0 +1,50 @@
+#!/usr/bin/python
+# Copyright 2009 Jan Dittberner <jan@dittberner.info>
+#
+# This file is part of cracklib.
+#
+# cracklib is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# cracklib is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Prua; if not, write to the Free Software Foundation,
+# Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+import os, sys
+
+from setuptools import setup, Extension, find_packages
+
+extensions = [
+    Extension("_cracklibmodule",
+        ["_cracklibmodule.c"],
+        libraries = ["crack"]),
+]
+
+setup(
+    name="cracklib",
+    version="@VERSION@",
+    description="A CPython extension module wrapping the libcrack library",
+    author="Jan Dittberner",
+    author_email="jan@dittberner.info",
+    url="http://cracklib.sourceforge.net/",
+    license="GPLv2+",
+    py_modules=['cracklib'],
+    ext_modules=extensions,
+    zip_safe=False,
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU General Public License (GPL)",
+        "Programming Language :: Python",
+        "Topic :: Security",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Systems :: Systems Administration",
+    ],
+)
