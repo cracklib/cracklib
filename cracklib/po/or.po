@@ -15,7 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
+"\n"
 
 #: lib/fascist.c:551
 msgid "you are not registered in the password file"
@@ -76,4 +77,3 @@ msgstr "ଏହା ଅଭିଧାନ ଶବ୍ଦ ଉପରେ ଆଧାରି�
 #: lib/fascist.c:830
 msgid "it is based on a (reversed) dictionary word"
 msgstr "ଏହା ଗୋଟିଏ (ଓଲଟା) ଅଭିଧାନ ଶବ୍ଦ ଉପରେ ଆଧାରିତ"
-

@@ -1,0 +1,9 @@
+configure
+make dist
+
+sftp nneul,cracklib@frs.sourceforge.net
+    create dir for new version
+	upload the .tar.gz file
+
+svn copy -m "tag at 2.8.14" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-2-8-14
+
