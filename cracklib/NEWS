@@ -1,4 +1,4 @@
-v2.8.16 
+v2.8.16 update licensing information in Python extension (Jan Dittberner)
 v2.8.15 allow building of Python extension outside source folder (Jan Dittberner)
         fix type on Python extension's trove classifier
 	reflect license change discussion that was never actually implemented in the repository and update to LGPL
