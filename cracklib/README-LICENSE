@@ -1,3 +1,262 @@
+-----------
+EFFECTIVE OCT 2008, LICENSE IS BEING CHANGED TO LGPL-2.1 (though not reflected
+in released code until Nov 2009 - slow release cycle...)
+-----------
+
+Discussion thread from mailing list archive, with approval from everyone actively
+involved or holding original licensing rights included.
+
+
+[Cracklib-devel] cracklib license
+From: Mike Frysinger <vapier@ge...> - 2007-10-02 01:16
+
+Attachments: Message as HTML     
+looks like 2.8.11 is out and marked as "GPL-2" ... releasing libraries unde=
+r=20
+GPL-2 is not desirable at all ... this is why the LGPL-2.1 exists
+=2Dmike
+
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Neulinger, Nathan <nneul@um...> - 2007-10-02 01:18
+      I understand that, and you're welcome to bring it up with Alec directly
+      and see if he wants to relicense his code as LGPL... but at this point,
+      it was enough to just get it consistent and documented as to what it was
+      released under. This wasn't actually a license change, just a
+      clarification of the licensing that was already in place.=20
+
+      -- Nathan
+      =20
+      ------------------------------------------------------------
+      Nathan Neulinger EMail: nneul@um...
+      University of Missouri - Rolla Phone: (573) 341-6679
+      UMR Information Technology Fax: (573) 341-4216
+
+      > -----Original Message-----
+      > From: cracklib-devel-bounces@li...
+      > [mailto:cracklib-devel-bounces@li...] On Behalf Of
+      > Mike Frysinger
+      > Sent: Monday, October 01, 2007 8:15 PM
+      > To: cracklib-devel@li...
+      > Subject: [Cracklib-devel] cracklib license
+      >=20
+      > looks like 2.8.11 is out and marked as "GPL-2" ... releasing
+      > libraries under
+      > GPL-2 is not desirable at all ... this is why the LGPL-2.1 exists
+      > -mike
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Mike Frysinger <vapier@ge...> - 2007-10-02 01:33
+
+      Attachments: Message as HTML     
+      On Monday 01 October 2007, Neulinger, Nathan wrote:
+      > I understand that, and you're welcome to bring it up with Alec directly
+      > and see if he wants to relicense his code as LGPL... but at this point,
+      > it was enough to just get it consistent and documented as to what it was
+      > released under. This wasn't actually a license change, just a
+      > clarification of the licensing that was already in place.
+
+      the original license (before moving to sourceforge -- aka, 2.7) was not=20
+      GPL-2 ... it was a modified artistic license ... i didnt notice the license=
+      =20
+      change until it was mentioned in the latest notes.
+
+      unlike the old license, GPL-2 prevents people from using cracklib unless th=
+      eir=20
+      applications are also GPL-2 which imo is just wrong. it isnt the place of =
+      a=20
+      library to dictact to application writes what license they should be using.=
+      =20
+      thus LGPL-2.1 enters to fill this void.
+      =2Dmike
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Neulinger, Nathan <nneul@um...> - 2007-10-02 01:46
+      Seems like the ideal thing here would be for you and the other distro
+      maintainers to get together with Alec in a conversation and come to a
+      decision as to what licensing scheme y'all want. I haven't really done
+      much other than cleaning up the packaging and patches and a small bit of
+      additional code, so whatever licensing y'all come up with is fine by me.
+
+      -- Nathan
+      =20
+      ------------------------------------------------------------
+      Nathan Neulinger EMail: nneul@um...
+      University of Missouri - Rolla Phone: (573) 341-6679
+      UMR Information Technology Fax: (573) 341-4216
+
+      > -----Original Message-----
+      > From: cracklib-devel-bounces@li...
+      > [mailto:cracklib-devel-bounces@li...] On Behalf Of
+      > Mike Frysinger
+      > Sent: Monday, October 01, 2007 8:33 PM
+      > To: Neulinger, Nathan
+      > Cc: cracklib-devel@li...; Alec Muffett
+      > Subject: Re: [Cracklib-devel] cracklib license
+      >=20
+      > On Monday 01 October 2007, Neulinger, Nathan wrote:
+      > > I understand that, and you're welcome to bring it up with Alec
+      > directly
+      > > and see if he wants to relicense his code as LGPL... but at this
+      > point,
+      > > it was enough to just get it consistent and documented as to what
+      > it was
+      > > released under. This wasn't actually a license change, just a
+      > > clarification of the licensing that was already in place.
+      >=20
+      > the original license (before moving to sourceforge -- aka, 2.7) was
+      > not
+      > GPL-2 ... it was a modified artistic license ... i didnt notice the
+      > license
+      > change until it was mentioned in the latest notes.
+      >=20
+      > unlike the old license, GPL-2 prevents people from using cracklib
+      > unless their
+      > applications are also GPL-2 which imo is just wrong. it isnt the
+      > place of a
+      > library to dictact to application writes what license they should
+      > be using.
+      > thus LGPL-2.1 enters to fill this void.
+      > -mike
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Alec Muffett <alecm@cr...> - 2007-10-02 08:57
+      > Seems like the ideal thing here would be for you and the other distro
+      > maintainers to get together with Alec in a conversation and come to a
+      > decision as to what licensing scheme y'all want. I haven't really done
+      > much other than cleaning up the packaging and patches and a small
+      > bit of
+      > additional code, so whatever licensing y'all come up with is fine
+      > by me.
+
+      I am sympathetic. Guys, what do you reckon?
+
+      What I am hearing so far is that LGPL makes sense, since it can be
+      linked with any code, not just GPL...
+
+      -a
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Devin Reade <gdr@gn...> - 2007-10-02 15:04
+      I would like to see it under LGPL as well. I think it is in everyone's
+      best interests to have as secure systems as possible, and I think tainting
+      it via GPL will just make it less likely that the library gets used, and
+      will not usually cause companies/developers to GPL the dependent code
+      (where it is not already GPL).
+
+      I like GPL, I use it when I can, but I don't think that it's the correct
+      license in this situation.
+
+      Devin
+      -- 
+      If it's sinful, it's more fun.
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Nalin Dahyabhai <nalin@re...> - 2008-01-28 16:32
+      On Tue, Oct 02, 2007 at 09:57:31AM +0100, Alec Muffett wrote:
+      > > Seems like the ideal thing here would be for you and the other distro
+      > > maintainers to get together with Alec in a conversation and come to a
+      > > decision as to what licensing scheme y'all want. I haven't really done
+      > > much other than cleaning up the packaging and patches and a small
+      > > bit of
+      > > additional code, so whatever licensing y'all come up with is fine
+      > > by me.
+      >
+      > I am sympathetic. Guys, what do you reckon?
+      >
+      > What I am hearing so far is that LGPL makes sense, since it can be
+      > linked with any code, not just GPL...
+
+      My apologies for not chiming in in anything resembling a reasonable
+      timeframe.
+
+      I'd also suggest the LGPL, for the reason you noted above. Alternately,
+      GPLv2 with the option of using the library under a later version of the
+      GPL would permit applications which were released under version 3 of the
+      GPL to use the library, too, which would be sufficient for the packages
+      which are included in Fedora. FWIW, I'd personally lean toward LGPL.
+
+      In any case, I thank you both for working on sorting this out.
+
+      Cheers,
+
+      Nalin
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Mike Frysinger <vapier@ge...> - 2008-10-05 21:27
+
+      Attachments: Message as HTML     
+      On Monday 28 January 2008, Nalin Dahyabhai wrote:
+      > On Tue, Oct 02, 2007 at 09:57:31AM +0100, Alec Muffett wrote:
+      > > > Seems like the ideal thing here would be for you and the other distro
+      > > > maintainers to get together with Alec in a conversation and come to a
+      > > > decision as to what licensing scheme y'all want. I haven't really done
+      > > > much other than cleaning up the packaging and patches and a small
+      > > > bit of
+      > > > additional code, so whatever licensing y'all come up with is fine
+      > > > by me.
+      > >
+      > > I am sympathetic. Guys, what do you reckon?
+      > >
+      > > What I am hearing so far is that LGPL makes sense, since it can be
+      > > linked with any code, not just GPL...
+      >
+      > My apologies for not chiming in in anything resembling a reasonable
+      > timeframe.
+      >
+      > I'd also suggest the LGPL, for the reason you noted above. Alternately,
+      > GPLv2 with the option of using the library under a later version of the
+      > GPL would permit applications which were released under version 3 of the
+      > GPL to use the library, too, which would be sufficient for the packages
+      > which are included in Fedora. FWIW, I'd personally lean toward LGPL.
+      >
+      > In any case, I thank you both for working on sorting this out.
+
+      looks like everyone is OK with LGPL-2.1 (GNU Lesser license), so can we make
+      the change now ?
+      -mike
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Alec Muffett <alecm@cr...> - 2008-10-05 23:18
+      >> In any case, I thank you both for working on sorting this out.
+      >
+      > looks like everyone is OK with LGPL-2.1 (GNU Lesser license), so can we make
+      > the change now ?
+
+      yes. go for it. thanks++
+
+      -a
+
+      	
+      Re: [Cracklib-devel] cracklib license
+      From: Mike Frysinger <vapier@ge...> - 2008-10-25 22:34
+
+      Attachments: Message as HTML     
+      On Sunday 05 October 2008, Alec Muffett wrote:
+      > >> In any case, I thank you both for working on sorting this out.
+      > >
+      > > looks like everyone is OK with LGPL-2.1 (GNU Lesser license), so can we
+      > > make the change now ?
+      >
+      > yes. go for it. thanks++
+
+      Nathan Neulinger is the only one who can actually make said change ...
+      -mike
+
+
+
+-----------
+BELOW IS ORIGINAL LICENSING DISCUSSION RE CHANGING TO GPL from Artistic.
+-----------
+
 CrackLib was originally licensed with a variant of the Artistic license. In the 
 interests of wider acceptance and more modern licensing, it was switched with
 the original author's blessing to GPL v2. 
