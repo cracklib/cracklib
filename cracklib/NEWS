@@ -1,7 +1,8 @@
 v2.8.16 update licensing information in Python extension (Jan Dittberner)
+        make translations work in Python extension (Jan Dittberner)
 v2.8.15 allow building of Python extension outside source folder (Jan Dittberner)
         fix type on Python extension's trove classifier
-	reflect license change discussion that was never actually implemented in the repository and update to LGPL
+        reflect license change discussion that was never actually implemented in the repository and update to LGPL
 v2.8.14 Added Assamese translation (Amitakhya Phukan)
         Added Bengali India translation (Runa Bhattacharjee)
         Added Gujarati translation (Ankit Patel)
@@ -22,27 +23,27 @@ v2.8.14 Added Assamese translation (Amitakhya Phukan)
 v2.8.13 Compressed dictionary support and better python module
 v2.8.11 Better create-cracklib-dict helper script (Mike Frysinger)
 v2.8.10 Patch for better hanlding of cracklist dictionary paths in python binding. (Nalin Dahyabhai)
-v2.8.8	Some shell quoting fixups for build scripts (Mike Frysinger)
+v2.8.8  Some shell quoting fixups for build scripts (Mike Frysinger)
 v2.8.7  Add support for NLS builds on FreeBSD
 v2.8.6  Add some sanity checkng to auto* script calls. (Mike Frysinger)
         Add support for cross compiling with a local dictionary
         Add a configure option to control default dictionary path
-      	Adjustments to prototypes to use const, and more language support. (Thorsten Kukuk <kukuk@suse.de>)
+        Adjustments to prototypes to use const, and more language support. (Thorsten Kukuk <kukuk@suse.de>)
 v2.8.5  Patches for python build and missing config.rpath
 v2.8.4  Patches for mod_php build issues
         Full localization of strings thanks to Thorsten Kukuk.
-	Patches for python binding support thanks to Nalin Dahyabhai
+        Patches for python binding support thanks to Nalin Dahyabhai
 v2.8.3  Deal with integer type and header portability issues
 v2.8.2  Check for LINE_MAX, cygwin workaround (sf patch #125964, Jürgen)
-	Fix a buffer overflow in packlib file handling (not a security issue)
-	  patch provided as #126097 by Jürgen
-v2.8.1	Install packer.h, php needs it, and address prototypes
-v2.8	new package, auto'ified with libtool and numerous bug fixes, forked
-	from original v2.7 distribution with the approval of the author
+        Fix a buffer overflow in packlib file handling (not a security issue)
+          patch provided as #126097 by Jürgen
+v2.8.1  Install packer.h, php needs it, and address prototypes
+v2.8    new package, auto'ified with libtool and numerous bug fixes, forked
+        from original v2.7 distribution with the approval of the author
 v2.7    mkdict/tr problem eliminated;
-	misc fixes suggested by Andrey Savochkin <saw@msu.ru> (with thanks)
+        misc fixes suggested by Andrey Savochkin <saw@msu.ru> (with thanks)
 v2.6    buffer overflow problems addressed - 1st attempt
-	permutations of fascist deconstructors fixed/enhanced
+        permutations of fascist deconstructors fixed/enhanced
 v2.5    added decent info to the "shadow" directory patches.
 v2.4    forwarded to ch & jfh3 for beta testing/comments
 v2.3-   internal beta test versions
