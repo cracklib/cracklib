@@ -33,6 +33,7 @@
 #endif
 #include <crack.h>
 #include <locale.h>
+#include <libintl.h>
 
 #ifdef HAVE_PTHREAD_H
 static pthread_mutex_t cracklib_mutex = PTHREAD_MUTEX_INITIALIZER;
