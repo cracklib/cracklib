@@ -103,7 +103,7 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
         sprintf(dictfile, "%s" DICT_SUFFIX, dict);
         if (lstat(dictfile, &st) == -1)
         {
-            PyErr_SetFromErrnoWithFilename(PyExc_OSError, dict);
+            PyErr_SetFromErrnoWithFilename(PyExc_OSError, dictfile);
             free(dictfile);
             return NULL;
         }
@@ -125,7 +125,7 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
         sprintf(dictfile, "%s" DICT_SUFFIX, defaultdict);
         if (lstat(dictfile, &st) == -1)
         {
-            PyErr_SetFromErrnoWithFilename(PyExc_OSError, defaultdict);
+            PyErr_SetFromErrnoWithFilename(PyExc_OSError, dictfile);
             free(defaultdict);
             free(dictfile);
             return NULL;
