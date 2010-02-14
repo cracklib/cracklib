@@ -57,13 +57,13 @@ main(argc, argv)
 
 	if (!buffer[0])
 	{
-	    fprintf(stderr, "skipping line: %u\n", readed);
+	    fprintf(stderr, "skipping line: %lu\n", readed);
 	    continue;
 	}
 
 	if (PutPW(pwp, buffer))
 	{
-	    fprintf(stderr, "error: PutPW '%s' line %uy\n", buffer, readed);
+	    fprintf(stderr, "error: PutPW '%s' line %luy\n", buffer, readed);
 	}
 
 	wrote++;
@@ -71,7 +71,7 @@ main(argc, argv)
 
     PWClose(pwp);
 
-    printf("%u %u\n", readed, wrote);
+    printf("%lu %lu\n", readed, wrote);
 
     return (0);
 }
