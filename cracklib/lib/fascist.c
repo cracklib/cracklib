@@ -32,7 +32,6 @@ typedef unsigned short uint16_t;
 
 #define MINDIFF 5
 #define MINLEN 6
-#define MAXSTEP 4
 
 #undef DEBUG
 #undef DEBUG2
@@ -707,7 +706,7 @@ FascistLook(pwp, instring)
     PWDICT *pwp;
     char *instring;
 {
-    int i;
+    int i,maxrepeat;
     char *ptr;
     char *jptr;
     char junk[STRINGSIZE];
@@ -774,7 +773,10 @@ FascistLook(pwp, instring)
 	ptr++;
     }
 
-    if (i > MAXSTEP)
+    /*  Change by Ben Karsin from ITS at University of Hawaii at Manoa.  Static MAXSTEP 
+        would generate many false positives for long passwords. */
+    maxrepeat = 3+(0.09*strlen(password));
+    if (i > maxrepeat)
     {
 	return _("it is too simplistic/systematic");
     }
