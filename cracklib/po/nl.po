@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-23 06:55-0500\n"
+"POT-Creation-Date: 2010-03-02 21:00-0600\n"
 "PO-Revision-Date: 2005-08-14 05:41+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -19,62 +19,62 @@ msgstr ""
 "X-Generator: KBabel 1.10.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: lib/fascist.c:551
+#: lib/fascist.c:550
 msgid "you are not registered in the password file"
 msgstr "u staat niet in het wachtwoordbestand geregistreerd"
 
-#: lib/fascist.c:565
+#: lib/fascist.c:564
 msgid "it is based on your username"
 msgstr "het is gebaseerd op uw gebruikersnaam"
 
-#: lib/fascist.c:630
+#: lib/fascist.c:629
 msgid "it is based upon your password entry"
 msgstr "het is gebaseerd op uw wachtwoordopgave"
 
-#: lib/fascist.c:650
+#: lib/fascist.c:649
 msgid "it is derived from your password entry"
 msgstr "het is afgeleid van uw wachtwoordopgave"
 
-#: lib/fascist.c:663
+#: lib/fascist.c:662
 msgid "it's derived from your password entry"
 msgstr "het is afgeleid van uw wachtwoordopgave"
 
-#: lib/fascist.c:677
+#: lib/fascist.c:676
 msgid "it is derivable from your password entry"
 msgstr "het is een afleiding van uw wachtwoordopgave"
 
-#: lib/fascist.c:691
+#: lib/fascist.c:690
 msgid "it's derivable from your password entry"
 msgstr "het is een afleiding van uw wachtwoordopgave"
 
-#: lib/fascist.c:727
+#: lib/fascist.c:726
 msgid "it is WAY too short"
 msgstr "het is VEEL te kort"
 
-#: lib/fascist.c:732
+#: lib/fascist.c:731
 msgid "it is too short"
 msgstr "het is te kort"
 
-#: lib/fascist.c:749
+#: lib/fascist.c:748
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "het bevat niet genoeg VERSCHILLENDE lettertekens"
 
-#: lib/fascist.c:763
+#: lib/fascist.c:762
 msgid "it is all whitespace"
 msgstr "het zijn allemaal spaties"
 
-#: lib/fascist.c:779
+#: lib/fascist.c:781
 msgid "it is too simplistic/systematic"
 msgstr "het is te eenvoudig/systematisch"
 
-#: lib/fascist.c:784
+#: lib/fascist.c:786
 msgid "it looks like a National Insurance number."
 msgstr "het lijkt op een nationaal verzekeringsnummer."
 
-#: lib/fascist.c:811
+#: lib/fascist.c:813
 msgid "it is based on a dictionary word"
 msgstr "het is gebaseerd op een woord uit een woordenboek"
 
-#: lib/fascist.c:830
+#: lib/fascist.c:832
 msgid "it is based on a (reversed) dictionary word"
 msgstr "het is gebaseerd op een (omgedraaid) woord uit een woordenboek"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib.default.cracklib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-23 06:55-0500\n"
+"POT-Creation-Date: 2010-03-02 21:00-0600\n"
 "PO-Revision-Date: 2009-11-11 14:21+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
@@ -17,62 +17,62 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
 
-#: lib/fascist.c:551
+#: lib/fascist.c:550
 msgid "you are not registered in the password file"
 msgstr "நீங்கள் கடவுச்சொல் கோப்பில் பதிவு செய்யவில்லை"
 
-#: lib/fascist.c:565
+#: lib/fascist.c:564
 msgid "it is based on your username"
 msgstr "இது உங்கள் பயனர்பெயர் அடிப்படையில் உள்ளது"
 
-#: lib/fascist.c:630
+#: lib/fascist.c:629
 msgid "it is based upon your password entry"
 msgstr "இது உங்கள் கடவுச்சொல் உள்ளீடு படி உள்ளது"
 
-#: lib/fascist.c:650
+#: lib/fascist.c:649
 msgid "it is derived from your password entry"
 msgstr "இது உங்கள் கடவுச்சொல் உள்ளீடிலிருந்து வரையறுக்கப்பட்டது"
 
-#: lib/fascist.c:663
+#: lib/fascist.c:662
 msgid "it's derived from your password entry"
 msgstr "இது உங்கள் கடவுச்சொல் உள்ளீடிலிருந்து வரையறுக்கப்பட்டது"
 
-#: lib/fascist.c:677
+#: lib/fascist.c:676
 msgid "it is derivable from your password entry"
 msgstr "இது உங்கள் கடவுச்சொல் உள்ளீடிலிருந்து வரையறுக்கப்படக்கூடியது"
 
-#: lib/fascist.c:691
+#: lib/fascist.c:690
 msgid "it's derivable from your password entry"
 msgstr "இது உங்கள் கடவுச்சொல் உள்ளீடிலிருந்து வரையறுக்கப்படக்கூடியது"
 
-#: lib/fascist.c:727
+#: lib/fascist.c:726
 msgid "it is WAY too short"
 msgstr "இது மிகவும் சிறியது"
 
-#: lib/fascist.c:732
+#: lib/fascist.c:731
 msgid "it is too short"
 msgstr "இது மிகவும் சிறியது"
 
-#: lib/fascist.c:749
+#: lib/fascist.c:748
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "இது போதிய வேறுபாடு எழுத்துக்களை கொண்டிருக்கவில்லை"
 
-#: lib/fascist.c:763
+#: lib/fascist.c:762
 msgid "it is all whitespace"
 msgstr "இது எல்லாம் காலிஇடங்கள்"
 
-#: lib/fascist.c:779
+#: lib/fascist.c:781
 msgid "it is too simplistic/systematic"
 msgstr "இது மிகவும் எளியது/அமைப்பானது"
 
-#: lib/fascist.c:784
+#: lib/fascist.c:786
 msgid "it looks like a National Insurance number."
 msgstr "இது ஒரு தேசிய காப்பீடு எண் போலுள்ளது."
 
-#: lib/fascist.c:811
+#: lib/fascist.c:813
 msgid "it is based on a dictionary word"
 msgstr "இது ஒரு அகராதி சொல்லை அடிப்படையாக கொண்டது"
 
-#: lib/fascist.c:830
+#: lib/fascist.c:832
 msgid "it is based on a (reversed) dictionary word"
 msgstr "இது ஒரு (தலைகீழானது) அகராதி சொல்லை அடிப்படையாக கொண்டது"

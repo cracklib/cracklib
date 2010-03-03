@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-23 06:55-0500\n"
+"POT-Creation-Date: 2010-03-02 21:00-0600\n"
 "PO-Revision-Date: 2005-08-04 12:05+0200\n"
 "Last-Translator: Linas Spraunius <linas@operis.org>\n"
 "Language-Team: lt\n"
@@ -15,62 +15,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/fascist.c:551
+#: lib/fascist.c:550
 msgid "you are not registered in the password file"
 msgstr "jūs neužregistruotas slaptažodžių byloje"
 
-#: lib/fascist.c:565
+#: lib/fascist.c:564
 msgid "it is based on your username"
 msgstr "jis pagrįstas jūsų vartotojo vardu"
 
-#: lib/fascist.c:630
+#: lib/fascist.c:629
 msgid "it is based upon your password entry"
 msgstr "jis pagrįstas jūsų slaptažodžio įrašu"
 
-#: lib/fascist.c:650
+#: lib/fascist.c:649
 msgid "it is derived from your password entry"
 msgstr "jis gautas iš jūsų slaptažodžio įrašo"
 
-#: lib/fascist.c:663
+#: lib/fascist.c:662
 msgid "it's derived from your password entry"
 msgstr "jis gautas iš jūsų slaptažodžio įrašo"
 
-#: lib/fascist.c:677
+#: lib/fascist.c:676
 msgid "it is derivable from your password entry"
 msgstr "jis gaunamas iš jūsų slaptažodžio įrašo"
 
-#: lib/fascist.c:691
+#: lib/fascist.c:690
 msgid "it's derivable from your password entry"
 msgstr "jis gaunamas iš jūsų slaptažodžio įrašo"
 
-#: lib/fascist.c:727
+#: lib/fascist.c:726
 msgid "it is WAY too short"
 msgstr "jis STIPRIAI per trumpas"
 
-#: lib/fascist.c:732
+#: lib/fascist.c:731
 msgid "it is too short"
 msgstr "jis per trumpas"
 
-#: lib/fascist.c:749
+#: lib/fascist.c:748
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "jis neturi pakankamai SKIRTINGŲ simbolių"
 
-#: lib/fascist.c:763
+#: lib/fascist.c:762
 msgid "it is all whitespace"
 msgstr "jis sudarytas tik iš tarpų"
 
-#: lib/fascist.c:779
+#: lib/fascist.c:781
 msgid "it is too simplistic/systematic"
 msgstr "jis per daug paprastas/sistemingas"
 
-#: lib/fascist.c:784
+#: lib/fascist.c:786
 msgid "it looks like a National Insurance number."
 msgstr "jis atrodo kaip nacionalinis draudimo numeris."
 
-#: lib/fascist.c:811
+#: lib/fascist.c:813
 msgid "it is based on a dictionary word"
 msgstr "jis pagrįstas žodžiu iš žodyno"
 
-#: lib/fascist.c:830
+#: lib/fascist.c:832
 msgid "it is based on a (reversed) dictionary word"
 msgstr "jis pagrįstas žodžiu iš žodyno, parašytu atvirkščiai"

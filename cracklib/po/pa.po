@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib.pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-23 06:55-0500\n"
+"POT-Creation-Date: 2010-03-02 21:00-0600\n"
 "PO-Revision-Date: 2009-11-17 05:52+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -19,62 +19,62 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/fascist.c:551
+#: lib/fascist.c:550
 msgid "you are not registered in the password file"
 msgstr "ਤੁਸੀਂ ਪਾਸਵਰਡ ਫਾਇਲ 'ਚ ਰਜਿਸਟਰ ਨਹੀਂ ਹੋ"
 
-#: lib/fascist.c:565
+#: lib/fascist.c:564
 msgid "it is based on your username"
 msgstr "ਇਹ ਤੁਹਾਡੇ ਯੂਜ਼ਰ-ਨਾਂ ਮੁਤਾਬਿਕ ਨਹੀਂ ਹੈ"
 
-#: lib/fascist.c:630
+#: lib/fascist.c:629
 msgid "it is based upon your password entry"
 msgstr "ਇਹ ਤੁਹਾਡੇ ਪਾਸਵਰਡ ਐਂਟਰੀ ਮੁਤਾਬਕ ਹੈ"
 
-#: lib/fascist.c:650
+#: lib/fascist.c:649
 msgid "it is derived from your password entry"
 msgstr "ਇਹ ਤੁਹਾਡੇ ਪਾਸਵਰਡ ਐਂਟਰੀ ਤੋਂ ਬਣਾਇਆ ਗਿਆ ਹੈ"
 
-#: lib/fascist.c:663
+#: lib/fascist.c:662
 msgid "it's derived from your password entry"
 msgstr "ਇਹ ਤੁਹਾਡੇ ਪਾਸਵਰਡ ਐਂਟਰੀ ਤੋਂ ਬਣਾਇਆ ਗਿਆ ਹੈ"
 
-#: lib/fascist.c:677
+#: lib/fascist.c:676
 msgid "it is derivable from your password entry"
 msgstr "ਇਹ ਤੁਹਾਡੇ ਪਾਸਵਰਡ ਐਂਟਰੀ ਤੋਂ ਬਣਾਉਣ ਯੋਗ ਹੈ"
 
-#: lib/fascist.c:691
+#: lib/fascist.c:690
 msgid "it's derivable from your password entry"
 msgstr "ਇਹ ਤੁਹਾਡੇ ਪਾਸਵਰਡ ਐਂਟਰੀ ਤੋਂ ਬਣਾਉਣਯੋਗ ਹੈ"
 
-#: lib/fascist.c:727
+#: lib/fascist.c:726
 msgid "it is WAY too short"
 msgstr "ਇਹ ਬਹੁਤ ਹੀ ਛੋਟਾ ਢੰਗ ਹੈ"
 
-#: lib/fascist.c:732
+#: lib/fascist.c:731
 msgid "it is too short"
 msgstr "ਇਹ ਬਹੁਤ ਛੋਟਾ ਹੈ"
 
-#: lib/fascist.c:749
+#: lib/fascist.c:748
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "ਇਹ ਵਿੱਚ ਲੋੜੀਦੇ*ਵੱਖਰੇ* ਅੱਖਰ ਮੌਜੂਦ ਨਹੀਂ ਹਨ"
 
-#: lib/fascist.c:763
+#: lib/fascist.c:762
 msgid "it is all whitespace"
 msgstr "ਇਹ ਸਿਰਫ਼ ਖਾਲੀ ਥਾਂ ਹੈ"
 
-#: lib/fascist.c:779
+#: lib/fascist.c:781
 msgid "it is too simplistic/systematic"
 msgstr "ਇਹ ਬਹੁਤ ਸਧਾਰਨ/ਇਕਸਾਰ ਜਿਹਾ ਹੈ"
 
-#: lib/fascist.c:784
+#: lib/fascist.c:786
 msgid "it looks like a National Insurance number."
 msgstr "ਇਹ ਰਾਸ਼ਟਰੀ ਸੁਰੱਖਿਆ ਨੰਬਰ ਵਰਗਾ ਜਾਪਦਾ ਹੈ।"
 
-#: lib/fascist.c:811
+#: lib/fascist.c:813
 msgid "it is based on a dictionary word"
 msgstr "ਇਹ ਡਿਕਸ਼ਨਰੀ ਸ਼ਬਦ ਉੱਤੇ ਅਧਾਰਿਤ ਹੈ"
 
-#: lib/fascist.c:830
+#: lib/fascist.c:832
 msgid "it is based on a (reversed) dictionary word"
 msgstr "ਇਹ (ਉਲਟੇ) ਡਿਕਸ਼ਨਰੀ ਸ਼ਬਦ ਉੱਤੇ ਅਧਾਰਿਤ ਹੈ"
