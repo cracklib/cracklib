@@ -3,8 +3,9 @@ make dist
 
 sftp nneul,cracklib@frs.sourceforge.net
 cd /home/pfs/project/c/cr/cracklib/cracklib/
-mkdir 2.8.15
-mput cracklib-2.8.15.tar.gz
+mkdir 2.8.17
+mput cracklib-2.8.17.tar.gz
+exit
 
-svn copy -m "tag at 2.8.15" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-2-8-15
+svn copy -m "tag at 2.8.17" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-2-8-17
 

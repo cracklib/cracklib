@@ -1,3 +1,4 @@
+v2.8.17
 v2.8.16 update licensing information in Python extension (Jan Dittberner)
         make translations work in Python extension (Jan Dittberner)
         fix Python extension compilation warning (Jan Dittberner)
