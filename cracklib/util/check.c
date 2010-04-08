@@ -21,8 +21,9 @@ main(int argc, char **argv)
 	const char *why;
 	int i;
 
-#ifdef ENABLE_NLS
 	setlocale(LC_ALL, "");
+
+#ifdef ENABLE_NLS
 	textdomain(PACKAGE);
 #endif
 
