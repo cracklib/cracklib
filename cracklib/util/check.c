@@ -21,8 +21,10 @@ main(int argc, char **argv)
 	const char *why;
 	int i;
 
+#ifdef ENABLE_NLS
 	setlocale(LC_ALL, "");
 	textdomain(PACKAGE);
+#endif
 
 	while (fgets(buf, sizeof(buf), stdin) != NULL) {
 		while (((i = strlen(buf)) > 0) && (i > 0)) {
