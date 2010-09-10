@@ -1,7 +1,8 @@
-v2.8.18 fixed compilation on interix systems
+v2.8.17 fixed compilation on interix systems
         updated Hindi translation (Rajesh Ranjan)
-v2.8.17 fixed NLS issue in cracklib-check
+        fixed NLS issue in cracklib-check
         add Ukrainian translation (Yuri Chornoivan)
+        fix segmentation fault in Python extension (Peter Palfrader)
 v2.8.16 update licensing information in Python extension (Jan Dittberner)
         make translations work in Python extension (Jan Dittberner)
         fix Python extension compilation warning (Jan Dittberner)

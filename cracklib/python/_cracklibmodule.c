@@ -64,7 +64,8 @@ static char _cracklib_FascistCheck_doc [] =
 static PyObject *
 _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 {
-    char *candidate, *dict, *defaultdict;
+    char *candidate, *dict;
+    char *defaultdict = NULL;
     const char *result;
     struct stat st;
     char *keywords[] = {"pw", "dictpath", NULL};
