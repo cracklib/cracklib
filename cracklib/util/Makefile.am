@@ -8,7 +8,7 @@ EXTRA_DIST = create-cracklib-dict cracklib-format
 
 LDADD = ../lib/libcrack.la
 
-AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(DEFAULT_CRACKLIB_DICT)"'
+AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(DEFAULT_CRACKLIB_DICT)"' -Wall
 
 cracklib_check_SOURCES = check.c
 cracklib_check_LDADD = $(LDADD)
