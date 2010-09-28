@@ -33,7 +33,9 @@
 #endif
 #include <crack.h>
 #include <locale.h>
+#ifdef HAVE_LIBINTL_H
 #include <libintl.h>
+#endif
 
 #ifdef HAVE_PTHREAD_H
 static pthread_mutex_t cracklib_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -135,7 +137,9 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
     }
 
 	setlocale(LC_ALL, "");
+#ifdef ENABLE_NLS
 	textdomain("cracklib");
+#endif
 
     LOCK();
     result = FascistCheck(candidate, dict ? dict : defaultdict);

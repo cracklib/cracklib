@@ -5,6 +5,7 @@ v2.8.17 fixed compilation on interix systems
         fix segmentation fault in Python extension (Peter Palfrader)
         add -Wall to AM_CFLAGS to discover possible programming errors (Jan Dittberner)
         updated Wei Liu (zh_CN) translation (Leah Liu)
+		fixed NLS support in python module compilation (Mike Frysinger)
 v2.8.16 update licensing information in Python extension (Jan Dittberner)
         make translations work in Python extension (Jan Dittberner)
         fix Python extension compilation warning (Jan Dittberner)
