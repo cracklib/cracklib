@@ -24,7 +24,9 @@ from setuptools import setup, Extension, find_packages
 extensions = [
     Extension("_cracklibmodule",
         ["_cracklibmodule.c"],
-        libraries = ["crack"]),
+        include_dirs = ["../lib"],
+        libraries = ["crack"],
+        library_dirs = ["../lib/.libs"]),
 ]
 
 setup(

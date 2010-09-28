@@ -1,4 +1,5 @@
 v2.8.18 also include stdlib.h in stringlib.c (Mike Frysinger)
+	    make sure python lib builds against build dir instead of system installed libs (Arfrever Frehtes Taifersar Arahesis)
 v2.8.17 fixed compilation on interix systems
         updated Hindi translation (Rajesh Ranjan)
         fixed NLS issue in cracklib-check
