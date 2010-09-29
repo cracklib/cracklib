@@ -3,11 +3,11 @@ make dist
 
 sftp nneul,cracklib@frs.sourceforge.net <<EOM
 cd /home/pfs/project/c/cr/cracklib/cracklib/
-mkdir 2.8.18
-cd 2.8.18
-mput cracklib-2.8.18.tar.gz
+mkdir 2.8.19
+cd 2.8.19
+mput cracklib-2.8.19.tar.gz
 exit
 EOM
 
-svn copy -m "tag at 2.8.18" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-2.8.18
+svn copy -m "tag at 2.8.19" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-2.8.19
 
