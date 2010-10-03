@@ -1,7 +1,6 @@
 SUBDIRS = m4 lib util po doc python dicts
 
-EXTRA_DIST = config.rpath mkinstalldirs  	\
-		autogen.sh \
+EXTRA_DIST = \
 		cracklib.spec.in \
 		README-DAWG \
 		README-WORDS \
