@@ -31,6 +31,9 @@
 #ifdef HAVE_PTHREAD_H
 #include <pthread.h>
 #endif
+#ifdef HAVE_SYS_STAT_H
+#include <sys/stat.h>
+#endif
 #include <crack.h>
 #include <locale.h>
 #ifdef HAVE_LIBINTL_H
