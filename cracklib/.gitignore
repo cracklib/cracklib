@@ -14,6 +14,7 @@
 Makefile
 Makefile.in
 
+/ABOUT-NLS
 /INSTALL
 /aclocal.m4
 /autom4te.cache
@@ -22,6 +23,7 @@ Makefile.in
 /config.h
 /config.h.in
 /config.log
+/config.rpath
 /config.status
 /config.sub
 /configure
@@ -29,6 +31,7 @@ Makefile.in
 /install-sh
 /libtool
 /ltmain.sh
+/m4/
 /missing
 /py-compile
 /stamp-h1
@@ -37,6 +40,8 @@ Makefile.in
 /m4/ltsugar.m4
 /m4/ltversion.m4
 /m4/lt~obsolete.m4
+/po/Makefile.in.in
+/po/Makevars.template
 /po/POTFILES
 /po/stamp-po
 /python/setup.py
