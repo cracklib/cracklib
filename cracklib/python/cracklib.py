@@ -4,7 +4,7 @@
 # Parts of this code are based on work Copyright (c) 2003 by Domenico
 # Andreoli.
 #
-# Copyright (c) 2008, 2009 Jan Dittberner <jan@dittberner.info>
+# Copyright (c) 2008, 2009, 2012 Jan Dittberner <jan@dittberner.info>
 #
 # This file is part of cracklib.
 #
@@ -26,6 +26,8 @@
 
 import string
 from _cracklib import FascistCheck
+
+__version__ = '2.8.19'
 
 ASCII_UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 ASCII_LOWERCASE = "abcdefghijklmnopqrstuvwxyz"
@@ -190,18 +192,18 @@ def VeryFascistCheck(new, old = None, dictpath = None):
     """
     if old != None:
         if new == old:
-            raise ValueError, "is the same as the old one"
+            raise ValueError("is the same as the old one")
                 
         oldmono = old.lower()
         newmono = new.lower()
         wrapped = old + old
 
         if newmono == oldmono:
-            raise ValueError, "case changes only"
+            raise ValueError("case changes only")
         if wrapped.find(new) != -1:
-            raise ValueError, "is rotated"
+            raise ValueError("is rotated")
         if similar(oldmono, newmono):
-            raise ValueError, "is too similar to the old one"
+            raise ValueError("is too similar to the old one")
     
     if dictpath == None:
         FascistCheck(new)
@@ -209,8 +211,18 @@ def VeryFascistCheck(new, old = None, dictpath = None):
         FascistCheck(new, dictpath)
 
     if palindrome(new):
-        raise ValueError, "is a palindrome"
+        raise ValueError("is a palindrome")
     if simple(new):
-        raise ValueError, "is too simple"
+        raise ValueError("is too simple")
 
     return new
+
+
+def test(verbosity=1, repeat=1):
+    """Test cracklib methods."""
+    import test_cracklib
+    import sys
+    result = test_cracklib.run(verbosity=verbosity, repeat=repeat)
+    if result.wasSuccessful():
+        sys.exit(0)
+    sys.exit(1)
