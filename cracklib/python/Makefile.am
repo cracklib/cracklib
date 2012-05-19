@@ -1,5 +1,5 @@
 if BUILD_PYTHON
-python_PYTHON = cracklib.py
+python_PYTHON = cracklib.py test_cracklib.py
 pyexec_LTLIBRARIES = _cracklibmodule.la
 AM_CFLAGS = -I$(top_srcdir)/lib -Wall
 _cracklibmodule_la_LDFLAGS = -module -avoid-version $(top_builddir)/lib/libcrack.la
