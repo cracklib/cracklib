@@ -218,11 +218,11 @@ def VeryFascistCheck(new, old = None, dictpath = None):
     return new
 
 
-def test(verbosity=1, repeat=1):
+def test(verbosity=1, repeat=1, dictpath=None):
     """Test cracklib methods."""
     import test_cracklib
     import sys
-    result = test_cracklib.run(verbosity=verbosity, repeat=repeat)
+    result = test_cracklib.run(verbosity=verbosity, repeat=repeat, use_dictpath=dictpath)
     if result.wasSuccessful():
         sys.exit(0)
     sys.exit(1)

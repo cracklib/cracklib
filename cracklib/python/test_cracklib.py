@@ -11,23 +11,24 @@ import cracklib
 __version__ = '2.8.19'
 
 tests = []
+dictpath = None
 
 
 class TestModuleFunctions(unittest.TestCase):
     def test_VeryFascistCheck(self):
         try:
-            cracklib.VeryFascistCheck('test')
+            cracklib.VeryFascistCheck('test', dictpath=dictpath)
             self.fail('expected ValueError')
         except ValueError:
             pass
         try:
-            cracklib.VeryFascistCheck('LhIRI6JXpKhUqBjT')
+            cracklib.VeryFascistCheck('LhIRI6JXpKhUqBjT', dictpath=dictpath)
         except ValueError:
             self.fail('password should be good enough')
 
     def test_palindrome(self):
         try:
-            cracklib.VeryFascistCheck('ot23#xyx#32to')
+            cracklib.VeryFascistCheck('ot23#xyx#32to', dictpath=dictpath)
             self.fail('expected ValueError')
         except ValueError:
             e = sys.exc_info()[1]
@@ -35,7 +36,7 @@ class TestModuleFunctions(unittest.TestCase):
 
     def test_same(self):
         try:
-            cracklib.VeryFascistCheck('test', 'test')
+            cracklib.VeryFascistCheck('test', 'test', dictpath=dictpath)
             self.fail('expected ValueError')
         except ValueError:
             e = sys.exc_info()[1]
@@ -43,7 +44,7 @@ class TestModuleFunctions(unittest.TestCase):
 
     def test_case_change(self):
         try:
-            cracklib.VeryFascistCheck('test', 'TeSt')
+            cracklib.VeryFascistCheck('test', 'TeSt', dictpath=dictpath)
             self.fail('expected ValueError')
         except ValueError:
             e = sys.exc_info()[1]
@@ -51,7 +52,7 @@ class TestModuleFunctions(unittest.TestCase):
 
     def test_similar(self):
         try:
-            cracklib.VeryFascistCheck('test12', 'test34')
+            cracklib.VeryFascistCheck('test12', 'test34', dictpath=dictpath)
             self.fail('expected ValueError')
         except ValueError:
             e = sys.exc_info()[1]
@@ -59,7 +60,7 @@ class TestModuleFunctions(unittest.TestCase):
 
     def test_simple(self):
         try:
-            cracklib.VeryFascistCheck('t3sx24')
+            cracklib.VeryFascistCheck('t3sx24', dictpath=dictpath)
             self.fail('expected ValueError')
         except ValueError:
             e = sys.exc_info()[1]
@@ -121,10 +122,12 @@ class TestModuleFunctions(unittest.TestCase):
 tests.append(TestModuleFunctions)
 
 
-def run(verbosity=1, repeat=1):
+def run(verbosity=1, repeat=1, use_dictpath=None):
+    global dictpath
     print(('cracklib is installed in: ' + os.path.dirname(__file__)))
     print(('cracklib version: ' + __version__))
     print((sys.version))
+    dictpath=use_dictpath
 
     suite = unittest.TestSuite()
     for cls in tests:
