@@ -1,13 +1,17 @@
 configure
 make dist
 
+ver=$(head -1 NEWS)
+ver=${ver#v}
+echo "creating ${ver} release"
+
 sftp nneul,cracklib@frs.sourceforge.net <<EOM
 cd /home/pfs/project/c/cr/cracklib/cracklib/
-mkdir 2.8.20
-cd 2.8.20
-mput cracklib-2.8.20.tar.gz
+mkdir ${ver}
+cd ${ver}
+mput cracklib-${ver}.tar.gz
 exit
 EOM
 
-svn copy -m "tag at 2.8.20" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-2.8.20
+svn copy -m "tag at ${ver}" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-${ver}
 
