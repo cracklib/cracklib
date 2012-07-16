@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Copyright 2009 Jan Dittberner <jan@dittberner.info>
+# Copyright 2009, 2012 Jan Dittberner <jan@dittberner.info>
 #
 # This file is part of cracklib.
 #
@@ -22,8 +22,8 @@ import os, sys
 from setuptools import setup, Extension, find_packages
 
 extensions = [
-    Extension("_cracklibmodule",
-        ["_cracklibmodule.c"],
+    Extension("_cracklib",
+        ["_cracklib.c"],
         include_dirs = ["@top_builddir@/lib"],
         libraries = ["crack"],
         library_dirs = ["@top_builddir@/lib/.libs"]),
