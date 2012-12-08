@@ -41,7 +41,8 @@ typedef struct
     uint64_t hwms[256];
     struct pi_header64 header;
     int count;
-    char data[NUMWORDS][MAXWORDLEN];
+    char data_put[NUMWORDS][MAXWORDLEN];
+    char data_get[NUMWORDS][MAXWORDLEN];
 } PWDICT64;
 
 
@@ -383,8 +384,8 @@ PutPW(pwp, string)
 
     if (string)
     {
-	strncpy(pwp->data[pwp->count], string, MAXWORDLEN);
-	pwp->data[pwp->count][MAXWORDLEN - 1] = '\0';
+	strncpy(pwp->data_put[pwp->count], string, MAXWORDLEN);
+	pwp->data_put[pwp->count][MAXWORDLEN - 1] = '\0';
 
 	pwp->hwms[string[0] & 0xff]= pwp->header.pih_numwords;
 
@@ -406,16 +407,16 @@ PutPW(pwp, string)
 
 	fwrite((char *) &datum, sizeof(datum), 1, pwp->ifp);
 
-	fputs(pwp->data[0], pwp->dfp);
+	fputs(pwp->data_put[0], pwp->dfp);
 	putc(0, pwp->dfp);
 
-	ostr = pwp->data[0];
+	ostr = pwp->data_put[0];
 
 	for (i = 1; i < NUMWORDS; i++)
 	{
 	    register int j;
 	    register char *nstr;
-	    nstr = pwp->data[i];
+	    nstr = pwp->data_put[i];
 
 	    if (nstr[0])
 	    {
@@ -428,7 +429,7 @@ PutPW(pwp, string)
 	    ostr = nstr;
 	}
 
-	memset(pwp->data, '\0', sizeof(pwp->data));
+	memset(pwp->data_put, '\0', sizeof(pwp->data_put));
 	pwp->count = 0;
     }
     return (0);
@@ -445,7 +446,6 @@ GetPW(pwp, number)
     register char *nstr;
     register char *bptr;
     char buffer[NUMWORDS * MAXWORDLEN];
-    static char data[NUMWORDS][MAXWORDLEN];
     static uint32_t prevblock = 0xffffffff;
     uint32_t thisblock;
 
@@ -454,9 +454,9 @@ GetPW(pwp, number)
     if (prevblock == thisblock)
     {
 #if DEBUG
-	fprintf(stderr, "returning (%s)\n", data[number % NUMWORDS]);
+	fprintf(stderr, "returning (%s)\n", pwp->data_get[number % NUMWORDS]);
 #endif
-	return (data[number % NUMWORDS]);
+	return (pwp->data_get[number % NUMWORDS]);
     }
 
     if (_PWIsBroken64(pwp->ifp))
@@ -507,7 +507,8 @@ GetPW(pwp, number)
 	return ((char *) 0);
     }
 	r = 0;
-	
+
+        memset(buffer, 0, sizeof(buffer));
 #ifdef HAVE_ZLIB_H
 	if (pwp->flags & PFOR_USEZLIB)
 	{
@@ -531,13 +532,13 @@ GetPW(pwp, number)
 
     bptr = buffer;
 
-    for (ostr = data[0]; (*(ostr++) = *(bptr++)); /* nothing */ );
+    for (ostr = pwp->data_get[0]; (*(ostr++) = *(bptr++)); /* nothing */ );
 
-    ostr = data[0];
+    ostr = pwp->data_get[0];
 
     for (i = 1; i < NUMWORDS; i++)
     {
-	nstr = data[i];
+	nstr = pwp->data_get[i];
 	strcpy(nstr, ostr);
 
 	ostr = nstr + *(bptr++);
@@ -546,7 +547,7 @@ GetPW(pwp, number)
 	ostr = nstr;
     }
 
-    return (data[number % NUMWORDS]);
+    return (pwp->data_get[number % NUMWORDS]);
 }
 
 unsigned int
