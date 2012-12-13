@@ -1,4 +1,4 @@
-v2.8.21
+v2.8.21 export prototype for FascistLook (Nalin Dahyabhai)
 v2.8.20 include python/test_cracklib.py in release tarball (Jan Dittberner)
         rename python/_cracklibmodule.c to python/_cracklib.c to support Python 3.3 (Jan Dittberner)
 		patch from Ivosh (iraisr) for uninitialized buffer issue with small dictionaries.

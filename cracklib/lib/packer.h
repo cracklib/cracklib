@@ -94,5 +94,6 @@ extern int PMatch(char *control, char *string);
 extern char *Mangle(char *input, char *control);
 extern char Chop(char *string);
 extern char *Trim(char *string);
+extern char *FascistLook(PWDICT *pwp, char *instring);
 
 #endif
