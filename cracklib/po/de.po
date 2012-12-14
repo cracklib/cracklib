@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: new\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-07 22:03-0600\n"
+"POT-Creation-Date: 2012-12-14 16:11-0600\n"
 "PO-Revision-Date: 2003-11-27 18:31GMT\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -79,3 +79,7 @@ msgstr "Es basiert auf einem Wörterbucheintrag"
 #: lib/fascist.c:832
 msgid "it is based on a (reversed) dictionary word"
 msgstr "Es basiert auf einem (umgekehrten) Wörterbucheintrag"
+
+#: lib/fascist.c:867
+msgid "error loading dictionary"
+msgstr ""

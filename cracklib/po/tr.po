@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-07 22:03-0600\n"
+"POT-Creation-Date: 2012-12-14 16:11-0600\n"
 "PO-Revision-Date: 2006-03-12 22:56+0200\n"
 "Last-Translator: Görkem Çetin <gorkem@uludag.org.tr>\n"
 "Language-Team:  <yerellestirme@kde.org.tr>\n"
@@ -76,3 +76,7 @@ msgstr "Bu parola sözlükteki bir kelime ile aynı"
 #: lib/fascist.c:832
 msgid "it is based on a (reversed) dictionary word"
 msgstr "Bu parola sözlükteki kelimelerden birisinin tersi"
+
+#: lib/fascist.c:867
+msgid "error loading dictionary"
+msgstr ""

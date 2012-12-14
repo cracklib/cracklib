@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-07 22:03-0600\n"
+"POT-Creation-Date: 2012-12-14 16:11-0600\n"
 "PO-Revision-Date: 2005-06-23 12:52+0200\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -75,3 +75,7 @@ msgstr "根據辭典單字"
 #: lib/fascist.c:832
 msgid "it is based on a (reversed) dictionary word"
 msgstr "根據 (顛倒的) 辭典單字"
+
+#: lib/fascist.c:867
+msgid "error loading dictionary"
+msgstr ""
