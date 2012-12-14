@@ -864,10 +864,7 @@ FascistCheck(password, path)
 
     if (!(pwp = PWOpen(path, "r")))
     {
-        /* shouldn't perror in a library or exit */
-	/* but should we return a "bad password" or "good password" if this error occurs */
-	perror("PWOpen");
-	exit(-1);
+	return _("error loading dictionary");
     }
 
     /* sure seems like we should close the database, since we're only likely to check one password */
