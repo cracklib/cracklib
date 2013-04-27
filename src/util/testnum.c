@@ -20,7 +20,7 @@ main ()
     PWDICT *pwp;
     char buffer[STRINGSIZE];
 
-    if (!(pwp = PWOpen (NULL, "r")))
+    if (!(pwp = PWOpen (DEFAULT_CRACKLIB_DICT, "r")))
     {
 	perror ("PWOpen");
 	return (-1);
