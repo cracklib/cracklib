@@ -1,3 +1,1 @@
-pkgdata_DATA = cracklib-small
-
-EXTRA_DIST = cracklib-small
+dist_pkgdata_DATA = cracklib-small

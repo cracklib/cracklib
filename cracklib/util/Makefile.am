@@ -2,9 +2,7 @@ sbin_PROGRAMS = cracklib-packer cracklib-unpacker cracklib-check
 
 noinst_PROGRAMS = testlib testnum teststr 
 
-sbin_SCRIPTS = create-cracklib-dict cracklib-format
-
-EXTRA_DIST = create-cracklib-dict cracklib-format
+dist_sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
 LDADD = ../lib/libcrack.la
 

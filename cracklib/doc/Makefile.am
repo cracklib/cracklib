@@ -1,3 +1,1 @@
-pkgdata_DATA = cracklib.magic
-
-EXTRA_DIST = cracklib.magic
+dist_pkgdata_DATA = cracklib.magic
