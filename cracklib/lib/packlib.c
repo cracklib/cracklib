@@ -79,7 +79,7 @@ PWOpen(prefix, mode)
     if (pdesc.header.pih_magic == PIH_MAGIC)
     {
 	fprintf(stderr, "%s: another dictionary already open\n", prefix);
-	return ((PWDICT *) 0);
+	return NULL;
     }
 
     memset(&pdesc, '\0', sizeof(pdesc));
@@ -102,11 +102,11 @@ PWOpen(prefix, mode)
 			if (!(pdesc.dfp = gzopen(dname, mode)))
 			{
 				perror(dname);
-				return ((PWDICT *) 0);
+				return NULL;
 			}
 #else
 		perror(dname);
-		return ((PWDICT *) 0);
+		return NULL;
 #endif
 		}
 	}
@@ -117,7 +117,7 @@ PWOpen(prefix, mode)
 		if (!(pdesc.dfp = fopen(dname, mode)))
 		{
 			perror(dname);
-			return ((PWDICT *) 0);
+			return NULL;
 		}
 	}
 
@@ -130,7 +130,7 @@ PWOpen(prefix, mode)
 #endif
 			fclose(pdesc.dfp);
 	perror(iname);
-	return ((PWDICT *) 0);
+	return NULL;
     }
 
     if ((pdesc.wfp = fopen(wname, mode)))
@@ -170,7 +170,7 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
-	    return ((PWDICT *) 0);
+	    return NULL;
 	}
 
         if ((pdesc.header.pih_magic == 0) || (pdesc.header.pih_numwords == 0))
@@ -193,7 +193,7 @@ PWOpen(prefix, mode)
 		{
 			fclose(wfp);
 		}
-                return ((PWDICT *) 0);
+                return NULL;
             }
             if (pdesc64.header.pih_magic != PIH_MAGIC)
             {
@@ -213,7 +213,7 @@ PWOpen(prefix, mode)
 		{
 			fclose(wfp);
 		}
-                return ((PWDICT *) 0);
+                return NULL;
             }
             pdesc.header.pih_magic = pdesc64.header.pih_magic;
             pdesc.header.pih_numwords = pdesc64.header.pih_numwords;
@@ -239,7 +239,7 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
-	    return ((PWDICT *) 0);
+	    return NULL;
 	}
 
         if (pdesc.header.pih_numwords < 1)
@@ -258,7 +258,7 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
-            return ((PWDICT *) 0);
+            return NULL;
         }
 
 	if (pdesc.header.pih_blocklen != NUMWORDS)
@@ -277,7 +277,7 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
-	    return ((PWDICT *) 0);
+	    return NULL;
 	}
 
 	if (pdesc.flags & PFOR_USEHWMS)
