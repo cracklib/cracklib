@@ -368,7 +368,7 @@ PolyStrchr(string, class)
 	}
 	string++;
     }
-    return ((char *) 0);
+    return NULL;
 }
 
 char *
@@ -471,18 +471,18 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1])
 	    {
 		Debug(1, "Mangle: '>' missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		limit = Char2Int(*(++ptr));
 		if (limit < 0)
 		{
 		    Debug(1, "Mangle: '>' weird argument in '%s'\n", control);
-		    return ((char *) 0);
+		    return NULL;
 		}
 		if ( (int) strlen(area) <= limit)
 		{
-		    return ((char *) 0);
+		    return NULL;
 		}
 	    }
 	    break;
@@ -490,18 +490,18 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1])
 	    {
 		Debug(1, "Mangle: '<' missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		limit = Char2Int(*(++ptr));
 		if (limit < 0)
 		{
 		    Debug(1, "Mangle: '<' weird argument in '%s'\n", control);
-		    return ((char *) 0);
+		    return NULL;
 		}
 		if ( (int) strlen(area) >= limit)
 		{
-		    return ((char *) 0);
+		    return NULL;
 		}
 	    }
 	    break;
@@ -509,7 +509,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1])
 	    {
 		Debug(1, "Mangle: prepend missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		area2[0] = *(++ptr);
@@ -521,7 +521,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1])
 	    {
 		Debug(1, "Mangle: append missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		register char *string;
@@ -535,7 +535,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || !ptr[2])
 	    {
 		Debug(1, "Mangle: extract missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		register int i;
@@ -546,7 +546,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		if (start < 0 || length < 0)
 		{
 		    Debug(1, "Mangle: extract: weird argument in '%s'\n", control);
-		    return ((char *) 0);
+		    return NULL;
 		}
 		strcpy(area2, area);
 		for (i = 0; length-- && area2[start + i]; i++)
@@ -561,7 +561,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || !ptr[2])
 	    {
 		Debug(1, "Mangle: overstrike missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		register int i;
@@ -570,7 +570,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		{
 		    Debug(1, "Mangle: overstrike weird argument in '%s'\n",
 			  control);
-		    return ((char *) 0);
+		    return NULL;
 		} else
 		{
 		    ++ptr;
@@ -585,7 +585,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || !ptr[2])
 	    {
 		Debug(1, "Mangle: insert missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		register int i;
@@ -596,7 +596,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		{
 		    Debug(1, "Mangle: insert weird argument in '%s'\n",
 			  control);
-		    return ((char *) 0);
+		    return NULL;
 		}
 		p1 = area;
 		p2 = area2;
@@ -616,7 +616,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || (ptr[1] == RULE_CLASS && !ptr[2]))
 	    {
 		Debug(1, "Mangle: delete missing arguments in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else if (ptr[1] != RULE_CLASS)
 	    {
 		strcpy(area, Purge(area, *(++ptr)));
@@ -630,7 +630,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || !ptr[2] || (ptr[1] == RULE_CLASS && !ptr[3]))
 	    {
 		Debug(1, "Mangle: subst missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else if (ptr[1] != RULE_CLASS)
 	    {
 		strcpy(area, Substitute(area, ptr[1], ptr[2]));
@@ -645,18 +645,18 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || (ptr[1] == RULE_CLASS && !ptr[2]))
 	    {
 		Debug(1, "Mangle: '/' missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else if (ptr[1] != RULE_CLASS)
 	    {
 		if (!strchr(area, *(++ptr)))
 		{
-		    return ((char *) 0);
+		    return NULL;
 		}
 	    } else
 	    {
 		if (!PolyStrchr(area, ptr[2]))
 		{
-		    return ((char *) 0);
+		    return NULL;
 		}
 		ptr += 2;
 	    }
@@ -665,18 +665,18 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || (ptr[1] == RULE_CLASS && !ptr[2]))
 	    {
 		Debug(1, "Mangle: '!' missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else if (ptr[1] != RULE_CLASS)
 	    {
 		if (strchr(area, *(++ptr)))
 		{
-		    return ((char *) 0);
+		    return NULL;
 		}
 	    } else
 	    {
 		if (PolyStrchr(area, ptr[2]))
 		{
-		    return ((char *) 0);
+		    return NULL;
 		}
 		ptr += 2;
 	    }
@@ -694,28 +694,28 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || !ptr[2] || (ptr[2] == RULE_CLASS && !ptr[3]))
 	    {
 		Debug(1, "Mangle: '=' missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		register int i;
 		if ((i = Char2Int(ptr[1])) < 0)
 		{
 		    Debug(1, "Mangle: '=' weird argument in '%s'\n", control);
-		    return ((char *) 0);
+		    return NULL;
 		}
 		if (ptr[2] != RULE_CLASS)
 		{
 		    ptr += 2;
 		    if (area[i] != *ptr)
 		    {
-			return ((char *) 0);
+			return NULL;
 		    }
 		} else
 		{
 		    ptr += 3;
 		    if (!MatchClass(*ptr, area[i]))
 		    {
-			return ((char *) 0);
+			return NULL;
 		    }
 		}
 	    }
@@ -746,7 +746,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || (ptr[1] == RULE_CLASS && !ptr[2]))
 	    {
 		Debug(1, "Mangle: '(' missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		if (ptr[1] != RULE_CLASS)
@@ -754,14 +754,14 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    ptr++;
 		    if (area[0] != *ptr)
 		    {
-			return ((char *) 0);
+			return NULL;
 		    }
 		} else
 		{
 		    ptr += 2;
 		    if (!MatchClass(*ptr, area[0]))
 		    {
-			return ((char *) 0);
+			return NULL;
 		    }
 		}
 	    }
@@ -769,7 +769,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    if (!ptr[1] || (ptr[1] == RULE_CLASS && !ptr[2]))
 	    {
 		Debug(1, "Mangle: ')' missing argument in '%s'\n", control);
-		return ((char *) 0);
+		return NULL;
 	    } else
 	    {
 		register int i;
@@ -781,7 +781,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    i--;
 		} else
 		{
-		    return ((char *) 0);
+		    return NULL;
 		}
 
 		if (ptr[1] != RULE_CLASS)
@@ -789,27 +789,27 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    ptr++;
 		    if (area[i] != *ptr)
 		    {
-			return ((char *) 0);
+			return NULL;
 		    }
 		} else
 		{
 		    ptr += 2;
 		    if (!MatchClass(*ptr, area[i]))
 		    {
-			return ((char *) 0);
+			return NULL;
 		    }
 		}
 	    }
 
 	default:
 	    Debug(1, "Mangle: unknown command %c in %s\n", *ptr, control);
-	    return ((char *) 0);
+	    return NULL;
 	    break;
 	}
     }
     if (!area[0])		/* have we deweted de poor widdle fing away? */
     {
-	return ((char *) 0);
+	return NULL;
     }
     return (area);
 }

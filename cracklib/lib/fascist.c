@@ -43,7 +43,7 @@ static char *r_destructors[] = {
     ":",                        /* noop - must do this to test raw word. */
 
 #ifdef DEBUG2
-    (char *) 0,
+    NULL,
 #endif
 
     "[",                        /* trimming leading/trailing junk */
@@ -412,14 +412,14 @@ static char *r_destructors[] = {
     "/4s4h",
 
     /* done */
-    (char *) 0
+    NULL
 };
 
 static char *r_constructors[] = {
     ":",
 
 #ifdef DEBUG2
-    (char *) 0,
+    NULL,
 #endif
 
     "r",
@@ -428,7 +428,7 @@ static char *r_constructors[] = {
     "dr",
     "fr",
     "rf",
-    (char *) 0
+    NULL
 };
 
 int
@@ -525,7 +525,7 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
     wc = 0;
     ptr = gbuffer;
     gwords = 0;
-    uwords[0] = (char *)0;
+    uwords[0] = NULL;
 
     while (*ptr)
     {
@@ -544,11 +544,11 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
 
 	if (wc == STRINGSIZE)
 	{
-	    uwords[--wc] = (char *) 0;  /* to hell with it */
+	    uwords[--wc] = NULL;  /* to hell with it */
 	    break;
 	} else
 	{
-	    uwords[wc] = (char *) 0;
+	    uwords[wc] = NULL;
 	}
 
 	while (*ptr && !ISSKIP(*ptr))
@@ -619,7 +619,7 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
 	}
     }
 
-    return ((char *) 0);
+    return NULL;
 }
 
 char *
@@ -821,7 +821,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	}
     }
 
-    return ((char *) 0);
+    return NULL;
 }
 
 char *

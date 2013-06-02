@@ -324,7 +324,7 @@ PWClose(pwp)
     if (pwp->flags & PFOR_WRITE)
     {
 	pwp->flags |= PFOR_FLUSH;
-	PutPW(pwp, (char *) 0);	/* flush last index if necess */
+	PutPW(pwp, NULL);	/* flush last index if necess */
 
 	if (fseek(pwp->ifp, 0L, 0))
 	{
@@ -465,26 +465,26 @@ GetPW(pwp, number)
        if (fseek(pwp->ifp, sizeof(struct pi_header64) + (thisblock * sizeof(uint64_t)), 0))
        {
            perror("(index fseek failed)");
-           return ((char *) 0);
+           return NULL;
        }
 
        if (!fread((char *) &datum64, sizeof(datum64), 1, pwp->ifp))
        {
            perror("(index fread failed)");
-           return ((char *) 0);
+           return NULL;
        }
        datum = datum64;
     } else {
        if (fseek(pwp->ifp, sizeof(struct pi_header) + (thisblock * sizeof(uint32_t)), 0))
        {
            perror("(index fseek failed)");
-           return ((char *) 0);
+           return NULL;
        }
 
        if (!fread((char *) &datum, sizeof(datum), 1, pwp->ifp))
        {
            perror("(index fread failed)");
-           return ((char *) 0);
+           return NULL;
        }
     }
 
@@ -504,7 +504,7 @@ GetPW(pwp, number)
     if (r)
     {
 	perror("(data fseek failed)");
-	return ((char *) 0);
+	return NULL;
     }
 	r = 0;
 
@@ -525,7 +525,7 @@ GetPW(pwp, number)
     if (!r)
     {
 	perror("(data fread failed)");
-	return ((char *) 0);
+	return NULL;
     }
 
     prevblock = thisblock;
