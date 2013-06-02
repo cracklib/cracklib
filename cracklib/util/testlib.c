@@ -22,7 +22,7 @@ main ()
     while (fgets (buffer, 1000, stdin))
     {
     	const char *val;
- 
+
 	Chop(buffer);
 
 	val = FascistCheck(buffer, NULL);
@@ -30,7 +30,7 @@ main ()
 	if (!val)
 	{
 		val = "ok";
-	}	
+	}
 	printf ("%s: %s\n", buffer, val);
     }
 

@@ -756,7 +756,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	ptr++;
     }
 
-    /*  Change by Ben Karsin from ITS at University of Hawaii at Manoa.  Static MAXSTEP 
+    /*  Change by Ben Karsin from ITS at University of Hawaii at Manoa.  Static MAXSTEP
         would generate many false positives for long passwords. */
     maxrepeat = 3+(0.09*strlen(password));
     if (i > maxrepeat)
