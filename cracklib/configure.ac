@@ -22,9 +22,18 @@ AC_CHECK_HEADERS(fcntl.h)
 AC_CHECK_HEADERS(inttypes.h)
 AC_CHECK_HEADERS(stdint.h)
 AC_CHECK_HEADERS(pthread.h)
-AC_CHECK_HEADERS(zlib.h, AC_DEFINE(HAVE_ZLIB_H, [], [found zlib]))
 
-AC_SEARCH_LIBS(gzopen, z)
+AC_ARG_WITH([zlib],
+   [AS_HELP_STRING([--without-zlib], [build without zlib support @<:@default=auto@:>@])])
+AS_IF([test "$with_zlib" != "no"], [dnl
+   found_zlib=yes
+   AC_CHECK_HEADERS([zlib.h],
+      [AC_DEFINE(HAVE_ZLIB_H, [], [found zlib])],
+      [found_zlib=no])
+   AC_SEARCH_LIBS([gzopen], [z], [], [found_zlib=no])
+   AS_IF([test "$with_zlib$found_zlib" = "yesno"],
+      [AC_MSG_ERROR([zlib not found])])
+])
 
 dnl Cygwin workaround
 AC_MSG_CHECKING(if LINE_MAX is defined)
