@@ -52,9 +52,10 @@ struct pi_header
 
 typedef struct
 {
-    FILE *ifp;
-    FILE *dfp;
-    FILE *wfp;
+    /* Might be FILE* or gzFile */
+    void *ifp;
+    void *dfp;
+    void *wfp;
 
     uint32_t flags;
 #define PFOR_WRITE	0x0001

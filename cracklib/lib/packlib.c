@@ -34,9 +34,9 @@ struct pi_header64
 
 typedef struct
 {
-    FILE *ifp;
-    FILE *dfp;
-    FILE *wfp;
+    void *ifp;
+    void *dfp;
+    void *wfp;
     uint64_t flags;
     uint64_t hwms[256];
     struct pi_header64 header;
@@ -72,9 +72,9 @@ PWOpen(prefix, mode)
     char iname[STRINGSIZE];
     char dname[STRINGSIZE];
     char wname[STRINGSIZE];
-    FILE *dfp;
-    FILE *ifp;
-    FILE *wfp;
+    void *dfp;
+    void *ifp;
+    void *wfp;
 
     if (pdesc.header.pih_magic == PIH_MAGIC)
     {
