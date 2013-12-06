@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-14 16:11-0600\n"
+"Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-12-06 07:51-0600\n"
 "PO-Revision-Date: 2005-06-23 13:17+02:00\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team:  Novell Language <language@novell.com>\n"
@@ -16,66 +16,66 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: lib/fascist.c:550
-msgid "you are not registered in the password file"
-msgstr "No está registrado en el archivo de contraseñas."
-
-#: lib/fascist.c:564
+#: lib/fascist.c:516
 msgid "it is based on your username"
 msgstr "Está basada en su nombre de usuario."
 
-#: lib/fascist.c:629
+#: lib/fascist.c:576
 msgid "it is based upon your password entry"
 msgstr "Está basada en su contraseña."
 
-#: lib/fascist.c:649
+#: lib/fascist.c:591
 msgid "it is derived from your password entry"
 msgstr "Se deriva de su contraseña."
 
-#: lib/fascist.c:662
+#: lib/fascist.c:599
 msgid "it's derived from your password entry"
 msgstr "Se deriva de su contraseña."
 
-#: lib/fascist.c:676
+#: lib/fascist.c:608
 msgid "it is derivable from your password entry"
 msgstr "Puede derivarse de su contraseña."
 
-#: lib/fascist.c:690
+#: lib/fascist.c:617
 msgid "it's derivable from your password entry"
 msgstr "Puede derivarse de su contraseña."
 
-#: lib/fascist.c:726
+#: lib/fascist.c:674
+msgid "you are not registered in the password file"
+msgstr "No está registrado en el archivo de contraseñas."
+
+#: lib/fascist.c:709
 msgid "it is WAY too short"
 msgstr "Es DEMASIADO corta."
 
-#: lib/fascist.c:731
+#: lib/fascist.c:714
 msgid "it is too short"
 msgstr "Es demasiado corta."
 
-#: lib/fascist.c:748
+#: lib/fascist.c:731
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "No contiene suficientes caracteres DIFERENTES."
 
-#: lib/fascist.c:762
+#: lib/fascist.c:745
 msgid "it is all whitespace"
 msgstr "Está formada sólo por espacios."
 
-#: lib/fascist.c:781
+#: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
 msgstr "Es demasiado simple/sistemática."
 
-#: lib/fascist.c:786
+#: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
 msgstr "Parece un número de la Seguridad Social."
 
-#: lib/fascist.c:813
+#: lib/fascist.c:801
 msgid "it is based on a dictionary word"
 msgstr "Está basada en una palabra del diccionario."
 
-#: lib/fascist.c:832
+#: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
 msgstr "Está basada en una palabra del diccionario escrita al revés."
 
-#: lib/fascist.c:867
+#: lib/fascist.c:865
 msgid "error loading dictionary"
 msgstr ""

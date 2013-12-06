@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-14 16:11-0600\n"
+"Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-12-06 07:51-0600\n"
 "PO-Revision-Date: 2009-11-11 15:13+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -19,66 +19,66 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 
-#: lib/fascist.c:550
-msgid "you are not registered in the password file"
-msgstr "మీరు సంకేతపదపు ఫైలునందు నమోదు కాలేదు"
-
-#: lib/fascist.c:564
+#: lib/fascist.c:516
 msgid "it is based on your username"
 msgstr "ఇది మీ వినియోగదారినామముపై ఆధారపడి వుంది"
 
-#: lib/fascist.c:629
+#: lib/fascist.c:576
 msgid "it is based upon your password entry"
 msgstr "ఇది మీ సంకేతపదము ప్రవేశముపై ఆధారపడి వుంది"
 
-#: lib/fascist.c:649
+#: lib/fascist.c:591
 msgid "it is derived from your password entry"
 msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడింది"
 
-#: lib/fascist.c:662
+#: lib/fascist.c:599
 msgid "it's derived from your password entry"
 msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడింది"
 
-#: lib/fascist.c:676
+#: lib/fascist.c:608
 msgid "it is derivable from your password entry"
 msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడ గలదు"
 
-#: lib/fascist.c:690
+#: lib/fascist.c:617
 msgid "it's derivable from your password entry"
 msgstr "ఇది మీ సంకేతపదము ప్రవేశమునుండి ఉత్పాదించబడ గలదు"
 
-#: lib/fascist.c:726
+#: lib/fascist.c:674
+msgid "you are not registered in the password file"
+msgstr "మీరు సంకేతపదపు ఫైలునందు నమోదు కాలేదు"
+
+#: lib/fascist.c:709
 msgid "it is WAY too short"
 msgstr "ఇది పొట్టి దానికి మార్గము"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:714
 msgid "it is too short"
 msgstr "ఇది మరీ పొట్టిదిగా వుంది"
 
-#: lib/fascist.c:748
+#: lib/fascist.c:731
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "ఇది కావలసినన్ని విభిన్న అక్షరాలను కలిగిలేదు"
 
-#: lib/fascist.c:762
+#: lib/fascist.c:745
 msgid "it is all whitespace"
 msgstr "ఇది అంతా ఖాళీగానే వుంది"
 
-#: lib/fascist.c:781
+#: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
 msgstr "ఇదీ మరీ సాధారణంగా/క్రమపద్దతిలో వుంది"
 
-#: lib/fascist.c:786
+#: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
 msgstr "ఇది నేష్నల్ ఇన్సూరెన్స్ సంఖ్య వలె వుంది."
 
-#: lib/fascist.c:813
+#: lib/fascist.c:801
 msgid "it is based on a dictionary word"
 msgstr "ఇది నిఘంటువు పదముపై ఆధారపడివుంది"
 
-#: lib/fascist.c:832
+#: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
 msgstr "ఇది నిఘంటువు(కలిగివున్న) పదముపై ఆధారపడివుంది"
 
-#: lib/fascist.c:867
+#: lib/fascist.c:865
 msgid "error loading dictionary"
 msgstr ""

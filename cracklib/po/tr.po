@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-14 16:11-0600\n"
+"Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2013-12-06 07:51-0600\n"
 "PO-Revision-Date: 2006-03-12 22:56+0200\n"
 "Last-Translator: Görkem Çetin <gorkem@uludag.org.tr>\n"
 "Language-Team:  <yerellestirme@kde.org.tr>\n"
@@ -17,66 +17,66 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11\n"
 
-#: lib/fascist.c:550
-msgid "you are not registered in the password file"
-msgstr "Sistem parola dosyasında tanımlı değilsiniz"
-
-#: lib/fascist.c:564
+#: lib/fascist.c:516
 msgid "it is based on your username"
 msgstr "Bu parola kullanıcı adınızla ilişkili"
 
-#: lib/fascist.c:629
+#: lib/fascist.c:576
 msgid "it is based upon your password entry"
 msgstr "Bu parola, sistem parola dosyasındaki bilgilerinizle ilişkili"
 
-#: lib/fascist.c:649
+#: lib/fascist.c:591
 msgid "it is derived from your password entry"
 msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilmiş"
 
-#: lib/fascist.c:662
+#: lib/fascist.c:599
 msgid "it's derived from your password entry"
 msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilmiş"
 
-#: lib/fascist.c:676
+#: lib/fascist.c:608
 msgid "it is derivable from your password entry"
 msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilebilir"
 
-#: lib/fascist.c:690
+#: lib/fascist.c:617
 msgid "it's derivable from your password entry"
 msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilmiş"
 
-#: lib/fascist.c:726
+#: lib/fascist.c:674
+msgid "you are not registered in the password file"
+msgstr "Sistem parola dosyasında tanımlı değilsiniz"
+
+#: lib/fascist.c:709
 msgid "it is WAY too short"
 msgstr "Bu parola çok kısa"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:714
 msgid "it is too short"
 msgstr "Bu parola oldukça kısa"
 
-#: lib/fascist.c:748
+#: lib/fascist.c:731
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "Bu parola yeterli sayıda farklı karakterden oluşmuyor"
 
-#: lib/fascist.c:762
+#: lib/fascist.c:745
 msgid "it is all whitespace"
 msgstr "Bu parolanın tamamı boşluk karakterlerinden oluşuyor"
 
-#: lib/fascist.c:781
+#: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
 msgstr "Bu parola çok basit"
 
-#: lib/fascist.c:786
+#: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
 msgstr "Bu parola bir kimlik numarasına benziyor"
 
-#: lib/fascist.c:813
+#: lib/fascist.c:801
 msgid "it is based on a dictionary word"
 msgstr "Bu parola sözlükteki bir kelime ile aynı"
 
-#: lib/fascist.c:832
+#: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
 msgstr "Bu parola sözlükteki kelimelerden birisinin tersi"
 
-#: lib/fascist.c:867
+#: lib/fascist.c:865
 msgid "error loading dictionary"
 msgstr ""
