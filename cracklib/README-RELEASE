@@ -13,5 +13,5 @@ mput cracklib-${ver}.tar.gz
 exit
 EOM
 
-svn copy -m "tag at ${ver}" https://cracklib.svn.sourceforge.net/svnroot/cracklib/trunk/cracklib https://cracklib.svn.sourceforge.net/svnroot/cracklib/tags/cracklib-${ver}
+svn copy -m "tag at ${ver}" https://svn.code.sf.net/p/cracklib/code/trunk/cracklib https://svn.code.sf.net/p/cracklib/code/tags/cracklib-${ver}
 

@@ -23,8 +23,8 @@ from setuptools import setup, Extension, find_packages
 
 extensions = [
     Extension("_cracklib",
-        ["_cracklib.c"],
-        include_dirs = ["@top_builddir@/lib"],
+        ["@srcdir@/_cracklib.c"],
+        include_dirs = ["@top_srcdir@/lib"],
         libraries = ["crack"],
         library_dirs = ["@top_builddir@/lib/.libs"]),
 ]
@@ -43,6 +43,7 @@ convenience functions.
     url="http://cracklib.sourceforge.net/",
     license="GPLv2+",
     py_modules=['cracklib', 'test_cracklib'],
+    package_dir={'': '@srcdir@'},
     ext_modules=extensions,
     zip_safe=False,
     classifiers=[
