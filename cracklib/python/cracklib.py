@@ -57,12 +57,12 @@ def distdifferent(old, new, i, j):
         cval = 0
     else:
         cval = old[i - 1]
-    
-    if j == 0 or len(new) <= i:
+
+    if j == 0 or len(new) <= j:
         dval = 0
     else:
         dval = new[j - 1]
-    
+
     return cval != dval
 
 
@@ -70,7 +70,7 @@ def distcalculate(distances, old, new, i, j):
     """Calculates the distance between two strings.
     """
     tmp = 0
-    
+
     if distances[i][j] != -1:
         return distances[i][j]
 
@@ -93,7 +93,7 @@ def distance(old, new):
     distances = [ [] for i in range(oldlength + 1) ]
     for i in range(oldlength + 1):
         distances[i] = [ -1 for j in range(newlength + 1) ]
- 
+
     for i in range(oldlength + 1):
         distances[i][0] = i
     for j in range(newlength + 1):
@@ -114,7 +114,7 @@ def similar(old, new):
     """
     if distance(old, new) >= DIFF_OK:
         return 0
-    
+
     if len(new) >= (len(old) * 2):
         return 0
 
@@ -164,12 +164,12 @@ def simple(new):
         size = size - digits
     elif digits < (DIG_CREDIT * -1):
         return 1
- 
+
     if UP_CREDIT >= 0:
         size = size - uppers
     elif uppers < (UP_CREDIT * -1):
         return 1
- 
+
     if LOW_CREDIT >= 0:
         size = size - lowers
     elif lowers < (LOW_CREDIT * -1):
@@ -182,7 +182,7 @@ def simple(new):
 
     if len(new) < size:
         return 1
-        
+
     return 0
 
 
@@ -193,7 +193,7 @@ def VeryFascistCheck(new, old = None, dictpath = None):
     if old != None:
         if new == old:
             raise ValueError("is the same as the old one")
-                
+
         oldmono = old.lower()
         newmono = new.lower()
         wrapped = old + old
@@ -204,7 +204,7 @@ def VeryFascistCheck(new, old = None, dictpath = None):
             raise ValueError("is rotated")
         if similar(oldmono, newmono):
             raise ValueError("is too similar to the old one")
-    
+
     if dictpath == None:
         FascistCheck(new)
     else:
