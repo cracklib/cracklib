@@ -446,18 +446,9 @@ GetPW(pwp, number)
     register char *nstr;
     register char *bptr;
     char buffer[NUMWORDS * MAXWORDLEN];
-    static uint32_t prevblock = 0xffffffff;
     uint32_t thisblock;
 
     thisblock = number / NUMWORDS;
-
-    if (prevblock == thisblock)
-    {
-#if DEBUG
-	fprintf(stderr, "returning (%s)\n", pwp->data_get[number % NUMWORDS]);
-#endif
-	return (pwp->data_get[number % NUMWORDS]);
-    }
 
     if (_PWIsBroken64(pwp->ifp))
     {
@@ -525,8 +516,6 @@ GetPW(pwp, number)
 	perror("(data fread failed)");
 	return NULL;
     }
-
-    prevblock = thisblock;
 
     bptr = buffer;
 
