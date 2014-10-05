@@ -1,6 +1,6 @@
-v2.9.3 fix bug #16 / debian bug 724570 - broken optimization with packlib prevblock (Russ Allbery)
 v2.9.2 support build of python support outside of source tree (Michał Górny)
        fix bug in Python string distance calculation (Pascal Muetschard)
+       fix bug #16 / debian bug 724570 - broken optimization with packlib prevblock (Russ Allbery)
 v2.9.1 added updated config.sub/config.guess in autogen
 v2.9.0 add new FascistCheckUser function from Enrico Scholz, bumped minor version for library
 v2.8.22 error return instead of exit if dictionary can't be opened (Nalin Dahyabhai)
