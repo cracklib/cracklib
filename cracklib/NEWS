@@ -1,4 +1,4 @@
-v2.9.3
+v2.9.3 expose additional functions externally
 v2.9.2 support build of python support outside of source tree (Michał Górny)
        fix bug in Python string distance calculation (Pascal Muetschard)
        fix bug #16 / debian bug 724570 - broken optimization with packlib prevblock (Russ Allbery)
