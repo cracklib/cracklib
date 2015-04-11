@@ -491,7 +491,7 @@ GTry(rawtext, password)
     return (0);
 }
 
-static char *
+char *
 FascistGecosUser(char *password, const char *user, const char *gecos)
 {
     int i;
@@ -685,7 +685,7 @@ FascistGecos(password, uid)
     return ptr;
 }
 
-static char *
+char *
 FascistLookUser(PWDICT *pwp, char *instring,
 		const char *user, const char *gecos)
 {
