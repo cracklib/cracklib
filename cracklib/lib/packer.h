@@ -100,6 +100,5 @@ extern char *FascistLookUser(PWDICT *pwp, char *instring, const char *user, cons
 extern char *FascistGecos(char *password, int uid);
 extern char *FascistGecosUser(char *password, const char *user, const char *gecos);
 extern const char *FascistCheck(const char *password, const char *path);
-extern const char *FascistCheckUser(const char *password, const char *path, const char *user, const char *gecos);
 
 #endif
