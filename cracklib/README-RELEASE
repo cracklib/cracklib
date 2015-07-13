@@ -5,13 +5,6 @@ ver=$(head -1 NEWS)
 ver=${ver#v}
 echo "creating ${ver} release"
 
-sftp nneul,cracklib@frs.sourceforge.net <<EOM
-cd /home/pfs/project/c/cr/cracklib/cracklib/
-mkdir ${ver}
-cd ${ver}
-mput cracklib-${ver}.tar.gz
-exit
-EOM
+echo "use the web UI to upload tarball"
 
-svn copy -m "tag at ${ver}" https://svn.code.sf.net/p/cracklib/code/trunk/cracklib https://svn.code.sf.net/p/cracklib/code/tags/cracklib-${ver}
-
+svn copy -m "tag at ${ver}" svn+ssh://nneul@svn.code.sf.net/p/cracklib/code/trunk/cracklib svn+ssh://nneul@svn.code.sf.net/p/cracklib/code/tags/cracklib-${ver}
