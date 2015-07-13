@@ -579,11 +579,12 @@ fprintf(stderr, "look for (%s)\n", string);
     fprintf(stderr, "---- %lu, %lu ----\n", lwm, hwm);
 #endif
 
+    middle = lwm + ((hwm - lwm + 1) / 2);
+
     for (;;)
     {
 	int cmp;
 
-	middle = lwm + ((hwm - lwm + 1) / 2);
 
 #if DEBUG
 	fprintf(stderr, "lwm = %lu,  middle = %lu,  hwm = %lu\n", lwm, middle, hwm);
@@ -621,10 +622,12 @@ fprintf(stderr, "look for (%s)\n", string);
 	if (cmp < 0)
 	{
 	    hwm = middle;
+	    middle = lwm + ((hwm - lwm ) / 2);
 	}
 	else if (cmp > 0)
 	{
 	    lwm = middle;
+	    middle = lwm + ((hwm - lwm + 1) / 2);
 	}
     }
 
