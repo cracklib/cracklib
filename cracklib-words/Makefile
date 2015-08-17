@@ -1,12 +1,19 @@
-all: cracklib-words.gz
+all: clean cracklib-words.gz cracklib-words.bz2
+
+clean:
+	rm -f cracklib-words cracklib-words.gz cracklib-words.bz2
 
 cracklib-words.gz: cracklib-words
 	rm -f cracklib-words.gz
 	gzip -v9 -c cracklib-words > cracklib-words.gz
 
-cracklib-words: src/clarkson-passwords src/words
+cracklib-words.bz2: cracklib-words
+	rm -f cracklib-words.bz2
+	bzip2 -v9 -c cracklib-words > cracklib-words.bz2
+
+cracklib-words: src/*/*.txt.bz2
 	rm -f cracklib-words
-	zcat -f src/* | tr A-Z a-z | sort | uniq > cracklib-words
+	bzcat -f `find src -type f` | tr A-Z a-z | sort | uniq > cracklib-words
 
 upload: cracklib-words.gz
 	cp cracklib-words.gz cracklib-words-`date '+%Y%m%d'`.gz
