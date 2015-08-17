@@ -7,6 +7,10 @@ that these would reasonably fall under the 'list of facts' and 'can't copyright 
 book' copyright scenarios. If someone objects to a list being included here, it will be
 removed immediately.
 
+Clarkson - Jim Owens and Jeanna Mathews research project
+========================================================
+http://people.clarkson.edu/~owensjp/pubs/leet08.pdf
+
 
 Openwall word lists
 ===================
