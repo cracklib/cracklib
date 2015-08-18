@@ -1,3 +1,7 @@
+v2.9.6 updates to cracklib-words to add a bunch of other dictionary lists
+       migration to github
+       patch to add some particularly bad cases to the cracklib small dictionary (Matthew Miller)
+       patch to fix issue with sort and locale (Mark Sirota)
 v2.9.5 fix matching against first password in dictionary (Anton Dobkin)
 v2.9.4 remove doubled prototype
 v2.9.3 expose additional functions externally

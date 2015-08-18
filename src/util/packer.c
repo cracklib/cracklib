@@ -20,7 +20,7 @@ main(argc, argv)
     unsigned long readed;
     unsigned long wrote;
     PWDICT *pwp;
-    char buffer[STRINGSIZE];
+    char buffer[STRINGSIZE], prev[STRINGSIZE];
     char *file;
 
     if (argc <= 1)
@@ -46,6 +46,7 @@ main(argc, argv)
     }
 
     wrote = 0;
+    prev[0] = '\0';
 
     for (readed = 0; fgets(buffer, STRINGSIZE, stdin); /* nothing */)
     {
@@ -60,6 +61,15 @@ main(argc, argv)
 	    fprintf(stderr, "skipping line: %lu\n", readed);
 	    continue;
 	}
+
+	/*
+	 * If this happens, strcmp() in FindPW() in packlib.c will be unhappy.
+	 */
+	if (strcmp(buffer, prev) < 0)
+	{
+	    fprintf(stderr, "warning: input out of order: '%s' should not follow '%s' (line %lu)\n", buffer, prev, readed);
+	}
+	strcpy(prev, buffer);
 
 	if (PutPW(pwp, buffer))
 	{
