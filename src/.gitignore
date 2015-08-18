@@ -45,6 +45,9 @@ Makefile.in
 /po/Makevars.template
 /po/POTFILES
 /po/stamp-po
+po/remove-potcdate.sed
 /python/setup.py
 
 /cracklib.spec
+
+cracklib-*.tar.gz
