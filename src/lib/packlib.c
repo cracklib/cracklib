@@ -408,7 +408,7 @@ PutPW(pwp, string)
 	fwrite((char *) &datum, sizeof(datum), 1, pwp->ifp);
 
 	fputs(pwp->data_put[0], pwp->dfp);
-	putc(0, pwp->dfp);
+	putc(0, (FILE*) pwp->dfp);
 
 	ostr = pwp->data_put[0];
 
@@ -421,10 +421,10 @@ PutPW(pwp, string)
 	    if (nstr[0])
 	    {
 		for (j = 0; ostr[j] && nstr[j] && (ostr[j] == nstr[j]); j++);
-		putc(j & 0xff, pwp->dfp);
+		putc(j & 0xff, (FILE*) pwp->dfp);
 		fputs(nstr + j, pwp->dfp);
 	    }
-	    putc(0, pwp->dfp);
+	    putc(0, (FILE*) pwp->dfp);
 
 	    ostr = nstr;
 	}
