@@ -47,6 +47,7 @@ Makefile.in
 /po/stamp-po
 po/remove-potcdate.sed
 /python/setup.py
+.ropeproject/
 
 /cracklib.spec
 
