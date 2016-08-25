@@ -434,9 +434,8 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 {
     int limit;
     register char *ptr;
-    static char area[STRINGSIZE];
-    char area2[STRINGSIZE];
-    area[0] = '\0';
+    static char area[STRINGSIZE * 2] = {0};
+    char area2[STRINGSIZE * 2] = {0};
     strcpy(area, input);
 
     for (ptr = control; *ptr; ptr++)
