@@ -1,3 +1,4 @@
+v2.9.x apply patch to fix CVE-2016-6318 Stack-based buffer overflow when parsing large GECOS field
 v2.9.6 updates to cracklib-words to add a bunch of other dictionary lists
        migration to github
        patch to add some particularly bad cases to the cracklib small dictionary (Matthew Miller)

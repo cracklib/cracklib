@@ -502,7 +502,7 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
     char gbuffer[STRINGSIZE];
     char tbuffer[STRINGSIZE];
     char *uwords[STRINGSIZE];
-    char longbuffer[STRINGSIZE * 2];
+    char longbuffer[STRINGSIZE];
 
     if (gecos == NULL)
 	gecos = "";
@@ -583,38 +583,47 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
     {
 	for (i = 0; i < j; i++)
 	{
-	    strcpy(longbuffer, uwords[i]);
-	    strcat(longbuffer, uwords[j]);
-
-	    if (GTry(longbuffer, password))
+	    if (strlen(uwords[i]) + strlen(uwords[j]) < STRINGSIZE)
 	    {
-		return _("it is derived from your password entry");
+		strcpy(longbuffer, uwords[i]);
+		strcat(longbuffer, uwords[j]);
+
+		if (GTry(longbuffer, password))
+		{
+		    return _("it is derived from your password entry");
+		}
+
+		strcpy(longbuffer, uwords[j]);
+		strcat(longbuffer, uwords[i]);
+
+		if (GTry(longbuffer, password))
+		{
+		   return _("it's derived from your password entry");
+		}
 	    }
 
-	    strcpy(longbuffer, uwords[j]);
-	    strcat(longbuffer, uwords[i]);
-
-	    if (GTry(longbuffer, password))
+	    if (strlen(uwords[j]) < STRINGSIZE - 1)
 	    {
-		return _("it's derived from your password entry");
+		longbuffer[0] = uwords[i][0];
+		longbuffer[1] = '\0';
+		strcat(longbuffer, uwords[j]);
+
+		if (GTry(longbuffer, password))
+		{
+		    return _("it is derivable from your password entry");
+		}
 	    }
 
-	    longbuffer[0] = uwords[i][0];
-	    longbuffer[1] = '\0';
-	    strcat(longbuffer, uwords[j]);
-
-	    if (GTry(longbuffer, password))
+	    if (strlen(uwords[i]) < STRINGSIZE - 1)
 	    {
-		return _("it is derivable from your password entry");
-	    }
+		longbuffer[0] = uwords[j][0];
+		longbuffer[1] = '\0';
+		strcat(longbuffer, uwords[i]);
 
-	    longbuffer[0] = uwords[j][0];
-	    longbuffer[1] = '\0';
-	    strcat(longbuffer, uwords[i]);
-
-	    if (GTry(longbuffer, password))
-	    {
-		return _("it's derivable from your password entry");
+		if (GTry(longbuffer, password))
+		{
+		    return _("it's derivable from your password entry");
+		}
 	    }
 	}
     }
