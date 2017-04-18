@@ -598,7 +598,7 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
 
 		if (GTry(longbuffer, password))
 		{
-		   return _("it's derived from your password entry");
+		   return _("it is derived from your password entry");
 		}
 	    }
 
