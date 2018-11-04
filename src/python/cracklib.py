@@ -53,12 +53,12 @@ def distdifferent(old, new, i, j):
     """Calculate how different two strings are in terms of the number
     of character removals, additions, and changes needed to go from one
     to the other."""
-    if i == 0 or len(old) <= i:
+    if i == 0 or len(old) < i:
         cval = 0
     else:
         cval = old[i - 1]
 
-    if j == 0 or len(new) <= j:
+    if j == 0 or len(new) < j:
         dval = 0
     else:
         dval = new[j - 1]
