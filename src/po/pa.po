@@ -2,27 +2,29 @@
 # translation of cracklib.po to Panjabi
 # Copyright (C) 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005, 2009.
 # A S Alam <aalam@users.sf.net>, 2009.
+# Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# A S Alam <aalam@fedoraproject.org>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib.pa\n"
+"Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2015-08-18 13:45-0500\n"
-"PO-Revision-Date: 2009-11-17 05:52+0530\n"
-"Last-Translator: A S Alam <aalam@users.sf.net>\n"
-"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"PO-Revision-Date: 2017-08-18 07:15+0000\n"
+"Last-Translator: A S Alam <aalam@fedoraproject.org>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"X-Generator: Zanata 4.6.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "ਇਹ ਤੁਹਾਡੇ ਯੂਜ਼ਰ-ਨਾਂ ਮੁਤਾਬਿਕ ਨਹੀਂ ਹੈ"
+msgstr "ਇਹ ਤੁਹਾਡੇ ਵਰਤੋਂਕਾਰ-ਨਾਂ ਮੁਤਾਬਕ ਹੈ"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
@@ -50,7 +52,7 @@ msgstr "ਤੁਸੀਂ ਪਾਸਵਰਡ ਫਾਇਲ 'ਚ ਰਜਿਸਟਰ 
 
 #: lib/fascist.c:709
 msgid "it is WAY too short"
-msgstr "ਇਹ ਬਹੁਤ ਹੀ ਛੋਟਾ ਢੰਗ ਹੈ"
+msgstr "ਇਹ ਬਹੁਤ ਹੀ ਛੋਟਾ ਹੈ"
 
 #: lib/fascist.c:714
 msgid "it is too short"
@@ -70,7 +72,7 @@ msgstr "ਇਹ ਬਹੁਤ ਸਧਾਰਨ/ਇਕਸਾਰ ਜਿਹਾ ਹੈ"
 
 #: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
-msgstr "ਇਹ ਰਾਸ਼ਟਰੀ ਸੁਰੱਖਿਆ ਨੰਬਰ ਵਰਗਾ ਜਾਪਦਾ ਹੈ।"
+msgstr "ਇਹ ਨੈਸ਼ਨਲ ਇਨਸ਼ੋਅਰੈਂਸ ਨੰਬਰ ਵਰਗਾ ਜਾਪਦਾ ਹੈ।"
 
 #: lib/fascist.c:801
 msgid "it is based on a dictionary word"
@@ -78,8 +80,8 @@ msgstr "ਇਹ ਡਿਕਸ਼ਨਰੀ ਸ਼ਬਦ ਉੱਤੇ ਅਧਾਰ�
 
 #: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
-msgstr "ਇਹ (ਉਲਟੇ) ਡਿਕਸ਼ਨਰੀ ਸ਼ਬਦ ਉੱਤੇ ਅਧਾਰਿਤ ਹੈ"
+msgstr "ਇਹ (ਉਲਟ) ਡਿਕਸ਼ਨਰੀ ਸ਼ਬਦ ਉੱਤੇ ਅਧਾਰਿਤ ਹੈ"
 
 #: lib/fascist.c:865
 msgid "error loading dictionary"
-msgstr ""
+msgstr "ਡਿਕਸ਼ਨਰੀ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ"

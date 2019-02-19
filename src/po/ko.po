@@ -1,22 +1,24 @@
 # translation of cracklib.default.po to Korean
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Eunju Kim <eukim@redhat.com>, 2009.
+# Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# Ludek Janda <ljanda@redhat.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib.default\n"
+"Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2015-08-18 13:45-0500\n"
-"PO-Revision-Date: 2009-11-18 11:19+1000\n"
-"Last-Translator: Eunju Kim <eukim@redhat.com>\n"
-"Language-Team: Korean <ko@li.org>\n"
-"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=1; plural=0;\n"
+"PO-Revision-Date: 2018-08-21 09:51+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"Language: ko\n"
+"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -80,4 +82,4 @@ msgstr "(역순) 사전에 있는 단어를 기반으로 합니다  "
 
 #: lib/fascist.c:865
 msgid "error loading dictionary"
-msgstr ""
+msgstr "사전을 로드하는 도중 오류가 발생했습니다 "

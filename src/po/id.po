@@ -1,9 +1,4 @@
-# translation of cracklib.po to Dansk
-# Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# Martin Møller <martin@martinm-76.dk>, 2005.
-# Jan Dittberner <jandd@debian.org>, 2016. #zanata
-# scootergrisen <scootergrisen@gmail.com>, 2017. #zanata
+# Andika Triwidada <andika@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
@@ -12,73 +7,73 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-10-06 02:39+0000\n"
-"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
-"Language-Team: Dansk <da@li.org>\n"
-"Language: da\n"
+"PO-Revision-Date: 2017-07-24 12:45+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
 "X-Generator: Zanata 4.6.2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "det er baseret på dit brugernavn"
+msgstr "ini berbasis pada nama Anda"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "det er baseret på din adgangskode"
+msgstr "ini berbasis pada entri kata sandi Anda"
 
 #: lib/fascist.c:591
 msgid "it is derived from your password entry"
-msgstr "det er afledt af din adgangskode"
+msgstr "ini diturunkan dari entri kata sandi Anda"
 
 #: lib/fascist.c:599
 msgid "it's derived from your password entry"
-msgstr "det er afledt af din adgangskode"
+msgstr "ini diturunkan dari entri kata sandi Anda"
 
 #: lib/fascist.c:608
 msgid "it is derivable from your password entry"
-msgstr "det kan afledes fra din adgangskode"
+msgstr "ini dapat diturunkan dari entri kata sandi Anda"
 
 #: lib/fascist.c:617
 msgid "it's derivable from your password entry"
-msgstr "det kan afledes fra din adgangskode"
+msgstr "ini dapat diturunkan dari entri kata sandi Anda"
 
 #: lib/fascist.c:674
 msgid "you are not registered in the password file"
-msgstr "du er ikke optegnet i adgangskodefilen"
+msgstr "Anda tidak terdaftar dalam berkas kata sandi"
 
 #: lib/fascist.c:709
 msgid "it is WAY too short"
-msgstr "det er ALT for kort"
+msgstr "ini KETERLALUAN pendeknya"
 
 #: lib/fascist.c:714
 msgid "it is too short"
-msgstr "det er for kort"
+msgstr "ini terlalu pendek"
 
 #: lib/fascist.c:731
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "der er ikke nok FORSKELLIGE tegn"
+msgstr "ini tidak memuat cukup karakter yang BERBEDA"
 
 #: lib/fascist.c:745
 msgid "it is all whitespace"
-msgstr "alt er blanktegn"
+msgstr "ini semua keluarga spasi"
 
 #: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
-msgstr "det er for simpelt/systematisk"
+msgstr "ini terlalu sederhana/sistematis"
 
 #: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
-msgstr "det ligner et \"National Insurance\"-nummer."
+msgstr "ini tampak seperti nomor Asuransi Nasional."
 
 #: lib/fascist.c:801
 msgid "it is based on a dictionary word"
-msgstr "det er baseret på et ord fra en ordbog"
+msgstr "ini berbasis pada kata kamus"
 
 #: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
-msgstr "det er baseret på et (spejlvendt) ord fra en ordbog"
+msgstr "ini berbasis pada kata kamus (terbalik)"
 
 #: lib/fascist.c:865
 msgid "error loading dictionary"
-msgstr "fejl ved indlæsning af ordbog"
+msgstr "galat saat memuat kamus"
