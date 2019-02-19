@@ -1,11 +1,11 @@
-# translation of sl_SI.po to Slovenščina
+# translation of sl.po to Slovenščina
 # Copyright (C) 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Janez Krek <janez.krek@euroteh.si>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sl_SI\n"
+"Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2015-08-18 13:45-0500\n"
 "PO-Revision-Date: 2005-08-21 18:02+0200\n"

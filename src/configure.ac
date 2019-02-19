@@ -5,7 +5,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
 dnl Set of available languages.
-ALL_LINGUAS="as bn_IN cs da de el es fi fr gu hi hu it ja kn ko lt nb nl ml mr or pa pl pt_BR pt ru sl_SI sk ta te tr uk zh_CN zh_TW"
+ALL_LINGUAS="as bn_IN cs da de el es fi fr gu hi hu it ja kn ko lt nb nl ml mr or pa pl pt_BR pt ru sl sk ta te tr uk zh_CN zh_TW"
 
 dnl Checks for programs.
 AC_PROG_LIBTOOL
