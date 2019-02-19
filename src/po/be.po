@@ -1,8 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# Viktar Siarheichyk <veq@fedoraproject.org>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
@@ -11,74 +7,74 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-06-18 01:02+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: lt\n"
-"Language: lt\n"
+"PO-Revision-Date: 2018-06-04 07:22+0000\n"
+"Last-Translator: Viktar Siarheichyk <veq@fedoraproject.org>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
 "X-Generator: Zanata 4.6.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "jis pagrįstas jūsų vartotojo vardu"
+msgstr "заснавана на імені карыстальніка"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "jis pagrįstas jūsų slaptažodžio įrašu"
+msgstr "заснавана на ўпісаным пароле"
 
 #: lib/fascist.c:591
 msgid "it is derived from your password entry"
-msgstr "jis gautas iš jūsų slaptažodžio įrašo"
+msgstr "паходзіць з вашага запісу пароля"
 
 #: lib/fascist.c:599
 msgid "it's derived from your password entry"
-msgstr "jis gautas iš jūsų slaptažodžio įrašo"
+msgstr "паходзіць з вашага запісу пароля"
 
 #: lib/fascist.c:608
 msgid "it is derivable from your password entry"
-msgstr "jis gaunamas iš jūsų slaptažodžio įrašo"
+msgstr "можа паходзіць з вашага запісу пароля"
 
 #: lib/fascist.c:617
 msgid "it's derivable from your password entry"
-msgstr "jis gaunamas iš jūsų slaptažodžio įrašo"
+msgstr "можа паходзіць з вашага запісу пароля"
 
 #: lib/fascist.c:674
 msgid "you are not registered in the password file"
-msgstr "jūs neužregistruotas slaptažodžių byloje"
+msgstr "няма вашага запісу ў файле пароляў"
 
 #: lib/fascist.c:709
 msgid "it is WAY too short"
-msgstr "jis STIPRIAI per trumpas"
+msgstr "ён ЗАНАДТА кароткі"
 
 #: lib/fascist.c:714
 msgid "it is too short"
-msgstr "jis per trumpas"
+msgstr "ён надта кароткі"
 
 #: lib/fascist.c:731
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "jis neturi pakankamai SKIRTINGŲ simbolių"
+msgstr "у ім недастаткова РОЗНАСТАЙНЫХ знакаў"
 
 #: lib/fascist.c:745
 msgid "it is all whitespace"
-msgstr "jis sudarytas tik iš tarpų"
+msgstr "адны прабелы"
 
 #: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
-msgstr "jis per daug paprastas/sistemingas"
+msgstr "надта просты ці распаўсюджаны"
 
 #: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
-msgstr "jis atrodo kaip nacionalinis draudimo numeris."
+msgstr " надобны на нумар сацыяльнага страхавання."
 
 #: lib/fascist.c:801
 msgid "it is based on a dictionary word"
-msgstr "jis pagrįstas žodžiu iš žodyno"
+msgstr "базуецца на слоўнікавым слове"
 
 #: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
-msgstr "jis pagrįstas žodžiu iš žodyno, parašytu atvirkščiai"
+msgstr "бвзуецца на (адваротным) слоўнікавым слове"
 
 #: lib/fascist.c:865
 msgid "error loading dictionary"
-msgstr ""
+msgstr "памылка падчас загрузкі слоўніка"

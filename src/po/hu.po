@@ -2,48 +2,49 @@
 # This file is put in the public domain.
 # Marcel Hilzinger <hili@suselinux.hu>, 2003.
 # Gábor Szentiványi <szenti@suselinux.hu>, 2003
-#
+# Meskó Balázs <meskobalazs@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib.hu\n"
+"Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2015-08-18 13:45-0500\n"
-"PO-Revision-Date: 2005-08-06 20:20+0100\n"
-"Last-Translator: Szabolcs Varga <shirokuma@shirokuma.hu>\n"
-"Language-Team: hungarian\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
+"PO-Revision-Date: 2016-09-10 06:40+0000\n"
+"Last-Translator: Meskó Balázs <meskobalazs@gmail.com>\n"
+"Language-Team: hungarian\n"
+"Language: hu\n"
+"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "az Ön felhasználónevén alapszik"
+msgstr "a felhasználónevén alapszik"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "az Ön jelszóbejegyzésén alapszik"
+msgstr "a jelszóbejegyzésén alapszik"
 
 #: lib/fascist.c:591
 msgid "it is derived from your password entry"
-msgstr "az Ön jelszóbejegyzéséból lett származtatva"
+msgstr "a jelszóbejegyzéséből lett származtatva"
 
 #: lib/fascist.c:599
 msgid "it's derived from your password entry"
-msgstr "az Ön jelszóbejegyzéséból lett származtatva"
+msgstr "a jelszóbejegyzéséből lett származtatva"
 
 #: lib/fascist.c:608
 msgid "it is derivable from your password entry"
-msgstr "kitalálható az Ön jelszóbejegyzéséből"
+msgstr "kitalálható a jelszóbejegyzéséből"
 
 #: lib/fascist.c:617
 msgid "it's derivable from your password entry"
-msgstr "kitalálható az Ön jelszóbejegyzéséből"
+msgstr "kitalálható a jelszóbejegyzéséből"
 
 #: lib/fascist.c:674
 msgid "you are not registered in the password file"
-msgstr "Ön nem szerepel a password fájlban"
+msgstr "nincs regisztrálva a jelszófájlban"
 
 #: lib/fascist.c:709
 msgid "it is WAY too short"
@@ -59,7 +60,7 @@ msgstr "nem tartalmaz elegendő számú KÜLÖNBÖZŐ karaktert"
 
 #: lib/fascist.c:745
 msgid "it is all whitespace"
-msgstr "csak szóközszerű karakterekből áll"
+msgstr "csak üres karakterekből áll"
 
 #: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
@@ -71,12 +72,12 @@ msgstr "úgy néz ki, mint egy TAJ-szám"
 
 #: lib/fascist.c:801
 msgid "it is based on a dictionary word"
-msgstr "a szótárban megtalálható"
+msgstr "szótári szón alapszik"
 
 #: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
-msgstr "visszafelé olvasva egy ismert szót ad"
+msgstr "(megfordított) szótári szón alapszik"
 
 #: lib/fascist.c:865
 msgid "error loading dictionary"
-msgstr ""
+msgstr "hiba a szótár betöltésekor"

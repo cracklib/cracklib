@@ -1,20 +1,22 @@
 # translation of cracklib.po to Slovak
 # This file is put in the public domain.
 # Stanislav Visnovsky <visnov@suse.cz>, 2003.
-#
+# Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# feonsu <feonsu@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib\n"
+"Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2015-08-18 13:45-0500\n"
-"PO-Revision-Date: 2005-06-23 13:12+02:00\n"
-"Last-Translator: Stanislav Visnovsky <visnov@suse.cz>\n"
-"Language-Team: Slovak <sk-i18n@linux.sk>\n"
-"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.2beta3\n"
+"PO-Revision-Date: 2016-10-11 06:53+0000\n"
+"Last-Translator: feonsu <feonsu@gmail.com>\n"
+"Language-Team: Slovak <sk-i18n@linux.sk>\n"
+"Language: sk\n"
+"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -78,4 +80,4 @@ msgstr "je založené na (obrátenom) slove zo slovníka"
 
 #: lib/fascist.c:865
 msgid "error loading dictionary"
-msgstr ""
+msgstr "chyba pri načítavaní slovníka"
