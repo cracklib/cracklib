@@ -52,3 +52,4 @@ po/remove-potcdate.sed
 /cracklib.spec
 
 cracklib-*.tar.gz
+cracklib-*.zip
