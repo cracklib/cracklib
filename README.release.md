@@ -8,13 +8,15 @@ During development, pick next planned version - increment patch level, and add "
 Before publication, add in NEWS for example "2.9.x" or "master" or "dev" and only when it is the commit
 for announcement, the moment to change the new version.
 
-At time of release, create ONE commit with all version numbers update in files and named for example "X.X.X".
-Create a tag of the name "vX.Y.Z" pointed to that commit and produce releases at that point
+Release process:
+	1) Start from a clean repo (git reset --hard; git clean -fdx)
+	2) Update version in configure.ac and ../words/Makefile. Update NEWS file to reflect that version.
+	3) Run autogen.sh and configure, then 'make dist'
+	4) Check for changes, there should be various files updated in po directory - all version number related
+	5) Commit that with new version
+	6) Create tag of form 'vX.Y.Z' pointed to that commit, push tags
+	7) Make in cracklib words directory
+	8) Upload the relevant binaries to a release on github attached to the tag that was already created above
 
-To produce release binaries
-	1) Start from a clean repo (git reset --hard; git clean -fdx) and run autogen.sh
-	2) Configure and 'make dist'
-	3) Make in cracklib words directory
-	3) Upload the relevant binaries to a release on github attached to the tag that was already created above
+After the release, repeat steps 2 through 5 with incremented version: MAJOR.MINOR.(PATCH+1)-dev
 
-After the release, commit a change to put versions to MAJOR.MINOR.(PATCH+1)-dev
