@@ -12,7 +12,7 @@ At time of release, create ONE commit with all version numbers update in files a
 Create a tag of the name "vX.Y.Z" pointed to that commit and produce releases at that point
 
 To produce release binaries
-	1) Start from a clean repo and run autogen.sh
+	1) Start from a clean repo (git reset --hard; git clean -fdx) and run autogen.sh
 	2) Configure and 'make dist'
 	3) Make in cracklib words directory
 	3) Upload the relevant binaries to a release on github attached to the tag that was already created above
