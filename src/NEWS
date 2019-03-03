@@ -1,4 +1,4 @@
-v2.9.x apply patch to fix CVE-2016-6318 Stack-based buffer overflow when parsing large GECOS field
+v2.9.7-dev apply patch to fix CVE-2016-6318 Stack-based buffer overflow when parsing large GECOS field
        fix a buffer overflow processing long words
        historical research and updates to repository tags to correct history, and suggestions for new release process (Neustradamus)
 v2.9.6 updates to cracklib-words to add a bunch of other dictionary lists

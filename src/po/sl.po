@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-08-18 13:45-0500\n"
+"POT-Creation-Date: 2019-03-03 11:21-0600\n"
 "PO-Revision-Date: 2005-08-21 18:02+0200\n"
 "Last-Translator: Janez Krek <janez.krek@euroteh.si>\n"
 "Language-Team: Slovenščina <sl@li.org>\n"
@@ -27,59 +27,58 @@ msgstr "na osnovi vašega uporabniškega imena"
 msgid "it is based upon your password entry"
 msgstr "na osnovi zapisa v datoteki gesel"
 
-#: lib/fascist.c:591
+#: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
 msgstr "izpeljano iz zapisa v datoteki gesel"
 
-#: lib/fascist.c:599
-msgid "it's derived from your password entry"
-msgstr "izpeljano iz zapisa v datoteki gesel"
-
-#: lib/fascist.c:608
+#: lib/fascist.c:613
 msgid "it is derivable from your password entry"
 msgstr "lahko izpeljano iz zapisa v datoteki gesel"
 
-#: lib/fascist.c:617
+#: lib/fascist.c:625
 msgid "it's derivable from your password entry"
 msgstr "lahko izpeljano iz zapisa v datoteki gesel"
 
-#: lib/fascist.c:674
+#: lib/fascist.c:683
 msgid "you are not registered in the password file"
 msgstr "v datoteki gesel niste registrirani"
 
-#: lib/fascist.c:709
+#: lib/fascist.c:718
 msgid "it is WAY too short"
 msgstr "je ZELO prekratko"
 
-#: lib/fascist.c:714
+#: lib/fascist.c:723
 msgid "it is too short"
 msgstr "je prekratko"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "ne vsebuje dovolj RAZLIČNIH znakov"
 
-#: lib/fascist.c:745
+#: lib/fascist.c:754
 msgid "it is all whitespace"
 msgstr "so samo presledki"
 
-#: lib/fascist.c:764
+#: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
 msgstr "je preveč enostavno (sistematično)"
 
-#: lib/fascist.c:769
+#: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
 msgstr ""
 "izgleda kot vaša številka (davčna, zdravstvenega zavarovanja, EMŠO, itd.)."
 
-#: lib/fascist.c:801
+#: lib/fascist.c:810
 msgid "it is based on a dictionary word"
 msgstr "preveč podobna besedi v slovarju"
 
-#: lib/fascist.c:820
+#: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
 msgstr "preveč podobna nazaj napisani besedi v slovarju"
 
-#: lib/fascist.c:865
+#: lib/fascist.c:874
 msgid "error loading dictionary"
 msgstr ""
+
+#~ msgid "it's derived from your password entry"
+#~ msgstr "izpeljano iz zapisa v datoteki gesel"

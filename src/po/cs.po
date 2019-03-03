@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-08-18 13:45-0500\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-03-03 11:21-0600\n"
 "PO-Revision-Date: 2016-08-31 01:14+0000\n"
 "Last-Translator: Marek Suchánek <m.suchanek.2@gmail.com>\n"
 "Language-Team: czech <suse@suse.cz>\n"
 "Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Zanata 4.6.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
@@ -25,58 +25,57 @@ msgstr "je založeno na vašem uživatelském jménu"
 msgid "it is based upon your password entry"
 msgstr "je založeno na záznamu účtu"
 
-#: lib/fascist.c:591
+#: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
 msgstr "je odvozené z vašeho záznamu účtu"
 
-#: lib/fascist.c:599
-msgid "it's derived from your password entry"
-msgstr "je odvozen ze záznamu účtu"
-
-#: lib/fascist.c:608
+#: lib/fascist.c:613
 msgid "it is derivable from your password entry"
 msgstr "je odvoditelné ze záznamu účtu"
 
-#: lib/fascist.c:617
+#: lib/fascist.c:625
 msgid "it's derivable from your password entry"
 msgstr "je odvoditelné ze záznamu účtu"
 
-#: lib/fascist.c:674
+#: lib/fascist.c:683
 msgid "you are not registered in the password file"
 msgstr "nejste zaneseni v souboru hesel"
 
-#: lib/fascist.c:709
+#: lib/fascist.c:718
 msgid "it is WAY too short"
 msgstr "je PŘÍLIŠ krátké"
 
-#: lib/fascist.c:714
+#: lib/fascist.c:723
 msgid "it is too short"
 msgstr "je příliš krátké"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "neobsahuje dostatečný počet ODLIŠNÝCH znaků"
 
-#: lib/fascist.c:745
+#: lib/fascist.c:754
 msgid "it is all whitespace"
 msgstr "vše jsou pouze mezery"
 
-#: lib/fascist.c:764
+#: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
 msgstr "je příliš jednoduché nebo systematické"
 
-#: lib/fascist.c:769
+#: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
 msgstr "vypadá jako rodné číslo."
 
-#: lib/fascist.c:801
+#: lib/fascist.c:810
 msgid "it is based on a dictionary word"
 msgstr "je založeno na slovu ze slovníku"
 
-#: lib/fascist.c:820
+#: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
 msgstr "je založeno na (obráceném) slově ze slovníku"
 
-#: lib/fascist.c:865
+#: lib/fascist.c:874
 msgid "error loading dictionary"
 msgstr "chyba při načítání slovníku"
+
+#~ msgid "it's derived from your password entry"
+#~ msgstr "je odvozen ze záznamu účtu"

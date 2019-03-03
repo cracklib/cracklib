@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([cracklib], [2.9.6], [cracklib-devel@lists.sourceforge.net])
+AC_INIT([cracklib], [2.9.7-dev], [cracklib-devel@lists.sourceforge.net])
 AM_INIT_AUTOMAKE
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
