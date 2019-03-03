@@ -23,5 +23,7 @@ same lists, might as well use it to benefit your security.
 
 There are HUGE (multi GB) wordlists available online with questionable
 sources, but if you are looking for the most complete source, those
-would be worth investigating.
+would be worth investigating. One collection of them here:
+
+	https://github.com/danielmiessler/SecLists/tree/master/Passwords/Common-Credentials
 
