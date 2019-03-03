@@ -1,8 +1,14 @@
-Nathan Neulinger <nneul@neulinger.org>
-	version 3.0 modifications and new release
+Post 2.7 modifications and new releases:
 
-Alec Muffett <alecm@crypto.dircon.co.uk>
-	Original CrackLib author for releases up to v2.7
+	Nathan Neulinger <nneul@neulinger.org>
+
+	Jan Dittberner <jan+github@dittberner.info>
+
+	Mike Frysinger <vapier@gmail.com>
+
+Original CrackLib author for releases up to v2.7
+
+	Alec Muffett <alecm@crypto.dircon.co.uk>
 
 Numerous others has provided patches included in both this and
 previous releases.
