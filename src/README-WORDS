@@ -21,3 +21,7 @@ For best results, supply cracklib with as large a wordlist as you
 have available to you - blackhats brute forcing passwords have those
 same lists, might as well use it to benefit your security.
 
+There are HUGE (multi GB) wordlists available online with questionable
+sources, but if you are looking for the most complete source, those
+would be worth investigating.
+
