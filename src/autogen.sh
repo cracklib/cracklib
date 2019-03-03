@@ -5,6 +5,7 @@ echo EXTRA_DIST = *.m4 > Makefile.am
 cd ..
 autoreconf -f -i
 
+# Grab latest versions instead of what is bundled with autoconf
 curl --silent "http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD" > config.guess
 curl --silent "http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD" > config.sub
 
