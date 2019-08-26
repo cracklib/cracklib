@@ -14,7 +14,7 @@ libcrack_la_SOURCES = 	fascist.c \
 # For next ABI changing release, use 3:0:0
 # After that, follow the libtool recommended incrementing procedure
 #
-libcrack_la_LDFLAGS = -version-info 11:0:9
+libcrack_la_LDFLAGS = -version-info 11:8:9
 
 # Link in NLS libs. Needed by FreeBSD build
 libcrack_la_LIBADD = $(LTLIBINTL)
