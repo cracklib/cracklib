@@ -7,6 +7,4 @@ CrackLib Library and Dictionaries
 
 ## translations
 
-We use Fedora's Zanata for
-[our translations](https://fedora.zanata.org/project/view/cracklib). Please
-contribute translations for your language there.
+[![Translate](https://translate.fedoraproject.org/widgets/cracklib/-/287x66-grey.png)](https://translate.fedoraproject.org/engage/cracklib/?utm_source=widget)
