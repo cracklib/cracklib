@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2019-03-03 11:55-0600\n"
+"POT-Creation-Date: 2015-08-18 13:45-0500\n"
 "PO-Revision-Date: 2017-10-06 02:39+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Dansk <da@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 4.6.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -27,57 +27,58 @@ msgstr "det er baseret på dit brugernavn"
 msgid "it is based upon your password entry"
 msgstr "det er baseret på din adgangskode"
 
-#: lib/fascist.c:593 lib/fascist.c:601
+#: lib/fascist.c:591
 msgid "it is derived from your password entry"
 msgstr "det er afledt af din adgangskode"
 
-#: lib/fascist.c:613
+#: lib/fascist.c:599
+msgid "it's derived from your password entry"
+msgstr "det er afledt af din adgangskode"
+
+#: lib/fascist.c:608
 msgid "it is derivable from your password entry"
 msgstr "det kan afledes fra din adgangskode"
 
-#: lib/fascist.c:625
+#: lib/fascist.c:617
 msgid "it's derivable from your password entry"
 msgstr "det kan afledes fra din adgangskode"
 
-#: lib/fascist.c:683
+#: lib/fascist.c:674
 msgid "you are not registered in the password file"
 msgstr "du er ikke optegnet i adgangskodefilen"
 
-#: lib/fascist.c:718
+#: lib/fascist.c:709
 msgid "it is WAY too short"
 msgstr "det er ALT for kort"
 
-#: lib/fascist.c:723
+#: lib/fascist.c:714
 msgid "it is too short"
 msgstr "det er for kort"
 
-#: lib/fascist.c:740
+#: lib/fascist.c:731
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "der er ikke nok FORSKELLIGE tegn"
 
-#: lib/fascist.c:754
+#: lib/fascist.c:745
 msgid "it is all whitespace"
 msgstr "alt er blanktegn"
 
-#: lib/fascist.c:773
+#: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
 msgstr "det er for simpelt/systematisk"
 
-#: lib/fascist.c:778
+#: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
 msgstr "det ligner et \"National Insurance\"-nummer."
 
-#: lib/fascist.c:810
+#: lib/fascist.c:801
 msgid "it is based on a dictionary word"
 msgstr "det er baseret på et ord fra en ordbog"
 
-#: lib/fascist.c:829
+#: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
 msgstr "det er baseret på et (spejlvendt) ord fra en ordbog"
 
-#: lib/fascist.c:874
+#: lib/fascist.c:865
 msgid "error loading dictionary"
 msgstr "fejl ved indlæsning af ordbog"
-
-#~ msgid "it's derived from your password entry"
-#~ msgstr "det er afledt af din adgangskode"
