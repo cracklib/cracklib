@@ -1,13 +1,13 @@
-# Mikel Olasagasti Uranga <mikel@olasagasti.info>, 2017. #zanata
+# Fabio Tomat <f.t.public@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2015-08-18 13:45-0500\n"
-"PO-Revision-Date: 2017-04-11 05:46+0000\n"
-"Last-Translator: Mikel Olasagasti Uranga <mikel@olasagasti.info>\n"
-"Language-Team: Basque\n"
-"Language: eu\n"
+"PO-Revision-Date: 2019-08-20 02:34+0000\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
+"Language-Team: Friulian\n"
+"Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,64 +16,64 @@ msgstr ""
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "zure erabiltzaile-izenean oinarrituta dago"
+msgstr "e je basade sul to non utent"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr ""
+msgstr "e je basade su la vuestre password regjistrade"
 
 #: lib/fascist.c:591
 msgid "it is derived from your password entry"
-msgstr ""
+msgstr "e derive de vuestre password regjistrade"
 
 #: lib/fascist.c:599
 msgid "it's derived from your password entry"
-msgstr ""
+msgstr "e derive de vuestre password regjistrade"
 
 #: lib/fascist.c:608
 msgid "it is derivable from your password entry"
-msgstr ""
+msgstr "si pues derivâ de vuestre password regjistrade"
 
 #: lib/fascist.c:617
 msgid "it's derivable from your password entry"
-msgstr ""
+msgstr "si pues derivâ de vuestre password regjistrade"
 
 #: lib/fascist.c:674
 msgid "you are not registered in the password file"
-msgstr ""
+msgstr "no tu sês regjistrât tal file des password"
 
 #: lib/fascist.c:709
 msgid "it is WAY too short"
-msgstr "OSO laburra da"
+msgstr "e je UNE VORE masse curte"
 
 #: lib/fascist.c:714
 msgid "it is too short"
-msgstr "laburregia da"
+msgstr "e je masse curte"
 
 #: lib/fascist.c:731
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "ez ditu nahikoa karaktere EZBERDIN"
+msgstr "no conten vonde caratars DIFERENTS"
 
 #: lib/fascist.c:745
 msgid "it is all whitespace"
-msgstr "karaktere guztiak zuriuneak dira"
+msgstr "e je fate dome di spazis"
 
 #: lib/fascist.c:764
 msgid "it is too simplistic/systematic"
-msgstr "oso sinple edo sistematikoa"
+msgstr "e je masse semplice/sistematiche"
 
 #: lib/fascist.c:769
 msgid "it looks like a National Insurance number."
-msgstr "Gizarte Segurantza zenbakia dirudi (National Insurance)"
+msgstr "e semee un numar di Previdence Sociâl."
 
 #: lib/fascist.c:801
 msgid "it is based on a dictionary word"
-msgstr "hiztegiko hitz batean oinarritua da"
+msgstr "e je basade suntune peraule di dizionari"
 
 #: lib/fascist.c:820
 msgid "it is based on a (reversed) dictionary word"
-msgstr "hiztegiko hitz batean oinarritua da (alderantziz)"
+msgstr "e je basade suntune peraule dal dizionari al contrari"
 
 #: lib/fascist.c:865
 msgid "error loading dictionary"
-msgstr "errorea hiztegia kargatzean"
+msgstr "erôr tal cjariâ il dizionari"
