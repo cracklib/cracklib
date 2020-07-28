@@ -5,20 +5,22 @@
 # Karl Eichwalder <ke@suse.de>, 1999-2003.
 # Martin Lohner <ml@suse.de>, 2000.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# Thomas Eichhorn <tomislav@posteo.de>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2018-08-16 12:44+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2020-02-01 16:16+0000\n"
+"Last-Translator: Thomas Eichhorn <tomislav@posteo.de>\n"
+"Language-Team: German <https://translate.fedoraproject.org/projects/cracklib/"
+"master/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10.3\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -34,15 +36,15 @@ msgstr "Es wird von Ihrem Passwort-Eintrag abgeleitet"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr "Es kann von Ihrem Passwort-Eintrag abgeleitet werden."
+msgstr "Es kann von Ihrem Passwort abgeleitet werden"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr "Es kann von Ihrem Passwort-Eintrag abgeleitet werden."
+msgstr "Es kann von Ihrem Passwort abgeleitet werden"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "Sie sind nicht in der passwd-Datei eingetragen."
+msgstr "Sie sind nicht in der passwd-Datei eingetragen"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
@@ -66,7 +68,7 @@ msgstr "Es ist zu einfach/systematisch"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "Es schaut nach Versicherungsnummer aus"
+msgstr "Es schaut nach einer Versicherungsnummer aus."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
