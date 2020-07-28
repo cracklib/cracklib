@@ -1,23 +1,25 @@
 # translation of cracklib.default.cracklib.or.po to Oriya
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Manoj Kumar Giri <mgiri@redhat.com>, 2009.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# Ankit Behera <proneon267@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2016-06-18 01:02+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Oriya <oriya-it@googlegroups.com>\n"
+"PO-Revision-Date: 2020-04-13 14:40+0000\n"
+"Last-Translator: Ankit Behera <proneon267@gmail.com>\n"
+"Language-Team: Odia <https://translate.fedoraproject.org/projects/cracklib/"
+"master/or/>\n"
 "Language: or\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -77,7 +79,7 @@ msgstr "ଏହା ଗୋଟିଏ (ଓଲଟା) ଅଭିଧାନ ଶବ୍ଦ
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr ""
+msgstr "ଅଭିଧାନ ଧାରଣ କରିବାରେ ତ୍ରୁଟି"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "ଏହା ଆପଣଙ୍କର ପ୍ରବେଶ ସଂକେତ ଭରଣରୁ ଉତ୍ପନ୍ନ କରାହୋଇଥାଏ"
