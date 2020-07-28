@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-08-18 13:45-0500\n"
+"POT-Creation-Date: 2019-03-03 11:55-0600\n"
 "PO-Revision-Date: 2016-06-18 01:02+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -27,58 +27,57 @@ msgstr "আপনার ব্যবহারকারীর নামের উ
 msgid "it is based upon your password entry"
 msgstr "আপনার পাসওয়ার্ড এনট্রির উপর এটি নির্ভরশীল"
 
-#: lib/fascist.c:591
+#: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
 msgstr "আপনার পাসওয়ার্ড এনট্রি থেকে এটি আহরণ করা হয়েছে"
 
-#: lib/fascist.c:599
-msgid "it's derived from your password entry"
-msgstr "আপনার পাসওয়ার্ড এনট্রি থেকে এটি আহরণ করা হয়েছে"
-
-#: lib/fascist.c:608
+#: lib/fascist.c:613
 msgid "it is derivable from your password entry"
 msgstr "আপনার পাসওয়ার্ড এনট্রি থেকে এটি আহরণ করা সম্ভব"
 
-#: lib/fascist.c:617
+#: lib/fascist.c:625
 msgid "it's derivable from your password entry"
 msgstr "আপনার পাসওয়ার্ড এনট্রি থেকে এটি আহরণ করা সম্ভব"
 
-#: lib/fascist.c:674
+#: lib/fascist.c:683
 msgid "you are not registered in the password file"
 msgstr "পাসওয়ার্ড ফাইলের মধ্যে আপনার পরিচয় নিবন্ধিত নয়"
 
-#: lib/fascist.c:709
+#: lib/fascist.c:718
 msgid "it is WAY too short"
 msgstr "এটি অত্যাধিক ছোট"
 
-#: lib/fascist.c:714
+#: lib/fascist.c:723
 msgid "it is too short"
 msgstr "এটি অতিমাত্রায় ছোট"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "এর মধ্যে উপস্থিত অক্ষরগুলির মধ্যে পর্যাপ্ত বৈচিত্র উপস্থিত নেই"
 
-#: lib/fascist.c:745
+#: lib/fascist.c:754
 msgid "it is all whitespace"
 msgstr "এটি শুধুমাত্র শূণ্যস্থান দ্বারা গঠিত হয়েছে"
 
-#: lib/fascist.c:764
+#: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
 msgstr "এটি অত্যাধিক সরল/গতানুগতিক"
 
-#: lib/fascist.c:769
+#: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
 msgstr "এটি একটি বীমার অ্যাকাউন্টের সংখ্যার অনুরূপ।"
 
-#: lib/fascist.c:801
+#: lib/fascist.c:810
 msgid "it is based on a dictionary word"
 msgstr "এটি অভিধানের একটি শব্দের ভিত্তিতে নির্ধারিত হয়েছে"
 
-#: lib/fascist.c:820
+#: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
 msgstr "এটি অভিধানের একটি শব্দের (বিপরীত) ভিত্তিতে নির্ধারিত হয়েছে"
 
-#: lib/fascist.c:865
+#: lib/fascist.c:874
 msgid "error loading dictionary"
 msgstr ""
+
+#~ msgid "it's derived from your password entry"
+#~ msgstr "আপনার পাসওয়ার্ড এনট্রি থেকে এটি আহরণ করা হয়েছে"

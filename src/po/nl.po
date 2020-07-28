@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-08-18 13:45-0500\n"
+"POT-Creation-Date: 2019-03-03 11:55-0600\n"
 "PO-Revision-Date: 2016-09-01 06:35+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -29,58 +29,57 @@ msgstr "het is gebaseerd op uw gebruikersnaam"
 msgid "it is based upon your password entry"
 msgstr "het is gebaseerd op uw wachtwoordopgave"
 
-#: lib/fascist.c:591
+#: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
 msgstr "het is afgeleid van uw wachtwoordopgave"
 
-#: lib/fascist.c:599
-msgid "it's derived from your password entry"
-msgstr "het is afgeleid van uw wachtwoordopgave"
-
-#: lib/fascist.c:608
+#: lib/fascist.c:613
 msgid "it is derivable from your password entry"
 msgstr "het is een afleiding van uw wachtwoordopgave"
 
-#: lib/fascist.c:617
+#: lib/fascist.c:625
 msgid "it's derivable from your password entry"
 msgstr "het is een afleiding van uw wachtwoordopgave"
 
-#: lib/fascist.c:674
+#: lib/fascist.c:683
 msgid "you are not registered in the password file"
 msgstr "u staat niet in het wachtwoordbestand geregistreerd"
 
-#: lib/fascist.c:709
+#: lib/fascist.c:718
 msgid "it is WAY too short"
 msgstr "het is VEEL te kort"
 
-#: lib/fascist.c:714
+#: lib/fascist.c:723
 msgid "it is too short"
 msgstr "het is te kort"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "het bevat niet genoeg VERSCHILLENDE lettertekens"
 
-#: lib/fascist.c:745
+#: lib/fascist.c:754
 msgid "it is all whitespace"
 msgstr "het zijn allemaal spaties"
 
-#: lib/fascist.c:764
+#: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
 msgstr "het is te eenvoudig/systematisch"
 
-#: lib/fascist.c:769
+#: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
 msgstr "het lijkt op een nationaal verzekeringsnummer."
 
-#: lib/fascist.c:801
+#: lib/fascist.c:810
 msgid "it is based on a dictionary word"
 msgstr "het is gebaseerd op een woord uit een woordenboek"
 
-#: lib/fascist.c:820
+#: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
 msgstr "het is gebaseerd op een (omgedraaid) woord uit een woordenboek"
 
-#: lib/fascist.c:865
+#: lib/fascist.c:874
 msgid "error loading dictionary"
 msgstr "fout bij laden woordenboek"
+
+#~ msgid "it's derived from your password entry"
+#~ msgstr "het is afgeleid van uw wachtwoordopgave"

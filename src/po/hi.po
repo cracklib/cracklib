@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-08-18 13:45-0500\n"
+"POT-Creation-Date: 2019-03-03 11:55-0600\n"
 "PO-Revision-Date: 2016-06-18 01:02+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hindi <Red Hat>\n"
@@ -28,58 +28,57 @@ msgstr "यह आपके उपयोक्ता नाम पर आधा�
 msgid "it is based upon your password entry"
 msgstr "यह आपकी कूटशब्द प्रविष्टि पर आधारित है"
 
-#: lib/fascist.c:591
+#: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
 msgstr "यह आपकी कूटशब्द प्रविष्टि से निकला हुआ है"
 
-#: lib/fascist.c:599
-msgid "it's derived from your password entry"
-msgstr "यह आपकी कूटशब्द प्रविष्टि से निकला हुआ है"
-
-#: lib/fascist.c:608
+#: lib/fascist.c:613
 msgid "it is derivable from your password entry"
 msgstr "यह आपकी कूटशब्द प्रविष्टि से निकलने योग्य है"
 
-#: lib/fascist.c:617
+#: lib/fascist.c:625
 msgid "it's derivable from your password entry"
 msgstr "यह आपकी कूटशब्द प्रविष्टि से निकलने योग्य है"
 
-#: lib/fascist.c:674
+#: lib/fascist.c:683
 msgid "you are not registered in the password file"
 msgstr "आप कूटशब्द फ़ाइल में पंजीकृत नहीं हैं"
 
-#: lib/fascist.c:709
+#: lib/fascist.c:718
 msgid "it is WAY too short"
 msgstr "यह बहुत ही छोटा है"
 
-#: lib/fascist.c:714
+#: lib/fascist.c:723
 msgid "it is too short"
 msgstr "यह बहुत छोटा है"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "इसमें पर्याप्त मात्रा में भिन्न वर्ण समाहित नहीं हैं"
 
-#: lib/fascist.c:745
+#: lib/fascist.c:754
 msgid "it is all whitespace"
 msgstr "यह पूरी तरह से खाली स्थान है"
 
-#: lib/fascist.c:764
+#: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
 msgstr "यह काफी सरल/क्रमबद्ध है"
 
-#: lib/fascist.c:769
+#: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
 msgstr "यह राष्ट्रीय बीमा संख्या की तरह दिखता है."
 
-#: lib/fascist.c:801
+#: lib/fascist.c:810
 msgid "it is based on a dictionary word"
 msgstr "यह शब्दकोश के शब्द पर आधारित है"
 
-#: lib/fascist.c:820
+#: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
 msgstr "यह शब्दकोश के शब्द (विलोम) पर आधारित है"
 
-#: lib/fascist.c:865
+#: lib/fascist.c:874
 msgid "error loading dictionary"
 msgstr ""
+
+#~ msgid "it's derived from your password entry"
+#~ msgstr "यह आपकी कूटशब्द प्रविष्टि से निकला हुआ है"
