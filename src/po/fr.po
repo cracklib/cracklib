@@ -3,15 +3,16 @@
 # Patricia Vaz <Patricia.Vaz@suse.de>, 2003
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2016. #zanata, 2020.
+# Julien Humbert <julroy67@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2020-01-30 22:54+0000\n"
-"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
-"Language-Team: French <https://translate.fedoraproject.org/projects/cracklib/"
-"master/fr/>\n"
+"PO-Revision-Date: 2020-02-05 04:16+0000\n"
+"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
+"Language-Team: French <https://translate.stg.fedoraproject.org/projects/"
+"cracklib/master/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "basé sur votre nom d'utilisateur"
+msgstr "basé sur votre nom d’utilisateur"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
@@ -41,7 +42,7 @@ msgstr "dérivable de votre mot de passe"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "vous n'êtes pas enregistré dans le fichier de mot de passe"
+msgstr "vous n’êtes pas enregistré dans le fichier de mot de passe"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
@@ -57,7 +58,7 @@ msgstr "ne contient pas suffisamment de caractères DIFFÉRENTS"
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr "il n'y a que des espaces"
+msgstr "il n’y a que des espaces"
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
@@ -73,7 +74,7 @@ msgstr "basé sur un mot du dictionnaire"
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr "basé sur un mot du dictionnaire à l'envers"
+msgstr "basé sur un mot du dictionnaire à l’envers"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
