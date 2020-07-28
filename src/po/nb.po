@@ -3,20 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Olav Pettershagen <olav.pet@online.no>, 2005.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2016-06-18 01:02+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: <nb@li.org>\n"
+"PO-Revision-Date: 2020-04-30 08:40+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://translate.fedoraproject.org/"
+"projects/cracklib/master/nb_NO/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.0.1\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -64,7 +66,7 @@ msgstr "det er for enkelt/systematisk"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "det ser ut som et personnummer"
+msgstr "det ser ut som et personnummer."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
@@ -76,7 +78,7 @@ msgstr "det er basert på et (baklengs) ord fra en ordbok"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr ""
+msgstr "kunne ikke laste inn ordbok"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "det er avledet av passordet ditt"
