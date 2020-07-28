@@ -1,84 +1,86 @@
 # translation of cracklib.po to
 # Copyright (C) 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Görkem Çetin <gorkem@uludag.org.tr>, 2006.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
+# Oğuz Ersen <oguzersen@protonmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2019-03-08 02:47+0000\n"
-"Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
-"Language-Team: <yerellestirme@kde.org.tr>\n"
+"PO-Revision-Date: 2020-02-01 16:16+0000\n"
+"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
+"cracklib/master/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>1)\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+"X-Generator: Weblate 3.10.3\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "Bu parola kullanıcı adınızla ilişkili"
+msgstr "bu parola, kullanıcı adınıza dayanıyor"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "Bu parola, sistem parola dosyasındaki bilgilerinizle ilişkili"
+msgstr "bu parola, sistem parola dosyasındaki bilgilerinize dayanıyor"
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilmiş"
+msgstr "bu parola, sistem parola dosyasındaki bilgilerinizden türetilmiş"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilebilir"
+msgstr "bu parola, sistem parola dosyasındaki bilgilerinizden türetilebilir"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilmiş"
+msgstr "bu parola, sistem parola dosyasındaki bilgilerinizden türetilebilir"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "Sistem parola dosyasında tanımlı değilsiniz"
+msgstr "sistem parola dosyasında kayıtlı değilsiniz"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
-msgstr "Bu parola çok kısa"
+msgstr "bu parola ÇOK kısa"
 
 #: lib/fascist.c:723
 msgid "it is too short"
-msgstr "Bu parola oldukça kısa"
+msgstr "bu parola çok kısa"
 
 #: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "Bu parola yeterli sayıda farklı karakterden oluşmuyor"
+msgstr "bu parola yeterli sayıda FARKLI karakter içermiyor"
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr "Bu parolanın tamamı boşluk karakterlerinden oluşuyor"
+msgstr "bu parolanın tamamı boşluk karakterlerinden oluşuyor"
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
-msgstr "Bu parola çok basit"
+msgstr "bu parola çok basit/sistematik"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "Bu parola bir kimlik numarasına benziyor"
+msgstr "bu parola, bir Ulusal Kimlik numarası gibi görünüyor."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
-msgstr "Bu parola sözlükteki bir kelime ile aynı"
+msgstr "bu parola, bir sözlük kelimesine dayanıyor"
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr "Bu parola sözlükteki kelimelerden birisinin tersi"
+msgstr "bu parola, bir sözlük kelimesine (tersten) dayanıyor"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr "Sözlük yükleme hatası"
+msgstr "sözlük yüklenirken hata oluştu"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "Bu parola, sistem parola dosyanızdaki bilgilerden türetilmiş"
