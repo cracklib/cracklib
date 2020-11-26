@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-08-18 13:45-0500\n"
+"POT-Creation-Date: 2019-03-03 11:55-0600\n"
 "PO-Revision-Date: 2017-04-11 05:46+0000\n"
 "Last-Translator: Mikel Olasagasti Uranga <mikel@olasagasti.info>\n"
 "Language-Team: Basque\n"
@@ -22,58 +22,54 @@ msgstr "zure erabiltzaile-izenean oinarrituta dago"
 msgid "it is based upon your password entry"
 msgstr ""
 
-#: lib/fascist.c:591
+#: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
 msgstr ""
 
-#: lib/fascist.c:599
-msgid "it's derived from your password entry"
-msgstr ""
-
-#: lib/fascist.c:608
+#: lib/fascist.c:613
 msgid "it is derivable from your password entry"
 msgstr ""
 
-#: lib/fascist.c:617
+#: lib/fascist.c:625
 msgid "it's derivable from your password entry"
 msgstr ""
 
-#: lib/fascist.c:674
+#: lib/fascist.c:683
 msgid "you are not registered in the password file"
 msgstr ""
 
-#: lib/fascist.c:709
+#: lib/fascist.c:718
 msgid "it is WAY too short"
 msgstr "OSO laburra da"
 
-#: lib/fascist.c:714
+#: lib/fascist.c:723
 msgid "it is too short"
 msgstr "laburregia da"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "ez ditu nahikoa karaktere EZBERDIN"
 
-#: lib/fascist.c:745
+#: lib/fascist.c:754
 msgid "it is all whitespace"
 msgstr "karaktere guztiak zuriuneak dira"
 
-#: lib/fascist.c:764
+#: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
 msgstr "oso sinple edo sistematikoa"
 
-#: lib/fascist.c:769
+#: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
 msgstr "Gizarte Segurantza zenbakia dirudi (National Insurance)"
 
-#: lib/fascist.c:801
+#: lib/fascist.c:810
 msgid "it is based on a dictionary word"
 msgstr "hiztegiko hitz batean oinarritua da"
 
-#: lib/fascist.c:820
+#: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
 msgstr "hiztegiko hitz batean oinarritua da (alderantziz)"
 
-#: lib/fascist.c:865
+#: lib/fascist.c:874
 msgid "error loading dictionary"
 msgstr "errorea hiztegia kargatzean"

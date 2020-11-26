@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-08-18 13:45-0500\n"
+"POT-Creation-Date: 2019-03-03 11:55-0600\n"
 "PO-Revision-Date: 2018-08-21 09:51+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Wei Liu\n"
@@ -29,58 +29,57 @@ msgstr "它基于您的用户名"
 msgid "it is based upon your password entry"
 msgstr "它基于您的密码"
 
-#: lib/fascist.c:591
+#: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
 msgstr "它根据您的密码生成"
 
-#: lib/fascist.c:599
-msgid "it's derived from your password entry"
-msgstr "它根据您的密码生成"
-
-#: lib/fascist.c:608
+#: lib/fascist.c:613
 msgid "it is derivable from your password entry"
 msgstr "它可以根据您的密码生成"
 
-#: lib/fascist.c:617
+#: lib/fascist.c:625
 msgid "it's derivable from your password entry"
 msgstr "它可以根据您的密码生成"
 
-#: lib/fascist.c:674
+#: lib/fascist.c:683
 msgid "you are not registered in the password file"
 msgstr "您没有在密码文件中注册"
 
-#: lib/fascist.c:709
+#: lib/fascist.c:718
 msgid "it is WAY too short"
 msgstr "太短"
 
-#: lib/fascist.c:714
+#: lib/fascist.c:723
 msgid "it is too short"
 msgstr "太短"
 
-#: lib/fascist.c:731
+#: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "不包括足够不同的字符"
 
-#: lib/fascist.c:745
+#: lib/fascist.c:754
 msgid "it is all whitespace"
 msgstr "都是空白"
 
-#: lib/fascist.c:764
+#: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
 msgstr "太简单或太有规律"
 
-#: lib/fascist.c:769
+#: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
 msgstr "象国家保险号。"
 
-#: lib/fascist.c:801
+#: lib/fascist.c:810
 msgid "it is based on a dictionary word"
 msgstr "它基于一个字典中的词"
 
-#: lib/fascist.c:820
+#: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
 msgstr "它基于一个字典中的词的反向拼写"
 
-#: lib/fascist.c:865
+#: lib/fascist.c:874
 msgid "error loading dictionary"
 msgstr "加载字典错误"
+
+#~ msgid "it's derived from your password entry"
+#~ msgstr "它根据您的密码生成"
