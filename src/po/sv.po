@@ -1,18 +1,20 @@
 # Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata
+# Luna Jernberg <bittin@reimu.nl>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2017-03-29 03:16+0000\n"
-"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
-"Language-Team: Swedish\n"
+"PO-Revision-Date: 2020-12-16 10:35+0000\n"
+"Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
+"Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
+"cracklib/master/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -60,7 +62,7 @@ msgstr "det är för simplistiskt/systematiskt"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "det ser ut som ett personnummer"
+msgstr "det ser ut som ett personnummer."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
