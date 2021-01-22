@@ -1,80 +1,80 @@
-# Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata
-# Luna Jernberg <bittin@reimu.nl>, 2020.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the cracklib package.
+# Vlad <milovlad@outlook.com>, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib 2.9.6\n"
+"Project-Id-Version: cracklib 2.9.8-dev\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2020-12-16 10:35+0000\n"
-"Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
-"Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
-"cracklib/master/sv/>\n"
-"Language: sv\n"
+"PO-Revision-Date: 2020-12-25 17:36+0000\n"
+"Last-Translator: Vlad <milovlad@outlook.com>\n"
+"Language-Team: Romanian <https://translate.fedoraproject.org/projects/"
+"cracklib/master/ro/>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
 "X-Generator: Weblate 4.3.2\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "det är baserat på ditt användarnamn"
+msgstr "este bazat pe numele tău de utilizator"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "det är baserat på din lösenordspost"
+msgstr "este bazat pe parola ta"
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr "det är härlett från din lösenordspost"
+msgstr "este derivat din parola ta"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr "det är härledbart från din lösenordspost"
+msgstr "este derivabil din parola ta"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr "det är härledbart från din lösenordspost"
+msgstr "este derivabil din parola ta"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "du är inte registrerad i lösenordsfilen"
+msgstr "nu ești înregistrat în fișierul cu parole"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
-msgstr "det är ALLDELES för kort"
+msgstr "este MULT prea scurtă"
 
 #: lib/fascist.c:723
 msgid "it is too short"
-msgstr "det är för kort"
+msgstr "este prea scurtă"
 
 #: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "det innehåller inte tillräckligt med OLIKA tecken"
+msgstr "nu conține suficiente caractere DIFERITE"
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr "det är bara blanktecken"
+msgstr "conține doar spații"
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
-msgstr "det är för simplistiskt/systematiskt"
+msgstr "este prea simplistă/sistematică"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "det ser ut som ett personnummer."
+msgstr "pare să contină un cod de la un document oficial."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
-msgstr "det är baserat på ett ord ur ordlistan"
+msgstr "este bazată pe un cuvânt din dicționar"
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr "det är baserat på ett (omvänt) ord ur ordlistan"
+msgstr "este bazată pe un cuvânt (inversat) din dicționar"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr "fel när ordlistan lästes in"
-
-#~ msgid "it's derived from your password entry"
-#~ msgstr "det är härlett från din lösenordspost"
+msgstr "eroare la încărcarea dicționarului"
