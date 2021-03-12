@@ -764,6 +764,8 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    }
 		}
 	    }
+	    break;
+
 	case RULE_MLAST:
 	    if (!ptr[1] || (ptr[1] == RULE_CLASS && !ptr[2]))
 	    {
@@ -799,6 +801,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    }
 		}
 	    }
+	    break;
 
 	default:
 	    Debug(1, "Mangle: unknown command %c in %s\n", *ptr, control);
