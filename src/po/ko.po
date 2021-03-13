@@ -5,80 +5,82 @@
 # Eunju Kim <eukim@redhat.com>, 2009.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Ludek Janda <ljanda@redhat.com>, 2018. #zanata
+# simmon <simmon@nplob.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2019-03-03 11:55-0600\n"
-"PO-Revision-Date: 2018-08-21 09:51+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: 2021-03-07 09:01+0000\n"
+"Last-Translator: simmon <simmon@nplob.com>\n"
+"Language-Team: Korean <https://translate.fedoraproject.org/projects/cracklib/"
+"master/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.5.1\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "이는 사용자 이름을 기반으로 합니다  "
+msgstr "이는 사용자 이름을 기반으로 합니다"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "이는 암호 항목을 기반으로 합니다  "
+msgstr "이는 암호 항목을 기반으로 합니다"
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr "이는 암호 항목에서 파생된 것입니다 "
+msgstr "이는 암호 항목에서 파생된 것입니다"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr "이는 암호 항목에서 파생 가능합니다  "
+msgstr "이는 암호 항목에서 파생 가능합니다"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr "이는 암호 항목에서 파생 가능합니다   "
+msgstr "이는 암호 항목에서 파생 가능합니다"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "암호 파일에 등록되어 있지 않습니다  "
+msgstr "암호 파일에 등록되어 있지 않습니다"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
-msgstr "너무 짧습니다  "
+msgstr "너무 짧습니다"
 
 #: lib/fascist.c:723
 msgid "it is too short"
-msgstr "너무 짧습니다  "
+msgstr "너무 짧습니다"
 
 #: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "다른 문자가 충분히 포함되어 있지 않습니다    "
+msgstr "다른 문자가 충분히 포함되어 있지 않습니다"
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr "모든 여백입니다  "
+msgstr "모든 여백입니다"
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
-msgstr "너무 단순/체계적입니다  "
+msgstr "너무 단순/체계적입니다"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "국민 보험 번호와 유사합니다.  "
+msgstr "국민 보험 번호와 유사합니다."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
-msgstr "사전에 있는 단어를 기반으로 합니다  "
+msgstr "사전에 있는 단어를 기반으로 합니다"
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr "(역순) 사전에 있는 단어를 기반으로 합니다  "
+msgstr "(역순) 사전에 있는 단어를 기반으로 합니다"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr "사전을 로드하는 도중 오류가 발생했습니다 "
+msgstr "사전을 로드하는 도중 오류가 발생했습니다"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "이는 암호 항목에서 파생된 것입니다  "
