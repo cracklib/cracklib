@@ -18,8 +18,6 @@
 #endif
 #include "packer.h"
 
-static const char vers_id[] = "packlib.c : v2.3p2 Alec Muffett 18 May 1993";
-
 #define DEBUG 0
 
 /* Structures for processing "broken" 64bit dictionary files */
