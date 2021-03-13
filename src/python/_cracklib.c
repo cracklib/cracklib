@@ -23,6 +23,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+#include "config.h"
 #ifdef PYTHON_H
 #include PYTHON_H
 #else
@@ -72,9 +73,8 @@ static char _cracklib_FascistCheck_doc [] =
 static PyObject *
 _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 {
-    char *candidate, *dict;
-    char *defaultdict = NULL;
-    const char *result;
+    char *candidate;
+    const char *result, *dict;
     struct stat st;
     char *keywords[] = {"pw", "dictpath", NULL};
     char *dictfile;
@@ -103,44 +103,35 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
                             "second argument was not an absolute path!");
             return NULL;
         }
-        dictfile = malloc(strlen(dict) + sizeof(DICT_SUFFIX));
-        if (dictfile == NULL)
-        {
-            PyErr_SetFromErrnoWithFilename(PyExc_OSError, dict);
-            return NULL;
-        }
-        sprintf(dictfile, "%s" DICT_SUFFIX, dict);
-        if (lstat(dictfile, &st) == -1)
-        {
-            PyErr_SetFromErrnoWithFilename(PyExc_OSError, dictfile);
-            free(dictfile);
-            return NULL;
-        }
-        free(dictfile);
     } else
     {
-        defaultdict = strdup(GetDefaultCracklibDict());
-        if (errno == ENOMEM) {
-            PyErr_SetFromErrno(PyExc_OSError);
-            return NULL;
-        }
-        dictfile = malloc(strlen(defaultdict) + sizeof(DICT_SUFFIX));
-        if (dictfile == NULL)
-        {
-            PyErr_SetFromErrnoWithFilename(PyExc_OSError, defaultdict);
-            free(defaultdict);
-            return NULL;
-        }
-        sprintf(dictfile, "%s" DICT_SUFFIX, defaultdict);
+        /* No need to strdup() anything as this is a constant value */
+        dict = GetDefaultCracklibDict();
+    }
+
+    dictfile = malloc(strlen(dict) + sizeof(DICT_SUFFIX) + 3);
+    if (dictfile == NULL)
+    {
+        PyErr_SetFromErrnoWithFilename(PyExc_OSError, dict);
+        return NULL;
+    }
+    sprintf(dictfile, "%s" DICT_SUFFIX, dict);
+    if (lstat(dictfile, &st) == -1)
+    {
+#ifdef HAVE_ZLIB_H
+        sprintf(dictfile, "%s" DICT_SUFFIX ".gz", dict);
         if (lstat(dictfile, &st) == -1)
         {
+            sprintf(dictfile, "%s" DICT_SUFFIX, dict);
+#endif
             PyErr_SetFromErrnoWithFilename(PyExc_OSError, dictfile);
-            free(defaultdict);
             free(dictfile);
             return NULL;
+#ifdef HAVE_ZLIB_H
         }
-        free(dictfile);
+#endif
     }
+    free(dictfile);
 
 	setlocale(LC_ALL, "");
 #ifdef ENABLE_NLS
@@ -148,13 +139,8 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 #endif
 
     LOCK();
-    result = FascistCheck(candidate, dict ? dict : defaultdict);
+    result = FascistCheck(candidate, dict);
     UNLOCK();
-
-    if (defaultdict != NULL)
-    {
-        free(defaultdict);
-    }
 
     if (result != NULL)
     {

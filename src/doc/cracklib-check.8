@@ -1,0 +1,25 @@
+.TH cracklib\-check 8 "Sat Jun 21 22:44:33 CEST 2008" "Jan Dittberner"
+.SH NAME
+cracklib\-check \- Check passwords using libcrack2
+.SH SYNOPSIS
+.B cracklib\-check
+.br
+
+.SH DESCRIPTION
+.B cracklib\-check
+takes a list of passwords from stdin and checks them via libcrack2's
+.BR FascistCheck (3)
+sub routine.
+
+.SH RESULT
+.B cracklib\-check
+prints each checked password and the corresponding result of
+.BR FascistCheck (3)
+to stdout. The password and the result are separated by a colon.
+
+.SH SEE ALSO
+.BR FascistCheck (3)
+
+.SH AUTHOR
+This man page was written by Jan Dittberner <jandd@debian.org> for
+the Debian GNU/Linux System (but may be used by others).

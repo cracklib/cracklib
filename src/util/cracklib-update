@@ -1,0 +1,46 @@
+#!/bin/sh
+# update-cracklib - Regenerate cracklib word lists
+#
+# This script is based on the original cron job written by Jean Pierre
+# LeJacq <jplejacq@quoininc.com>.
+
+set -e
+
+umask 0022
+
+if [ -r "/etc/cracklib/cracklib.conf" ]
+then
+    . /etc/cracklib/cracklib.conf
+else
+    echo Error: cannot read configuration file /etc/cracklib/cracklib.conf
+    exit 1
+fi
+
+if [ ! -d /var/cache/cracklib/ ]; then
+    install -d -m 755 /var/cache/cracklib/
+fi
+
+if [ -n "${cracklib_dictpath_src}"  -a  -n "${cracklib_dictpath}" ]
+then
+    export LC_COLLATE=C
+    processed=0
+    for i in ${cracklib_dictpath_src}
+    do
+        if ! [ -e /var/cache/cracklib/src-dicts ] \
+            || ! grep -q "$i" /var/cache/cracklib/src-dicts \
+            || ! [ -e "${cracklib_dictpath}.pwd" ] \
+            || [ "$i" -nt "${cracklib_dictpath}.pwd" ]
+        then
+            if [ $processed = 0 ]
+            then
+                /usr/sbin/cracklib-format ${cracklib_dictpath_src} | \
+                /usr/sbin/cracklib-packer
+                processed=1
+                echo "${cracklib_dictpath_src}" > \
+                    /var/cache/cracklib/src-dicts
+            fi
+        fi
+    done
+fi
+
+exit 0

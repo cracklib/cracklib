@@ -1,4 +1,5 @@
 sbin_PROGRAMS = cracklib-packer cracklib-unpacker cracklib-check
+sbin_SCRIPTS = cracklib-update
 
 check_PROGRAMS = testlib testnum teststr 
 
