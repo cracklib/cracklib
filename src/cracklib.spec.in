@@ -102,20 +102,17 @@ rm -rf $RPM_BUILD_ROOT
 %postun -n %libname -p /sbin/ldconfig
 
 %files -n %{libname}
-%defattr(-,root,root)
 %doc README README-DAWG doc
 %{_datadir}/cracklib/cracklib.magic
 %{_libdir}/libcrack.so.*
 
 %files -n %{libnamedev}
-%defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libcrack.so
 %{_libdir}/libcrack.la
 %{_libdir}/libcrack.a
 
 %files dicts
-%defattr(-,root,root)
 %{_sbindir}/*
 %{_datadir}/cracklib/pw_dict*
 
