@@ -579,7 +579,7 @@ fprintf(stderr, "look for (%s)\n", string);
     fprintf(stderr, "---- %lu, %lu ----\n", lwm, hwm);
 #endif
 
-    middle = lwm + ((hwm - lwm + 1) / 2);
+    middle = lwm + ((hwm - lwm) / 2);
 
     for (;;)
     {
@@ -612,12 +612,12 @@ fprintf(stderr, "look for (%s)\n", string);
         }
 
         if (middle == hwm)
-        {
+	{
 #if DEBUG
-		fprintf(stderr, "at terminal subdivision, stopping search\n");
+	    fprintf(stderr, "at terminal subdivision, stopping search\n");
 #endif
-		break;
-        }
+	    break;
+	}
 
 	if (cmp < 0)
 	{
