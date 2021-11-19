@@ -611,14 +611,6 @@ fprintf(stderr, "look for (%s)\n", string);
 	    return(middle);
         }
 
-        if (middle == hwm)
-        {
-#if DEBUG
-		fprintf(stderr, "at terminal subdivision, stopping search\n");
-#endif
-		break;
-        }
-
 	if (cmp < 0)
 	{
 	    hwm = middle;
