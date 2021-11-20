@@ -579,7 +579,7 @@ fprintf(stderr, "look for (%s)\n", string);
     fprintf(stderr, "---- %lu, %lu ----\n", lwm, hwm);
 #endif
 
-    middle = lwm + ((hwm - lwm + 1) / 2);
+    middle = lwm + ((hwm - lwm) / 2);
 
     for (;;)
     {
