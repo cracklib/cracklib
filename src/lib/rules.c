@@ -343,7 +343,7 @@ MatchClass(class, input)
 	break;
 
     default:
-	Debug(1, "MatchClass: unknown class %c\n", class);
+	Debug(1, "MatchClass: unknown class %c\n", &class);
 	return (0);
 	break;
     }
@@ -801,7 +801,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    }
 
 	default:
-	    Debug(1, "Mangle: unknown command %c in %s\n", *ptr, control);
+	    Debug(1, "Mangle: unknown command %c in %s\n", ptr, control);
 	    return NULL;
 	    break;
 	}
