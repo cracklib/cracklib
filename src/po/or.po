@@ -1,7 +1,7 @@
 # translation of cracklib.default.cracklib.or.po to Oriya
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Manoj Kumar Giri <mgiri@redhat.com>, 2009.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Ankit Behera <proneon267@gmail.com>, 2020.

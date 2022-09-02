@@ -1,7 +1,7 @@
 # translation of cracklib.po to
 # Copyright (C) 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Görkem Çetin <gorkem@uludag.org.tr>, 2006.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
