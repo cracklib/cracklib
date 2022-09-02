@@ -1,4 +1,11 @@
-v2.9.8-dev
+v2.9.8 Correct parameter types to Debug() calls
+       rules: Drop using register keyword
+       remove needless use of %defattr per fedora project
+       add exec perms
+       translation updates
+       Use what's in the build environment and use a current autoconf
+       util/Makefile.am: fix link with lintl
+       Force grep to treat the input as text when formatting word files
 v2.9.7 apply patch to fix CVE-2016-6318 Stack-based buffer overflow when parsing large GECOS field
        fix a buffer overflow processing long words
        historical research and updates to repository tags to correct history, and suggestions for new release process (Neustradamus)
