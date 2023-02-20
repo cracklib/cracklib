@@ -1,18 +1,19 @@
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2017. #zanata
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2017. #zanata, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2022-09-02 08:39-0500\n"
-"PO-Revision-Date: 2017-04-11 12:05+0000\n"
+"PO-Revision-Date: 2022-12-31 17:20+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
-"Language-Team: Kazakh\n"
+"Language-Team: Kazakh <https://translate.fedoraproject.org/projects/cracklib/"
+"master/kk/>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.15\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
@@ -20,23 +21,23 @@ msgstr "ол сіздің пайдаланушы атыңызға негізде
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr ""
+msgstr "ол сіздің парольді енгізуге негізделген"
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr ""
+msgstr "ол сіздің парольді енгізуден алынған"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr ""
+msgstr "ол сіздің парольді енгізуден алынады"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr ""
+msgstr "ол сіздің парольді енгізуден алынады"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr ""
+msgstr "сіз парольдер файлында тіркелмегенсіз"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
@@ -48,28 +49,28 @@ msgstr "ол тым қысқа"
 
 #: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
-msgstr ""
+msgstr "онда ӘР ТҮРЛІ таңбалар саны жеткіліксіз"
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr ""
+msgstr "бос аралықтардан тұрады"
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
-msgstr ""
+msgstr "тым қарапайым"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr ""
+msgstr "ол ұлттық сақтандыру нөміріне ұқсайды."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
-msgstr ""
+msgstr "ол сөздік сөзіне негізделген"
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr ""
+msgstr "ол (кері ретпен) сөздік сөзіне негізделген"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr ""
+msgstr "сөздікті жүктеу қатесі"
