@@ -77,7 +77,7 @@ msgstr "இது ஒரு (தலைகீழானது) அகராதி 
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr ""
+msgstr "பிழை ஏற்றுதல் அகராதி"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "இது உங்கள் கடவுச்சொல் உள்ளீடிலிருந்து வரையறுக்கப்பட்டது"

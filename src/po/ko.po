@@ -24,27 +24,27 @@ msgstr ""
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "이는 사용자 이름을 기반으로 합니다"
+msgstr "사용자 이름을 기반으로 합니다"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "이는 암호 항목을 기반으로 합니다"
+msgstr "자신의 비밀번호 항목을 기반으로 합니다"
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr "이는 암호 항목에서 파생된 것입니다"
+msgstr "비밀번호 항목에서 파생됩니다"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr "이는 암호 항목에서 파생 가능합니다"
+msgstr "비밀번호 항목에서 파생됩니다"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr "이는 암호 항목에서 파생 가능합니다"
+msgstr "비밀번호 항목에서 파생됩니다"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "암호 파일에 등록되어 있지 않습니다"
+msgstr "비밀번호 파일에 등록되어 있지 않습니다"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
@@ -60,7 +60,7 @@ msgstr "다른 문자가 충분히 포함되어 있지 않습니다"
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr "모든 여백입니다"
+msgstr "모두 여백입니다"
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
@@ -80,7 +80,7 @@ msgstr "(역순) 사전에 있는 단어를 기반으로 합니다"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr "사전을 로드하는 도중 오류가 발생했습니다"
+msgstr "사전을 적재하는 중 오류 발생"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "이는 암호 항목에서 파생된 것입니다  "
