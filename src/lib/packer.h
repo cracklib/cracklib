@@ -30,17 +30,7 @@
 #define _(String) (String)
 #endif
 
-#if defined(HAVE_INTTYPES_H)
-#include <inttypes.h>
-#else
-#if defined(HAVE_STDINT_H)
 #include <stdint.h>
-#else
-typedef unsigned int uint32_t;
-typedef unsigned short uint16_t;
-#endif
-#endif
-
 
 struct pi_header
 {

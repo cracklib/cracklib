@@ -8,7 +8,7 @@ dnl Set of available languages.
 ALL_LINGUAS="as be bn_IN ca cs da de el es eu fi fr gu he hi hu id it ja kk kn ko lt ml mr nb nl or pa pl pt pt_BR ru sk sl sq sv ta te tr uk zh_CN zh_TW"
 
 dnl Checks for programs.
-AC_PROG_LIBTOOL
+LT_INIT
 AC_PROG_CC
 AC_PROG_CPP
 AC_PROG_INSTALL
@@ -61,7 +61,7 @@ AM_GNU_GETTEXT([external])
 dnl Control default dictname
 AC_MSG_CHECKING(default dict filename)
 AC_ARG_WITH(default-dict,
-AC_HELP_STRING(--with-default-dict,[Specify default dict filename]),
+AS_HELP_STRING([--with-default-dict],[Specify default dict filename]),
 default_cracklib_dict=$withval,
 default_cracklib_dict='$(pkgdatadir)/pw_dict')
 AC_SUBST(DEFAULT_CRACKLIB_DICT, $default_cracklib_dict)
@@ -69,7 +69,7 @@ AC_MSG_RESULT($default_cracklib_dict)
 
 dnl Check for python, unless we were told to not try to build a python module
 AC_ARG_WITH(python,
-AC_HELP_STRING(--without-python,[Build a python module @<:@default=auto@:>@]),
+AS_HELP_STRING([--without-python],[Build a python module @<:@default=auto@:>@]),
 build_python=$withval,build_python=auto)
 if test "$build_python" != no ; then
    AM_PATH_PYTHON(,,
@@ -97,7 +97,8 @@ AM_CONDITIONAL(BUILD_PYTHON,[test "$build_python" = "yes"])
 dnl Handle local dict compiling properly
 AC_SUBST(CROSS_COMPILING, $cross_compiling)
 
-AC_OUTPUT(util/Makefile lib/Makefile doc/Makefile python/Makefile Makefile \
+AC_CONFIG_FILES([util/Makefile lib/Makefile doc/Makefile python/Makefile Makefile \
 		python/setup.py \
-		po/Makefile.in m4/Makefile dicts/Makefile cracklib.spec)
+		po/Makefile.in m4/Makefile dicts/Makefile cracklib.spec])
+AC_OUTPUT
 
