@@ -65,8 +65,8 @@ Suffix(myword, suffix)
     char *myword;
     char *suffix;
 {
-    register int i;
-    register int j;
+    int i;
+    int j;
     i = strlen(myword);
     j = strlen(suffix);
 
@@ -81,10 +81,10 @@ Suffix(myword, suffix)
 
 char *
 Reverse(str)			/* return a pointer to a reversal */
-    register char *str;
+    char *str;
 {
-    register int i;
-    register int j;
+    int i;
+    int j;
     static char area[STRINGSIZE];
     j = i = strlen(str);
     while (*str)
@@ -97,9 +97,9 @@ Reverse(str)			/* return a pointer to a reversal */
 
 char *
 Uppercase(str)			/* return a pointer to an uppercase */
-    register char *str;
+    char *str;
 {
-    register char *ptr;
+    char *ptr;
     static char area[STRINGSIZE];
     ptr = area;
     while (*str)
@@ -114,9 +114,9 @@ Uppercase(str)			/* return a pointer to an uppercase */
 
 char *
 Lowercase(str)			/* return a pointer to an lowercase */
-    register char *str;
+    char *str;
 {
-    register char *ptr;
+    char *ptr;
     static char area[STRINGSIZE];
     ptr = area;
     while (*str)
@@ -131,9 +131,9 @@ Lowercase(str)			/* return a pointer to an lowercase */
 
 char *
 Capitalise(str)			/* return a pointer to an capitalised */
-    register char *str;
+    char *str;
 {
-    register char *ptr;
+    char *ptr;
     static char area[STRINGSIZE];
     ptr = area;
 
@@ -150,9 +150,9 @@ Capitalise(str)			/* return a pointer to an capitalised */
 
 char *
 Pluralise(string)		/* returns a pointer to a plural */
-    register char *string;
+    char *string;
 {
-    register int length;
+    int length;
     static char area[STRINGSIZE];
     length = strlen(string);
     strcpy(area, string);
@@ -191,11 +191,11 @@ Pluralise(string)		/* returns a pointer to a plural */
 
 char *
 Substitute(string, old, new)	/* returns pointer to a swapped about copy */
-    register char *string;
-    register char old;
-    register char new;
+    char *string;
+    char old;
+    char new;
 {
-    register char *ptr;
+    char *ptr;
     static char area[STRINGSIZE];
     ptr = area;
     while (*string)
@@ -209,11 +209,11 @@ Substitute(string, old, new)	/* returns pointer to a swapped about copy */
 
 char *
 Purge(string, target)		/* returns pointer to a purged copy */
-    register char *string;
-    register char target;
+    char *string;
+    char target;
 {
-    register char *ptr;
-    static char area[STRINGSIZE];
+    char *ptr;
+    char area[STRINGSIZE];
     ptr = area;
     while (*string)
     {
@@ -236,11 +236,11 @@ Purge(string, target)		/* returns pointer to a purged copy */
 
 int
 MatchClass(class, input)
-    register char class;
-    register char input;
+    char class;
+    char input;
 {
-    register char c;
-    register int retval;
+    char c;
+    int retval;
     retval = 0;
 
     switch (class)
@@ -341,7 +341,7 @@ MatchClass(class, input)
 	break;
 
     default:
-	Debug(1, "MatchClass: unknown class %c\n", class);
+	Debug(1, "MatchClass: unknown class %c\n", &class);
 	return (0);
 	break;
     }
@@ -355,8 +355,8 @@ MatchClass(class, input)
 
 char *
 PolyStrchr(string, class)
-    register char *string;
-    register char class;
+    char *string;
+    char class;
 {
     while (*string)
     {
@@ -371,11 +371,11 @@ PolyStrchr(string, class)
 
 char *
 PolySubst(string, class, new)	/* returns pointer to a swapped about copy */
-    register char *string;
-    register char class;
-    register char new;
+    char *string;
+    char class;
+    char new;
 {
-    register char *ptr;
+    char *ptr;
     static char area[STRINGSIZE];
     ptr = area;
     while (*string)
@@ -389,10 +389,10 @@ PolySubst(string, class, new)	/* returns pointer to a swapped about copy */
 
 char *
 PolyPurge(string, class)	/* returns pointer to a purged copy */
-    register char *string;
-    register char class;
+    char *string;
+    char class;
 {
-    register char *ptr;
+    char *ptr;
     static char area[STRINGSIZE];
     ptr = area;
     while (*string)
@@ -431,7 +431,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
     char *control;
 {
     int limit;
-    register char *ptr;
+    char *ptr;
     static char area[STRINGSIZE * 2] = {0};
     char area2[STRINGSIZE * 2] = {0};
     strcpy(area, input);
@@ -521,7 +521,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		return NULL;
 	    } else
 	    {
-		register char *string;
+		char *string;
 		string = area;
 		while (*(string++));
 		string[-1] = *(++ptr);
@@ -535,7 +535,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		return NULL;
 	    } else
 	    {
-		register int i;
+		int i;
 		int start;
 		int length;
 		start = Char2Int(*(++ptr));
@@ -561,7 +561,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		return NULL;
 	    } else
 	    {
-		register int i;
+		int i;
 		i = Char2Int(*(++ptr));
 		if (i < 0)
 		{
@@ -585,9 +585,9 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		return NULL;
 	    } else
 	    {
-		register int i;
-		register char *p1;
-		register char *p2;
+		int i;
+		char *p1;
+		char *p2;
 		i = Char2Int(*(++ptr));
 		if (i < 0)
 		{
@@ -694,7 +694,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		return NULL;
 	    } else
 	    {
-		register int i;
+		int i;
 		if ((i = Char2Int(ptr[1])) < 0)
 		{
 		    Debug(1, "Mangle: '=' weird argument in '%s'\n", control);
@@ -721,7 +721,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	case RULE_DFIRST:
 	    if (area[0])
 	    {
-		register int i;
+		int i;
 		for (i = 1; area[i]; i++)
 		{
 		    area[i - 1] = area[i];
@@ -733,7 +733,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	case RULE_DLAST:
 	    if (area[0])
 	    {
-		register int i;
+		int i;
 		for (i = 1; area[i]; i++);
 		area[i - 1] = '\0';
 	    }
@@ -771,7 +771,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		return NULL;
 	    } else
 	    {
-		register int i;
+		int i;
 
 		for (i = 0; area[i]; i++);
 
@@ -802,7 +802,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 	    break;
 
 	default:
-	    Debug(1, "Mangle: unknown command %c in %s\n", *ptr, control);
+	    Debug(1, "Mangle: unknown command %c in %s\n", ptr, control);
 	    return NULL;
 	    break;
 	}
@@ -816,8 +816,8 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 
 int
 PMatch(control, string)
-register char *control;
-register char *string;
+char *control;
+char *string;
 {
     while (*string && *control)
     {

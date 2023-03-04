@@ -1,7 +1,7 @@
 # translation of cracklib.po to
 # Copyright (C) 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Görkem Çetin <gorkem@uludag.org.tr>, 2006.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2019-03-03 11:55-0600\n"
+"POT-Creation-Date: 2022-09-02 08:39-0500\n"
 "PO-Revision-Date: 2020-02-01 16:16+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"

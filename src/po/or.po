@@ -1,7 +1,7 @@
 # translation of cracklib.default.cracklib.or.po to Oriya
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Manoj Kumar Giri <mgiri@redhat.com>, 2009.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Ankit Behera <proneon267@gmail.com>, 2020.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2019-03-03 11:55-0600\n"
+"POT-Creation-Date: 2022-09-02 08:39-0500\n"
 "PO-Revision-Date: 2020-04-13 14:40+0000\n"
 "Last-Translator: Ankit Behera <proneon267@gmail.com>\n"
 "Language-Team: Odia <https://translate.fedoraproject.org/projects/cracklib/"

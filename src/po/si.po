@@ -1,78 +1,76 @@
-# Andika Triwidada <andika@gmail.com>, 2017. #zanata
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the cracklib package.
+# Hela Basa <r45xveza@pm.me>, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib 2.9.6\n"
+"Project-Id-Version: cracklib 2.9.8-dev\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2022-09-02 08:39-0500\n"
-"PO-Revision-Date: 2017-07-24 12:45+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
-"Language-Team: Indonesian\n"
-"Language: id\n"
+"POT-Creation-Date: 2019-03-03 11:55-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 4.6.2\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "ini berbasis pada nama Anda"
+msgstr ""
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "ini berbasis pada entri kata sandi Anda"
+msgstr ""
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr "ini diturunkan dari entri kata sandi Anda"
+msgstr ""
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr "ini dapat diturunkan dari entri kata sandi Anda"
+msgstr ""
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr "ini dapat diturunkan dari entri kata sandi Anda"
+msgstr ""
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "Anda tidak terdaftar dalam berkas kata sandi"
+msgstr ""
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
-msgstr "ini KETERLALUAN pendeknya"
+msgstr ""
 
 #: lib/fascist.c:723
 msgid "it is too short"
-msgstr "ini terlalu pendek"
+msgstr ""
 
 #: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "ini tidak memuat cukup karakter yang BERBEDA"
+msgstr ""
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr "ini semua keluarga spasi"
+msgstr ""
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
-msgstr "ini terlalu sederhana/sistematis"
+msgstr ""
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "ini tampak seperti nomor Asuransi Nasional."
+msgstr ""
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
-msgstr "ini berbasis pada kata kamus"
+msgstr ""
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr "ini berbasis pada kata kamus (terbalik)"
+msgstr ""
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr "galat saat memuat kamus"
-
-#~ msgid "it's derived from your password entry"
-#~ msgstr "ini diturunkan dari entri kata sandi Anda"
+msgstr ""
