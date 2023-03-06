@@ -27,3 +27,5 @@ testnum_LDADD = $(LDADD)
 teststr_SOURCES = teststr.c
 teststr_LDADD = $(LDADD)
 
+EXTRA_DIST = $(sbin_SCRIPTS) $(sbin_PROGRAMS)
+
