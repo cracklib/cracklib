@@ -1,4 +1,4 @@
-v2.9.10-dev Fix missing files in dist tarball (Leandro Nini)
+v2.9.10-dev Fix missing files in dist tarball, other automake fixes (Leandro Nini)
 v2.9.9 Merge of man pages/other fixes from Fedora (Tomasz Kłoczko)
 v2.9.8 Correct parameter types to Debug() calls
        rules: Drop using register keyword
