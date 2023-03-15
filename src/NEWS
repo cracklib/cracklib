@@ -1,6 +1,7 @@
 v2.9.10 Fix missing files in dist tarball, other automake fixes (Leandro Nini)
         Fix error handling during build of dictionary (yixiangzhike)
         Fix to localization support (A. Wilcox, nekopsykose)
+		Fix to test utilities (Alexander Kanavin)
 v2.9.9 Merge of man pages/other fixes from Fedora (Tomasz Kłoczko)
 v2.9.8 Correct parameter types to Debug() calls
        rules: Drop using register keyword
