@@ -18,8 +18,6 @@
 #endif
 #include "packer.h"
 
-static const char vers_id[] = "packlib.c : v2.3p2 Alec Muffett 18 May 1993";
-
 #define DEBUG 0
 
 /* Structures for processing "broken" 64bit dictionary files */
@@ -579,12 +577,11 @@ fprintf(stderr, "look for (%s)\n", string);
     fprintf(stderr, "---- %lu, %lu ----\n", lwm, hwm);
 #endif
 
-    middle = lwm + ((hwm - lwm + 1) / 2);
-
     for (;;)
     {
 	int cmp;
 
+	middle = lwm + ((hwm - lwm + 1) / 2);
 
 #if DEBUG
 	fprintf(stderr, "lwm = %lu,  middle = %lu,  hwm = %lu\n", lwm, middle, hwm);
@@ -611,24 +608,28 @@ fprintf(stderr, "look for (%s)\n", string);
 	    return(middle);
         }
 
-        if (middle == hwm)
-        {
-#if DEBUG
-		fprintf(stderr, "at terminal subdivision, stopping search\n");
-#endif
-		break;
-        }
-
 	if (cmp < 0)
 	{
-	    hwm = middle;
-	    middle = lwm + ((hwm - lwm ) / 2);
-	}
+	    if (middle == lwm)
+	    {
+#if DEBUG 
+		fprintf(stderr, "at terminal subdivision from right, stopping search\n");
+#endif
+		break;
+	    }
+	    hwm = middle - 1;
+	} 
 	else if (cmp > 0)
 	{
-	    lwm = middle;
-	    middle = lwm + ((hwm - lwm + 1) / 2);
-	}
+	    if (middle == hwm)
+	    {
+#if DEBUG 
+		fprintf(stderr, "at terminal subdivision from left, stopping search\n");
+#endif
+		break;
+	    }
+	    lwm = middle + 1;
+	} 
     }
 
     return (PW_WORDS(pwp));

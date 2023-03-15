@@ -22,6 +22,7 @@ main(argc, argv)
     PWDICT *pwp;
     char buffer[STRINGSIZE], prev[STRINGSIZE];
     char *file;
+    char opened = 0;
 
     if (argc <= 1)
     {
@@ -36,12 +37,6 @@ main(argc, argv)
     {
 	fprintf(stderr, "Usage:\t%s dbname\n", argv[0]);
         fprintf(stderr, "  if dbname is not specified, will use compiled in default of (%s).\n", DEFAULT_CRACKLIB_DICT);
-	return (-1);
-    }
-
-    if (!(pwp = PWOpen(file, "w")))
-    {
-	perror(file);
 	return (-1);
     }
 
@@ -62,6 +57,16 @@ main(argc, argv)
 	    continue;
 	}
 
+	if (!opened)
+	{
+	    if (!(pwp = PWOpen(file, "w")))
+	    {
+	        perror(file);
+	        return (-1);
+	    }
+	    opened = 1;
+	}
+
 	/*
 	 * If this happens, strcmp() in FindPW() in packlib.c will be unhappy.
 	 */
@@ -79,7 +84,8 @@ main(argc, argv)
 	wrote++;
     }
 
-    PWClose(pwp);
+    if (opened)
+        PWClose(pwp);
 
     printf("%lu %lu\n", readed, wrote);
 

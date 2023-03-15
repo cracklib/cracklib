@@ -4,8 +4,6 @@
  * or its effect upon hardware or computer systems.
  */
 
-static const char vers_id[] = "rules.c : v5.0p3 Alec Muffett 20 May 1993";
-
 #include "config.h"
 #include <string.h>
 #ifdef HAVE_INTTYPES_H
@@ -764,6 +762,8 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    }
 		}
 	    }
+	    break;
+
 	case RULE_MLAST:
 	    if (!ptr[1] || (ptr[1] == RULE_CLASS && !ptr[2]))
 	    {
@@ -799,6 +799,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 		    }
 		}
 	    }
+	    break;
 
 	default:
 	    Debug(1, "Mangle: unknown command %c in %s\n", ptr, control);

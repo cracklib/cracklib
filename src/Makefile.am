@@ -7,7 +7,7 @@ EXTRA_DIST = \
 		README-LICENSE \
 		test-data 
 
-DIST_TARGETS=dist-gzip dist-bzip2 dist-zip
+AUTOMAKE_OPTIONS=dist-bzip2 dist-zip
 
 all-local:
 	@echo
