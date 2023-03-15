@@ -135,6 +135,7 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
 
 	setlocale(LC_ALL, "");
 #ifdef ENABLE_NLS
+	bindtextdomain(PACKAGE, LOCALEDIR);
 	textdomain("cracklib");
 #endif
 
