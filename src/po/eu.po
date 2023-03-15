@@ -20,23 +20,23 @@ msgstr "zure erabiltzaile-izenean oinarrituta dago"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr ""
+msgstr "zure pasahitzaren sarreran oinarritzen da"
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr ""
+msgstr "zure pasahitzaren sarreratik eratorria da"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr ""
+msgstr "zure pasahitzaren sarreratik erator daiteke"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr ""
+msgstr "zure pasahitzaren sarreratik erator daiteke"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr ""
+msgstr "ez zaude pasahitz fitxategian erregistratuta"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
@@ -60,7 +60,7 @@ msgstr "oso sinple edo sistematikoa"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "Gizarte Segurantza zenbakia dirudi (National Insurance)"
+msgstr "Aseguru Nazionaleko zenbakia dirudi."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"

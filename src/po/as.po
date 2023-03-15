@@ -76,7 +76,7 @@ msgstr "ই এটা অভিধানৰ শব্দৰ আধাৰত (ও
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
-msgstr ""
+msgstr "অভিধান লোড কৰাত ভুল হৈছে"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "ইয়াক আপোনাৰ গুপ্তশব্দৰ নিবেশৰ পৰা পোৱা হৈছে"

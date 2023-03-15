@@ -72,11 +72,11 @@ msgstr "bu parola, bir Ulusal Kimlik numarası gibi görünüyor."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
-msgstr "bu parola, bir sözlük kelimesine dayanıyor"
+msgstr "bu parola, sözlükteki bir sözcüğe dayanıyor"
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr "bu parola, bir sözlük kelimesine (tersten) dayanıyor"
+msgstr "bu parola, sözlükteki bir sözcüğe (tersten) dayanıyor"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
