@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: deps
+      run: |
+        sudo apt-get install \
+          autopoint \
+          gettext
+    - uses: actions/checkout@v3
+    - name: bootstrap
+      run: cd src && ./autogen.sh
+    - name: configure
+      run: cd src && ./configure
+    - name: make
+      run: cd src && make
+    - name: make distcheck
+      run: cd src && make distcheck
