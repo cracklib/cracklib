@@ -1,4 +1,5 @@
 v2.9.11 Added xz dist
+test
 v2.9.10 Fix missing files in dist tarball, other automake fixes (Leandro Nini)
         Fix error handling during build of dictionary (yixiangzhike)
         Fix to localization support (A. Wilcox, nekopsykose)
