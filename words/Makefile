@@ -1,4 +1,4 @@
-VERSION=2.9.10
+VERSION=2.9.11
 
 all: clean cracklib-words.gz cracklib-words.bz2
 
