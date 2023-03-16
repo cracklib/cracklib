@@ -7,7 +7,7 @@ EXTRA_DIST = \
 		README-LICENSE \
 		test-data 
 
-AUTOMAKE_OPTIONS=dist-bzip2 dist-zip
+AUTOMAKE_OPTIONS=dist-bzip2 dist-zip dist-xz
 
 all-local:
 	@echo
