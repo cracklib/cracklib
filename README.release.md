@@ -12,7 +12,7 @@ Release process:
 	1) Start from a clean repo (git reset --hard; git clean -fdx)
 	2) Update version in configure.ac and ../words/Makefile. Update NEWS file to reflect that version.
 	3) Run autogen.sh and configure, then 'make dist'
-    4) Validate that tarball successfully can be built from source
+	4) Validate that tarball successfully can be built from source
 	5) Check for changes, there should be various files updated in po directory - all version number related
 	6) Commit that with new version
 	7) Create tag of form 'vX.Y.Z' pointed to that commit, push tags
