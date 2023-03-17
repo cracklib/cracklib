@@ -22,7 +22,7 @@ from setuptools import setup, Extension
 extensions = [
     Extension("_cracklib",
         ["@srcdir@/_cracklib.c"],
-        include_dirs = ["@top_srcdir@/lib"],
+        include_dirs = ["@top_builddir@", "@top_srcdir@/lib"],
         libraries = ["crack"],
         library_dirs = ["@top_builddir@/lib/.libs"]),
 ]
