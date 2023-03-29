@@ -213,7 +213,7 @@ Purge(string, target)		/* returns pointer to a purged copy */
     char target;
 {
     char *ptr;
-    char area[STRINGSIZE];
+    static char area[STRINGSIZE];
     ptr = area;
     while (*string)
     {
