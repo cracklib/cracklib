@@ -1,3 +1,4 @@
+v2.9.12
 v2.9.11 Added xz dist
         Fix incorrect non-static memory return (drfiemost)
 v2.9.10 Fix missing files in dist tarball, other automake fixes (Leandro Nini)
