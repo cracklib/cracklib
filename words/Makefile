@@ -15,6 +15,11 @@ cracklib-words.bz2: cracklib-words
 	bzip2 -v9 -c cracklib-words > cracklib-words.bz2
 	cp cracklib-words.bz2 cracklib-words-$(VERSION).bz2
 
+cracklib-words.xz: cracklib-words
+	rm -f cracklib-words.xz
+	xz -v9 -c cracklib-words > cracklib-words.xz
+	cp cracklib-words.xz cracklib-words-$(VERSION).xz
+
 cracklib-words: files/*/*.txt.bz2
 	rm -f cracklib-words
 	bzcat -f `find files -type f` | tr A-Z a-z | sort | uniq > cracklib-words
