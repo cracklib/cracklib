@@ -2,13 +2,14 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the cracklib package.
 # Vlad <milovlad@outlook.com>, 2020.
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.8-dev\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2022-09-02 08:39-0500\n"
-"PO-Revision-Date: 2020-12-25 17:36+0000\n"
-"Last-Translator: Vlad <milovlad@outlook.com>\n"
+"POT-Creation-Date: 2023-04-02 16:13-0500\n"
+"PO-Revision-Date: 2023-04-09 23:12+0000\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <https://translate.fedoraproject.org/projects/"
 "cracklib/master/ro/>\n"
 "Language: ro\n"
@@ -17,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.15.2\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "este bazat pe numele tău de utilizator"
+msgstr "este bazată pe numele tău de utilizator"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
@@ -41,7 +42,7 @@ msgstr "este derivabil din parola ta"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "nu ești înregistrat în fișierul cu parole"
+msgstr "nu sunteți înregistrat în fișierul cu parole"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
@@ -65,7 +66,7 @@ msgstr "este prea simplistă/sistematică"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "pare să contină un cod de la un document oficial."
+msgstr "pare să conțină un cod de la un document oficial."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
