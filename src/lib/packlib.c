@@ -65,8 +65,8 @@ PWOpen(prefix, mode)
     char *mode;
 {
     int use64 = 0;
-    static PWDICT pdesc;
-    static PWDICT64 pdesc64;
+    PWDICT *pdesc;
+    PWDICT64 pdesc64;
     char iname[STRINGSIZE];
     char dname[STRINGSIZE];
     char wname[STRINGSIZE];
@@ -74,13 +74,11 @@ PWOpen(prefix, mode)
     void *ifp;
     void *wfp;
 
-    if (pdesc.header.pih_magic == PIH_MAGIC)
-    {
-	fprintf(stderr, "%s: another dictionary already open\n", prefix);
+    pdesc = malloc(sizeof(*pdesc));
+    if (pdesc == NULL)
 	return NULL;
-    }
 
-    memset(&pdesc, '\0', sizeof(pdesc));
+    memset(pdesc, '\0', sizeof(*pdesc));
     memset(&pdesc64, '\0', sizeof(pdesc64));
 
     snprintf(iname, STRINGSIZE, "%s.pwi", prefix);
@@ -89,77 +87,80 @@ PWOpen(prefix, mode)
 
     if (mode[0] == 'r')
     {
-		pdesc.flags &= ~PFOR_USEZLIB;
+		pdesc->flags &= ~PFOR_USEZLIB;
 		/* first try the normal db file */
-		if (!(pdesc.dfp = fopen(dname, mode)))
+		if (!(pdesc->dfp = fopen(dname, mode)))
 		{
 #ifdef HAVE_ZLIB_H
-			pdesc.flags |= PFOR_USEZLIB;
+			pdesc->flags |= PFOR_USEZLIB;
 			/* try extension .gz */
 			snprintf(dname, STRINGSIZE, "%s.pwd.gz", prefix);
-			if (!(pdesc.dfp = gzopen(dname, mode)))
+			if (!(pdesc->dfp = gzopen(dname, mode)))
 			{
 				perror(dname);
+				free(pdesc);
 				return NULL;
 			}
 #else
 		perror(dname);
+		free(pdesc);
 		return NULL;
 #endif
 		}
 	}
 	else
 	{
-		pdesc.flags &= ~PFOR_USEZLIB;
+		pdesc->flags &= ~PFOR_USEZLIB;
 		/* write mode: use fopen */
-		if (!(pdesc.dfp = fopen(dname, mode)))
+		if (!(pdesc->dfp = fopen(dname, mode)))
 		{
 			perror(dname);
+			free(pdesc);
 			return NULL;
 		}
 	}
 
-    if (!(pdesc.ifp = fopen(iname, mode)))
+    if (!(pdesc->ifp = fopen(iname, mode)))
     {
 #ifdef HAVE_ZLIB_H
-		if (pdesc.flags & PFOR_USEZLIB)
-			gzclose(pdesc.dfp);
+		if (pdesc->flags & PFOR_USEZLIB)
+			gzclose(pdesc->dfp);
 		else
 #endif
-			fclose(pdesc.dfp);
+			fclose(pdesc->dfp);
 	perror(iname);
+	free(pdesc);
 	return NULL;
     }
 
-    if ((pdesc.wfp = fopen(wname, mode)))
+    if ((pdesc->wfp = fopen(wname, mode)))
     {
-	pdesc.flags |= PFOR_USEHWMS;
+	pdesc->flags |= PFOR_USEHWMS;
     }
 
-    ifp = pdesc.ifp;
-    dfp = pdesc.dfp;
-    wfp = pdesc.wfp;
+    ifp = pdesc->ifp;
+    dfp = pdesc->dfp;
+    wfp = pdesc->wfp;
 
     if (mode[0] == 'w')
     {
-	pdesc.flags |= PFOR_WRITE;
-	pdesc.header.pih_magic = PIH_MAGIC;
-	pdesc.header.pih_blocklen = NUMWORDS;
-	pdesc.header.pih_numwords = 0;
+	pdesc->flags |= PFOR_WRITE;
+	pdesc->header.pih_magic = PIH_MAGIC;
+	pdesc->header.pih_blocklen = NUMWORDS;
+	pdesc->header.pih_numwords = 0;
 
-	fwrite((char *) &pdesc.header, sizeof(pdesc.header), 1, ifp);
+	fwrite((char *) &pdesc->header, sizeof(pdesc->header), 1, ifp);
     } else
     {
-	pdesc.flags &= ~PFOR_WRITE;
+	pdesc->flags &= ~PFOR_WRITE;
 
-	if (!fread((char *) &pdesc.header, sizeof(pdesc.header), 1, ifp))
+	if (!fread((char *) &pdesc->header, sizeof(pdesc->header), 1, ifp))
 	{
 	    fprintf(stderr, "%s: error reading header\n", prefix);
 
-	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
 #ifdef HAVE_ZLIB_H
-		if (pdesc.flags & PFOR_USEZLIB)
+		if (pdesc->flags & PFOR_USEZLIB)
 			gzclose(dfp);
 		else
 #endif
@@ -168,10 +169,11 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
+	    free(pdesc);
 	    return NULL;
 	}
 
-        if ((pdesc.header.pih_magic == 0) || (pdesc.header.pih_numwords == 0))
+        if ((pdesc->header.pih_magic == 0) || (pdesc->header.pih_numwords == 0))
         {
             /* uh-oh. either a broken "64-bit" file or a garbage file. */
             rewind (ifp);
@@ -179,10 +181,9 @@ PWOpen(prefix, mode)
             {
                 fprintf(stderr, "%s: error reading header\n", prefix);
 
-                pdesc.header.pih_magic = 0;
                 fclose(ifp);
 #ifdef HAVE_ZLIB_H
-				if (pdesc.flags & PFOR_USEZLIB)
+				if (pdesc->flags & PFOR_USEZLIB)
 					gzclose(dfp);
 				else
 #endif
@@ -191,6 +192,7 @@ PWOpen(prefix, mode)
 		{
 			fclose(wfp);
 		}
+	        free(pdesc);
                 return NULL;
             }
             if (pdesc64.header.pih_magic != PIH_MAGIC)
@@ -198,10 +200,9 @@ PWOpen(prefix, mode)
                 /* nope, not "64-bit" after all */
                 fprintf(stderr, "%s: error reading header\n", prefix);
 
-                pdesc.header.pih_magic = 0;
                 fclose(ifp);
 #ifdef HAVE_ZLIB_H
-				if (pdesc.flags & PFOR_USEZLIB)
+				if (pdesc->flags & PFOR_USEZLIB)
 					gzclose(dfp);
 				else
 #endif
@@ -211,23 +212,23 @@ PWOpen(prefix, mode)
 		{
 			fclose(wfp);
 		}
+	        free(pdesc);
                 return NULL;
             }
-            pdesc.header.pih_magic = pdesc64.header.pih_magic;
-            pdesc.header.pih_numwords = pdesc64.header.pih_numwords;
-            pdesc.header.pih_blocklen = pdesc64.header.pih_blocklen;
-            pdesc.header.pih_pad = pdesc64.header.pih_pad;
+            pdesc->header.pih_magic = pdesc64.header.pih_magic;
+            pdesc->header.pih_numwords = pdesc64.header.pih_numwords;
+            pdesc->header.pih_blocklen = pdesc64.header.pih_blocklen;
+            pdesc->header.pih_pad = pdesc64.header.pih_pad;
             use64 = 1;
         }
 
-	if (pdesc.header.pih_magic != PIH_MAGIC)
+	if (pdesc->header.pih_magic != PIH_MAGIC)
 	{
 	    fprintf(stderr, "%s: magic mismatch\n", prefix);
 
-	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
 #ifdef HAVE_ZLIB_H
-		if (pdesc.flags & PFOR_USEZLIB)
+		if (pdesc->flags & PFOR_USEZLIB)
 			gzclose(dfp);
 		else
 #endif
@@ -237,17 +238,17 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
+	    free(pdesc);
 	    return NULL;
 	}
 
-        if (pdesc.header.pih_numwords < 1)
+        if (pdesc->header.pih_numwords < 1)
         {
             fprintf(stderr, "%s: invalid word count\n", prefix);
 
-            pdesc.header.pih_magic = 0;
             fclose(ifp);
 #ifdef HAVE_ZLIB_H
-			if (pdesc.flags & PFOR_USEZLIB)
+			if (pdesc->flags & PFOR_USEZLIB)
 				gzclose(dfp);
 			else
 #endif
@@ -256,17 +257,17 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
+	    free(pdesc);
             return NULL;
         }
 
-	if (pdesc.header.pih_blocklen != NUMWORDS)
+	if (pdesc->header.pih_blocklen != NUMWORDS)
 	{
 	    fprintf(stderr, "%s: size mismatch\n", prefix);
 
-	    pdesc.header.pih_magic = 0;
 	    fclose(ifp);
 #ifdef HAVE_ZLIB_H
-		if (pdesc.flags & PFOR_USEZLIB)
+		if (pdesc->flags & PFOR_USEZLIB)
 			gzclose(dfp);
 		else
 #endif
@@ -275,10 +276,11 @@ PWOpen(prefix, mode)
 	    {
 		fclose(wfp);
 	    }
+	    free(pdesc);
 	    return NULL;
 	}
 
-	if (pdesc.flags & PFOR_USEHWMS)
+	if (pdesc->flags & PFOR_USEHWMS)
 	{
             int i;
 
@@ -286,27 +288,27 @@ PWOpen(prefix, mode)
             {
                 if (fread(pdesc64.hwms, 1, sizeof(pdesc64.hwms), wfp) != sizeof(pdesc64.hwms))
                 {
-                    pdesc.flags &= ~PFOR_USEHWMS;
+                    pdesc->flags &= ~PFOR_USEHWMS;
                 }
-                for (i = 0; i < sizeof(pdesc.hwms) / sizeof(pdesc.hwms[0]); i++)
+                for (i = 0; i < sizeof(pdesc->hwms) / sizeof(pdesc->hwms[0]); i++)
                 {
-                    pdesc.hwms[i] = pdesc64.hwms[i];
+                    pdesc->hwms[i] = pdesc64.hwms[i];
                 }
             }
-            else if (fread(pdesc.hwms, 1, sizeof(pdesc.hwms), wfp) != sizeof(pdesc.hwms))
+            else if (fread(pdesc->hwms, 1, sizeof(pdesc->hwms), wfp) != sizeof(pdesc->hwms))
 	    {
-		pdesc.flags &= ~PFOR_USEHWMS;
+		pdesc->flags &= ~PFOR_USEHWMS;
 	    }
 #if DEBUG
             for (i=1; i<=0xff; i++)
             {
-                printf("hwm[%02x] = %d\n", i, pdesc.hwms[i]);
+                printf("hwm[%02x] = %d\n", i, pdesc->hwms[i]);
             }
 #endif
 	}
     }
 
-    return (&pdesc);
+    return (pdesc);
 }
 
 int
@@ -327,12 +329,14 @@ PWClose(pwp)
 	if (fseek(pwp->ifp, 0L, 0))
 	{
 	    fprintf(stderr, "index magic fseek failed\n");
+	    free(pwp);
 	    return (-1);
 	}
 
 	if (!fwrite((char *) &pwp->header, sizeof(pwp->header), 1, pwp->ifp))
 	{
 	    fprintf(stderr, "index magic fwrite failed\n");
+	    free(pwp);
 	    return (-1);
 	}
 
@@ -366,6 +370,7 @@ PWClose(pwp)
     }
 
     pwp->header.pih_magic = 0;
+    free(pwp);
 
     return (0);
 }

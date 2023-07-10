@@ -10,10 +10,12 @@
 # lines (possibly introduced by earlier parts of the pipeline) as
 # cracklib-packer will generate "skipping line" warnings otherwise.
 #
+LC_ALL=C
+export LC_ALL
 gzip -cdf "$@" |
     grep -a -v '^#' |
     tr '[A-Z]' '[a-z]' |
     tr -cd '\012[a-z][0-9]' |
     cut -c 1-1022 |
     grep -v '^$' |
-    env LC_ALL=C sort -u
+    sort -u

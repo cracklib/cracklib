@@ -36,8 +36,8 @@ typedef unsigned short uint16_t;
 #undef DEBUG
 #undef DEBUG2
 
-extern char *Reverse(char *buf);
-extern char *Lowercase(char *buf);
+extern char *Reverse(char *buf, char *area);
+extern char *Lowercase(char *buf, char *area);
 
 static char *r_destructors[] = {
     ":",                        /* noop - must do this to test raw word. */
@@ -55,7 +55,6 @@ static char *r_destructors[] = {
 
     "/?p@?p",                   /* purging out punctuation/symbols/junk */
     "/?s@?s",
-    "/?X@?X",
 
     /* attempt reverse engineering of password strings */
 
@@ -439,6 +438,8 @@ GTry(rawtext, password)
     int i;
     int len;
     char *mp;
+    char area[STRINGSIZE];
+    char revarea[STRINGSIZE];
 
     /* use destructors to turn password into rawtext */
     /* note use of Reverse() to save duplicating all rules */
@@ -447,9 +448,15 @@ GTry(rawtext, password)
 
     for (i = 0; r_destructors[i]; i++)
     {
-	if (!(mp = Mangle(password, r_destructors[i])))
+	if (!(mp = Mangle(password, r_destructors[i], area)))
 	{
 	    continue;
+	}
+
+	if (len - strlen(mp) >= 3)
+	{
+	   /* purged too much */
+	   continue;
 	}
 
 #ifdef DEBUG
@@ -462,10 +469,10 @@ GTry(rawtext, password)
 	}
 
 #ifdef DEBUG
-	printf("%-16s = %-16s (destruct %s reversed)\n", Reverse(mp), rawtext, r_destructors[i]);
+	printf("%-16s = %-16s (destruct %s reversed)\n", Reverse(mp, revarea), rawtext, r_destructors[i]);
 #endif
 
-	if (!strncmp(Reverse(mp), rawtext, len))
+	if (!strncmp(Reverse(mp, revarea), rawtext, len))
 	{
 	    return (1);
 	}
@@ -473,9 +480,15 @@ GTry(rawtext, password)
 
     for (i = 0; r_constructors[i]; i++)
     {
-	if (!(mp = Mangle(rawtext, r_constructors[i])))
+	if (!(mp = Mangle(rawtext, r_constructors[i], area)))
 	{
 	    continue;
+	}
+
+	if (len - strlen(mp) >= 3)
+	{
+	   /* purged too much */
+	   continue;
 	}
 
 #ifdef DEBUG
@@ -520,7 +533,7 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
 
     strncpy(tbuffer, gecos, STRINGSIZE);
     tbuffer[STRINGSIZE-1] = '\0';
-    strcpy(gbuffer, Lowercase(tbuffer));
+    Lowercase(tbuffer, gbuffer);
 
     wc = 0;
     ptr = gbuffer;
@@ -704,7 +717,9 @@ FascistLookUser(PWDICT *pwp, char *instring,
     char junk[STRINGSIZE];
     char *password;
     char rpassword[STRINGSIZE];
+    char area[STRINGSIZE];
     uint32_t notfound;
+    int len;
 
     notfound = PW_WORDS(pwp);
     /* already truncated if from FascistCheck() */
@@ -740,7 +755,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	return _("it does not contain enough DIFFERENT characters");
     }
 
-    strcpy(password, (char *)Lowercase(password));
+    strcpy(password, (char *)Lowercase(password, area));
 
     Trim(password);
 
@@ -754,6 +769,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	return _("it is all whitespace");
     }
 
+    len = strlen(password);
     i = 0;
     ptr = password;
     while (ptr[0] && ptr[1])
@@ -765,10 +781,9 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	ptr++;
     }
 
-    /*  Change by Ben Karsin from ITS at University of Hawaii at Manoa.  Static MAXSTEP
-        would generate many false positives for long passwords. */
-    maxrepeat = 3+(0.09*strlen(password));
-    if (i > maxrepeat)
+    /*  We were still generating false positives for long passwords.
+	Just count systematic double as a single character. */
+    if (len - i < MINLEN)
     {
 	return _("it is too simplistic/systematic");
     }
@@ -796,9 +811,15 @@ FascistLookUser(PWDICT *pwp, char *instring,
     {
 	char *a;
 
-	if (!(a = Mangle(password, r_destructors[i])))
+	if (!(a = Mangle(password, r_destructors[i], area)))
 	{
 	    continue;
+	}
+
+	if (len - strlen(a) >= 3)
+	{
+	   /* purged too much */
+	   continue;
 	}
 
 #ifdef DEBUG
@@ -811,16 +832,23 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	}
     }
 
-    strcpy(password, (char *)Reverse(password));
+    strcpy(password, (char *)Reverse(password, area));
 
     for (i = 0; r_destructors[i]; i++)
     {
 	char *a;
 
-	if (!(a = Mangle(password, r_destructors[i])))
+	if (!(a = Mangle(password, r_destructors[i], area)))
 	{
 	    continue;
 	}
+
+	if (len - strlen(a) >= 3)
+	{
+	   /* purged too much */
+	   continue;
+	}
+
 #ifdef DEBUG
 	printf("%-16s (reversed dict)\n", a);
 #endif
