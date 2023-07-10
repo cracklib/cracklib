@@ -36,8 +36,8 @@ typedef unsigned short uint16_t;
 #undef DEBUG
 #undef DEBUG2
 
-extern char *Reverse(char *buf);
-extern char *Lowercase(char *buf);
+extern char *Reverse(char *buf, char *area);
+extern char *Lowercase(char *buf, char *area);
 
 static char *r_destructors[] = {
     ":",                        /* noop - must do this to test raw word. */
@@ -439,6 +439,8 @@ GTry(rawtext, password)
     int i;
     int len;
     char *mp;
+    char area[STRINGSIZE];
+    char revarea[STRINGSIZE];
 
     /* use destructors to turn password into rawtext */
     /* note use of Reverse() to save duplicating all rules */
@@ -447,7 +449,7 @@ GTry(rawtext, password)
 
     for (i = 0; r_destructors[i]; i++)
     {
-	if (!(mp = Mangle(password, r_destructors[i])))
+	if (!(mp = Mangle(password, r_destructors[i], area)))
 	{
 	    continue;
 	}
@@ -462,10 +464,10 @@ GTry(rawtext, password)
 	}
 
 #ifdef DEBUG
-	printf("%-16s = %-16s (destruct %s reversed)\n", Reverse(mp), rawtext, r_destructors[i]);
+	printf("%-16s = %-16s (destruct %s reversed)\n", Reverse(mp, revarea), rawtext, r_destructors[i]);
 #endif
 
-	if (!strncmp(Reverse(mp), rawtext, len))
+	if (!strncmp(Reverse(mp, revarea), rawtext, len))
 	{
 	    return (1);
 	}
@@ -473,7 +475,7 @@ GTry(rawtext, password)
 
     for (i = 0; r_constructors[i]; i++)
     {
-	if (!(mp = Mangle(rawtext, r_constructors[i])))
+	if (!(mp = Mangle(rawtext, r_constructors[i], area)))
 	{
 	    continue;
 	}
@@ -520,7 +522,7 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
 
     strncpy(tbuffer, gecos, STRINGSIZE);
     tbuffer[STRINGSIZE-1] = '\0';
-    strcpy(gbuffer, Lowercase(tbuffer));
+    Lowercase(tbuffer, gbuffer);
 
     wc = 0;
     ptr = gbuffer;
@@ -704,6 +706,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
     char junk[STRINGSIZE];
     char *password;
     char rpassword[STRINGSIZE];
+    char area[STRINGSIZE];
     uint32_t notfound;
 
     notfound = PW_WORDS(pwp);
@@ -740,7 +743,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	return _("it does not contain enough DIFFERENT characters");
     }
 
-    strcpy(password, (char *)Lowercase(password));
+    strcpy(password, (char *)Lowercase(password, area));
 
     Trim(password);
 
@@ -796,7 +799,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
     {
 	char *a;
 
-	if (!(a = Mangle(password, r_destructors[i])))
+	if (!(a = Mangle(password, r_destructors[i], area)))
 	{
 	    continue;
 	}
@@ -811,13 +814,13 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	}
     }
 
-    strcpy(password, (char *)Reverse(password));
+    strcpy(password, (char *)Reverse(password, area));
 
     for (i = 0; r_destructors[i]; i++)
     {
 	char *a;
 
-	if (!(a = Mangle(password, r_destructors[i])))
+	if (!(a = Mangle(password, r_destructors[i], area)))
 	{
 	    continue;
 	}

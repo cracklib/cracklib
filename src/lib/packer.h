@@ -82,7 +82,7 @@ extern int PWClose(PWDICT *pwp);
 extern unsigned int FindPW(PWDICT *pwp, char *string);
 extern int PutPW(PWDICT *pwp, char *string);
 extern int PMatch(char *control, char *string);
-extern char *Mangle(char *input, char *control);
+extern char *Mangle(char *input, char *control, char *area);
 extern char Chop(char *string);
 extern char *Trim(char *string);
 extern char *FascistLook(PWDICT *pwp, char *instring);
