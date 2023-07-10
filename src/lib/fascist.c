@@ -55,7 +55,6 @@ static char *r_destructors[] = {
 
     "/?p@?p",                   /* purging out punctuation/symbols/junk */
     "/?s@?s",
-    "/?X@?X",
 
     /* attempt reverse engineering of password strings */
 
@@ -454,6 +453,12 @@ GTry(rawtext, password)
 	    continue;
 	}
 
+	if (len - strlen(mp) >= 3)
+	{
+	   /* purged too much */
+	   continue;
+	}
+
 #ifdef DEBUG
 	printf("%-16s = %-16s (destruct %s)\n", mp, rawtext, r_destructors[i]);
 #endif
@@ -478,6 +483,12 @@ GTry(rawtext, password)
 	if (!(mp = Mangle(rawtext, r_constructors[i], area)))
 	{
 	    continue;
+	}
+
+	if (len - strlen(mp) >= 3)
+	{
+	   /* purged too much */
+	   continue;
 	}
 
 #ifdef DEBUG
@@ -708,6 +719,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
     char rpassword[STRINGSIZE];
     char area[STRINGSIZE];
     uint32_t notfound;
+    int len;
 
     notfound = PW_WORDS(pwp);
     /* already truncated if from FascistCheck() */
@@ -757,6 +769,7 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	return _("it is all whitespace");
     }
 
+    len = strlen(password);
     i = 0;
     ptr = password;
     while (ptr[0] && ptr[1])
@@ -768,10 +781,9 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	ptr++;
     }
 
-    /*  Change by Ben Karsin from ITS at University of Hawaii at Manoa.  Static MAXSTEP
-        would generate many false positives for long passwords. */
-    maxrepeat = 3+(0.09*strlen(password));
-    if (i > maxrepeat)
+    /*  We were still generating false positives for long passwords.
+	Just count systematic double as a single character. */
+    if (len - i < MINLEN)
     {
 	return _("it is too simplistic/systematic");
     }
@@ -804,6 +816,12 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	    continue;
 	}
 
+	if (len - strlen(a) >= 3)
+	{
+	   /* purged too much */
+	   continue;
+	}
+
 #ifdef DEBUG
 	printf("%-16s (dict)\n", a);
 #endif
@@ -824,6 +842,13 @@ FascistLookUser(PWDICT *pwp, char *instring,
 	{
 	    continue;
 	}
+
+	if (len - strlen(a) >= 3)
+	{
+	   /* purged too much */
+	   continue;
+	}
+
 #ifdef DEBUG
 	printf("%-16s (reversed dict)\n", a);
 #endif
