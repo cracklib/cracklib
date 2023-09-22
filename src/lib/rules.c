@@ -5,6 +5,7 @@
  */
 
 #include "config.h"
+#include <stdarg.h>
 #include <string.h>
 #ifdef HAVE_INTTYPES_H
 #include <inttypes.h>
@@ -16,22 +17,16 @@
 #define CRACK_TOUPPER(a)        (islower(a)?toupper(a):(a))
 #define STRCMP(a,b)             strcmp((a),(b))
 
+static void
+Debug(int val, char *fmt, ...)
+{
 #if 0
-static void
-Debug(val, a, b, c, d, e, f, g)
-    int val;
-    char *a, *b, *c, *d, *e, *f, *g;
-{
-    fprintf(stderr, a, b, c, d, e, f, g);
-}
-#else
-static void
-Debug(val, a, b, c, d, e, f, g)
-    int val;
-    char *a, *b, *c, *d, *e, *f, *g;
-{
-}
+    va_list ap;
+    va_start(ap, fmt);
+    vfprintf(stderr, fmt, ap);
+    va_end(ap);
 #endif
+}
 
 #define RULE_NOOP	':'
 #define RULE_PREPEND	'^'
@@ -61,9 +56,7 @@ Debug(val, a, b, c, d, e, f, g)
 #define RULE_MLAST	')'
 
 int
-Suffix(myword, suffix)
-    char *myword;
-    char *suffix;
+Suffix(char *myword, char *suffix)
 {
     int i;
     int j;
@@ -80,8 +73,7 @@ Suffix(myword, suffix)
 }
 
 char *
-Reverse(str)			/* return a pointer to a reversal */
-    char *str;
+Reverse(char *str)			/* return a pointer to a reversal */
 {
     int i;
     int j;
@@ -96,8 +88,7 @@ Reverse(str)			/* return a pointer to a reversal */
 }
 
 char *
-Uppercase(str)			/* return a pointer to an uppercase */
-    char *str;
+Uppercase(char *str)			/* return a pointer to an uppercase */
 {
     char *ptr;
     static char area[STRINGSIZE];
@@ -113,8 +104,7 @@ Uppercase(str)			/* return a pointer to an uppercase */
 }
 
 char *
-Lowercase(str)			/* return a pointer to an lowercase */
-    char *str;
+Lowercase(char *str)			/* return a pointer to an lowercase */
 {
     char *ptr;
     static char area[STRINGSIZE];
@@ -130,8 +120,7 @@ Lowercase(str)			/* return a pointer to an lowercase */
 }
 
 char *
-Capitalise(str)			/* return a pointer to an capitalised */
-    char *str;
+Capitalise(char *str)			/* return a pointer to an capitalised */
 {
     char *ptr;
     static char area[STRINGSIZE];
@@ -149,8 +138,7 @@ Capitalise(str)			/* return a pointer to an capitalised */
 }
 
 char *
-Pluralise(string)		/* returns a pointer to a plural */
-    char *string;
+Pluralise(char *string)		/* returns a pointer to a plural */
 {
     int length;
     static char area[STRINGSIZE];
@@ -190,10 +178,7 @@ Pluralise(string)		/* returns a pointer to a plural */
 }
 
 char *
-Substitute(string, old, new)	/* returns pointer to a swapped about copy */
-    char *string;
-    char old;
-    char new;
+Substitute(char *string, char old, char new)	/* returns pointer to a swapped about copy */
 {
     char *ptr;
     static char area[STRINGSIZE];
@@ -208,9 +193,7 @@ Substitute(string, old, new)	/* returns pointer to a swapped about copy */
 }
 
 char *
-Purge(string, target)		/* returns pointer to a purged copy */
-    char *string;
-    char target;
+Purge(char *string, char target)		/* returns pointer to a purged copy */
 {
     char *ptr;
     static char area[STRINGSIZE];
@@ -235,9 +218,7 @@ Purge(string, target)		/* returns pointer to a purged copy */
  */
 
 int
-MatchClass(class, input)
-    char class;
-    char input;
+MatchClass(char class, char input)
 {
     char c;
     int retval;
@@ -354,9 +335,7 @@ MatchClass(class, input)
 }
 
 char *
-PolyStrchr(string, class)
-    char *string;
-    char class;
+PolyStrchr(char *string, char class)
 {
     while (*string)
     {
@@ -370,10 +349,7 @@ PolyStrchr(string, class)
 }
 
 char *
-PolySubst(string, class, new)	/* returns pointer to a swapped about copy */
-    char *string;
-    char class;
-    char new;
+PolySubst(char *string, char class, char new)	/* returns pointer to a swapped about copy */
 {
     char *ptr;
     static char area[STRINGSIZE];
@@ -388,9 +364,7 @@ PolySubst(string, class, new)	/* returns pointer to a swapped about copy */
 }
 
 char *
-PolyPurge(string, class)	/* returns pointer to a purged copy */
-    char *string;
-    char class;
+PolyPurge(char *string, char class)	/* returns pointer to a purged copy */
 {
     char *ptr;
     static char area[STRINGSIZE];
@@ -409,8 +383,7 @@ PolyPurge(string, class)	/* returns pointer to a purged copy */
 /* -------- BACK TO NORMALITY -------- */
 
 int
-Char2Int(character)
-    char character;
+Char2Int(char character)
 {
     if (isdigit(character))
     {
@@ -426,9 +399,7 @@ Char2Int(character)
 }
 
 char *
-Mangle(input, control)		/* returns a pointer to a controlled Mangle */
-    char *input;
-    char *control;
+Mangle(char *input, char *control)		/* returns a pointer to a controlled Mangle */
 {
     int limit;
     char *ptr;
@@ -815,9 +786,7 @@ Mangle(input, control)		/* returns a pointer to a controlled Mangle */
 }
 
 int
-PMatch(control, string)
-char *control;
-char *string;
+PMatch(char *control, char *string)
 {
     while (*string && *control)
     {

@@ -5,6 +5,10 @@
  */
 
 #include "config.h"
+#ifdef HAVE_GETPWUID_R
+// Needed for LINE_MAX
+#define	_XOPEN_SOURCE 700
+#endif
 #include <sys/types.h>
 #include <errno.h>
 #include <limits.h>
@@ -432,9 +436,7 @@ static char *r_constructors[] = {
 };
 
 int
-GTry(rawtext, password)
-    char *rawtext;
-    char *password;
+GTry(char *rawtext, char *password)
 {
     int i;
     int len;
@@ -632,9 +634,7 @@ FascistGecosUser(char *password, const char *user, const char *gecos)
 }
 
 char *
-FascistGecos(password, uid)
-    char *password;
-    int uid;
+FascistGecos( char *password, int uid)
 {
     struct passwd *pwp;
     char *sbuffer = NULL;
@@ -834,19 +834,14 @@ FascistLookUser(PWDICT *pwp, char *instring,
 }
 
 char *
-FascistLook(pwp, instring)
-    PWDICT *pwp;
-    char *instring;
+FascistLook(PWDICT *pwp, char *instring)
 {
     return FascistLookUser(pwp, instring, NULL, NULL);
 }
 
 const char *
-FascistCheckUser(password, path, user, gecos)
-    const char *password;
-    const char *path;
-    const char *user;
-    const char *gecos;
+FascistCheckUser(const char *password, const char *path, const char *user,
+    const char *gecos)
 {
     PWDICT *pwp;
     char pwtrunced[STRINGSIZE];
@@ -884,15 +879,13 @@ FascistCheckUser(password, path, user, gecos)
 }
 
 const char *
-FascistCheck(password, path)
-    const char *password;
-    const char *path;
+FascistCheck(const char *password, const char *path)
 {
     return FascistCheckUser(password, path, NULL, NULL);
 }
 
 const char *
-GetDefaultCracklibDict()
+GetDefaultCracklibDict(void)
 {
     return DEFAULT_CRACKLIB_DICT;
 }

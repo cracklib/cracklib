@@ -13,8 +13,7 @@
 #include "packer.h"
 
 char
-Chop(string)
-    register char *string;
+Chop(register char *string)
 {
     register char c;
     register char *ptr;
@@ -30,8 +29,7 @@ Chop(string)
 }
 
 char *
-Trim(string)
-    register char *string;
+Trim(register char *string)
 {
     register char *ptr;
     for (ptr = string; *ptr; ptr++);
@@ -44,8 +42,7 @@ Trim(string)
 }
 
 char *
-Clone(string)
-    char *string;
+Clone(char *string)
 {
     register char *retval;
     retval = (char *) malloc(strlen(string) + 1);

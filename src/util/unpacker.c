@@ -12,9 +12,7 @@
 #include "packer.h"
 
 int
-main(argc, argv)
-    int argc;
-    char *argv[];
+main(int argc, char *argv[])
 {
     uint32_t i;
     PWDICT *pwp;
