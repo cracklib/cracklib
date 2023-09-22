@@ -4,9 +4,6 @@
  * or its effect upon hardware or computer systems.
  */
 
-// Needed for LINE_MAX
-#define	_XOPEN_SOURCE 700
-
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>

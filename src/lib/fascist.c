@@ -5,10 +5,6 @@
  */
 
 #include "config.h"
-#ifdef HAVE_GETPWUID_R
-// Needed for LINE_MAX
-#define	_XOPEN_SOURCE 700
-#endif
 #include <sys/types.h>
 #include <errno.h>
 #include <limits.h>
