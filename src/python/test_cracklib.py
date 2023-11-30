@@ -69,52 +69,52 @@ class TestModuleFunctions(unittest.TestCase):
     def test_simple_lower(self):
         for passwd in ['t' * i for i in range(
             cracklib.MIN_LENGTH - cracklib.LOW_CREDIT)]:
-            self.assertEquals(
+            self.assertEqual(
                 1, cracklib.simple(passwd),
                 'password {0} should be detected as too simple'.format(
                     passwd))
-        self.assertEquals(0, cracklib.simple(
+        self.assertEqual(0, cracklib.simple(
             't' * (cracklib.MIN_LENGTH - cracklib.LOW_CREDIT)))
 
     def test_simple_upper(self):
         for passwd in ['T' * i for i in range(
             cracklib.MIN_LENGTH - cracklib.UP_CREDIT)]:
-            self.assertEquals(
+            self.assertEqual(
                 1, cracklib.simple(passwd),
                 'password {0} should be detected as too simple'.format(
                     passwd))
-        self.assertEquals(0, cracklib.simple(
+        self.assertEqual(0, cracklib.simple(
             'T' * (cracklib.MIN_LENGTH - cracklib.UP_CREDIT)))
 
     def test_simple_digit(self):
         for passwd in ['1' * i for i in range(
             cracklib.MIN_LENGTH - cracklib.DIG_CREDIT)]:
-            self.assertEquals(
+            self.assertEqual(
                 1, cracklib.simple(passwd),
                 'password {0} should be detected as too simple'.format(
                     passwd))
-        self.assertEquals(0, cracklib.simple(
+        self.assertEqual(0, cracklib.simple(
             '1' * (cracklib.MIN_LENGTH - cracklib.DIG_CREDIT)))
 
     def test_simple_other(self):
         for passwd in ['#' * i for i in range(
             cracklib.MIN_LENGTH - cracklib.OTH_CREDIT)]:
-            self.assertEquals(
+            self.assertEqual(
                 1, cracklib.simple(passwd),
                 'password {0} should be detected as too simple'.format(
                     passwd))
-        self.assertEquals(0, cracklib.simple(
+        self.assertEqual(0, cracklib.simple(
             '#' * (cracklib.MIN_LENGTH - cracklib.OTH_CREDIT)))
 
     def test_simple_combinations(self):
         testset = '#a' * (cracklib.MIN_LENGTH // 2)
         for passwd in [testset[:i] for i in range(
             cracklib.MIN_LENGTH - cracklib.LOW_CREDIT - cracklib.OTH_CREDIT)]:
-            self.assertEquals(
+            self.assertEqual(
                 1, cracklib.simple(passwd),
                 'password {0} should be detected as too simple'.format(
                     passwd))
-        self.assertEquals(0, cracklib.simple(
+        self.assertEqual(0, cracklib.simple(
             testset[:(cracklib.MIN_LENGTH - cracklib.LOW_CREDIT -
                 cracklib.OTH_CREDIT)]))
 
