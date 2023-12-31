@@ -2,7 +2,7 @@
 .SH NAME
 cracklib\-check \- Check passwords using libcrack2
 .SH SYNOPSIS
-.B cracklib\-check
+.B cracklib\-check [\-h|\-\-no\-echo]
 .br
 
 .SH DESCRIPTION
@@ -11,11 +11,20 @@ takes a list of passwords from stdin and checks them via libcrack2's
 .BR FascistCheck (3)
 sub routine.
 
+.SH OPTIONS
+.TP 4
+.I \-\-no\-echo
+Don't echo the password which is ok to the terminal.
+.TP
+.I \-h, \-\-help
+Print help explaining the command line options.
+
 .SH RESULT
 .B cracklib\-check
 prints each checked password and the corresponding result of
 .BR FascistCheck (3)
 to stdout. The password and the result are separated by a colon.
+When \-\-no\-echo is specified, prints only the result if password is ok.
 
 .SH SEE ALSO
 .BR FascistCheck (3)
