@@ -20,51 +20,11 @@
 
 #define DEBUG 0
 
-/* Structures for processing "broken" 64bit dictionary files */
-
-struct pi_header64
-{
-    uint64_t pih_magic;
-    uint64_t pih_numwords;
-    uint16_t pih_blocklen;
-    uint16_t pih_pad;
-};
-
-typedef struct
-{
-    void *ifp;
-    void *dfp;
-    void *wfp;
-    uint64_t flags;
-    uint64_t hwms[256];
-    struct pi_header64 header;
-    int count;
-    char data_put[NUMWORDS][MAXWORDLEN];
-    char data_get[NUMWORDS][MAXWORDLEN];
-} PWDICT64;
-
-
-static int
-_PWIsBroken64(FILE *ifp)
-{
-    PWDICT64 pdesc64;
-
-    rewind(ifp);
-    if (!fread((char *) &pdesc64.header, sizeof(pdesc64.header), 1, ifp))
-    {
-       return 0;
-    }
-
-    return (pdesc64.header.pih_magic == PIH_MAGIC);
-}
-
 
 PWDICT *
 PWOpen(const char *prefix, char *mode)
 {
-    int use64 = 0;
     PWDICT *pdesc;
-    PWDICT64 pdesc64;
     char iname[STRINGSIZE];
     char dname[STRINGSIZE];
     char wname[STRINGSIZE];
@@ -77,7 +37,6 @@ PWOpen(const char *prefix, char *mode)
         return NULL;
 
     memset(pdesc, '\0', sizeof(*pdesc));
-    memset(&pdesc64, '\0', sizeof(pdesc64));
 
     snprintf(iname, STRINGSIZE, "%s.pwi", prefix);
     snprintf(dname, STRINGSIZE, "%s.pwd", prefix);
@@ -171,55 +130,6 @@ PWOpen(const char *prefix, char *mode)
             return NULL;
         }
 
-        if ((pdesc->header.pih_magic == 0) || (pdesc->header.pih_numwords == 0))
-        {
-            /* uh-oh. either a broken "64-bit" file or a garbage file. */
-            rewind (ifp);
-            if (!fread((char *) &pdesc64.header, sizeof(pdesc64.header), 1, ifp))
-            {
-                fprintf(stderr, "%s: error reading header\n", prefix);
-
-                fclose(ifp);
-#ifdef HAVE_ZLIB_H
-                if (pdesc->flags & PFOR_USEZLIB)
-                    gzclose(dfp);
-                else
-#endif
-                    fclose(dfp);
-                if (wfp)
-                {
-                        fclose(wfp);
-                }
-                free(pdesc);
-                return NULL;
-            }
-            if (pdesc64.header.pih_magic != PIH_MAGIC)
-            {
-                /* nope, not "64-bit" after all */
-                fprintf(stderr, "%s: error reading header\n", prefix);
-
-                fclose(ifp);
-#ifdef HAVE_ZLIB_H
-                if (pdesc->flags & PFOR_USEZLIB)
-                    gzclose(dfp);
-                else
-#endif
-                    fclose(dfp);
-
-                if (wfp)
-                {
-                    fclose(wfp);
-                }
-                free(pdesc);
-                return NULL;
-            }
-            pdesc->header.pih_magic = pdesc64.header.pih_magic;
-            pdesc->header.pih_numwords = pdesc64.header.pih_numwords;
-            pdesc->header.pih_blocklen = pdesc64.header.pih_blocklen;
-            pdesc->header.pih_pad = pdesc64.header.pih_pad;
-            use64 = 1;
-        }
-
         if (pdesc->header.pih_magic != PIH_MAGIC)
         {
             fprintf(stderr, "%s: magic mismatch\n", prefix);
@@ -280,24 +190,12 @@ PWOpen(const char *prefix, char *mode)
 
         if (pdesc->flags & PFOR_USEHWMS)
         {
-            int i;
-
-            if (use64)
-            {
-                if (fread(pdesc64.hwms, 1, sizeof(pdesc64.hwms), wfp) != sizeof(pdesc64.hwms))
-                {
-                    pdesc->flags &= ~PFOR_USEHWMS;
-                }
-                for (i = 0; i < sizeof(pdesc->hwms) / sizeof(pdesc->hwms[0]); i++)
-                {
-                    pdesc->hwms[i] = pdesc64.hwms[i];
-                }
-            }
-            else if (fread(pdesc->hwms, 1, sizeof(pdesc->hwms), wfp) != sizeof(pdesc->hwms))
+            if (fread(pdesc->hwms, 1, sizeof(pdesc->hwms), wfp) != sizeof(pdesc->hwms))
             {
                 pdesc->flags &= ~PFOR_USEHWMS;
             }
 #if DEBUG
+            int i;
             for (i=1; i<=0xff; i++)
             {
                 printf("hwm[%02x] = %d\n", i, pdesc->hwms[i]);
@@ -446,33 +344,16 @@ GetPW(PWDICT *pwp, uint32_t number)
 
     thisblock = number / NUMWORDS;
 
-    if (_PWIsBroken64(pwp->ifp))
+    if (fseek(pwp->ifp, sizeof(struct pi_header) + (thisblock * sizeof(uint32_t)), 0))
     {
-        uint64_t datum64;
-        if (fseek(pwp->ifp, sizeof(struct pi_header64) + (thisblock * sizeof(uint64_t)), 0))
-        {
-            perror("(index fseek failed)");
-            return NULL;
-        }
+        perror("(index fseek failed)");
+        return NULL;
+    }
 
-        if (!fread((char *) &datum64, sizeof(datum64), 1, pwp->ifp))
-        {
-            perror("(index fread failed)");
-            return NULL;
-        }
-        datum = datum64;
-    } else {
-        if (fseek(pwp->ifp, sizeof(struct pi_header) + (thisblock * sizeof(uint32_t)), 0))
-        {
-            perror("(index fseek failed)");
-            return NULL;
-        }
-
-        if (!fread((char *) &datum, sizeof(datum), 1, pwp->ifp))
-        {
-            perror("(index fread failed)");
-            return NULL;
-        }
+    if (!fread((char *) &datum, sizeof(datum), 1, pwp->ifp))
+    {
+        perror("(index fread failed)");
+        return NULL;
     }
 
     int r = 1;
