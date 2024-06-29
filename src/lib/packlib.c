@@ -60,9 +60,7 @@ _PWIsBroken64(FILE *ifp)
 
 
 PWDICT *
-PWOpen(prefix, mode)
-    const char *prefix;
-    char *mode;
+PWOpen(const char *prefix, char *mode)
 {
     int use64 = 0;
     PWDICT *pdesc;
@@ -312,8 +310,7 @@ PWOpen(prefix, mode)
 }
 
 int
-PWClose(pwp)
-    PWDICT *pwp;
+PWClose(PWDICT *pwp)
 {
     if (pwp->header.pih_magic != PIH_MAGIC)
     {
@@ -376,9 +373,7 @@ PWClose(pwp)
 }
 
 int
-PutPW(pwp, string)
-    PWDICT *pwp;
-    char *string;
+PutPW(PWDICT *pwp, char *string)
 {
     if (!(pwp->flags & PFOR_WRITE))
     {
@@ -439,9 +434,7 @@ PutPW(pwp, string)
 }
 
 char *
-GetPW(pwp, number)
-    PWDICT *pwp;
-    uint32_t number;
+GetPW(PWDICT *pwp, uint32_t number)
 {
     uint32_t datum;
     register int i;
@@ -541,9 +534,7 @@ GetPW(pwp, number)
 }
 
 unsigned int
-FindPW(pwp, string)
-    PWDICT *pwp;
-    char *string;
+FindPW(PWDICT *pwp, char *string)
 {
     register uint32_t lwm;
     register uint32_t hwm;
