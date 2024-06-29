@@ -73,11 +73,10 @@ Suffix(char *myword, char *suffix)
 }
 
 char *
-Reverse(char *str)			/* return a pointer to a reversal */
+Reverse(char *str, char *area)			/* return a pointer to a reversal */
 {
     int i;
     int j;
-    static char area[STRINGSIZE];
     j = i = strlen(str);
     while (*str)
     {
@@ -88,10 +87,9 @@ Reverse(char *str)			/* return a pointer to a reversal */
 }
 
 char *
-Uppercase(char *str)			/* return a pointer to an uppercase */
+Uppercase(char *str, char *area)			/* return a pointer to an uppercase */
 {
     char *ptr;
-    static char area[STRINGSIZE];
     ptr = area;
     while (*str)
     {
@@ -104,10 +102,9 @@ Uppercase(char *str)			/* return a pointer to an uppercase */
 }
 
 char *
-Lowercase(char *str)			/* return a pointer to an lowercase */
+Lowercase(char *str, char *area)			/* return a pointer to an lowercase */
 {
     char *ptr;
-    static char area[STRINGSIZE];
     ptr = area;
     while (*str)
     {
@@ -120,10 +117,9 @@ Lowercase(char *str)			/* return a pointer to an lowercase */
 }
 
 char *
-Capitalise(char *str)			/* return a pointer to an capitalised */
+Capitalise(char *str, char *area)			/* return a pointer to an capitalised */
 {
     char *ptr;
-    static char area[STRINGSIZE];
     ptr = area;
 
     while (*str)
@@ -138,10 +134,9 @@ Capitalise(char *str)			/* return a pointer to an capitalised */
 }
 
 char *
-Pluralise(char *string)		/* returns a pointer to a plural */
+Pluralise(char *string, char *area)		/* returns a pointer to a plural */
 {
     int length;
-    static char area[STRINGSIZE];
     length = strlen(string);
     strcpy(area, string);
 
@@ -178,10 +173,9 @@ Pluralise(char *string)		/* returns a pointer to a plural */
 }
 
 char *
-Substitute(char *string, char old, char new)	/* returns pointer to a swapped about copy */
+Substitute(char *string, char old, char new, char *area)	/* returns pointer to a swapped about copy */
 {
     char *ptr;
-    static char area[STRINGSIZE];
     ptr = area;
     while (*string)
     {
@@ -193,10 +187,9 @@ Substitute(char *string, char old, char new)	/* returns pointer to a swapped abo
 }
 
 char *
-Purge(char *string, char target)		/* returns pointer to a purged copy */
+Purge(char *string, char target, char *area)		/* returns pointer to a purged copy */
 {
     char *ptr;
-    static char area[STRINGSIZE];
     ptr = area;
     while (*string)
     {
@@ -349,10 +342,9 @@ PolyStrchr(char *string, char class)
 }
 
 char *
-PolySubst(char *string, char class, char new)	/* returns pointer to a swapped about copy */
+PolySubst(char *string, char class, char new, char *area)	/* returns pointer to a swapped about copy */
 {
     char *ptr;
-    static char area[STRINGSIZE];
     ptr = area;
     while (*string)
     {
@@ -364,10 +356,9 @@ PolySubst(char *string, char class, char new)	/* returns pointer to a swapped ab
 }
 
 char *
-PolyPurge(char *string, char class)	/* returns pointer to a purged copy */
+PolyPurge(char *string, char class, char *area)	/* returns pointer to a purged copy */
 {
     char *ptr;
-    static char area[STRINGSIZE];
     ptr = area;
     while (*string)
     {
@@ -399,37 +390,37 @@ Char2Int(char character)
 }
 
 char *
-Mangle(char *input, char *control)		/* returns a pointer to a controlled Mangle */
+Mangle(char *input, char *control, char *area)		/* returns a pointer to a controlled Mangle */
 {
     int limit;
     char *ptr;
-    static char area[STRINGSIZE * 2] = {0};
     char area2[STRINGSIZE * 2] = {0};
     strcpy(area, input);
 
     for (ptr = control; *ptr; ptr++)
     {
+	strcpy(area2, area);
 	switch (*ptr)
 	{
 	case RULE_NOOP:
 	    break;
 	case RULE_REVERSE:
-	    strcpy(area, Reverse(area));
+	    Reverse(area2, area);
 	    break;
 	case RULE_UPPERCASE:
-	    strcpy(area, Uppercase(area));
+	    Uppercase(area2, area);
 	    break;
 	case RULE_LOWERCASE:
-	    strcpy(area, Lowercase(area));
+	    Lowercase(area2, area);
 	    break;
 	case RULE_CAPITALISE:
-	    strcpy(area, Capitalise(area));
+	    Capitalise(area2, area);
 	    break;
 	case RULE_PLURALISE:
-	    strcpy(area, Pluralise(area));
+	    Pluralise(area2, area);
 	    break;
 	case RULE_REFLECT:
-	    strcat(area, Reverse(area));
+	    strcat(area, Reverse(area, area2));
 	    break;
 	case RULE_DUPLICATE:
 	    strcpy(area2, area);
@@ -516,7 +507,6 @@ Mangle(char *input, char *control)		/* returns a pointer to a controlled Mangle 
 		    Debug(1, "Mangle: extract: weird argument in '%s'\n", control);
 		    return NULL;
 		}
-		strcpy(area2, area);
 		for (i = 0; length-- && area2[start + i]; i++)
 		{
 		    area[i] = area2[start + i];
@@ -587,10 +577,10 @@ Mangle(char *input, char *control)		/* returns a pointer to a controlled Mangle 
 		return NULL;
 	    } else if (ptr[1] != RULE_CLASS)
 	    {
-		strcpy(area, Purge(area, *(++ptr)));
+		Purge(area2, *(++ptr), area);
 	    } else
 	    {
-		strcpy(area, PolyPurge(area, ptr[2]));
+		PolyPurge(area2, ptr[2], area);
 		ptr += 2;
 	    }
 	    break;
@@ -601,11 +591,11 @@ Mangle(char *input, char *control)		/* returns a pointer to a controlled Mangle 
 		return NULL;
 	    } else if (ptr[1] != RULE_CLASS)
 	    {
-		strcpy(area, Substitute(area, ptr[1], ptr[2]));
+		Substitute(area2, ptr[1], ptr[2], area);
 		ptr += 2;
 	    } else
 	    {
-		strcpy(area, PolySubst(area, ptr[2], ptr[3]));
+		PolySubst(area2, ptr[2], ptr[3], area);
 		ptr += 3;
 	    }
 	    break;
