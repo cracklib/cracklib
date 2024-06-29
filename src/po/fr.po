@@ -4,77 +4,78 @@
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
 # Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2016. #zanata, 2020.
 # Julien Humbert <julroy67@gmail.com>, 2020.
+# Léane GRASSER <leane.grasser@proton.me>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2023-04-02 16:13-0500\n"
-"PO-Revision-Date: 2020-02-05 04:16+0000\n"
-"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
-"Language-Team: French <https://translate.stg.fedoraproject.org/projects/"
-"cracklib/master/fr/>\n"
+"PO-Revision-Date: 2024-06-27 08:36+0000\n"
+"Last-Translator: Léane GRASSER <leane.grasser@proton.me>\n"
+"Language-Team: French <https://translate.fedoraproject.org/projects/cracklib/"
+"master/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: lib/fascist.c:516
 msgid "it is based on your username"
-msgstr "basé sur votre nom d’utilisateur"
+msgstr "il est basé sur votre nom d'utilisateur"
 
 #: lib/fascist.c:576
 msgid "it is based upon your password entry"
-msgstr "basé sur votre mot de passe"
+msgstr "il est basé sur votre mot de passe"
 
 #: lib/fascist.c:593 lib/fascist.c:601
 msgid "it is derived from your password entry"
-msgstr "dérivé de votre mot de passe"
+msgstr "il est dérivé de votre mot de passe"
 
 #: lib/fascist.c:613
 msgid "it is derivable from your password entry"
-msgstr "dérivable de votre mot de passe"
+msgstr "il est dérivable de votre mot de passe"
 
 #: lib/fascist.c:625
 msgid "it's derivable from your password entry"
-msgstr "dérivable de votre mot de passe"
+msgstr "il est dérivable de votre mot de passe"
 
 #: lib/fascist.c:683
 msgid "you are not registered in the password file"
-msgstr "vous n’êtes pas enregistré dans le fichier de mot de passe"
+msgstr "vous n'êtes pas enregistré(e) dans le fichier passwd"
 
 #: lib/fascist.c:718
 msgid "it is WAY too short"
-msgstr "BEAUCOUP trop court"
+msgstr "il est BIEN TROP court"
 
 #: lib/fascist.c:723
 msgid "it is too short"
-msgstr "trop court"
+msgstr "il est trop court"
 
 #: lib/fascist.c:740
 msgid "it does not contain enough DIFFERENT characters"
-msgstr "ne contient pas suffisamment de caractères DIFFÉRENTS"
+msgstr "il ne contient pas suffisamment de caractères DIFFÉRENTS"
 
 #: lib/fascist.c:754
 msgid "it is all whitespace"
-msgstr "il n’y a que des espaces"
+msgstr "il ne contient que des espaces"
 
 #: lib/fascist.c:773
 msgid "it is too simplistic/systematic"
-msgstr "trop simple/systématique"
+msgstr "il est trop simple"
 
 #: lib/fascist.c:778
 msgid "it looks like a National Insurance number."
-msgstr "ressemble à un numéro de sécurité sociale."
+msgstr "il ressemble à un numéro de sécurité sociale."
 
 #: lib/fascist.c:810
 msgid "it is based on a dictionary word"
-msgstr "basé sur un mot du dictionnaire"
+msgstr "il est basé sur un mot du dictionnaire"
 
 #: lib/fascist.c:829
 msgid "it is based on a (reversed) dictionary word"
-msgstr "basé sur un mot du dictionnaire à l’envers"
+msgstr "il est basé sur un mot du dictionnaire (écrit à l'envers)"
 
 #: lib/fascist.c:874
 msgid "error loading dictionary"
