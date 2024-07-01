@@ -10,12 +10,22 @@
 #include "packer.h"
 
 int
-main ()
+main(int argc, char *argv[])
 {
     PWDICT *pwp;
     char buffer[STRINGSIZE];
+    char *file;
 
-    if (!(pwp = PWOpen (DEFAULT_CRACKLIB_DICT, "r")))
+    if (argc <= 1)
+    {
+	file = DEFAULT_CRACKLIB_DICT;
+    }
+    else
+    {
+        file = argv[1];
+    }
+
+    if (!(pwp = PWOpen (file, "r")))
     {
 	perror ("PWOpen");
 	return (-1);
