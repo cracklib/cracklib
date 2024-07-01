@@ -707,7 +707,7 @@ char *
 FascistLookUser(PWDICT *pwp, char *instring,
 		const char *user, const char *gecos)
 {
-    int i,maxrepeat;
+    int i;
     char *ptr;
     char *jptr;
     char junk[STRINGSIZE];
