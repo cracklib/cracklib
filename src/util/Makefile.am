@@ -2,6 +2,7 @@ sbin_PROGRAMS = cracklib-packer cracklib-unpacker cracklib-check
 sbin_SCRIPTS = cracklib-update
 
 check_PROGRAMS = testlib testnum teststr 
+check_DATA = testdict
 
 dist_sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
@@ -26,6 +27,11 @@ testnum_LDADD = $(LDADD)
 
 teststr_SOURCES = teststr.c
 teststr_LDADD = $(LDADD)
+
+testdict: $(top_srcdir)/dicts/cracklib-small
+	cracklib-format "$<" | cracklib-packer "$@"
+
+CLEANFILES = testdict.pwi testdict.pwd testdict.hwm
 
 EXTRA_DIST = $(sbin_SCRIPTS) $(sbin_PROGRAMS)
 
