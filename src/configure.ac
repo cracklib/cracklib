@@ -15,11 +15,7 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 
-AC_CHECK_HEADERS(unistd.h)
-AC_CHECK_HEADERS(fcntl.h)
-AC_CHECK_HEADERS(inttypes.h)
-AC_CHECK_HEADERS(stdint.h)
-AC_CHECK_HEADERS(pthread.h)
+AC_CHECK_HEADERS([unistd.h fcntl.h inttypes.h stdint.h pthread.h endian.h])
 
 AC_ARG_WITH([zlib],
    [AS_HELP_STRING([--without-zlib], [build without zlib support @<:@default=auto@:>@])])
