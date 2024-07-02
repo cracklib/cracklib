@@ -3,6 +3,8 @@ sbin_SCRIPTS = cracklib-update
 
 check_PROGRAMS = testlib testnum teststr 
 check_DATA = testdict
+check_SCRIPTS = checkdict.sh
+TESTS = $(check_SCRIPTS)
 
 dist_sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
@@ -29,9 +31,13 @@ teststr_SOURCES = teststr.c
 teststr_LDADD = $(LDADD)
 
 testdict: $(top_srcdir)/dicts/cracklib-small
-	cracklib-format "$<" | cracklib-packer "$@"
+	$(builddir)/cracklib-format "$<" | $(builddir)/cracklib-packer "$@"
 
-CLEANFILES = testdict.pwi testdict.pwd testdict.hwm
+checkdict.sh: testdict
+	echo '! $(builddir)/cracklib-format $(top_srcdir)/dicts/cracklib-small | $(builddir)/testlib $(builddir)/testdict | grep -c ": ok"' > "$@"
+	chmod +x "$@"
+
+CLEANFILES = testdict.pwi testdict.pwd testdict.hwm checkdict.sh
 
 EXTRA_DIST = $(sbin_SCRIPTS) $(sbin_PROGRAMS)
 
