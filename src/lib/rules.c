@@ -394,7 +394,7 @@ Mangle(char *input, char *control, char *area)		/* returns a pointer to a contro
 {
     int limit;
     char *ptr;
-    char area2[STRINGSIZE * 2] = {0};
+    char area2[STRINGSIZE * 2];
     strcpy(area, input);
 
     for (ptr = control; *ptr; ptr++)
