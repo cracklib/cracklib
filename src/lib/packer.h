@@ -60,6 +60,7 @@ typedef struct
     int count;
     char data_put[NUMWORDS][MAXWORDLEN];
     char data_get[NUMWORDS][MAXWORDLEN];
+    char wrong_endian;
 } PWDICT;
 
 #define PW_WORDS(x) ((x)->header.pih_numwords)
