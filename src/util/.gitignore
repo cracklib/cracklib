@@ -4,3 +4,11 @@
 /testlib
 /testnum
 /teststr
+/checkdict.sh
+/checkdict.sh.log
+/checkdict.sh.trs
+/test-suite.log
+/testdict.hwm
+/testdict.pwd
+/testdict.pwi
+
