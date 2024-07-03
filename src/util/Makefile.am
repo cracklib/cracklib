@@ -2,9 +2,11 @@ sbin_PROGRAMS = cracklib-packer cracklib-unpacker cracklib-check
 sbin_SCRIPTS = cracklib-update
 
 check_PROGRAMS = testlib testnum teststr 
+if NOT_CROSS_COMPILING
 check_DATA = testdict
 check_SCRIPTS = checkdict.sh
 TESTS = $(check_SCRIPTS)
+endif
 
 dist_sbin_SCRIPTS = create-cracklib-dict cracklib-format
 
@@ -32,12 +34,14 @@ teststr_LDADD = $(LDADD)
 
 testdict: $(top_srcdir)/dicts/cracklib-small
 	$(builddir)/cracklib-format "$<" | $(builddir)/cracklib-packer "$@"
-
 checkdict.sh: testdict
 	echo '! $(builddir)/cracklib-format $(top_srcdir)/dicts/cracklib-small | $(builddir)/testlib $(builddir)/testdict | grep -c ": ok"' > "$@"
 	chmod +x "$@"
 
+if NOT_CROSS_COMPILING
 CLEANFILES = testdict.pwi testdict.pwd testdict.hwm checkdict.sh
+endif
+
 
 EXTRA_DIST = $(sbin_SCRIPTS) $(sbin_PROGRAMS)
 

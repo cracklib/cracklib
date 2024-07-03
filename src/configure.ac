@@ -96,6 +96,7 @@ AM_CONDITIONAL(BUILD_PYTHON,[test "$build_python" = "yes"])
 
 dnl Handle local dict compiling properly
 AC_SUBST(CROSS_COMPILING, $cross_compiling)
+AM_CONDITIONAL([NOT_CROSS_COMPILING], [test "$cross_compiling" = "no"])
 
 AC_CONFIG_FILES([util/Makefile lib/Makefile doc/Makefile python/Makefile Makefile \
 		python/setup.py \
