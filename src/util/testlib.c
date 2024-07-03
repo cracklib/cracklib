@@ -13,9 +13,18 @@
 #include "packer.h"
 
 int
-main ()
+main (int argc, char *argv[])
 {
     char buffer[1024];
+    char *file;
+    if (argc <= 1)
+    {
+	file = DEFAULT_CRACKLIB_DICT;
+    }
+    else
+    {
+        file = argv[1];
+    }
 
     printf("enter potential passwords, one per line...\n");
 
@@ -25,7 +34,7 @@ main ()
 
 	Chop(buffer);
 
-	val = FascistCheck(buffer, NULL);
+	val = FascistCheck(buffer, file);
 
 	if (!val)
 	{
