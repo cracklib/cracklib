@@ -33,9 +33,9 @@ teststr_SOURCES = teststr.c
 teststr_LDADD = $(LDADD)
 
 testdict: $(top_srcdir)/dicts/cracklib-small
-	$(builddir)/cracklib-format "$<" | $(builddir)/cracklib-packer "$@"
+	$(srcdir)/cracklib-format "$<" | $(builddir)/cracklib-packer "$@"
 checkdict.sh: testdict
-	echo '! $(builddir)/cracklib-format $(top_srcdir)/dicts/cracklib-small | $(builddir)/testlib $(builddir)/testdict | grep -c ": ok"' > "$@"
+	echo '! $(srcdir)/cracklib-format $(top_srcdir)/dicts/cracklib-small | $(builddir)/testlib $(builddir)/testdict | grep -c ": ok"' > "$@"
 	chmod +x "$@"
 
 if NOT_CROSS_COMPILING
