@@ -28,7 +28,9 @@
 #define STORE_ORDER_BE 1
 #define STORE_ORDER_LE 2
 
+#ifndef STORE_ORDER
 #define STORE_ORDER STORE_ORDER_LE
+#endif
 
 #if STORE_ORDER == STORE_ORDER_LE
 #if DEBUG
