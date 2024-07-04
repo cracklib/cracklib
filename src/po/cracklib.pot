@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: cracklib 2.9.12\n"
+"Project-Id-Version: cracklib 2.10.0\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2023-04-02 16:13-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"

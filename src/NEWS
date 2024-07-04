@@ -1,4 +1,4 @@
-v2.9.12 Removal of broken legacy 64bit dictionary support and various style improvements (Ed Beroset)
+v2.10.0 Removal of broken legacy 64bit dictionary support and various style improvements (Ed Beroset)
         Improve output of password checks (yixiangzhike)
         Translation updates from weblate
         Test suite python updates (Olivier Gayot)
@@ -6,6 +6,7 @@ v2.9.12 Removal of broken legacy 64bit dictionary support and various style impr
         Improve simplistic checks based on Fedora patch (Paul Wouters)
         Library re-entrancy updates based on Fedora patch (Paul Wouters)
         Improvements to build time testing (Ed Beroset)
+        Indexes stored in little endian only, with legacy support (Ed Beroset)
 v2.9.11 Added xz dist
         Fix incorrect non-static memory return (drfiemost)
 v2.9.10 Fix missing files in dist tarball, other automake fixes (Leandro Nini)
