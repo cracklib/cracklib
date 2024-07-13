@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2023-04-02 16:13-0500\n"
+"POT-Creation-Date: 2024-07-13 11:34-0500\n"
 "PO-Revision-Date: 2021-03-07 09:01+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/cracklib/"
@@ -22,63 +22,63 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.5.1\n"
 
-#: lib/fascist.c:516
+#: lib/fascist.c:527
 msgid "it is based on your username"
 msgstr "사용자 이름을 기반으로 합니다"
 
-#: lib/fascist.c:576
+#: lib/fascist.c:587
 msgid "it is based upon your password entry"
 msgstr "자신의 비밀번호 항목을 기반으로 합니다"
 
-#: lib/fascist.c:593 lib/fascist.c:601
+#: lib/fascist.c:604 lib/fascist.c:612
 msgid "it is derived from your password entry"
 msgstr "비밀번호 항목에서 파생됩니다"
 
-#: lib/fascist.c:613
+#: lib/fascist.c:624
 msgid "it is derivable from your password entry"
 msgstr "비밀번호 항목에서 파생됩니다"
 
-#: lib/fascist.c:625
+#: lib/fascist.c:636
 msgid "it's derivable from your password entry"
 msgstr "비밀번호 항목에서 파생됩니다"
 
-#: lib/fascist.c:683
+#: lib/fascist.c:692
 msgid "you are not registered in the password file"
 msgstr "비밀번호 파일에 등록되어 있지 않습니다"
 
-#: lib/fascist.c:718
+#: lib/fascist.c:729
 msgid "it is WAY too short"
 msgstr "너무 짧습니다"
 
-#: lib/fascist.c:723
+#: lib/fascist.c:734
 msgid "it is too short"
 msgstr "너무 짧습니다"
 
-#: lib/fascist.c:740
+#: lib/fascist.c:751
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "다른 문자가 충분히 포함되어 있지 않습니다"
 
-#: lib/fascist.c:754
+#: lib/fascist.c:765
 msgid "it is all whitespace"
 msgstr "모두 여백입니다"
 
-#: lib/fascist.c:773
+#: lib/fascist.c:784
 msgid "it is too simplistic/systematic"
 msgstr "너무 단순/체계적입니다"
 
-#: lib/fascist.c:778
+#: lib/fascist.c:789
 msgid "it looks like a National Insurance number."
 msgstr "국민 보험 번호와 유사합니다."
 
-#: lib/fascist.c:810
+#: lib/fascist.c:827
 msgid "it is based on a dictionary word"
 msgstr "사전에 있는 단어를 기반으로 합니다"
 
-#: lib/fascist.c:829
+#: lib/fascist.c:853
 msgid "it is based on a (reversed) dictionary word"
 msgstr "(역순) 사전에 있는 단어를 기반으로 합니다"
 
-#: lib/fascist.c:874
+#: lib/fascist.c:893
 msgid "error loading dictionary"
 msgstr "사전을 적재하는 중 오류 발생"
 

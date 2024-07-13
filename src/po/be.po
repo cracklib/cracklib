@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2023-04-02 16:13-0500\n"
+"POT-Creation-Date: 2024-07-13 11:34-0500\n"
 "PO-Revision-Date: 2023-05-13 19:21+0000\n"
 "Last-Translator: Maksim Kliazovich <maxklezovich@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.fedoraproject.org/projects/"
@@ -17,63 +17,63 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.15.2\n"
 
-#: lib/fascist.c:516
+#: lib/fascist.c:527
 msgid "it is based on your username"
 msgstr "заснавана на імені карыстальніка"
 
-#: lib/fascist.c:576
+#: lib/fascist.c:587
 msgid "it is based upon your password entry"
 msgstr "заснавана на ўпісаным пароле"
 
-#: lib/fascist.c:593 lib/fascist.c:601
+#: lib/fascist.c:604 lib/fascist.c:612
 msgid "it is derived from your password entry"
 msgstr "паходзіць з вашага запісу пароля"
 
-#: lib/fascist.c:613
+#: lib/fascist.c:624
 msgid "it is derivable from your password entry"
 msgstr "можа паходзіць з вашага запісу пароля"
 
-#: lib/fascist.c:625
+#: lib/fascist.c:636
 msgid "it's derivable from your password entry"
 msgstr "можа паходзіць з вашага запісу пароля"
 
-#: lib/fascist.c:683
+#: lib/fascist.c:692
 msgid "you are not registered in the password file"
 msgstr "няма вашага запісу ў файле пароляў"
 
-#: lib/fascist.c:718
+#: lib/fascist.c:729
 msgid "it is WAY too short"
 msgstr "ён ЗАНАДТА кароткі"
 
-#: lib/fascist.c:723
+#: lib/fascist.c:734
 msgid "it is too short"
 msgstr "ён надта кароткі"
 
-#: lib/fascist.c:740
+#: lib/fascist.c:751
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "у ім недастаткова РОЗНАСТАЙНЫХ знакаў"
 
-#: lib/fascist.c:754
+#: lib/fascist.c:765
 msgid "it is all whitespace"
 msgstr "адны прабелы"
 
-#: lib/fascist.c:773
+#: lib/fascist.c:784
 msgid "it is too simplistic/systematic"
 msgstr "надта просты ці распаўсюджаны"
 
-#: lib/fascist.c:778
+#: lib/fascist.c:789
 msgid "it looks like a National Insurance number."
 msgstr "надобны на нумар сацыяльнага страхавання."
 
-#: lib/fascist.c:810
+#: lib/fascist.c:827
 msgid "it is based on a dictionary word"
 msgstr "базуецца на слоўнікавым слове"
 
-#: lib/fascist.c:829
+#: lib/fascist.c:853
 msgid "it is based on a (reversed) dictionary word"
 msgstr "бвзуецца на (адваротным) слоўнікавым слове"
 
-#: lib/fascist.c:874
+#: lib/fascist.c:893
 msgid "error loading dictionary"
 msgstr "памылка падчас загрузкі слоўніка"
 

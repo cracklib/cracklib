@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2023-04-02 16:13-0500\n"
+"POT-Creation-Date: 2024-07-13 11:34-0500\n"
 "PO-Revision-Date: 2016-06-18 01:02+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -19,63 +19,63 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Zanata 4.6.2\n"
 
-#: lib/fascist.c:516
+#: lib/fascist.c:527
 msgid "it is based on your username"
 msgstr "ಇದು ನಿಮ್ಮ ಬಳಕೆದಾರಹೆಸರಿನ ಮೇಲೆ ಆಧರಿತವಾಗಿದೆ"
 
-#: lib/fascist.c:576
+#: lib/fascist.c:587
 msgid "it is based upon your password entry"
 msgstr "ಇದು ನಿಮ್ಮ ಗುಪ್ತಪದ ನಮೂದಿನ ಮೇಲೆ ಆಧರಿತವಾಗಿದೆ"
 
-#: lib/fascist.c:593 lib/fascist.c:601
+#: lib/fascist.c:604 lib/fascist.c:612
 msgid "it is derived from your password entry"
 msgstr "ಇದನ್ನು ನಿಮ್ಮ ಗುಪ್ತಪದ ನಮೂದಿನಿಂದ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ"
 
-#: lib/fascist.c:613
+#: lib/fascist.c:624
 msgid "it is derivable from your password entry"
 msgstr "ಇದನ್ನು ನಿಮ್ಮ ಗುಪ್ತಪದ ನಮೂದಿನಿಂದ ತೆಗೆದುಕೊಳ್ಳಬಹುದಾಗಿದೆ"
 
-#: lib/fascist.c:625
+#: lib/fascist.c:636
 msgid "it's derivable from your password entry"
 msgstr "ಇದನ್ನು ನಿಮ್ಮ ಗುಪ್ತಪದ ನಮೂದಿನಿಂದ ತೆಗೆದುಕೊಳ್ಳಬಹುದಾಗಿದೆ"
 
-#: lib/fascist.c:683
+#: lib/fascist.c:692
 msgid "you are not registered in the password file"
 msgstr "ಗುಪ್ತಪದದ ಕಡತದಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ನೋಂದಾಯಿಸಲ್ಪಟ್ಟಿಲ್ಲ"
 
-#: lib/fascist.c:718
+#: lib/fascist.c:729
 msgid "it is WAY too short"
 msgstr "ಇದು ಅತ್ಯಂತ ಚಿಕ್ಕದಾಗಿದೆ"
 
-#: lib/fascist.c:723
+#: lib/fascist.c:734
 msgid "it is too short"
 msgstr "ಇದು ಬಹಳ ಚಿಕ್ಕದಾಗಿದೆ"
 
-#: lib/fascist.c:740
+#: lib/fascist.c:751
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "ಇದು ವಿಭಿನ್ನವಾದ ಸಾಕಷ್ಟು ಅಕ್ಷರಗಳನ್ನು ಹೊಂದಿಲ್ಲ"
 
-#: lib/fascist.c:754
+#: lib/fascist.c:765
 msgid "it is all whitespace"
 msgstr "ಇದು ಕೇವಲ ಖಾಲಿ ಜಾಗಗಳನ್ನು ಹೊಂದಿದೆ"
 
-#: lib/fascist.c:773
+#: lib/fascist.c:784
 msgid "it is too simplistic/systematic"
 msgstr "ಇದು ಬಹಳ ಸರಳ/ಊಹಿಸಬಹುದಾಗಿದೆ"
 
-#: lib/fascist.c:778
+#: lib/fascist.c:789
 msgid "it looks like a National Insurance number."
 msgstr "ಇದು ರಾಷ್ಟ್ರೀಯ ವಿಮೆ ಸಂಖ್ಯೆಯಂತೆ ಕಾಣಿಸುತ್ತಿದೆ"
 
-#: lib/fascist.c:810
+#: lib/fascist.c:827
 msgid "it is based on a dictionary word"
 msgstr "ಇದು ಶಬ್ಧಕೋಶದಲ್ಲಿನ ಒಂದು ಪದದಂತಿದೆ"
 
-#: lib/fascist.c:829
+#: lib/fascist.c:853
 msgid "it is based on a (reversed) dictionary word"
 msgstr "ಇದು ಶಬ್ಧಕೋಶದಲ್ಲಿನ ಒಂದು ಪದದಂತಿದೆ(ತಿರುಮುರುವು)"
 
-#: lib/fascist.c:874
+#: lib/fascist.c:893
 msgid "error loading dictionary"
 msgstr ""
 
