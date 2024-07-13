@@ -17,7 +17,8 @@ Release process:
 	6) Commit that with new version
 	7) Create tag of form 'vX.Y.Z' pointed to that commit, push tags
 	8) Make in cracklib words directory
-	9) Upload the relevant binaries to a release on github attached to the tag that was already created above
+    9) Sign all files with: gpg -u 350D0B0705E9C3CB --armor --detach-sign $f
+	10) Upload the relevant binaries to a release on github attached to the tag that was already created above
 
 After the release, repeat steps 2 through 5 with incremented version: MAJOR.MINOR.(PATCH+1)-dev
 
