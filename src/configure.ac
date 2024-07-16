@@ -96,6 +96,6 @@ AM_CONDITIONAL([NOT_CROSS_COMPILING], [test "$cross_compiling" = "no"])
 
 AC_CONFIG_FILES([util/Makefile lib/Makefile doc/Makefile python/Makefile Makefile \
 		python/setup.py \
-		po/Makefile.in m4/Makefile dicts/Makefile cracklib.spec])
+		po/Makefile.in dicts/Makefile cracklib.spec])
 AC_OUTPUT
 
