@@ -1,8 +1,4 @@
 #!/bin/sh -x
-autopoint -f
-cd m4
-echo EXTRA_DIST = *.m4 > Makefile.am
-cd ..
 autoreconf -f -i
 
 # Grab latest versions instead of what is bundled with autoconf

@@ -1,4 +1,4 @@
-SUBDIRS = m4 lib util po doc python dicts
+SUBDIRS = lib util po doc python dicts
 
 EXTRA_DIST = \
 		cracklib.spec.in \
