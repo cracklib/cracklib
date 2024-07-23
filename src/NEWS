@@ -1,4 +1,6 @@
-v2.10.1
+v2.10.1 Add missing man page from debian upstream
+        Fix compilation issues with parallel make due to missing dependencies
+        Fix some duplicate define warnings
 v2.10.0 Removal of broken legacy 64bit dictionary support and various style improvements (Ed Beroset)
         Improve output of password checks (yixiangzhike)
         Translation updates from weblate
