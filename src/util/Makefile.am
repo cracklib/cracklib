@@ -46,7 +46,7 @@ both-endian.sh:
 	echo '[ "$(echo 50000 |./testnum baddict)" = "$(echo 50000 |./testnum testdict)" ]' > "$@"
 	chmod +x "$@"
 
-baddict: $(top_srcdir)/dicts/cracklib-small
+baddict: $(top_srcdir)/dicts/cracklib-small $(builddir)/make-bad-endian
 	$(srcdir)/cracklib-format "$<" | $(builddir)/make-bad-endian "$@"
 
 
