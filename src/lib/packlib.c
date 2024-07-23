@@ -18,6 +18,7 @@
 #endif
 #ifdef HAVE_ENDIAN_H
 #define _BSD_SOURCE
+#undef _DEFAULT_SOURCE
 #define _DEFAULT_SOURCE
 #include <endian.h>
 #endif
