@@ -4,7 +4,9 @@
  * or its effect upon hardware or computer systems.
  */
 
+#undef IN_CRACKLIB
 #define IN_CRACKLIB
+
 #include "config.h"
 #include "crack.h"
 #include "packer.h"

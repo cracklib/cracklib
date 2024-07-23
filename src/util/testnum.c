@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#undef IN_CRACKLIB
 #define IN_CRACKLIB
 
 #include "config.h"
