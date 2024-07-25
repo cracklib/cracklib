@@ -55,5 +55,6 @@ cracklib-*.tar.gz
 cracklib-*.tar.xz
 cracklib-*.tar.bz2
 cracklib-*.zip
+*.asc
 
 test-driver
