@@ -7,6 +7,7 @@ libcrack_la_SOURCES = 	fascist.c \
 			rules.c \
 			stringlib.c \
 			packer.h \
+			portable_endian.h \
 			crack.h 
 
 #

@@ -16,21 +16,7 @@
 #ifdef HAVE_STDINT_H
 #include <stdint.h>
 #endif
-#ifdef HAVE_ENDIAN_H
-#define _BSD_SOURCE
-#undef _DEFAULT_SOURCE
-#define _DEFAULT_SOURCE
-#include <endian.h>
-#endif
-#ifdef __APPLE__
-#include <libkern/OSByteOrder.h>
-#define be16toh OSSwapBigToHostInt16
-#define be32toh OSSwapBigToHostInt32
-#define htole16 OSSwapHostToLittleInt16
-#define htole32 OSSwapHostToLittleInt32
-#define le16toh OSSwapLittleToHostInt16
-#define le32toh OSSwapLittleToHostInt32
-#endif
+#include "portable_endian.h"
 #include "packer.h"
 
 #define DEBUG 0
