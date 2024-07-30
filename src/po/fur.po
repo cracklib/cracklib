@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2023-04-02 16:13-0500\n"
+"POT-Creation-Date: 2024-07-25 17:22-0500\n"
 "PO-Revision-Date: 2019-08-20 02:34+0000\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian\n"
@@ -14,63 +14,63 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Zanata 4.6.2\n"
 
-#: lib/fascist.c:516
+#: lib/fascist.c:527
 msgid "it is based on your username"
 msgstr "e je basade sul to non utent"
 
-#: lib/fascist.c:576
+#: lib/fascist.c:587
 msgid "it is based upon your password entry"
 msgstr "e je basade su la vuestre password regjistrade"
 
-#: lib/fascist.c:593 lib/fascist.c:601
+#: lib/fascist.c:604 lib/fascist.c:612
 msgid "it is derived from your password entry"
 msgstr "e derive de vuestre password regjistrade"
 
-#: lib/fascist.c:613
+#: lib/fascist.c:624
 msgid "it is derivable from your password entry"
 msgstr "si pues derivâ de vuestre password regjistrade"
 
-#: lib/fascist.c:625
+#: lib/fascist.c:636
 msgid "it's derivable from your password entry"
 msgstr "si pues derivâ de vuestre password regjistrade"
 
-#: lib/fascist.c:683
+#: lib/fascist.c:692
 msgid "you are not registered in the password file"
 msgstr "no tu sês regjistrât tal file des password"
 
-#: lib/fascist.c:718
+#: lib/fascist.c:729
 msgid "it is WAY too short"
 msgstr "e je UNE VORE masse curte"
 
-#: lib/fascist.c:723
+#: lib/fascist.c:734
 msgid "it is too short"
 msgstr "e je masse curte"
 
-#: lib/fascist.c:740
+#: lib/fascist.c:751
 msgid "it does not contain enough DIFFERENT characters"
 msgstr "no conten vonde caratars DIFERENTS"
 
-#: lib/fascist.c:754
+#: lib/fascist.c:765
 msgid "it is all whitespace"
 msgstr "e je fate dome di spazis"
 
-#: lib/fascist.c:773
+#: lib/fascist.c:784
 msgid "it is too simplistic/systematic"
 msgstr "e je masse semplice/sistematiche"
 
-#: lib/fascist.c:778
+#: lib/fascist.c:789
 msgid "it looks like a National Insurance number."
 msgstr "e semee un numar di Previdence Sociâl."
 
-#: lib/fascist.c:810
+#: lib/fascist.c:827
 msgid "it is based on a dictionary word"
 msgstr "e je basade suntune peraule di dizionari"
 
-#: lib/fascist.c:829
+#: lib/fascist.c:853
 msgid "it is based on a (reversed) dictionary word"
 msgstr "e je basade suntune peraule dal dizionari al contrari"
 
-#: lib/fascist.c:874
+#: lib/fascist.c:893
 msgid "error loading dictionary"
 msgstr "erôr tal cjariâ il dizionari"
 
