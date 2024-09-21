@@ -77,7 +77,7 @@ msgstr "（逆順の）辞書の単語に基づいています"
 
 #: lib/fascist.c:893
 msgid "error loading dictionary"
-msgstr "辞書の読み込み中二エラーが発生しました"
+msgstr "辞書の読み込み中にエラーが発生しました"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "パスワードエントリから引き出されています"
