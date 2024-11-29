@@ -1,6 +1,9 @@
 // Retrieved on 2024-07-26 from https://gist.github.com/panzi/6856583
 // https://gist.githubusercontent.com/panzi/6856583/raw/12f9f02f1298bb0bc054ba667bccc0cf032cdb03/portable_endian.h
 
+// Per https://gist.github.com/panzi/6856583?permalink_comment_id=3712226#gistcomment-3712226
+// the upstream gist is not being updated, so this will include additional fixes and diverge from the above source.
+
 // "License": Public Domain
 // I, Mathias Panzenböck, place this file hereby into the public domain. Use it at your own risk for whatever you like.
 // In case there are jurisdictions that don't support putting things in the public domain you can also consider it to
