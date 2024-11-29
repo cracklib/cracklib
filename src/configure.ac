@@ -51,7 +51,8 @@ AC_CHECK_FUNCS(strdup)
 AC_CHECK_FUNCS(getpwuid_r)
 
 dnl internationalization macros
-AM_GNU_GETTEXT_VERSION([0.17])
+AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+AM_GNU_GETTEXT_VERSION([0.19.6])
 AM_GNU_GETTEXT([external])
 
 dnl Control default dictname

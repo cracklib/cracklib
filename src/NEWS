@@ -1,4 +1,4 @@
-v2.10.3 
+v2.10.3 Merge in debian upstream patches from https://sources.debian.org/patches/cracklib2/2.10.2-0.1/
 v2.10.2 Fix to build on darwin due to non-portable endian.h (reckenrode)
         Include portable_endian.h for more complete fix.
 v2.10.1 Add missing man page from debian upstream
