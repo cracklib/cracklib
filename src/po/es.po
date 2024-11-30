@@ -2,20 +2,22 @@
 # This file is put in the public domain.
 # Waldo Ribeiro <waldoribeiro@sapo.pt>, 2016. #zanata
 # Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2017. #zanata
+# Nathan Neulinger <nneul@neulinger.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-08-03 13:40-0500\n"
-"PO-Revision-Date: 2018-08-16 12:44+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2024-11-30 02:38+0000\n"
+"Last-Translator: Nathan Neulinger <nneul@neulinger.org>\n"
+"Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
+"cracklib/master/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.2\n"
 
 #: lib/fascist.c:527
 msgid "it is based on your username"
@@ -27,7 +29,7 @@ msgstr "está basada en su contraseña"
 
 #: lib/fascist.c:604 lib/fascist.c:612
 msgid "it is derived from your password entry"
-msgstr "se deriva de su contraseña"
+msgstr "Está derivado de vuestra entrada de contraseña"
 
 #: lib/fascist.c:624
 msgid "it is derivable from your password entry"
