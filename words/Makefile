@@ -1,9 +1,9 @@
-VERSION=2.10.3
+VERSION=2.10.4
 
 all: clean cracklib-words.gz cracklib-words.bz2 cracklib-words.xz
 
 clean:
-	rm -f cracklib-words cracklib-words*.gz cracklib-words*.bz2
+	rm -f cracklib-words cracklib-words*.gz cracklib-words*.bz2 cracklib-words*.xz
 
 cracklib-words.gz: cracklib-words
 	rm -f cracklib-words.gz
