@@ -1,3 +1,4 @@
+v2.10.4 
 v2.10.3 Merge in debian upstream patches from https://sources.debian.org/patches/cracklib2/2.10.2-0.1/
         Fix to enable additional translations (Rafael Fontenelle)
         Improvement to portable_endian.h for BSD builds (nibon7)
