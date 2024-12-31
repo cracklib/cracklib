@@ -3,7 +3,7 @@ sbin_SCRIPTS = cracklib-update
 
 check_PROGRAMS = testlib testnum teststr make-bad-endian
 if NOT_CROSS_COMPILING
-check_DATA = testdict baddict
+check_DATA = testdict testdict-gz testdict-bz2 testdict-xz baddict
 check_SCRIPTS = both-endian.sh checkdict.sh
 TESTS = $(check_SCRIPTS)
 endif
@@ -38,6 +38,21 @@ make_bad_endian_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT
 testdict: $(top_srcdir)/dicts/cracklib-small
 	$(srcdir)/cracklib-format "$<" | $(builddir)/cracklib-packer "$@"
 
+testdict-gz: testdict
+	gzip -v9 -c $(top_srcdir)/dicts/cracklib-small > cracklib-small.gz
+	$(srcdir)/cracklib-format cracklib-small.gz | $(builddir)/cracklib-packer "$@"
+	cmp testdict.pwi $@.pwi
+
+testdict-bz2: testdict
+	bzip2 -v9 -c $(top_srcdir)/dicts/cracklib-small > cracklib-small.bz2
+	$(srcdir)/cracklib-format cracklib-small.bz2 | $(builddir)/cracklib-packer "$@"
+	cmp testdict.pwi $@.pwi
+
+testdict-xz: testdict
+	xz -v9 -c $(top_srcdir)/dicts/cracklib-small > cracklib-small.xz
+	$(srcdir)/cracklib-format cracklib-small.xz | $(builddir)/cracklib-packer "$@"
+	cmp testdict.pwi $@.pwi
+
 checkdict.sh:
 	echo '! $(srcdir)/cracklib-format $(top_srcdir)/dicts/cracklib-small | $(builddir)/testlib $(builddir)/testdict | grep -c ": ok"' > "$@"
 	chmod +x "$@"
@@ -51,8 +66,14 @@ baddict: $(top_srcdir)/dicts/cracklib-small $(builddir)/make-bad-endian
 
 
 if NOT_CROSS_COMPILING
-CLEANFILES = testdict.pwi testdict.pwd testdict.hwm \
-	baddict.pwi baddict.pwd baddict.hwm checkdict.sh both-endian.sh
+CLEANFILES = \
+	testdict.pwi testdict.pwd testdict.hwm \
+	testdict-gz.pwi testdict-gz.pwd testdict-gz.hwm \
+	testdict-bz2.pwi testdict-bz2.pwd testdict-bz2.hwm \
+	testdict-xz.pwi testdict-xz.pwd testdict-xz.hwm \
+	baddict.pwi baddict.pwd baddict.hwm \
+	cracklib-small.gz cracklib-small.bz2 cracklib-small.xz \
+	checkdict.sh both-endian.sh
 endif
 
 

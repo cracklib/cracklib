@@ -12,7 +12,27 @@
 #
 LC_ALL=C
 export LC_ALL
-gzip -cdf "$@" |
+
+case "$@" in
+*.gz)
+	CMD="gzip"
+	ARGS="-cdf"
+	;;
+*.bz2)
+	CMD="bzcat"
+	ARGS=""
+	;;
+*.xz)
+	CMD="xzcat"
+	ARGS=""
+	;;
+*)
+	CMD="gzip"
+	ARGS="-cdf"
+	;;
+esac
+
+$CMD $ARGS "$@" |
     grep -a -v '^#' |
     tr '[A-Z]' '[a-z]' |
     tr -cd '\n[:graph:]' |

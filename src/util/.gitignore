@@ -10,11 +10,12 @@
 /cracklib-check
 /cracklib-packer
 /cracklib-unpacker
+/cracklib-small.*
 /make-bad-endian
 /test-suite.log
-/testdict.hwm
-/testdict.pwd
-/testdict.pwi
+/testdict*.hwm
+/testdict*.pwd
+/testdict*.pwi
 /testlib
 /testnum
 /teststr
