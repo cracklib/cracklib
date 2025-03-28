@@ -3,13 +3,14 @@
 # Waldo Ribeiro <waldoribeiro@sapo.pt>, 2016. #zanata
 # Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2017. #zanata
 # Nathan Neulinger <nneul@neulinger.org>, 2024.
+# Javier Francisco <fserrador@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-23 10:28-0600\n"
-"PO-Revision-Date: 2024-11-30 02:38+0000\n"
-"Last-Translator: Nathan Neulinger <nneul@neulinger.org>\n"
+"PO-Revision-Date: 2025-03-24 13:53+0000\n"
+"Last-Translator: Javier Francisco <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "cracklib/master/es/>\n"
 "Language: es\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: lib/fascist.c:527
 msgid "it is based on your username"
@@ -65,7 +66,7 @@ msgstr "es demasiado simple/sistemática"
 
 #: lib/fascist.c:789
 msgid "it looks like a National Insurance number."
-msgstr "parece un número de la Seguridad Social"
+msgstr "parece un número de la Seguridad Social."
 
 #: lib/fascist.c:827
 msgid "it is based on a dictionary word"
