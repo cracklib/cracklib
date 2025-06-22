@@ -5,20 +5,22 @@
 # Kostas Boukouvalas <quantis@hellug.gr>, 2005.
 # Hellenic SuSE Translation Group <hstg@billg.gr>, 2005.
 # Jan Dittberner <jandd@debian.org>, 2016. #zanata
+# Jim Spentzos <jimspentzos2000@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: cracklib 2.9.6\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-23 10:28-0600\n"
-"PO-Revision-Date: 2016-06-18 01:02+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hellenic-Ελληνικά-Greek <hstg@billg.gr>\n"
+"PO-Revision-Date: 2025-06-22 11:27+0000\n"
+"Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
+"Language-Team: Greek <https://translate.fedoraproject.org/projects/cracklib/"
+"master/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #: lib/fascist.c:527
 msgid "it is based on your username"
@@ -66,7 +68,7 @@ msgstr "είναι πολύ απλό/συστηματικό"
 
 #: lib/fascist.c:789
 msgid "it looks like a National Insurance number."
-msgstr "μοιάζει με αριθμό Ταυτότητας ή Τηλεφώνου"
+msgstr "μοιάζει με αριθμό εθνικής ασφάλισης."
 
 #: lib/fascist.c:827
 msgid "it is based on a dictionary word"
@@ -78,7 +80,7 @@ msgstr "βασίζεται σε (ανάστροφο) λήμμα λεξικού"
 
 #: lib/fascist.c:893
 msgid "error loading dictionary"
-msgstr ""
+msgstr "σφάλμα φόρτωσης καταλόγου"
 
 #~ msgid "it's derived from your password entry"
 #~ msgstr "συνάγεται από την εισαγωγή κωδικού"
