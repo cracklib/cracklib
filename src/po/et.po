@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the cracklib package.
+# Priit Jõerüüt <jrtkbfdr@users.noreply.translate.fedoraproject.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib 2.10.3\n"
+"Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-23 10:28-0600\n"
+"PO-Revision-Date: 2025-12-16 02:15+0000\n"
+"Last-Translator: Priit Jõerüüt "
+"<jrtkbfdr@users.noreply.translate.fedoraproject.org>\n"
+"Language-Team: Estonian <https://translate.fedoraproject.org/projects/"
+"cracklib/master/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15\n"
+
+#: lib/fascist.c:527
+msgid "it is based on your username"
+msgstr "põhineb sinu kasutajanimel"
+
+#: lib/fascist.c:587
+msgid "it is based upon your password entry"
+msgstr "põhineb sinu salasõnal"
+
+#: lib/fascist.c:604 lib/fascist.c:612
+msgid "it is derived from your password entry"
+msgstr "on tuletatud sinu salasõnast"
+
+#: lib/fascist.c:624
+msgid "it is derivable from your password entry"
+msgstr "on tuletatav sinu salasõnast"
+
+#: lib/fascist.c:636
+msgid "it's derivable from your password entry"
+msgstr "on tuletatav sinu salasõnast"
+
+#: lib/fascist.c:692
+msgid "you are not registered in the password file"
+msgstr "sa pole kirjas salasõnade failis"
+
+#: lib/fascist.c:729
+msgid "it is WAY too short"
+msgstr "on LIIGA lühike"
+
+#: lib/fascist.c:734
+msgid "it is too short"
+msgstr "on lühikesepoolne"
+
+#: lib/fascist.c:751
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "ei sisalda piisavalt palju ERINEVAID tähemärke"
+
+#: lib/fascist.c:765
+msgid "it is all whitespace"
+msgstr "koosneb vaid tühikutest"
+
+#: lib/fascist.c:784
+msgid "it is too simplistic/systematic"
+msgstr "on liiga lihtne/süsteemipärane"
+
+#: lib/fascist.c:789
+msgid "it looks like a National Insurance number."
+msgstr "näeb vägagi inglise rahvusliku kindlustustunnuse moodi välja."
+
+#: lib/fascist.c:827
+msgid "it is based on a dictionary word"
+msgstr "põhineb sõnastiku sissekandel"
+
+#: lib/fascist.c:853
+msgid "it is based on a (reversed) dictionary word"
+msgstr "põhineb (tagurpidi kirjutatud) sõnastiku sissekandel"
+
+#: lib/fascist.c:893
+msgid "error loading dictionary"
+msgstr "viga sõnastiku laadimisel"
