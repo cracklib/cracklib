@@ -29,9 +29,6 @@
 #else
 #include <Python.h>
 #endif
-#if PY_MAJOR_VERSION >= 3
-#define IS_PY3K
-#endif
 #ifdef HAVE_PTHREAD_H
 #include <pthread.h>
 #endif
@@ -170,8 +167,6 @@ static char _cracklib_doc[] =
     "program or interpreter.\n"
 ;
 
-#ifdef IS_PY3K
-
 static struct PyModuleDef moduledef = {
     PyModuleDef_HEAD_INIT,
     "_cracklib",
@@ -184,26 +179,12 @@ static struct PyModuleDef moduledef = {
     NULL
 };
 
-#define INITERROR return NULL
-
 PyObject *
 PyInit__cracklib(void)
 
-#else
-#define INITERROR return
-
-void
-init_cracklib(void)
-#endif
 {
-#ifdef IS_PY3K
     PyObject *module = PyModule_Create(&moduledef);
-#else
-    PyObject *module = Py_InitModule3("_cracklib", _cracklibmethods, _cracklib_doc);
-#endif
     if (module == NULL)
-        INITERROR;
-#ifdef IS_PY3K
+        return NULL;
     return module;
-#endif
 }
