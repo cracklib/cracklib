@@ -17,55 +17,32 @@ class TestModuleFunctions(unittest.TestCase):
     DICTPATH = None
 
     def test_VeryFascistCheck(self):
-        try:
+        with self.assertRaises(ValueError):
             cracklib.VeryFascistCheck('test', dictpath=self.DICTPATH)
-            self.fail('expected ValueError')
-        except ValueError:
-            pass
         try:
             cracklib.VeryFascistCheck('LhIRI6JXpKhUqBjT', dictpath=self.DICTPATH)
         except ValueError:
             self.fail('password should be good enough')
 
     def test_palindrome(self):
-        try:
+        with self.assertRaisesRegex(ValueError, 'is a palindrome'):
             cracklib.VeryFascistCheck('ot23#xyx#32to', dictpath=self.DICTPATH)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is a palindrome', str(e))
 
     def test_same(self):
-        try:
+        with self.assertRaisesRegex(ValueError, 'is the same as the old one'):
             cracklib.VeryFascistCheck('test', 'test', dictpath=self.DICTPATH)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is the same as the old one', str(e))
 
     def test_case_change(self):
-        try:
+        with self.assertRaisesRegex(ValueError, 'case changes only'):
             cracklib.VeryFascistCheck('test', 'TeSt', dictpath=self.DICTPATH)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('case changes only', str(e))
 
     def test_similar(self):
-        try:
+        with self.assertRaisesRegex(ValueError, 'is too similar to the old one'):
             cracklib.VeryFascistCheck('test12', 'test34', dictpath=self.DICTPATH)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is too similar to the old one', str(e))
 
     def test_simple(self):
-        try:
+        with self.assertRaisesRegex(ValueError, 'is too simple'):
             cracklib.VeryFascistCheck('t3sx24', dictpath=self.DICTPATH)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is too simple', str(e))
 
     def test_simple_lower(self):
         for passwd in ['t' * i for i in range(
