@@ -8,8 +8,6 @@ import sys
 import unittest
 import cracklib
 
-__version__ = '2.8.19'
-
 tests = []
 
 
@@ -102,7 +100,7 @@ tests.append(TestModuleFunctions)
 
 def run(verbosity=1, repeat=1, use_dictpath=None):
     print(('cracklib is installed in: ' + os.path.dirname(__file__)))
-    print(('cracklib version: ' + __version__))
+    print(('cracklib version: ' + cracklib.__version__))
     print((sys.version))
 
     suite = unittest.TestSuite()
