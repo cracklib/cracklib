@@ -84,18 +84,12 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
     candidate = NULL;
     dict = NULL;
 
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "s|s", keywords,
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "s|s:FascistCheck", keywords,
                                      &candidate, &dict))
     {
-        PyErr_SetString(PyExc_ValueError, "error parsing arguments");
         return NULL;
     }
 
-    if (candidate == NULL)
-    {
-        PyErr_SetString(PyExc_ValueError, "first argument was not a string!");
-        return NULL;
-    }
     if (dict != NULL)
     {
         if (dict[0] != '/')
