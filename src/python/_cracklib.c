@@ -44,6 +44,10 @@
 #include <libintl.h>
 #endif
 
+#if PY_VERSION_HEX < 0x03060000
+#error The minimum Python required is 3.6
+#endif
+
 #ifdef HAVE_PTHREAD_H
 static pthread_mutex_t cracklib_mutex = PTHREAD_MUTEX_INITIALIZER;
 #define LOCK() pthread_mutex_lock(&cracklib_mutex)

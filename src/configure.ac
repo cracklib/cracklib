@@ -69,7 +69,7 @@ AC_ARG_WITH(python,
 AS_HELP_STRING([--without-python],[Build a python module @<:@default=auto@:>@]),
 build_python=$withval,build_python=auto)
 if test "$build_python" != no ; then
-   AM_PATH_PYTHON(,,
+   AM_PATH_PYTHON([3.6],,
                   [if test "$build_python" != yes ; then
                       AC_MSG_WARN([python was not found, continuing])
                       build_python=no
