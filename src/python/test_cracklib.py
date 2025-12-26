@@ -8,63 +8,39 @@ import sys
 import unittest
 import cracklib
 
-__version__ = '2.8.19'
-
 tests = []
-dictpath = None
 
 
 class TestModuleFunctions(unittest.TestCase):
+    DICTPATH = None
+
     def test_VeryFascistCheck(self):
+        with self.assertRaises(ValueError):
+            cracklib.VeryFascistCheck('test', dictpath=self.DICTPATH)
         try:
-            cracklib.VeryFascistCheck('test', dictpath=dictpath)
-            self.fail('expected ValueError')
-        except ValueError:
-            pass
-        try:
-            cracklib.VeryFascistCheck('LhIRI6JXpKhUqBjT', dictpath=dictpath)
+            cracklib.VeryFascistCheck('LhIRI6JXpKhUqBjT', dictpath=self.DICTPATH)
         except ValueError:
             self.fail('password should be good enough')
 
     def test_palindrome(self):
-        try:
-            cracklib.VeryFascistCheck('ot23#xyx#32to', dictpath=dictpath)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is a palindrome', str(e))
+        with self.assertRaisesRegex(ValueError, 'is a palindrome'):
+            cracklib.VeryFascistCheck('ot23#xyx#32to', dictpath=self.DICTPATH)
 
     def test_same(self):
-        try:
-            cracklib.VeryFascistCheck('test', 'test', dictpath=dictpath)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is the same as the old one', str(e))
+        with self.assertRaisesRegex(ValueError, 'is the same as the old one'):
+            cracklib.VeryFascistCheck('test', 'test', dictpath=self.DICTPATH)
 
     def test_case_change(self):
-        try:
-            cracklib.VeryFascistCheck('test', 'TeSt', dictpath=dictpath)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('case changes only', str(e))
+        with self.assertRaisesRegex(ValueError, 'case changes only'):
+            cracklib.VeryFascistCheck('test', 'TeSt', dictpath=self.DICTPATH)
 
     def test_similar(self):
-        try:
-            cracklib.VeryFascistCheck('test12', 'test34', dictpath=dictpath)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is too similar to the old one', str(e))
+        with self.assertRaisesRegex(ValueError, 'is too similar to the old one'):
+            cracklib.VeryFascistCheck('test12', 'test34', dictpath=self.DICTPATH)
 
     def test_simple(self):
-        try:
-            cracklib.VeryFascistCheck('t3sx24', dictpath=dictpath)
-            self.fail('expected ValueError')
-        except ValueError:
-            e = sys.exc_info()[1]
-            self.assertEqual('is too simple', str(e))
+        with self.assertRaisesRegex(ValueError, 'is too simple'):
+            cracklib.VeryFascistCheck('t3sx24', dictpath=self.DICTPATH)
 
     def test_simple_lower(self):
         for passwd in ['t' * i for i in range(
@@ -123,14 +99,13 @@ tests.append(TestModuleFunctions)
 
 
 def run(verbosity=1, repeat=1, use_dictpath=None):
-    global dictpath
     print(('cracklib is installed in: ' + os.path.dirname(__file__)))
-    print(('cracklib version: ' + __version__))
+    print(('cracklib version: ' + cracklib.__version__))
     print((sys.version))
-    dictpath=use_dictpath
 
     suite = unittest.TestSuite()
     for cls in tests:
+        cls.DICTPATH = use_dictpath
         for _ in range(repeat):
             loader = unittest.TestLoader()
             suite.addTest(loader.loadTestsFromTestCase(cls))

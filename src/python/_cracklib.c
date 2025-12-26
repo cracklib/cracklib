@@ -29,9 +29,6 @@
 #else
 #include <Python.h>
 #endif
-#if PY_MAJOR_VERSION >= 3
-#define IS_PY3K
-#endif
 #ifdef HAVE_PTHREAD_H
 #include <pthread.h>
 #endif
@@ -42,6 +39,10 @@
 #include <locale.h>
 #ifdef HAVE_LIBINTL_H
 #include <libintl.h>
+#endif
+
+#if PY_VERSION_HEX < 0x03060000
+#error The minimum Python required is 3.6
 #endif
 
 #ifdef HAVE_PTHREAD_H
@@ -83,18 +84,12 @@ _cracklib_FascistCheck(PyObject *self, PyObject *args, PyObject *kwargs)
     candidate = NULL;
     dict = NULL;
 
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "s|s", keywords,
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "s|s:FascistCheck", keywords,
                                      &candidate, &dict))
     {
-        PyErr_SetString(PyExc_ValueError, "error parsing arguments");
         return NULL;
     }
 
-    if (candidate == NULL)
-    {
-        PyErr_SetString(PyExc_ValueError, "first argument was not a string!");
-        return NULL;
-    }
     if (dict != NULL)
     {
         if (dict[0] != '/')
@@ -166,8 +161,6 @@ static char _cracklib_doc[] =
     "program or interpreter.\n"
 ;
 
-#ifdef IS_PY3K
-
 static struct PyModuleDef moduledef = {
     PyModuleDef_HEAD_INIT,
     "_cracklib",
@@ -180,26 +173,12 @@ static struct PyModuleDef moduledef = {
     NULL
 };
 
-#define INITERROR return NULL
-
 PyObject *
 PyInit__cracklib(void)
 
-#else
-#define INITERROR return
-
-void
-init_cracklib(void)
-#endif
 {
-#ifdef IS_PY3K
     PyObject *module = PyModule_Create(&moduledef);
-#else
-    PyObject *module = Py_InitModule3("_cracklib", _cracklibmethods, _cracklib_doc);
-#endif
     if (module == NULL)
-        INITERROR;
-#ifdef IS_PY3K
+        return NULL;
     return module;
-#endif
 }
