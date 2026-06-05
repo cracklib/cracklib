@@ -2,13 +2,13 @@
 # Copyright (C) 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Janez Krek <janez.krek@euroteh.si>, 2005.
-# Martin Srebotnjak <miles@filmsi.net>, 2023.
+# Martin Srebotnjak <miles@filmsi.net>, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-23 10:28-0600\n"
-"PO-Revision-Date: 2023-02-20 19:20+0000\n"
+"PO-Revision-Date: 2026-06-05 08:02+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
 "cracklib/master/sl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #: lib/fascist.c:527
 msgid "it is based on your username"
@@ -67,7 +67,7 @@ msgstr "je preveč enostavno (sistematično)"
 #: lib/fascist.c:789
 msgid "it looks like a National Insurance number."
 msgstr ""
-"izgleda kot vaša številka (davčna, zdravstvenega zavarovanja, EMŠO, itd.)."
+"videti je kot vaša številka (davčna, zdravstvenega zavarovanja, EMŠO, itn.)."
 
 #: lib/fascist.c:827
 msgid "it is based on a dictionary word"
