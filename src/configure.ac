@@ -51,8 +51,13 @@ dnl Check for utility functions that may need to be replaced
 AC_CHECK_FUNCS(strdup)
 AC_CHECK_FUNCS(getpwuid_r)
 
-dnl internationalization macros
+dnl Internationalization macros
+dnl Require at least this gettext version, but will take any later version too.
 AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+# XXX: We cannot remove the following macro due to backwards compatibility
+# reasons. The above macro is set unconditionally to the minimal version
+# required, and the below is set to 0.19.6, the first version introducing
+# the AM_GNU_GETTEXT_REQUIRE_VERSION macro.
 AM_GNU_GETTEXT_VERSION([0.19.6])
 AM_GNU_GETTEXT([external])
 
