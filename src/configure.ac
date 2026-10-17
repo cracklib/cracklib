@@ -83,7 +83,7 @@ if test "$build_python" != no ; then
                       AC_MSG_ERROR([python was required but not found])
                    fi])
    if test "$build_python" != no ; then
-      AC_CHECK_HEADERS(python${PYTHON_VERSION}/Python.h,,
+      AC_CHECK_HEADER([python${PYTHON_VERSION}/Python.h],,
 		       [if test "$build_python" != yes ; then
 		           AC_MSG_WARN([python headers not found, continuing])
 			   build_python=no
