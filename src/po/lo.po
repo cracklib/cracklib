@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the cracklib package.
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: cracklib 2.10.3\n"
+"Report-Msgid-Bugs-To: cracklib-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2024-12-23 10:28-0600\n"
+"PO-Revision-Date: 2026-05-08 10:59+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.fedoraproject.org/projects/cracklib/"
+"master/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17.1\n"
+
+#: lib/fascist.c:527
+msgid "it is based on your username"
+msgstr "ມັນອີງຕາມຊື່ຜູ້ໃຊ້ຂອງທ່ານ"
+
+#: lib/fascist.c:587
+msgid "it is based upon your password entry"
+msgstr "ມັນອີງຕາມຂໍ້ມູນລະຫັດຜ່ານຂອງທ່ານ"
+
+#: lib/fascist.c:604 lib/fascist.c:612
+msgid "it is derived from your password entry"
+msgstr "ມັນໄດ້ມາຈາກຂໍ້ມູນລະຫັດຜ່ານຂອງທ່ານ"
+
+#: lib/fascist.c:624
+msgid "it is derivable from your password entry"
+msgstr "ມັນສາມາດຄາດເດົາໄດ້ຈາກຂໍ້ມູນລະຫັດຜ່ານຂອງທ່ານ"
+
+#: lib/fascist.c:636
+msgid "it's derivable from your password entry"
+msgstr "ມັນສາມາດຄາດເດົາໄດ້ຈາກຂໍ້ມູນລະຫັດຜ່ານຂອງທ່ານ"
+
+#: lib/fascist.c:692
+msgid "you are not registered in the password file"
+msgstr "ທ່ານບໍ່ໄດ້ລົງທະບຽນໃນໄຟລ໌ລະຫັດຜ່ານ"
+
+#: lib/fascist.c:729
+msgid "it is WAY too short"
+msgstr "ມັນສັ້ນຫຼາຍເກີນໄປ"
+
+#: lib/fascist.c:734
+msgid "it is too short"
+msgstr "ມັນສັ້ນເກີນໄປ"
+
+#: lib/fascist.c:751
+msgid "it does not contain enough DIFFERENT characters"
+msgstr "ມັນມີຕົວອັກສອນທີ່ແຕກຕ່າງກັນບໍ່ພຽງພໍ"
+
+#: lib/fascist.c:765
+msgid "it is all whitespace"
+msgstr "ມັນມີແຕ່ຍະຫວ່າງທັງໝົດ"
+
+#: lib/fascist.c:784
+msgid "it is too simplistic/systematic"
+msgstr "ມັນງ່າຍດາຍ ຫຼື ເປັນລະບົບເກີນໄປ"
+
+#: lib/fascist.c:789
+msgid "it looks like a National Insurance number."
+msgstr "ມັນເບິ່ງຄືກັບເລກປະກັນສັງຄົມ."
+
+#: lib/fascist.c:827
+msgid "it is based on a dictionary word"
+msgstr "ມັນອີງຕາມຄຳສັບໃນວັດຈະນານຸກົມ"
+
+#: lib/fascist.c:853
+msgid "it is based on a (reversed) dictionary word"
+msgstr "ມັນອີງຕາມຄຳສັບໃນວັດຈະນານຸກົມ (ທີ່ຂຽນປີ້ນກັບ)"
+
+#: lib/fascist.c:893
+msgid "error loading dictionary"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການໂຫຼດວັດຈະນານຸກົມ"
