@@ -1,11 +1,12 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_INIT([cracklib],[2.10.4],[cracklib-devel@lists.sourceforge.net])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE(
+    [dist-bzip2 dist-zip dist-xz]
+    [subdir-objects]
+)
+
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
-
-dnl Set of available languages.
-ALL_LINGUAS="as be bn_IN ca cs da de el es eu fi fr fur gu he hi hu id it ja ka kk kn ko lt ml mr nb nl or pa pl pt pt_BR ro ru si sk sl sq sv ta te tr uk zh_CN zh_TW"
 
 dnl Checks for programs.
 LT_INIT
@@ -50,8 +51,13 @@ dnl Check for utility functions that may need to be replaced
 AC_CHECK_FUNCS(strdup)
 AC_CHECK_FUNCS(getpwuid_r)
 
-dnl internationalization macros
+dnl Internationalization macros
+dnl Require at least this gettext version, but will take any later version too.
 AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+# XXX: We cannot remove the following macro due to backwards compatibility
+# reasons. The above macro is set unconditionally to the minimal version
+# required, and the below is set to 0.19.6, the first version introducing
+# the AM_GNU_GETTEXT_REQUIRE_VERSION macro.
 AM_GNU_GETTEXT_VERSION([0.19.6])
 AM_GNU_GETTEXT([external])
 
@@ -77,7 +83,7 @@ if test "$build_python" != no ; then
                       AC_MSG_ERROR([python was required but not found])
                    fi])
    if test "$build_python" != no ; then
-      AC_CHECK_HEADERS(python${PYTHON_VERSION}/Python.h,,
+      AC_CHECK_HEADER([python${PYTHON_VERSION}/Python.h],,
 		       [if test "$build_python" != yes ; then
 		           AC_MSG_WARN([python headers not found, continuing])
 			   build_python=no

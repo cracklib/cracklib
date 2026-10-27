@@ -7,8 +7,6 @@ EXTRA_DIST = \
 		README-LICENSE \
 		test-data 
 
-AUTOMAKE_OPTIONS=dist-bzip2 dist-zip dist-xz
-
 test: check
 
 ACLOCAL_AMFLAGS = -I m4
