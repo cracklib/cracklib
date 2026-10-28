@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([cracklib],[2.10.4],[cracklib-devel@lists.sourceforge.net])
+AC_INIT([cracklib],[2.10.5],[cracklib-devel@lists.sourceforge.net])
 AM_INIT_AUTOMAKE(
     [dist-bzip2 dist-zip dist-xz]
     [subdir-objects]

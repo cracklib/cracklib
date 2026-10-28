@@ -1,3 +1,4 @@
+v2.10.5-dev
 v2.10.4 Basic support for other compression in cracklib-format
         Improvements in python support and explicitly raising minimum python version requirement. (Pino Toscano)
         Improvements and fixes for autotools build system with support for new gettext 1.0 (Guillem Jover)
