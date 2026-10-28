@@ -13,8 +13,12 @@
 #include "crack.h"
 #include "packer.h"
 
-#define CRACK_TOLOWER(a)        (isupper(a)?tolower(a):(a))
-#define CRACK_TOUPPER(a)        (islower(a)?toupper(a):(a))
+/* the <ctype.h> functions accept only EOF or a value representable as an
+   unsigned char; plain char may be signed, so pass any other negative
+   char as unsigned char (EOF itself is passed unchanged) */
+#define CRACK_CTYPE(a)          ((a) == EOF ? EOF : (unsigned char) (a))
+#define CRACK_TOLOWER(a)        (isupper(CRACK_CTYPE(a))?tolower(CRACK_CTYPE(a)):(a))
+#define CRACK_TOUPPER(a)        (islower(CRACK_CTYPE(a))?toupper(CRACK_CTYPE(a)):(a))
 #define STRCMP(a,b)             strcmp((a),(b))
 
 static void
@@ -274,7 +278,7 @@ MatchClass(char class, char input)
 
     case 'L':
     case 'l':			/* lowercase */
-	if (islower(input))
+	if (islower(CRACK_CTYPE(input)))
 	{
 	    retval = 1;
 	}
@@ -282,7 +286,7 @@ MatchClass(char class, char input)
 
     case 'U':
     case 'u':			/* uppercase */
-	if (isupper(input))
+	if (isupper(CRACK_CTYPE(input)))
 	{
 	    retval = 1;
 	}
@@ -290,7 +294,7 @@ MatchClass(char class, char input)
 
     case 'A':
     case 'a':			/* alphabetic */
-	if (isalpha(input))
+	if (isalpha(CRACK_CTYPE(input)))
 	{
 	    retval = 1;
 	}
@@ -298,7 +302,7 @@ MatchClass(char class, char input)
 
     case 'X':
     case 'x':			/* alphanumeric */
-	if (isalnum(input))
+	if (isalnum(CRACK_CTYPE(input)))
 	{
 	    retval = 1;
 	}
@@ -306,7 +310,7 @@ MatchClass(char class, char input)
 
     case 'D':
     case 'd':			/* digits */
-	if (isdigit(input))
+	if (isdigit(CRACK_CTYPE(input)))
 	{
 	    retval = 1;
 	}
@@ -318,7 +322,7 @@ MatchClass(char class, char input)
 	break;
     }
 
-    if (isupper(class))
+    if (isupper(CRACK_CTYPE(class)))
     {
 	return (!retval);
     }
@@ -374,13 +378,13 @@ PolyPurge(char *string, char class, char *area)	/* returns pointer to a purged c
 int
 Char2Int(char character)
 {
-    if (isdigit(character))
+    if (isdigit(CRACK_CTYPE(character)))
     {
 	return (character - '0');
-    } else if (islower(character))
+    } else if (islower(CRACK_CTYPE(character)))
     {
 	return (character - 'a' + 10);
-    } else if (isupper(character))
+    } else if (isupper(CRACK_CTYPE(character)))
     {
 	return (character - 'A' + 10);
     }
