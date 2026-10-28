@@ -75,13 +75,15 @@ Suffix(char *myword, char *suffix)
 char *
 Reverse(char *str, char *area)			/* return a pointer to a reversal */
 {
-    area += strlen(str);
-    *area-- = '\0';
+    char *ptr;
+    /* fill area from the end without ever stepping before its start */
+    ptr = area + strlen(str);
+    *ptr = '\0';
     while (*str)
     {
-	 *area-- = *str++;
+	*(--ptr) = *str++;
     }
-    return (++area);
+    return (area);
 }
 
 char *
