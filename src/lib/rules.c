@@ -392,7 +392,17 @@ Mangle(char *input, char *control, char *area)		/* returns a pointer to a contro
 {
     int limit;
     char *ptr;
-    char area2[STRINGSIZE * 2];
+    /* zero-filled, so that rule x never reads uninitialized bytes */
+    char area2[STRINGSIZE * 2] = "";
+    /* a plural is at most 2 characters longer than its word */
+    char plural[STRINGSIZE + 2];
+
+    /* every caller passes a char area[STRINGSIZE]; refuse inputs
+       that cannot fit it */
+    if (strlen(input) >= STRINGSIZE)
+    {
+	return NULL;
+    }
     strcpy(area, input);
 
     for (ptr = control; *ptr; ptr++)
@@ -415,12 +425,27 @@ Mangle(char *input, char *control, char *area)		/* returns a pointer to a contro
 	    Capitalise(area2, area);
 	    break;
 	case RULE_PLURALISE:
-	    Pluralise(area2, area);
+	    /* the plural adds "s" (1 character) or "es"/"ies" (2); build it
+	       where there is always room and keep it only if it fits area */
+	    Pluralise(area2, plural);
+	    if (strlen(plural) >= STRINGSIZE)
+	    {
+		return NULL;
+	    }
+	    strcpy(area, plural);
 	    break;
 	case RULE_REFLECT:
+	    if (strlen(area) > (STRINGSIZE - 1) / 2)
+	    {
+		return NULL;
+	    }
 	    strcat(area, Reverse(area, area2));
 	    break;
 	case RULE_DUPLICATE:
+	    if (strlen(area) > (STRINGSIZE - 1) / 2)
+	    {
+		return NULL;
+	    }
 	    strcpy(area2, area);
 	    strcat(area, area2);
 	    break;
@@ -469,6 +494,10 @@ Mangle(char *input, char *control, char *area)		/* returns a pointer to a contro
 		return NULL;
 	    } else
 	    {
+		if (strlen(area) > STRINGSIZE - 2)
+		{
+		    return NULL;
+		}
 		area2[0] = *(++ptr);
 		strcpy(area2 + 1, area);
 		strcpy(area, area2);
@@ -482,6 +511,10 @@ Mangle(char *input, char *control, char *area)		/* returns a pointer to a contro
 	    } else
 	    {
 		char *string;
+		if (strlen(area) > STRINGSIZE - 2)
+		{
+		    return NULL;
+		}
 		string = area;
 		while (*(string++));
 		string[-1] = *(++ptr);
@@ -552,6 +585,10 @@ Mangle(char *input, char *control, char *area)		/* returns a pointer to a contro
 		{
 		    Debug(1, "Mangle: insert weird argument in '%s'\n",
 			  control);
+		    return NULL;
+		}
+		if (strlen(area) > STRINGSIZE - 2)
+		{
 		    return NULL;
 		}
 		p1 = area;
