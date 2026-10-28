@@ -49,6 +49,8 @@ po/remove-potcdate.sed
 /python/setup.py
 .ropeproject/
 
+lib/.dirstamp
+
 /cracklib.spec
 
 cracklib-*.tar.gz
