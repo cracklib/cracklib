@@ -159,7 +159,7 @@ Pluralise(char *string, char *area)		/* returns a pointer to a plural */
 	    /* gully -> gullies */
 	    strcpy(area + length - 1, "ies");
 	}
-    } else if (string[length - 1] == 's')
+    } else if (length > 0 && string[length - 1] == 's')
     {
 	/* bias -> biases */
 	strcat(area, "es");
