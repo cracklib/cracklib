@@ -43,7 +43,11 @@ main (int argc, char *argv[])
     {
 	char *c;
 
-	sscanf (buffer, "%u", &i);
+	if (sscanf (buffer, "%u", &i) != 1)
+	{
+	    fprintf (stderr, "Invalid input\n");
+	    continue;
+	}
 
 	printf ("(word %d) ", i);
 
