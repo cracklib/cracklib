@@ -27,7 +27,7 @@ main(int argc, char **argv)
 	int i;
 	int result = -1;
 	int echo_on = 1;
-	struct termios tios;
+	struct termios tios, saved_tios;
 
 	setlocale(LC_ALL, "");
 
@@ -60,8 +60,9 @@ main(int argc, char **argv)
 	if (!echo_on) {
 		result = tcgetattr(STDIN_FILENO, &tios);
 		if (!result) {
+			saved_tios = tios;
 			tios.c_lflag &= ~ECHO;
-			tcsetattr(STDIN_FILENO, TCSAFLUSH, &tios);
+			result = tcsetattr(STDIN_FILENO, TCSAFLUSH, &tios);
 		}
 	}
 
@@ -85,5 +86,8 @@ main(int argc, char **argv)
 			}
 		}
 	}
+	if (!echo_on && !result)
+		tcsetattr(STDIN_FILENO, TCSANOW, &saved_tios);
+
 	return 0;
 }
