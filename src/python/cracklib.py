@@ -69,19 +69,18 @@ def distdifferent(old, new, i, j):
 def distcalculate(distances, old, new, i, j):
     """Calculates the distance between two strings.
     """
-    tmp = 0
-
     if distances[i][j] != -1:
         return distances[i][j]
 
-    tmp =          distcalculate(distances, old, new, i - 1, j - 1)
-    tmp = min(tmp, distcalculate(distances, old, new, i    , j - 1))
-    tmp = min(tmp, distcalculate(distances, old, new, i - 1, j    ))
-    tmp = tmp + distdifferent(old, new, i, j)
+    for row in range(1, i + 1):
+        for col in range(1, j + 1):
+            if distances[row][col] == -1:
+                tmp = distances[row - 1][col - 1]
+                tmp = min(tmp, distances[row][col - 1])
+                tmp = min(tmp, distances[row - 1][col])
+                distances[row][col] = tmp + distdifferent(old, new, row, col)
 
-    distances[i][j] = tmp
-
-    return tmp
+    return distances[i][j]
 
 
 def distance(old, new):
