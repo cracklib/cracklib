@@ -1,4 +1,7 @@
 v2.10.5-dev
+        Avoid recursion errors in the Python string distance calculation (meng chaoming)
+        Reject invalid numeric input in testnum (meng chaoming)
+        Restore terminal echo settings when cracklib-check exits (meng chaoming)
 v2.10.4 Basic support for other compression in cracklib-format
         Improvements in python support and explicitly raising minimum python version requirement. (Pino Toscano)
         Improvements and fixes for autotools build system with support for new gettext 1.0 (Guillem Jover)
